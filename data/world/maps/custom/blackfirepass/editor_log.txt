@@ -1,0 +1,88 @@
+Loading from file mods/Call_of_Warhammer/data/world/maps/battle/custom/blackfirepass2/descr_battle.txt
+Created faction turks from file
+	Creating army controlled by General Grimgor at 0x11ed27a8 from script
+		Creating unit (Black Orc Bodyguard) at 0x168dfd38
+		Creating unit (Stone Trolls) at 0x16930d18
+		Creating unit (Stone Trolls) at 0x168f2f28
+		Creating unit (Giants) at 0x1684b8f0
+		Creating unit (Giants) at 0x169caeb0
+		Creating unit (Orc Big'uns ) at 0x167b65f0
+		Creating unit (Orc Boyz) at 0x16745cc8
+		Creating unit (Orc Boyz) at 0xde47da0
+		Creating unit (Orc Boyz) at 0x167fd528
+		Creating unit (night goblin fanatics) at 0x1678dcd0
+		Creating unit (Forest Goblin Spears) at 0x11a89ec0
+		Creating unit (Doom Diver Catapult) at 0x11a8a0e8
+		Creating unit (Savage Orc Arrer Boyz) at 0x11a8a310
+		Creating unit (Orc Boyz) at 0x166ce928
+		Creating unit (Orc Boar Boyz ) at 0x166ceb50
+		Creating unit (Savage Boar Boyz ) at 0x166ced78
+		Creating unit (Oglah Khan's Wolfboyz) at 0x166cefa0
+		Creating unit (Harboth's Black Mountain Boys Bodyguards) at 0x166cf1c8
+		Creating unit (Orc Boyz) at 0x166cf3f0
+		Creating unit (Orc Boyz) at 0x166cf618
+Created faction hre from file
+	Creating army controlled by General Karl at 0x11ed2800 from script
+		Creating unit (Reiksguard Knights Bodyguard) at 0x166cf840
+		Creating unit (Reiksguard Knights) at 0x166cfa68
+		Creating unit (Pistoliers) at 0x166cfc90
+		Creating unit (Empire Swordsmen) at 0x166cfeb8
+		Creating unit (Empire Swordsmen) at 0x166d00e0
+		Creating unit (Empire Halberdiers) at 0x166d0308
+		Creating unit (Empire Halberdiers) at 0x166d0530
+		Creating unit (Helstorm Rocket Battery) at 0x166d0758
+		Creating unit (Altdorf's Company of Honour) at 0x166d0980
+		Creating unit (Helblaster Volley Gun) at 0x166d0ba8
+		Creating unit (Carroburg Greatswords) at 0x166d0dd0
+		Creating unit (Carroburg Greatswords) at 0x166d0ff8
+		Creating unit (outriders) at 0x166d1220
+		Creating unit (Conqueror Steam Tank) at 0x166d1448
+		Creating unit (Helstorm Rocket Battery) at 0x166d1670
+		Creating unit (Witch Hunters) at 0x166d1898
+		Creating unit (Warrior Priests of Ulric) at 0x166d1ac0
+		Creating unit (Warrior Priests of Ulric) at 0x166d1ce8
+		Creating unit (Handgunners) at 0x166d1f10
+		Creating unit (Handgunners) at 0x166d2138
+Adding unit (Black Orc Bodyguard) at 0x168dfd38 to deployment area at 0x4f030f0
+Adding unit (Stone Trolls) at 0x16930d18 to deployment area at 0x4f030f0
+Adding unit (Stone Trolls) at 0x168f2f28 to deployment area at 0x4f030f0
+Adding unit (Giants) at 0x1684b8f0 to deployment area at 0x4f030f0
+Adding unit (Giants) at 0x169caeb0 to deployment area at 0x4f030f0
+Adding unit (Orc Big'uns ) at 0x167b65f0 to deployment area at 0x4f030f0
+Adding unit (Orc Boyz) at 0x16745cc8 to deployment area at 0x4f030f0
+Adding unit (Orc Boyz) at 0xde47da0 to deployment area at 0x4f030f0
+Adding unit (Orc Boyz) at 0x167fd528 to deployment area at 0x4f030f0
+Adding unit (night goblin fanatics) at 0x1678dcd0 to deployment area at 0x4f030f0
+Adding unit (Forest Goblin Spears) at 0x11a89ec0 to deployment area at 0x4f030f0
+Adding unit (Doom Diver Catapult) at 0x11a8a0e8 to deployment area at 0x4f030f0
+Adding unit (Savage Orc Arrer Boyz) at 0x11a8a310 to deployment area at 0x4f030f0
+Adding unit (Orc Boyz) at 0x166ce928 to deployment area at 0x4f030f0
+Adding unit (Orc Boar Boyz ) at 0x166ceb50 to deployment area at 0x4f030f0
+Adding unit (Savage Boar Boyz ) at 0x166ced78 to deployment area at 0x4f030f0
+Adding unit (Oglah Khan's Wolfboyz) at 0x166cefa0 to deployment area at 0x4f030f0
+Adding unit (Harboth's Black Mountain Boys Bodyguards) at 0x166cf1c8 to deployment area at 0x4f030f0
+Adding unit (Orc Boyz) at 0x166cf3f0 to deployment area at 0x4f030f0
+Adding unit (Orc Boyz) at 0x166cf618 to deployment area at 0x4f030f0
+Adding unit (Reiksguard Knights Bodyguard) at 0x166cf840 to deployment area at 0x4f0312c
+Adding unit (Reiksguard Knights) at 0x166cfa68 to deployment area at 0x4f0312c
+Adding unit (Pistoliers) at 0x166cfc90 to deployment area at 0x4f0312c
+Adding unit (Empire Swordsmen) at 0x166cfeb8 to deployment area at 0x4f0312c
+Adding unit (Empire Swordsmen) at 0x166d00e0 to deployment area at 0x4f0312c
+Adding unit (Empire Halberdiers) at 0x166d0308 to deployment area at 0x4f0312c
+Adding unit (Empire Halberdiers) at 0x166d0530 to deployment area at 0x4f0312c
+Adding unit (Helstorm Rocket Battery) at 0x166d0758 to deployment area at 0x4f0312c
+Adding unit (Altdorf's Company of Honour) at 0x166d0980 to deployment area at 0x4f0312c
+Adding unit (Helblaster Volley Gun) at 0x166d0ba8 to deployment area at 0x4f0312c
+Adding unit (Carroburg Greatswords) at 0x166d0dd0 to deployment area at 0x4f0312c
+Adding unit (Carroburg Greatswords) at 0x166d0ff8 to deployment area at 0x4f0312c
+Adding unit (outriders) at 0x166d1220 to deployment area at 0x4f0312c
+Adding unit (Conqueror Steam Tank) at 0x166d1448 to deployment area at 0x4f0312c
+Adding unit (Helstorm Rocket Battery) at 0x166d1670 to deployment area at 0x4f0312c
+Adding unit (Witch Hunters) at 0x166d1898 to deployment area at 0x4f0312c
+Adding unit (Warrior Priests of Ulric) at 0x166d1ac0 to deployment area at 0x4f0312c
+Adding unit (Warrior Priests of Ulric) at 0x166d1ce8 to deployment area at 0x4f0312c
+Adding unit (Handgunners) at 0x166d1f10 to deployment area at 0x4f0312c
+Adding unit (Handgunners) at 0x166d2138 to deployment area at 0x4f0312c
+Load finished **************************
+
+

@@ -1,0 +1,40 @@
+pool Empire
+	regions Altdorf_Province Bogenhafen_Province Grunburg_Province Middenheim_Province Senden_Province Delberz_Province Talabheim_Province Krugenheim_Province Hergig_Province Heedenhof_Province Koerin_Province Salzmund_Province Dietershafen_Province Norden_Province Wissenburg_Province Wusterburg_Province Nuln_Province Averheim_Province Hochsleben_Province Loningbruck_Province Sylvania_Province Templehof_Province Wurtbad_Province Flensburg_Province Hornau_Province Bechafen_Province Mordheim_Province Moot_Province Nagenhof_Province Wolfenburg_Province Ferlangen_Province Salkalten_Province Marienburg_Province Middenstag_Province Volgen_Province Welleborn_Province Grenzburg_Province Vorderdergen_Province Pfungzing_Province Laurelorn_Province
+	unit Vampire skeleton mount		exp 0 cost 0 replenish 0.05 - 0.1 max 2 initial 1 religions { vampire }
+	unit zombies		exp 0 cost 0 replenish 0.3 - 0.4 max 5 initial 2 religions { vampire }
+	unit Vampire skeleton		exp 0 cost 0 replenish 0.1 - 0.2 max 3 initial 1 religions { vampire }
+	unit Vampire skeleton archer		exp 0 cost 0 replenish 0.1 - 0.2 max 3 initial 1 religions { vampire }
+	unit Vampire skeleton crossbow		exp 0 cost 0 replenish 0.1 - 0.2 max 3 initial 1 religions { vampire }
+	unit Vampire skeleton spears	exp 0 cost 0 replenish 0.1 - 0.2 max 3 initial 1 religions { vampire }
+
+pool haifling
+	regions Averheim_Province Wurtbad_Province Hornau_Province Pfungzing_Province Moot_Province
+	unit Halfling		exp 0 cost 800 replenish 0.05 - 0.15 max 1 initial 3 religions { chaos }
+	unit zombies		exp 0 cost 0 replenish 0.3 - 0.4 max 5 initial 4 religions { vampire }
+        unit Orcz boyz		exp 0 cost 100 replenish 0.1 - 0.2 max 4 initial 1 religions { islam } crusading
+	
+pool drakwald
+	regions Middenheim_Province Altdorf_Province Bogenhafen_Province Senden_Province Delberz_Province Marienburg_Province Middenstag_Province Erlach_Province
+	unit Sigmar Hunters		exp 0 cost 3000 replenish 0.05 - 0.1 max 1 initial 1 religions { chaos }
+	unit Flagellant		exp 0 cost 1000 replenish 0.05 - 0.1 max 3 initial 1 religions { chaos }
+	unit zombies		exp 0 cost 0 replenish 0.3 - 0.4 max 5 initial 4 religions { vampire }
+        unit Orcz boyz		exp 0 cost 100 replenish 0.1 - 0.2 max 4 initial 1 religions { islam } crusading
+
+pool kislev
+	regions Kislev_Province Erengrad_Province Praag_Province Bolgasgrad_Province Dushyka_Province Vitevo_Province Ziochenk_Province
+	unit kranger		exp 0 cost 1500 replenish 0.1 - 0.2 max 2 initial 1 religions { catholic }
+	unit kranger		exp 0 cost 1500 replenish 0.1 - 0.2 max 2 initial 1 religions { orthodox }
+        unit Troll		exp 0 cost 5000 replenish 0.1 - 0.2 max 2 initial 1 religions { islam }
+        unit Orcz boyz		exp 0 cost 100 replenish 0.1 - 0.2 max 4 initial 1 religions { islam } crusading
+        unit Orcz boyz		exp 0 cost 700 replenish 0.1 - 0.2 max 4 initial 1 religions { islam }
+
+pool Blasted_Wastes_Province	
+        regions Darklands_Province Akendorf_Province Munzig_Province Karak_Gunbad_Province Mount_Silverspear_Province
+        unit Giant		exp 0 cost 4000 replenish 0.1 - 0.2 max 2 initial 1 religions { islam }
+        unit Giant		exp 0 cost 2000 replenish 0.1 - 0.2 max 2 initial 1 religions { islam } crusading
+        unit Troll		exp 0 cost 7000 replenish 0.1 - 0.2 max 2 initial 0 religions { islam }
+        unit Troll		exp 0 cost 2000 replenish 0.1 - 0.2 max 2 initial 1 religions { islam } crusading
+        unit Big`un Orcz boyz		exp 0 cost 300 replenish 0.1 - 0.2 max 2 initial 1 religions { islam } crusading
+        unit Savage Orcs boyz		exp 0 cost 200 replenish 0.1 - 0.2 max 4 initial 1 religions { islam } crusading
+        unit Orcz boyz		exp 0 cost 100 replenish 0.1 - 0.3 max 4 initial 1 religions { islam } crusading
+        unit Orcz boyz		exp 0 cost 700 replenish 0.1 - 0.3 max 4 initial 1 religions { islam }
