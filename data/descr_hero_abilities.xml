@@ -1,0 +1,1348 @@
+<?xml version="1.0"?>
+<root>
+	<hero_abilities>
+		<hero_ability>
+			<!-- Hero ability name, used when creating a character -->
+			<name>Sample_Ability</name>
+			<!-- Duration in seconds, 0 means instant -->
+			<duration>30</duration>
+			<!-- Number of times the ability can be used, defaults to 1 if not specified -->
+			<activations>5</activations>
+			<!-- Cooldown in seconds for abilities with more than 1 activation -->
+			<cooldown>60</cooldown>
+			<!-- Tooltip labels from expanded.txt -->
+			<normal_tooltip_label>EMT_HERO_SPECIAL_ABILITY_DEFAULT_NORMAL</normal_tooltip_label>
+			<selected_tooltip_label>EMT_HERO_SPECIAL_ABILITY_DEFAULT_SELECTED</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_HERO_SPECIAL_ABILITY_DEFAULT_DISABLED</disabled_tooltip_label>
+			<!-- Sprites from battle.sd -->
+			<normal_sprite>SCHILTROM_BUTTON_IMAGE</normal_sprite>
+			<selected_sprite>SCHILTROM_BUTTON_IMAGE_SELECTED</selected_sprite>
+			<disabled_sprite>SCHILTROM_BUTTON_IMAGE_DISABLED</disabled_sprite>
+			<!-- Sound effect played when ability begins -->
+			<sound_effect>DEPLOY_STAKES</sound_effect>
+			<!-- Effects used by this hero ability -->
+			<!-- Possible Values: lock_morale, rally_units, army_morale, army_fatigue, soldier_combat_effectiveness, unit_infighting -->
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<!-- lock_morale: target units' morale will not change (does not affect routing units, units with higher morale will lock at that level instead) -->
+					<name>lock_morale</name>
+					<!-- Armies that will be affected by the effect -->
+					<!-- Possible Values: enemy_armies, own_army, allied_armies -->
+					<target>own_army</target>
+					<!-- Level that the morale will be locked at -->
+					<!-- Possible Values: impetuous, high, firm, shaken, wavering -->
+					<morale_level>high</morale_level>
+				</hero_ability_effect>
+				<hero_ability_effect>
+					<!-- rally_units: rallies all routing units at the specified level of morale -->
+					<name>rally_units</name>
+					<target>own_army</target>
+					<!-- Level to which the morale will be set after rallying -->
+					<!-- Possible Values: impetuous, high, firm, shaken, wavering -->
+					<morale_level>firm</morale_level>
+					<!-- Minimum time before the unit will rout again -->
+					<min_time_before_rout>20</min_time_before_rout>
+				</hero_ability_effect>
+				<hero_ability_effect>
+					<!-- army_morale: increases/decreases the morale of target units -->
+					<name>army_morale</name>
+					<target>enemy_armies</target>
+					<!-- positive values increase morale -->
+					<morale_modifier>-5</morale_modifier>
+				</hero_ability_effect>
+				<hero_ability_effect>
+					<!-- army_fatigue: increases/decreases the fatigue of target units -->
+					<name>army_fatigue</name>
+					<target>own_army</target>
+					<!-- negative values decrease fatigue -->
+					<fatigue_modifier>-2000</fatigue_modifier>
+					<!-- Whether the fatigue boost is permanent, or will revert to what it was once the effect finishes -->
+					<!-- Possible Values: true, false -->
+					<permanent>false</permanent>
+				</hero_ability_effect>
+				<hero_ability_effect>
+					<!-- soldier_combat_effectiveness: increases/decreases the combat effectiveness of target units -->
+					<name>soldier_combat_effectiveness</name>
+					<target>own_army</target>
+					<!-- 0 = no chance to kill, < 1 = decreased chance, 1 = normal chance, > 1 = increased chance -->
+					<kill_chance_modifier>2</kill_chance_modifier>
+				</hero_ability_effect>
+				<hero_ability_effect>
+					<!-- unit_infighting: has a percentage chance to cause the target units to become inactive for a time -->
+					<name>unit_infighting</name>
+					<target>enemy_armies</target>
+					<!-- Percentage chance per unit -->
+					<percentage_chance>50</percentage_chance>
+					<!-- Minimum time effected units will remain inactive for -->
+					<min_effect_time>10</min_effect_time>
+					<!-- Maximum time effected units will remain inactive for -->
+					<max_effect_time>20</max_effect_time>
+				</hero_ability_effect>				
+			</hero_ability_effects>
+		</hero_ability>
+		<hero_ability>    
+			<name>The_Heart_of_the_Lion</name>
+			<duration>0</duration>
+			<normal_tooltip_label>EMT_THE_HEART_OF_THE_LION_NORMAL</normal_tooltip_label>
+			<disabled_tooltip_label>EMT_THE_HEART_OF_THE_LION_DISABLED</disabled_tooltip_label>
+			<normal_sprite>HERO_ABILITY_THE_HEART_OF_THE_LION_BUTTON_IMAGE</normal_sprite>
+			<selected_sprite>HERO_ABILITY_THE_HEART_OF_THE_LION_BUTTON_IMAGE</selected_sprite>
+			<disabled_sprite>HERO_ABILITY_THE_HEART_OF_THE_LION_BUTTON_IMAGE_DISABLED</disabled_sprite>
+			<sound_effect>The_Heart_of_the_Lion</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>rally_units</name>
+					<target>own_army</target>
+					<morale_level>firm</morale_level>
+					<min_time_before_rout>15</min_time_before_rout>
+				</hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>
+		<hero_ability>    
+			<name>Righteousness_of_Faith</name>
+			<duration>60</duration>
+			<normal_tooltip_label>EMT_RIGHTEOUSNESS_OF_FAITH_NORMAL</normal_tooltip_label>
+			<selected_tooltip_label>EMT_RIGHTEOUSNESS_OF_FAITH_SELECTED</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_RIGHTEOUSNESS_OF_FAITH_DISABLED</disabled_tooltip_label>
+			<normal_sprite>HERO_ABILITY_RIGHTEOUSNESS_OF_FAITH_BUTTON_IMAGE</normal_sprite>
+			<selected_sprite>HERO_ABILITY_RIGHTEOUSNESS_OF_FAITH_BUTTON_IMAGE_SELECTED</selected_sprite>
+			<disabled_sprite>HERO_ABILITY_RIGHTEOUSNESS_OF_FAITH_BUTTON_IMAGE_DISABLED</disabled_sprite>
+			<sound_effect>Righteousness_of_Faith</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>lock_morale</name>
+					<target>own_army</target>
+					<morale_level>high</morale_level>
+				</hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>
+		<hero_ability>    
+			<name>Light_of_the_Faith</name>
+			<duration>30</duration>
+			<normal_tooltip_label>EMT_LIGHT_OF_THE_FAITH_NORMAL</normal_tooltip_label>
+			<selected_tooltip_label>EMT_LIGHT_OF_THE_FAITH_SELECTED</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_LIGHT_OF_THE_FAITH_DISABLED</disabled_tooltip_label>
+			<normal_sprite>HERO_ABILITY_LIGHT_OF_THE_FAITH_BUTTON_IMAGE</normal_sprite>
+			<selected_sprite>HERO_ABILITY_LIGHT_OF_THE_FAITH_BUTTON_IMAGE_SELECTED</selected_sprite>
+			<disabled_sprite>HERO_ABILITY_LIGHT_OF_THE_FAITH_BUTTON_IMAGE_DISABLED</disabled_sprite>
+			<sound_effect>Light_of_the_Faith</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>army_morale</name>
+					<target>own_army</target>
+					<morale_modifier>10</morale_modifier>
+				</hero_ability_effect>
+				<hero_ability_effect>
+					<name>soldier_combat_effectiveness</name>
+					<target>own_army</target>
+					<kill_chance_modifier>2</kill_chance_modifier>
+				</hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>
+		<hero_ability>    
+			<name>The_Flower_of_Chivalry</name>
+			<duration>30</duration>
+			<normal_tooltip_label>EMT_THE_FLOWER_OF_CHIVALRY_NORMAL</normal_tooltip_label>
+			<selected_tooltip_label>EMT_THE_FLOWER_OF_CHIVALRY_SELECTED</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_THE_FLOWER_OF_CHIVALRY_DISABLED</disabled_tooltip_label>
+			<normal_sprite>HERO_ABILITY_THE_FLOWER_OF_CHIVALRY_BUTTON_IMAGE</normal_sprite>
+			<selected_sprite>HERO_ABILITY_THE_FLOWER_OF_CHIVALRY_BUTTON_IMAGE_SELECTED</selected_sprite>
+			<disabled_sprite>HERO_ABILITY_THE_FLOWER_OF_CHIVALRY_BUTTON_IMAGE_DISABLED</disabled_sprite>
+			<sound_effect>The_Flower_of_Chivalry</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>army_fatigue</name>
+					<target>own_army</target>
+					<fatigue_modifier>-2000</fatigue_modifier>
+					<permanent>false</permanent>
+				</hero_ability_effect>
+				<hero_ability_effect>
+					<name>soldier_combat_effectiveness</name>
+					<target>own_army</target>
+					<kill_chance_modifier>2</kill_chance_modifier>
+				</hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>
+		<hero_ability>    
+			<name>Byzantine_Politics</name>
+			<duration>0</duration>
+			<normal_tooltip_label>EMT_BYZANTINE_POLITICS_NORMAL</normal_tooltip_label>
+			<disabled_tooltip_label>EMT_BYZANTINE_POLITICS_DISABLED</disabled_tooltip_label>
+			<normal_sprite>HERO_ABILITY_BYZANTINE_POLITICS_BUTTON_IMAGE</normal_sprite>
+			<selected_sprite>HERO_ABILITY_BYZANTINE_POLITICS_BUTTON_IMAGE</selected_sprite>
+			<disabled_sprite>HERO_ABILITY_BYZANTINE_POLITICS_BUTTON_IMAGE_DISABLED</disabled_sprite>
+			<sound_effect>Byzantine_Politics</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>unit_infighting</name>
+					<target>enemy_armies</target>
+					<percentage_chance>50</percentage_chance>
+					<min_effect_time>30</min_effect_time>
+					<max_effect_time>60</max_effect_time>
+				</hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>
+
+		<hero_ability>    
+			<name>BLOOD_OF_KHORNE</name>
+			<duration>60</duration>
+			<normal_tooltip_label>EMT_BLOOD_OF_KHORNE_NORMAL</normal_tooltip_label>
+			<selected_tooltip_label>EMT_BLOOD_OF_KHORNE_SELECTED</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_BLOOD_OF_KHORNE_DISABLED</disabled_tooltip_label>
+			<normal_sprite>HERO_ABILITY_BYZANTINE_POLITICS_BUTTON_IMAGE</normal_sprite>
+			<selected_sprite>HERO_ABILITY_BYZANTINE_POLITICS_BUTTON_IMAGE</selected_sprite>
+			<disabled_sprite>HERO_ABILITY_BYZANTINE_POLITICS_BUTTON_IMAGE_DISABLED</disabled_sprite>
+			<sound_effect>Righteousness_of_Faith</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>lock_morale</name>
+					<target>own_army</target>
+					<morale_level>high</morale_level>
+				</hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>
+
+
+
+
+
+
+
+
+
+
+
+		<hero_ability>    
+			<name>Super_Banana_Bomb</name>
+			<duration>0</duration>
+			<activations>150</activations>
+			<cooldown>1</cooldown>
+			<normal_tooltip_label>EMT_HERO_SPECIAL_ABILITY_DEFAULT_NORMAL</normal_tooltip_label>
+			<selected_tooltip_label>EMT_SNEAKY_SHEMES</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_HERO_SPECIAL_ABILITY_DEFAULT_DISABLED</disabled_tooltip_label>
+			<normal_sprite>HERO_ABILITY_BANANA_BUTTON_IMAGE</normal_sprite>
+			<selected_sprite>HERO_ABILITY_BANANA_BUTTON_IMAGE</selected_sprite>
+			<disabled_sprite>HERO_ABILITY_BANANA_BUTTON_IMAGE_DISABLED</disabled_sprite>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>projectile</name>
+					<target>enemy_armies</target>
+ 			            <effect>air_burst_impact_wall_explosion_culvern_set</effect>
+			            <explosion_force_min>80.0</explosion_force_min>
+			            <explosion_force_max>80.0</explosion_force_max>
+			            <projectile_type>cannon_misfire_missile</projectile_type>
+			            <!-- Do new projectiles have same velocity as parent (true/false) -->
+			            <preserve_momentum>false</preserve_momentum>
+			            <!-- Direction projectiles are fired by the explosion (forward, backward, up or down) -->
+  			            <direction>forward</direction>
+			            <!-- max deviation of projectiles from direction -->
+			            <scatter_angle>30</scatter_angle>         
+			            <projectile_number>4</projectile_number>
+					<projectile_name>fire_mag_fireball</projectile_name>
+			            <impulse_radius>20.0</impulse_radius>         
+			            <impulse_force>0.0</impulse_force>
+			            <effective_radius>20.0</effective_radius>
+			            <effective_damage>0.0</effective_damage>
+			            <kill_radius>20.0</kill_radius>
+			            <kill_damage>0.0</kill_damage>
+				</hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>			
+
+		<hero_ability>    
+			<name>ability1</name>
+			<duration>15</duration>
+			<activations>150</activations>
+			<cooldown>5</cooldown>
+			<normal_tooltip_label>EMT_HERO_SPECIAL_ABILITY_DEFAULT_NORMAL</normal_tooltip_label>
+			<selected_tooltip_label>EMT_SNEAKY_SHEMES</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_HERO_SPECIAL_ABILITY_DEFAULT_DISABLED</disabled_tooltip_label>
+			<normal_sprite>HERO_ABILITY_1</normal_sprite>
+			<selected_sprite>HERO_ABILITY_2</selected_sprite>
+			<disabled_sprite>HERO_ABILITY_3</disabled_sprite>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<!-- army_morale: increases/decreases the morale of target units -->
+					<name>army_morale</name>
+					<target>enemy_armies</target>
+					<!-- positive values increase morale -->
+					<morale_modifier>-200</morale_modifier>
+				</hero_ability_effect>
+				<hero_ability_effect>
+					<!-- army_fatigue: increases/decreases the fatigue of target units -->
+					<name>army_fatigue</name>
+					<target>enemy_armies</target>
+					<!-- negative values decrease fatigue -->
+					<fatigue_modifier>2000</fatigue_modifier>
+					<!-- Whether the fatigue boost is permanent, or will revert to what it was once the effect finishes -->
+					<!-- Possible Values: true, false -->
+					<permanent>true</permanent>
+				</hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>			
+
+		<hero_ability>    
+			<name>Sneaky_Shemes_Ability</name>
+			<duration>0</duration>
+			<activations>150</activations>
+			<cooldown>300</cooldown>
+			<normal_tooltip_label>EMT_SNEAKY_SHEMES</normal_tooltip_label>
+			<selected_tooltip_label>EMT_SNEAKY_SHEMES</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_SNEAKY_SHEMES</disabled_tooltip_label>
+			<normal_sprite>SKARSNIK_ABILITY_BUTTON</normal_sprite>
+			<selected_sprite>SKARSNIK _ABILITY_BUTTON_SELECTED</selected_sprite>
+			<disabled_sprite>SKARSNIK _ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>unit_infighting</name>
+					<target>enemy_armies</target>
+					<!-- Percentage chance per unit -->
+					<percentage_chance>30</percentage_chance>
+					<!-- Minimum time effected units will remain inactive for -->
+					<min_effect_time>60</min_effect_time>
+					<!-- Maximum time effected units will remain inactive for -->
+					<max_effect_time>90</max_effect_time>
+				</hero_ability_effect>				
+			</hero_ability_effects>
+		</hero_ability>			
+
+		<hero_ability>    
+			<name>Waagh_Ability</name>
+			<duration>30</duration>
+			<activations>150</activations>
+			<cooldown>210</cooldown>
+			<normal_tooltip_label>EMT_WAAGH</normal_tooltip_label>
+			<selected_tooltip_label>EMT_WAAGH</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_WAAGH</disabled_tooltip_label>
+			<normal_sprite>WAAGH1_ABILITY_BUTTON</normal_sprite>
+			<selected_sprite>WAAGH1_ABILITY_BUTTON_SELECTED</selected_sprite>
+			<disabled_sprite>WAAGH1_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>lock_morale</name>
+					<!-- Armies that will be affected by the effect -->
+					<!-- Possible Values: enemy_armies, own_army, allied_armies -->
+					<target>own_army</target>
+					<!-- Level that the morale will be locked at -->
+					<!-- Possible Values: impetuous, high, firm, shaken, wavering -->
+					<morale_level>impetuous</morale_level>
+				</hero_ability_effect>
+				<hero_ability_effect>
+					<!-- soldier_combat_effectiveness: increases/decreases the combat effectiveness of target units -->
+					<name>soldier_combat_effectiveness</name>
+					<target>own_army</target>
+					<!-- 0 = no chance to kill, < 1 = decreased chance, 1 = normal chance, > 1 = increased chance -->
+					<kill_chance_modifier>2</kill_chance_modifier>
+				</hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>			
+
+		<hero_ability>    
+			<name>BashEmLadz_Ability</name>
+			<duration>30</duration>
+			<activations>150</activations>
+			<cooldown>210</cooldown>
+			<normal_tooltip_label>EMT_BASHEMLADZ</normal_tooltip_label>
+			<selected_tooltip_label>EMT_BASHEMLADZ</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_BASHEMLADZ</disabled_tooltip_label>
+			<normal_sprite>WAAGH2_ABILITY_BUTTON</normal_sprite>
+			<selected_sprite>WAAGH2_ABILITY_BUTTON_SELECTED</selected_sprite>
+			<disabled_sprite>WAAGH2_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<!-- soldier_combat_effectiveness: increases/decreases the combat effectiveness of target units -->
+					<name>soldier_combat_effectiveness</name>
+					<target>own_army</target>
+					<!-- 0 = no chance to kill, < 1 = decreased chance, 1 = normal chance, > 1 = increased chance -->
+					<kill_chance_modifier>1.5</kill_chance_modifier>
+				</hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>			
+
+		<hero_ability>    
+			<name>GorkFixIt_Ability</name>
+			<duration>60</duration>
+			<activations>150</activations>
+			<cooldown>240</cooldown>
+			<normal_tooltip_label>EMT_WAAGH</normal_tooltip_label>
+			<selected_tooltip_label>EMT_WAAGH</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_WAAGH</disabled_tooltip_label>
+			<normal_sprite>GORK_ABILITY_BUTTON</normal_sprite>
+			<selected_sprite>GORK_ABILITY_BUTTON_SELECTED</selected_sprite>
+			<disabled_sprite>GORK_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<!-- soldier_combat_effectiveness: increases/decreases the combat effectiveness of target units -->
+					<name>soldier_combat_effectiveness</name>
+					<target>enemy_armies</target>
+					<!-- 0 = no chance to kill, < 1 = decreased chance, 1 = normal chance, > 1 = increased chance -->
+					<kill_chance_modifier>0.7</kill_chance_modifier>
+				</hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>			
+
+		<hero_ability>    
+			<name>VanhelsMacabre_Ability</name>
+			<duration>30</duration>
+			<activations>150</activations>
+			<cooldown>210</cooldown>
+			<normal_tooltip_label>EMT_VANHEL</normal_tooltip_label>
+			<selected_tooltip_label>EMT_VANHEL</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_VANHEL</disabled_tooltip_label>
+			<normal_sprite>VAMPIRE1_ABILITY_BUTTON</normal_sprite>
+			<selected_sprite>VAMPIRE1_ABILITY_BUTTON_SELECTED</selected_sprite>
+			<disabled_sprite>VAMPIRE1_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<!-- soldier_combat_effectiveness: increases/decreases the combat effectiveness of target units -->
+					<name>soldier_combat_effectiveness</name>
+					<target>own_army</target>
+					<!-- 0 = no chance to kill, < 1 = decreased chance, 1 = normal chance, > 1 = increased chance -->
+					<kill_chance_modifier>1.5</kill_chance_modifier>
+				</hero_ability_effect>
+				<hero_ability_effect>
+					<!-- army_fatigue: increases/decreases the fatigue of target units -->
+					<name>army_fatigue</name>
+					<target>own_army</target>
+					<!-- negative values decrease fatigue -->
+					<fatigue_modifier>-2000</fatigue_modifier>
+					<!-- Whether the fatigue boost is permanent, or will revert to what it was once the effect finishes -->
+					<!-- Possible Values: true, false -->
+					<permanent>false</permanent>
+				</hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>			
+
+		<hero_ability>    
+			<name>WindOfUndeath_Ability</name>
+			<duration>1</duration>
+			<activations>150</activations>
+			<cooldown>239</cooldown>
+			<normal_tooltip_label>EMT_UNDEATH_WIND</normal_tooltip_label>
+			<selected_tooltip_label>EMT_UNDEATH_WIND</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_UNDEATH_WIND</disabled_tooltip_label>
+			<normal_sprite>VAMPIRE2_ABILITY_BUTTON</normal_sprite>
+			<selected_sprite>VAMPIRE2_ABILITY_BUTTON_SELECTED</selected_sprite>
+			<disabled_sprite>VAMPIRE2_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<!-- army_fatigue: increases/decreases the fatigue of target units -->
+					<name>army_fatigue</name>
+					<target>enemy_armies</target>
+					<!-- negative values decrease fatigue -->
+					<fatigue_modifier>1500</fatigue_modifier>
+					<!-- Whether the fatigue boost is permanent, or will revert to what it was once the effect finishes -->
+					<!-- Possible Values: true, false -->
+					<permanent>false</permanent>
+				</hero_ability_effect>
+				<hero_ability_effect>
+					<!-- army_fatigue: increases/decreases the fatigue of target units -->
+					<name>army_fatigue</name>
+					<target>own_army</target>
+					<!-- negative values decrease fatigue -->
+					<fatigue_modifier>-1000</fatigue_modifier>
+					<!-- Whether the fatigue boost is permanent, or will revert to what it was once the effect finishes -->
+					<!-- Possible Values: true, false -->
+					<permanent>false</permanent>
+				</hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>			
+
+            <hero_ability>    
+			<name>Treating_hand_Ability</name>
+			<duration>1</duration>
+                        <activations>150</activations>
+			<cooldown>299</cooldown>
+			<normal_tooltip_label>EMT_TREATING_HAND</normal_tooltip_label>
+			<selected_tooltip_label>EMT_TREATING_HAND</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_TREATING_HAND</disabled_tooltip_label>
+			<normal_sprite>HEALHAND_ABILITY_BUTTON</normal_sprite>
+			<selected_sprite>HEALHAND_ABILITY_BUTTON_SELECTED</selected_sprite>
+			<disabled_sprite>HEALHAND_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>The_Flower_of_Chivalry</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>army_fatigue</name>
+					<target>own_army</target>
+					<fatigue_modifier>-2000</fatigue_modifier>
+					<permanent>true</permanent>
+				</hero_ability_effect>
+				<hero_ability_effect>
+                                        <name>army_morale</name> 
+                                        <target>own_army</target> 
+                                        <morale_modifier>20</morale_modifier> 
+                        </hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>	
+
+            <hero_ability>    
+			<name>Lead_transformation_Ability</name>
+			<duration>60</duration>
+                        <activations>150</activations>
+			<cooldown>60</cooldown>
+			<normal_tooltip_label>EMT_WAAGH</normal_tooltip_label>
+			<selected_tooltip_label>EMT_WAAGH</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_WAAGH</disabled_tooltip_label>
+			<normal_sprite>LEAD_ABILITY_BUTTON</normal_sprite>
+			<selected_sprite>LEAD_ABILITY_BUTTON_SELECTED</selected_sprite>
+			<disabled_sprite>LEAD_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>Light_of_the_Faith</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>army_fatigue</name>
+					<target>enemy_armies</target>
+					<fatigue_modifier>-2000</fatigue_modifier>
+					<permanent>false</permanent>
+				</hero_ability_effect>
+				<hero_ability_effect>
+					<name>soldier_combat_effectiveness</name>
+					<target>enemy_armies</target>
+					<kill_chance_modifier>0.6</kill_chance_modifier>
+				</hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>	
+
+              <hero_ability>    
+			<name>Oxen_Stands_Ability</name>
+			<duration>1</duration>
+                        <activations>200</activations>
+			<cooldown>180</cooldown>
+			<normal_tooltip_label>EMT_WAAGH</normal_tooltip_label>
+                  <selected_tooltip_label>EMT_WAAGH</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_WAAGH</disabled_tooltip_label>
+			<normal_sprite>HERO_ABILITY_THE_HEART_OF_THE_LION_BUTTON_IMAGE</normal_sprite>
+			<selected_sprite>HERO_ABILITY_THE_HEART_OF_THE_LION_BUTTON_IMAGE</selected_sprite>
+			<disabled_sprite>HERO_ABILITY_THE_HEART_OF_THE_LION_BUTTON_IMAGE_DISABLED</disabled_sprite>
+			<sound_effect>The_Heart_of_the_Lion</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>rally_units</name>
+					<target>own_army</target>
+					<morale_level>firm</morale_level>
+					<min_time_before_rout>15</min_time_before_rout>
+				</hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>
+
+               <hero_ability>    
+			<name>Guardian_light_Ability</name>
+			<duration>60</duration>
+                        <activations>200</activations>
+			<cooldown>120</cooldown>
+			<normal_tooltip_label>EMT_WAAGH</normal_tooltip_label>
+                  <selected_tooltip_label>EMT_WAAGH</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_WAAGH</disabled_tooltip_label>
+			<normal_sprite>GUARDLIGHT_ABILITY_BUTTON</normal_sprite>
+			<selected_sprite>GUARDLIGHT_ABILITY_BUTTON_SELECTED</selected_sprite>
+			<disabled_sprite>GUARDLIGHT_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>The_Heart_of_the_Lion</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>rally_units</name>
+					<target>own_army</target>
+					<morale_level>firm</morale_level>
+					<min_time_before_rout>15</min_time_before_rout>
+				</hero_ability_effect>
+                        <hero_ability_effect>
+					<name>lock_morale</name>
+					<target>own_army</target>
+					<morale_level>high</morale_level>
+				</hero_ability_effect>
+	   	      </hero_ability_effects>
+             </hero_ability>    
+
+
+             <hero_ability>    
+			<name>Doom_and_darkness_Ability</name>
+			<duration>30</duration>
+                        <activations>150</activations>
+			<cooldown>150</cooldown>
+			<normal_tooltip_label>EMT_WAAGH</normal_tooltip_label>
+                  <selected_tooltip_label>EMT_WAAGH</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_WAAGH</disabled_tooltip_label>
+			<normal_sprite>DOOMDARKNESS_ABILITY_BUTTON</normal_sprite>
+			<selected_sprite>DOOMDARKNESS_ABILITY_BUTTON_SELECTED</selected_sprite>
+			<disabled_sprite>DOOMDARKNESS_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>The_Flower_of_Chivalry</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+                                        <name>army_morale</name> 
+                                        <target>enemy_armies</target> 
+                                        <morale_modifier>-15</morale_modifier> 
+                        </hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>	
+
+             <hero_ability>    
+			<name>Ice_Storm_Ability</name>
+			<duration>30</duration>
+                        <activations>150</activations>
+			<cooldown>150</cooldown>
+			<normal_tooltip_label>EMT_WAAGH</normal_tooltip_label>
+                  <selected_tooltip_label>EMT_WAAGH</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_WAAGH</disabled_tooltip_label>
+			<normal_sprite>HERO_ABILITY_THE_FLOWER_OF_CHIVALRY_BUTTON_IMAGE</normal_sprite>
+			<selected_sprite>HERO_ABILITY_THE_FLOWER_OF_CHIVALRY_BUTTON_IMAGE_SELECTED</selected_sprite>
+			<disabled_sprite>HERO_ABILITY_THE_FLOWER_OF_CHIVALRY_BUTTON_IMAGE_DISABLED</disabled_sprite>
+			<sound_effect>The_Flower_of_Chivalry</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>army_fatigue</name>
+					<target>enemy_armies</target>
+					<fatigue_modifier>-2000</fatigue_modifier>
+					<permanent>false</permanent>
+				</hero_ability_effect>
+				<hero_ability_effect>
+					<name>unit_infighting</name>
+					<target>enemy_armies</target>
+					<!-- Percentage chance per unit -->
+					<percentage_chance>30</percentage_chance>
+					<!-- Minimum time effected units will remain inactive for -->
+					<min_effect_time>30</min_effect_time>
+					<!-- Maximum time effected units will remain inactive for -->
+					<max_effect_time>30</max_effect_time>
+				</hero_ability_effect>				
+			</hero_ability_effects>
+		</hero_ability>	
+
+		<hero_ability>    
+			<name>Super_Banana_Bomb1</name>
+			<duration>0</duration>
+			<activations>150</activations>
+			<cooldown>1</cooldown>
+			<normal_tooltip_label>EMT_WAAGH</normal_tooltip_label>
+                  <selected_tooltip_label>EMT_WAAGH</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_WAAGH</disabled_tooltip_label>
+			<normal_sprite>HERO_ABILITY_BANANA_BUTTON_IMAGE</normal_sprite>
+			<selected_sprite>HERO_ABILITY_BANANA_BUTTON_IMAGE</selected_sprite>
+			<disabled_sprite>HERO_ABILITY_BANANA_BUTTON_IMAGE_DISABLED</disabled_sprite>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>projectile</name>
+					<projectile_name>green_lighting</projectile_name>
+				</hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>			
+
+		<hero_ability>    
+			<name>Super_Banana_Bomb2</name>
+			<duration>1</duration>
+			<activations>150</activations>
+			<cooldown>1</cooldown>
+			<normal_tooltip_label>EMT_WAAGH</normal_tooltip_label>
+                  <selected_tooltip_label>EMT_WAAGH</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_WAAGH</disabled_tooltip_label>
+			<normal_sprite>HERO_ABILITY_BANANA_BUTTON_IMAGE</normal_sprite>
+			<selected_sprite>HERO_ABILITY_BANANA_BUTTON_IMAGE</selected_sprite>
+			<disabled_sprite>HERO_ABILITY_BANANA_BUTTON_IMAGE_DISABLED</disabled_sprite>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>projectile</name>
+					<projectile_name>green_lighting</projectile_name>
+				</hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>			
+
+		<hero_ability>    
+			<name>Super_Banana_Bomb3</name>
+			<duration>1</duration>
+			<activations>150</activations>
+			<cooldown>1</cooldown>
+			<normal_tooltip_label>EMT_WAAGH</normal_tooltip_label>
+                  <selected_tooltip_label>EMT_WAAGH</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_WAAGH</disabled_tooltip_label>
+			<normal_sprite>HERO_ABILITY_BANANA_BUTTON_IMAGE</normal_sprite>
+			<selected_sprite>HERO_ABILITY_BANANA_BUTTON_IMAGE</selected_sprite>
+			<disabled_sprite>HERO_ABILITY_BANANA_BUTTON_IMAGE_DISABLED</disabled_sprite>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>projectile</name>
+					<projectile_name>green_lighting</projectile_name>
+				</hero_ability_effect>
+			</hero_ability_effects>
+</hero_ability>	
+
+		<hero_ability>			
+<name>SLAYERS_FURY_Ability</name> 
+  <duration>60</duration> 
+  <normal_tooltip_label>EMT_SLAYERS_FURY</normal_tooltip_label> 
+  <selected_tooltip_label>EMT_SLAYERS_FURY</selected_tooltip_label> 
+  <disabled_tooltip_label>EMT_SLAYERS_FURY</disabled_tooltip_label> 
+  <normal_sprite>SLAYERS_ABILITY_BUTTON</normal_sprite> 
+  <selected_sprite>SLAYERS_ABILITY_BUTTON_SELECTED</selected_sprite> 
+  <disabled_sprite>SLAYERS_ABILITY_BUTTON_DISABLED</disabled_sprite> 
+  <sound_effect>Light_of_the_Faith</sound_effect> 
+- <hero_ability_effects>
+- <hero_ability_effect>
+  <name>army_morale</name> 
+  <target>own_army</target> 
+  <morale_modifier>10</morale_modifier> 
+  </hero_ability_effect>
+- <hero_ability_effect>
+  <name>soldier_combat_effectiveness</name> 
+  <target>own_army</target> 
+  <kill_chance_modifier>4.0</kill_chance_modifier> 
+  </hero_ability_effect>
+<hero_ability_effect>
+					<name>army_fatigue</name>
+					<target>own_army</target>
+					<fatigue_modifier>1000</fatigue_modifier>
+					<permanent>true</permanent>
+				</hero_ability_effect>
+<hero_ability_effect>
+					<name>lock_morale</name>
+					<target>own_army</target>
+					<morale_level>impetuous</morale_level>
+				</hero_ability_effect>
+  </hero_ability_effects>
+- </hero_ability>
+<hero_ability>    
+			<name>Shield_saferi_Ability</name>
+			<duration>30</duration>
+                        <activations>150</activations>
+			<cooldown>299</cooldown>
+			<normal_tooltip_label>EMT_SAFERI</normal_tooltip_label>
+			<selected_tooltip_label>EMT_SAFERI</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_SAFERI</disabled_tooltip_label>
+			<normal_sprite>SAFERY_ABILITY_BUTTON</normal_sprite>
+			<selected_sprite>SAFERY_ABILITY_BUTTON_SELECTED</selected_sprite>
+			<disabled_sprite>SAFERY_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>The_Flower_of_Chivalry</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>soldier_combat_effectiveness</name>
+					<target>enemy_armies</target>
+					<kill_chance_modifier>0.4</kill_chance_modifier>
+				</hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>	
+<hero_ability>    
+			<name>Courage_of_Anerion_Ability</name>
+			<duration>60</duration>
+			<normal_tooltip_label>EMT_COURAGE_OF_ANERION</normal_tooltip_label>
+			<selected_tooltip_label>EMT_COURAGE_OF_ANERION</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_COURAGE_OF_ANERION</disabled_tooltip_label>
+			<normal_sprite>HIGHELF_ABILITY_BUTTON_DISABLED</normal_sprite>
+			<selected_sprite>HIGHELF_ABILITY_BUTTON</selected_sprite>
+			<disabled_sprite>HIGHELF_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>Righteousness_of_Faith</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>lock_morale</name>
+					<target>own_army</target>
+					<morale_level>high</morale_level>
+				</hero_ability_effect>
+<hero_ability_effect>
+					<name>army_fatigue</name>
+					<target>own_army</target>
+					<fatigue_modifier>-3000</fatigue_modifier>
+					<permanent>false</permanent>
+				</hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>
+<hero_ability>    
+			<name>Pain_word_Ability</name>
+			<duration>30</duration>
+                        <activations>150</activations>
+			<cooldown>299</cooldown>
+			<normal_tooltip_label>EMT_PAIN_WORD</normal_tooltip_label>
+			<selected_tooltip_label>EMT_PAIN_WORD</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_PAIN_WORD</disabled_tooltip_label>
+			<normal_sprite>SORSORERS_ABILITY_BUTTON</normal_sprite>
+			<selected_sprite>SORSORERS_ABILITY_BUTTON_SELECTED</selected_sprite>
+			<disabled_sprite>SORSORERS_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>The_Flower_of_Chivalry</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>soldier_combat_effectiveness</name>
+					<target>enemy_armies</target>
+					<kill_chance_modifier>0.7</kill_chance_modifier>
+				</hero_ability_effect>
+<hero_ability_effect>
+                                        <name>army_morale</name> 
+                                        <target>enemy_armies</target> 
+                                        <morale_modifier>-7</morale_modifier> 
+                        </hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>	
+<hero_ability>    
+			<name>To_kill_with_pleasure_Ability</name>
+			<duration>60</duration>
+			<normal_tooltip_label>EMT_TO_KILL_WITH_PLEASURE</normal_tooltip_label>
+			<selected_tooltip_label>EMT_TO_KILL_WITH_PLEASURE</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_TO_KILL_WITH_PLEASURE</disabled_tooltip_label>
+			<normal_sprite>COMANDER_ABILITY_BUTTON_DISABLED</normal_sprite>
+			<selected_sprite>COMANDER_ABILITY_BUTTON</selected_sprite>
+			<disabled_sprite>COMANDER_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>Righteousness_of_Faith</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>soldier_combat_effectiveness</name>
+					<target>own_army</target>
+					<kill_chance_modifier>1.7</kill_chance_modifier>
+				</hero_ability_effect>
+<hero_ability_effect>
+                                        <name>army_morale</name> 
+                                        <target>own_army</target> 
+                                        <morale_modifier>10</morale_modifier> 
+                        </hero_ability_effect>
+</hero_ability_effects>
+</hero_ability>	
+<hero_ability>    
+			<name>For_empire_Ability</name>
+			<duration>60</duration>
+			<normal_tooltip_label>EMT_FOR_EMPIRE</normal_tooltip_label>
+			<selected_tooltip_label>EMT_FOR_EMPIRE</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_FOR_EMPIRE</disabled_tooltip_label>
+			<normal_sprite>HAMMER_ABILITY_BUTTON_DISABLED</normal_sprite>
+			<selected_sprite>HAMMER_ABILITY_BUTTON</selected_sprite>
+			<disabled_sprite>HAMMER_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>Righteousness_of_Faith</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>army_fatigue</name>
+					<target>own_army</target>
+					<fatigue_modifier>-5000</fatigue_modifier>
+					<permanent>true</permanent>
+				</hero_ability_effect>
+<hero_ability_effect>
+                                        <name>army_morale</name> 
+                                        <target>own_army</target> 
+                                        <morale_modifier>40</morale_modifier> 
+                        </hero_ability_effect>
+</hero_ability_effects>
+</hero_ability>	
+<hero_ability>    
+			<name>Chivalry_Ability</name>
+			<duration>60</duration>
+			<normal_tooltip_label>EMT_THE_FLOWER_OF_CHIVALRY</normal_tooltip_label>
+			<selected_tooltip_label>EMT_THE_FLOWER_OF_CHIVALRY</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_THE_FLOWER_OF_CHIVALRY</disabled_tooltip_label>
+			<normal_sprite>HELM_ABILITY_BUTTON_DISABLED</normal_sprite>
+			<selected_sprite>HELM_ABILITY_BUTTON</selected_sprite>
+			<disabled_sprite>HELM_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>The_Flower_of_Chivalry</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>army_fatigue</name>
+					<target>own_army</target>
+					<fatigue_modifier>-2000</fatigue_modifier>
+					<permanent>false</permanent>
+				</hero_ability_effect>
+				<hero_ability_effect>
+					<name>soldier_combat_effectiveness</name>
+					<target>own_army</target>
+					<kill_chance_modifier>2</kill_chance_modifier>
+				</hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>
+<hero_ability>    
+			<name>Fury_flame_Ability</name>
+			<duration>30</duration>
+                        <activations>150</activations>
+			<cooldown>299</cooldown>
+			<normal_tooltip_label>EMT_FURY_FLAME</normal_tooltip_label>
+			<selected_tooltip_label>EMT_FURY_FLAME</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_FURY_FLAME</disabled_tooltip_label>
+			<normal_sprite>FIRESWORD_ABILITY_BUTTON</normal_sprite>
+			<selected_sprite>FIRESWORD_ABILITY_BUTTON_SELECTED</selected_sprite>
+			<disabled_sprite>FIRESWORD_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>The_Flower_of_Chivalry</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>soldier_combat_effectiveness</name>
+					<target>own_army</target>
+					<kill_chance_modifier>1.4</kill_chance_modifier>
+				</hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>	
+<hero_ability>    
+			<name>Oath_of_allegiance_Ability</name>
+			<duration>60</duration>
+			<normal_tooltip_label>EMT_OATH_OF_ALLEGIANCE</normal_tooltip_label>
+			<selected_tooltip_label>EMT_OATH_OF_ALLEGIANCE</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_OATH_OF_ALLEGIANCE</disabled_tooltip_label>
+			<normal_sprite>MARKOFSIGMAR_ABILITY_BUTTON_DISABLED</normal_sprite>
+			<selected_sprite>MARKOFSIGMAR_ABILITY_BUTTON</selected_sprite>
+			<disabled_sprite>MARKOFSIGMAR_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>Righteousness_of_Faith</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>lock_morale</name>
+					<target>own_army</target>
+					<morale_level>high</morale_level>
+				</hero_ability_effect>
+<hero_ability_effect>
+					<name>rally_units</name>
+					<target>own_army</target>
+					<morale_level>firm</morale_level>
+					<min_time_before_rout>15</min_time_before_rout>
+				</hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>
+<hero_ability>    
+			<name>Severe_frost_Ability</name>
+			<duration>30</duration>
+                        <activations>150</activations>
+			<cooldown>299</cooldown>
+			<normal_tooltip_label>EMT_SEVERE_FROST</normal_tooltip_label>
+			<selected_tooltip_label>EMT_SEVERE_FROST</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_SEVERE_FROST</disabled_tooltip_label>
+			<normal_sprite>MOROZ_ABILITY_BUTTON</normal_sprite>
+			<selected_sprite>MOROZ_ABILITY_BUTTON</selected_sprite>
+			<disabled_sprite>MOROZ_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>The_Flower_of_Chivalry</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>soldier_combat_effectiveness</name>
+					<target>enemy_armies</target>
+					<kill_chance_modifier>0.8</kill_chance_modifier>
+				</hero_ability_effect>
+<hero_ability_effect>
+                                        <name>army_morale</name> 
+                                        <target>enemy_armies</target> 
+                                        <morale_modifier>-7</morale_modifier> 
+                        </hero_ability_effect>
+<hero_ability_effect>
+					<name>army_fatigue</name>
+					<target>enemy_armies</target>
+					<fatigue_modifier>-2000</fatigue_modifier>
+					<permanent>false</permanent>
+				</hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>	
+<hero_ability>    
+			<name>For_fatherland_Ability</name>
+			<duration>60</duration>
+			<normal_tooltip_label>EMT_FOR_FATHERLAND</normal_tooltip_label>
+			<selected_tooltip_label>EMT_FOR_FATHERLAND</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_FOR_FATHERLAND</disabled_tooltip_label>
+			<normal_sprite>URSUS_ABILITY_BUTTON_DISABLED</normal_sprite>
+			<selected_sprite>URSUS_ABILITY_BUTTON</selected_sprite>
+			<disabled_sprite>URSUS_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>Righteousness_of_Faith</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>army_fatigue</name>
+					<target>own_army</target>
+					<fatigue_modifier>-5000</fatigue_modifier>
+					<permanent>true</permanent>
+				</hero_ability_effect>
+<hero_ability_effect>
+                                        <name>army_morale</name> 
+                                        <target>own_army</target> 
+                                        <morale_modifier>40</morale_modifier> 
+                        </hero_ability_effect>
+<hero_ability_effect>
+					<name>lock_morale</name>
+					<target>own_army</target>
+					<morale_level>impetuous</morale_level>
+				</hero_ability_effect>
+<hero_ability_effect>
+					<name>soldier_combat_effectiveness</name>
+					<target>own_army</target>
+					<kill_chance_modifier>1.6</kill_chance_modifier>
+				</hero_ability_effect>
+</hero_ability_effects>
+</hero_ability>	
+<hero_ability>    
+			<name>Ura_Ability</name>
+			<duration>60</duration>
+			<normal_tooltip_label>EMT_URA</normal_tooltip_label>
+			<selected_tooltip_label>EMT_URA</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_URA</disabled_tooltip_label>
+			<normal_sprite>VITYAZ_ABILITY_BUTTON_DISABLED</normal_sprite>
+			<selected_sprite>VITYAZ_ABILITY_BUTTON</selected_sprite>
+			<disabled_sprite>VITYAZ_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>Righteousness_of_Faith</sound_effect>
+			<hero_ability_effects>
+<hero_ability_effect>
+                                        <name>army_morale</name> 
+                                        <target>enemy_armies</target> 
+                                        <morale_modifier>-10</morale_modifier> 
+                        </hero_ability_effect>
+<hero_ability_effect>
+					<name>lock_morale</name>
+					<target>own_army</target>
+					<morale_level>impetuous</morale_level>
+				</hero_ability_effect>
+<hero_ability_effect>
+					<name>soldier_combat_effectiveness</name>
+					<target>own_army</target>
+					<kill_chance_modifier>1.5</kill_chance_modifier>
+				</hero_ability_effect>
+</hero_ability_effects>
+</hero_ability>
+<hero_ability>    
+			<name>Beat_kill_Ability</name>
+			<duration>60</duration>
+			<normal_tooltip_label>EMT_BEAT_KILL</normal_tooltip_label>
+			<selected_tooltip_label>EMT_BEAT_KILL</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_BEAT_KILL</disabled_tooltip_label>
+			<normal_sprite>DROYASHKA_ABILITY_BUTTON_DISABLED</normal_sprite>
+			<selected_sprite>DROYASHKA_ABILITY_BUTTON</selected_sprite>
+			<disabled_sprite>DROYASHKA_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>Righteousness_of_Faith</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>army_fatigue</name>
+					<target>own_army</target>
+					<fatigue_modifier>-2000</fatigue_modifier>
+					<permanent>false</permanent>
+				</hero_ability_effect>
+<hero_ability_effect>
+					<name>lock_morale</name>
+					<target>own_army</target>
+					<morale_level>impetuous</morale_level>
+				</hero_ability_effect>
+<hero_ability_effect>
+					<name>soldier_combat_effectiveness</name>
+					<target>own_army</target>
+					<kill_chance_modifier>2.0</kill_chance_modifier>
+				</hero_ability_effect>
+</hero_ability_effects>
+</hero_ability>		
+<hero_ability>    
+			<name>Blood_insult_Ability</name>
+			<duration>60</duration>
+			<normal_tooltip_label>EMT_BLOOD_INSULT</normal_tooltip_label>
+			<selected_tooltip_label>EMT_BLOOD_INSULT</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_BLOOD_INSULT</disabled_tooltip_label>
+			<normal_sprite>BOOK_ABILITY_BUTTON_DISABLED</normal_sprite>
+			<selected_sprite>BOOK_ABILITY_BUTTON</selected_sprite>
+			<disabled_sprite>BOOK_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>Righteousness_of_Faith</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>army_fatigue</name>
+					<target>own_army</target>
+					<fatigue_modifier>-4000</fatigue_modifier>
+					<permanent>true</permanent>
+				</hero_ability_effect>
+<hero_ability_effect>
+					<name>lock_morale</name>
+					<target>own_army</target>
+					<morale_level>impetuous</morale_level>
+				</hero_ability_effect>
+<hero_ability_effect>
+					<name>soldier_combat_effectiveness</name>
+					<target>own_army</target>
+					<kill_chance_modifier>2.0</kill_chance_modifier>
+				</hero_ability_effect>
+</hero_ability_effects>
+</hero_ability>		
+<hero_ability>    
+			<name>Traps_of_miners_Ability</name>
+			<duration>0</duration>
+			<normal_tooltip_label>EMT_TRAPS_OF_MINERS</normal_tooltip_label>
+			<disabled_tooltip_label>EMT_TRAPS_OF_MINERS</disabled_tooltip_label>
+			<normal_sprite>KIRKA_ABILITY_BUTTON_DISABLED</normal_sprite>
+			<selected_sprite>KIRKA_ABILITY_BUTTON</selected_sprite>
+			<disabled_sprite>KIRKA_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>Byzantine_Politics</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>unit_infighting</name>
+					<target>enemy_armies</target>
+					<percentage_chance>30</percentage_chance>
+					<min_effect_time>30</min_effect_time>
+					<max_effect_time>60</max_effect_time>
+				</hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>
+<hero_ability>    
+			<name>Gold_job_Ability</name>
+			<duration>60</duration>
+			<normal_tooltip_label>EMT_GOLD_JOB</normal_tooltip_label>
+			<selected_tooltip_label>EMT_GOLD_JOB</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_GOLD_JOB</disabled_tooltip_label>
+			<normal_sprite>CHEST_ABILITY_BUTTON_DISABLED</normal_sprite>
+			<selected_sprite>CHEST_ABILITY_BUTTON</selected_sprite>
+			<disabled_sprite>CHEST_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>Righteousness_of_Faith</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>army_fatigue</name>
+					<target>own_army</target>
+					<fatigue_modifier>-2000</fatigue_modifier>
+					<permanent>false</permanent>
+				</hero_ability_effect>
+<hero_ability_effect>
+					<name>lock_morale</name>
+					<target>own_army</target>
+					<morale_level>impetuous</morale_level>
+				</hero_ability_effect>
+
+</hero_ability_effects>
+</hero_ability>	
+<hero_ability>    
+			<name>Damnation_Ability</name>
+			<duration>60</duration>
+			<normal_tooltip_label>EMT_DAMNATION</normal_tooltip_label>
+			<selected_tooltip_label>EMT_DAMNATION</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_DAMNATION</disabled_tooltip_label>
+			<normal_sprite>KRYGER_ABILITY_BUTTON_DISABLED</normal_sprite>
+			<selected_sprite>KRYGER_ABILITY_BUTTON</selected_sprite>
+			<disabled_sprite>KRYGER_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>Righteousness_of_Faith</sound_effect>
+			<hero_ability_effects>
+<hero_ability_effect>
+                                        <name>army_morale</name> 
+                                        <target>enemy_armies</target> 
+                                        <morale_modifier>-10</morale_modifier> 
+                        </hero_ability_effect>
+<hero_ability_effect>
+					<name>soldier_combat_effectiveness</name>
+					<target>enemy_armies</target>
+					<kill_chance_modifier>0.7</kill_chance_modifier>
+				</hero_ability_effect>
+</hero_ability_effects>
+</hero_ability>
+<hero_ability>    
+			<name>Will_of_gods_Ability</name>
+			<duration>300</duration>
+			<normal_tooltip_label>EMT_WILL_OF_GODS</normal_tooltip_label>
+			<selected_tooltip_label>EMT_WILL_OF_GODS</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_WILL_OF_GODS</disabled_tooltip_label>
+			<normal_sprite>FACE_ABILITY_BUTTON_DISABLED</normal_sprite>
+			<selected_sprite>FACE_ABILITY_BUTTON</selected_sprite>
+			<disabled_sprite>FACE_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>Righteousness_of_Faith</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>army_fatigue</name>
+					<target>own_army</target>
+					<fatigue_modifier>-2000</fatigue_modifier>
+					<permanent>false</permanent>
+				</hero_ability_effect>
+<hero_ability_effect>
+					<name>soldier_combat_effectiveness</name>
+					<target>own_army</target>
+					<kill_chance_modifier>1.2</kill_chance_modifier>
+				</hero_ability_effect>
+</hero_ability_effects>
+</hero_ability>	
+<hero_ability>    
+			<name>Forces_of_chaos_Ability</name>
+			<duration>60</duration>
+			<normal_tooltip_label>EMT_FORCES_OF_CHAOS</normal_tooltip_label>
+			<selected_tooltip_label>EMT_FORCES_OF_CHAOS</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_FORCES_OF_CHAOS</disabled_tooltip_label>
+			<normal_sprite>CHAOSSTAR_ABILITY_BUTTON_DISABLED</normal_sprite>
+			<selected_sprite>CHAOSSTAR_ABILITY_BUTTON</selected_sprite>
+			<disabled_sprite>CHAOSSTAR_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>Righteousness_of_Faith</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>army_fatigue</name>
+					<target>own_army</target>
+					<fatigue_modifier>-2000</fatigue_modifier>
+					<permanent>false</permanent>
+				</hero_ability_effect>
+<hero_ability_effect>
+					<name>soldier_combat_effectiveness</name>
+					<target>own_army</target>
+					<kill_chance_modifier>2.0</kill_chance_modifier>
+				</hero_ability_effect>
+</hero_ability_effects>
+</hero_ability>	
+<hero_ability>    
+			<name>Blood_to_god_of_blood_Ability</name>
+			<duration>120</duration>
+			<normal_tooltip_label>EMT_BLOODSWORD</normal_tooltip_label>
+			<selected_tooltip_label>EMT_BLOODSWORD</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_BLOODSWORD</disabled_tooltip_label>
+			<normal_sprite>BLOODSWORD_ABILITY_BUTTON_DISABLED</normal_sprite>
+			<selected_sprite>BLOODSWORD_ABILITY_BUTTON</selected_sprite>
+			<disabled_sprite>BLOODSWORD_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>Righteousness_of_Faith</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>army_fatigue</name>
+					<target>own_army</target>
+					<fatigue_modifier>-1000</fatigue_modifier>
+					<permanent>true</permanent>
+				</hero_ability_effect>
+<hero_ability_effect>
+					<name>lock_morale</name>
+					<target>enemy_armies</target>
+					<morale_level>impetuous</morale_level>
+				</hero_ability_effect>
+<hero_ability_effect>
+					<name>lock_morale</name>
+					<target>own_army</target>
+					<morale_level>impetuous</morale_level>
+				</hero_ability_effect>
+<hero_ability_effect>
+					<name>soldier_combat_effectiveness</name>
+					<target>own_army</target>
+					<kill_chance_modifier>2.0</kill_chance_modifier>
+				</hero_ability_effect>
+</hero_ability_effects>
+</hero_ability>	
+<hero_ability>    
+			<name>Pandemonium_Ability</name>
+			<duration>0</duration>
+			<activations>150</activations>
+			<cooldown>300</cooldown>
+			<normal_tooltip_label>EMT_PANDEMONIUM</normal_tooltip_label>
+			<selected_tooltip_label>EMT_PANDEMONIUM</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_PANDEMONIUM</disabled_tooltip_label>
+			<normal_sprite>TZINCHCHAMP_ABILITY_BUTTON</normal_sprite>
+			<selected_sprite>TZINCHCHAMP_ABILITY_BUTTON_SELECTED</selected_sprite>
+			<disabled_sprite>TZINCHCHAMP_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>The_Flower_of_Chivalry</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>soldier_combat_effectiveness</name>
+					<target>enemy_armies</target>
+					<kill_chance_modifier>0.7</kill_chance_modifier>
+				</hero_ability_effect>
+<hero_ability_effect>
+                                        <name>army_morale</name> 
+                                        <target>enemy_armies</target> 
+                                        <morale_modifier>-15</morale_modifier> 
+                        </hero_ability_effect>
+</hero_ability_effects>
+</hero_ability>	
+<hero_ability>    
+			<name>Magic_fetters_Ability</name>
+			<duration>0</duration>
+<activations>150</activations>
+			<cooldown>299</cooldown>
+			<normal_tooltip_label>EMT_MAGIC_FETTERS</normal_tooltip_label>
+			<disabled_tooltip_label>EMT_MAGIC_FETTERS</disabled_tooltip_label>
+			<normal_sprite>TZINCHCHAMP_ABILITY_BUTTON</normal_sprite>
+			<selected_sprite>TZINCHCHAMP_ABILITY_BUTTON_SELECTED</selected_sprite>
+			<disabled_sprite>TZINCHCHAMP_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>Byzantine_Politics</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>unit_infighting</name>
+					<target>enemy_armies</target>
+					<percentage_chance>30</percentage_chance>
+					<min_effect_time>30</min_effect_time>
+					<max_effect_time>60</max_effect_time>
+				</hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>	
+<hero_ability>    
+			<name>Plague_downpour_Ability</name>
+			<duration>120</duration>
+			<normal_tooltip_label>EMT_PLAGUE_DOWPOUR</normal_tooltip_label>
+			<selected_tooltip_label>EMT_PLAGUE_DOWPOUR</selected_tooltip_label>
+			<disabled_tooltip_label>EMT__PLAGUE_DOWPOUR</disabled_tooltip_label>
+			<normal_sprite>NURGL_ABILITY_BUTTON</normal_sprite>
+			<selected_sprite>NURGL_ABILITY_BUTTON_SELECTED</selected_sprite>
+			<disabled_sprite>NURGL_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>Righteousness_of_Faith</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>army_fatigue</name>
+					<target>own_army</target>
+					<fatigue_modifier>-2000</fatigue_modifier>
+					<permanent>false</permanent>
+				</hero_ability_effect>
+<hero_ability_effect>
+					<name>army_fatigue</name>
+					<target>enemy_armies</target>
+					<fatigue_modifier>2000</fatigue_modifier>
+					<permanent>false</permanent>
+				</hero_ability_effect>
+</hero_ability_effects>
+</hero_ability>		
+<hero_ability>    
+			<name>Plague_Ability</name>
+			<duration>30</duration>
+                        <activations>150</activations>
+			<cooldown>299</cooldown>
+			<normal_tooltip_label>EMT_PLAGUE</normal_tooltip_label>
+			<selected_tooltip_label>EMT_PLAGUE</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_PLAGUE</disabled_tooltip_label>
+			<normal_sprite>NURGL_ABILITY_BUTTON</normal_sprite>
+			<selected_sprite>NURGL_ABILITY_BUTTON_SELECTED</selected_sprite>
+			<disabled_sprite>NURGL_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>The_Flower_of_Chivalry</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>soldier_combat_effectiveness</name>
+					<target>enemy_armies</target>
+					<kill_chance_modifier>0.7</kill_chance_modifier>
+				</hero_ability_effect>
+			</hero_ability_effects>
+<hero_ability_effect>
+                                        <name>army_morale</name> 
+                                        <target>enemy_armies</target> 
+                                        <morale_modifier>-15</morale_modifier> 
+                        </hero_ability_effect>
+</hero_ability>	
+<hero_ability>    
+			<name>Passion_to_violence_Ability</name>
+			<duration>120</duration>
+			<normal_tooltip_label>EMT_PASSION_TO_VIOLENCE</normal_tooltip_label>
+			<selected_tooltip_label>EMT_PASSION_TO_VIOLENCE</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_PASSION_TO_VIOLENCE</disabled_tooltip_label>
+			<normal_sprite>TZINCH_ABILITY_BUTTON</normal_sprite>
+			<selected_sprite>TZINCH_ABILITY_BUTTON_SELECTED</selected_sprite>
+			<disabled_sprite>TZINCH_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>Righteousness_of_Faith</sound_effect>
+			<hero_ability_effects>
+<hero_ability_effect>
+					<name>lock_morale</name>
+					<target>own_army</target>
+					<morale_level>impetuous</morale_level>
+				</hero_ability_effect>
+</hero_ability_effects>
+</hero_ability>	
+<hero_ability>    
+			<name>To_a_step_back_Ability</name>
+			<duration>60</duration>
+			<normal_tooltip_label>EMT_TO_THE_STEP_BACK</normal_tooltip_label>
+			<selected_tooltip_label>EMT_TO_THE_STEP_BACK</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_TO_THE_STEP_BACK</disabled_tooltip_label>
+			<normal_sprite>EGL_ABILITY_BUTTON_DISABLED</normal_sprite>
+			<selected_sprite>EGL_ABILITY_BUTTON</selected_sprite>
+			<disabled_sprite>EGL_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>The_Flower_of_Chivalry</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>army_fatigue</name>
+					<target>own_army</target>
+					<fatigue_modifier>-2000</fatigue_modifier>
+					<permanent>true</permanent>
+				</hero_ability_effect>
+				<hero_ability_effect>
+					<name>lock_morale</name>
+					<target>own_army</target>
+					<morale_level>impetuous</morale_level>
+				</hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>	
+<hero_ability>    
+			<name>Death_to_traitors_Ability</name>
+			<duration>60</duration>
+			<normal_tooltip_label>EMT_DEATH_TO_TRAITORS</normal_tooltip_label>
+			<selected_tooltip_label>EMT_DEATH_TO_TRAITORS</selected_tooltip_label>
+			<disabled_tooltip_label>EMT_DEATH_TO_TRAITORS</disabled_tooltip_label>
+			<normal_sprite>CHEKIST_ABILITY_BUTTON_DISABLED</normal_sprite>
+			<selected_sprite>CHEKIST_ABILITY_BUTTON</selected_sprite>
+			<disabled_sprite>CHEKIST_ABILITY_BUTTON_DISABLED</disabled_sprite>
+			<sound_effect>The_Flower_of_Chivalry</sound_effect>
+			<hero_ability_effects>
+				<hero_ability_effect>
+					<name>army_fatigue</name>
+					<target>own_army</target>
+					<fatigue_modifier>-2000</fatigue_modifier>
+					<permanent>true</permanent>
+				</hero_ability_effect>
+				<hero_ability_effect>
+					<name>lock_morale</name>
+					<target>own_army</target>
+					<morale_level>impetuous</morale_level>
+				</hero_ability_effect>
+			</hero_ability_effects>
+		</hero_ability>	
+
+</hero_abilities>
+
+</root>

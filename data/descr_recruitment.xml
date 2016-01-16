@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<root>
+    <recruitment slots_required="1"/>
+    <retraining slots_required="1"/>
+    <agent slots_required="1"/>
+    
+    <deplenish_pools_with_caps flag="true"/>
+    <clear_pools_with_caps flag="true"/>
+    <add_initial_with_caps flag="true"/>
+    <add_disband_no_caps flag="true"/>
+    <deplenish_multiplier value="5.0"/>
+    <deplenish_offset value="-0.5"/>
+    <lost percentage_pool_reduction="0"/>
+    <occupy percentage_pool_reduction="50"/>
+    <sack percentage_pool_reduction="75"/>
+    <exterminate percentage_pool_reduction="100"/>
+</root>

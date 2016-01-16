@@ -1,0 +1,676 @@
+<?xml version="1.0"?>
+<root>
+   <area_effects>
+      <!--
+        Types correspond to names in AREA_EFFECT_STRINGS.
+        Area_attack_set can have as many effects as you like,
+        but in code the id returned when you add a set will be
+        refer to the last effect.
+        -->
+      <area_effect>    
+         <name>ae_cow_carcass</name>
+         <type>nausea</type>
+         <ground_effect>cow_impact_ground_set</ground_effect>
+         <floating_effect>cow_impact_wall_set</floating_effect>
+         <radius>5.0</radius>
+         <duration>60</duration>
+         <banner_colour>
+            <red>221</red>
+            <green>242</green>
+            <blue>44</blue>
+		 </banner_colour>
+         <banner_colour_alpha_min>32</banner_colour_alpha_min>
+         <banner_colour_alpha_max>160</banner_colour_alpha_max>
+         <morale_effect>-25</morale_effect>
+         <morale_max>16</morale_max>
+      </area_effect>
+      <area_effect>    
+         <name>ae_greek_fire_fear</name>
+         <type>nausea</type>
+         <radius>2.0</radius>
+         <duration>30</duration>
+         <banner_colour>
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+		 </banner_colour>
+         <banner_colour_alpha_min>32</banner_colour_alpha_min>
+         <banner_colour_alpha_max>160</banner_colour_alpha_max>
+         <morale_effect>-10</morale_effect>
+         <morale_max>16</morale_max>
+      </area_effect>
+      <area_effect>    
+         <name>ae_greek_fire</name>
+         <type>explosion</type>
+         <impulse_radius>5.0</impulse_radius>         
+         <impulse_force>5.0</impulse_force>
+         <effective_radius>8.5</effective_radius>
+         <effective_damage>8.5</effective_damage>
+         <kill_radius>8.5</kill_radius>
+         <kill_damage>8.0</kill_damage>
+         <fiery>2</fiery>
+      </area_effect>
+      <area_effect>    
+         <name>ae_meteor_fire</name>
+         <type>explosion</type>
+         <impulse_radius>3.0</impulse_radius>         
+         <impulse_force>0.1</impulse_force>
+         <effective_radius>2.0</effective_radius>
+         <effective_damage>2.0</effective_damage>
+         <kill_radius>1.0</kill_radius>
+         <kill_damage>20.0</kill_damage>
+         <fiery>1</fiery>
+      </area_effect>
+      <area_effect>    
+         <name>air_burst_test</name>
+         <type>projectile</type>
+         <effect>man_impact_tiny_set</effect>
+         <explosion_force_min>1.0</explosion_force_min>
+         <explosion_force_max>10.0</explosion_force_max>
+         <projectile_type>air_burst_fire</projectile_type>
+         <!-- Do new projectiles have same velocity as parent (true/false) -->
+         <preserve_momentum>true</preserve_momentum>
+         <!-- Direction projectiles are fired by the explosion (forward, backward, up or down) -->
+         <direction>forward</direction>
+         <!-- max deviation of projectiles from direction -->
+         <scatter_angle>180</scatter_angle>         
+         <projectile_number>14</projectile_number>
+      </area_effect>
+     <area_effect>    
+         <name>aeset_meteor_fire</name>
+         <type>area_effect_set</type>
+	 <effect delay="0.2">ae_meteor_fire</effect>
+	 <effect delay="1.0">ph_fire_burn4</effect>
+	 <effect delay="2.0">ph_fire_burn3</effect>
+	 <effect delay="3.0">ph_fire_burn2</effect>
+	 <effect delay="4.0">ph_fire_burn1</effect>
+	  </area_effect>
+      <area_effect>    
+         <name>ae_greek_fire_burn</name>
+         <type>explosion</type>
+         <impulse_radius>0.0</impulse_radius>         
+         <impulse_force>0.0</impulse_force>
+         <effective_radius>1.2</effective_radius>
+         <effective_damage>1.2</effective_damage>
+         <kill_radius>1.2</kill_radius>
+         <kill_damage>0.0</kill_damage>
+         <fiery>1</fiery>
+      </area_effect>
+      <area_effect>    
+         <name>ae_holy_inspiration</name>
+         <type>holy</type>
+         <radius>60.0</radius>
+         <morale_effect>10</morale_effect>
+      </area_effect>
+	  <area_effect>    
+         <name>ae_holy_inspiration_beer</name>
+         <type>holy</type>
+         <radius>80.0</radius>
+         <morale_effect>20</morale_effect>
+      </area_effect>
+	  <area_effect>    
+         <name>ae_holy_inspiration_bell</name>
+         <type>holy</type>
+         <radius>100.0</radius>
+         <morale_effect>30</morale_effect>
+      </area_effect>
+      <area_effect>    
+         <name>ae_naphtha_fire</name>
+         <type>fire</type>
+         <effect>nahptha_fire_set</effect>
+         <radius>2.5</radius>
+         <height>4.0</height>
+         <duration>5</duration>
+		 <kill_radius>2.2</kill_radius>
+         <kill_damage>20.0</kill_damage>
+         <fiery>2</fiery>
+      </area_effect>
+      <area_effect>    
+         <name>ae_medium_fire</name>
+         <type>fire</type>
+         <radius>2.0</radius>
+         <height>2.0</height>
+         <delay>1000</delay>
+         <duration>60</duration>
+      </area_effect> 
+ <area_effect>    
+         <name>ae_trebuchet_shot</name>
+         <type>explosion</type>
+         <impulse_radius>10.0</impulse_radius>         
+         <impulse_force>425.0</impulse_force>
+         <effective_radius>8.5</effective_radius>
+         <effective_damage>6.5</effective_damage>
+         <kill_radius>4.5</kill_radius>
+         <kill_damage>10.0</kill_damage>
+         <fiery>0</fiery>
+      </area_effect>
+       <area_effect>    
+         <name>ae_barrel_explosion</name>
+         <type>explosion</type>
+         <impulse_radius>10.0</impulse_radius>         
+         <impulse_force>100.0</impulse_force>
+         <effective_radius>8.0</effective_radius>
+         <effective_damage>2.5</effective_damage>
+         <kill_radius>3.0</kill_radius>
+         <kill_damage>10.0</kill_damage>
+         <fiery>1</fiery>
+    </area_effect>
+    <area_effect>    
+         <name>ae_mortar_shot</name>
+         <type>explosion</type>
+         <impulse_radius>6.0</impulse_radius>         
+         <impulse_force>425.0</impulse_force>
+         <effective_radius>3.5</effective_radius>
+         <effective_damage>2.5</effective_damage>
+         <kill_radius>1.5</kill_radius>
+         <kill_damage>0.0</kill_damage>
+         <fiery>0</fiery>
+      </area_effect>     
+      <area_effect>    
+         <name>ae_cannon_shot_large</name>
+         <type>explosion</type>
+         <impulse_radius>7.0</impulse_radius>         
+         <impulse_force>425.0</impulse_force>
+         <effective_radius>5.0</effective_radius>
+         <effective_damage>3.0</effective_damage>
+         <kill_radius>1.5</kill_radius>
+         <kill_damage>0.0</kill_damage>
+         <fiery>0</fiery>
+      </area_effect>
+    <area_effect>    
+         <name>ae_small_cannon_shot</name>
+         <type>explosion</type>
+         <impulse_radius>5.0</impulse_radius>         
+         <impulse_force>425.0</impulse_force>
+         <effective_radius>3.5</effective_radius>
+         <effective_damage>1.5</effective_damage>
+         <kill_radius>0.5</kill_radius>
+         <kill_damage>0.0</kill_damage>
+         <fiery>0</fiery>
+      </area_effect>
+	  <area_effect>    
+         <name>ae_catapult_shot</name>
+         <type>explosion</type>
+         <impulse_radius>6.0</impulse_radius>         
+         <impulse_force>425.0</impulse_force>
+         <effective_radius>4.0</effective_radius>
+         <effective_damage>2.0</effective_damage>
+         <kill_radius>1.0</kill_radius>
+         <kill_damage>0.0</kill_damage>
+         <fiery>0</fiery>
+      </area_effect>
+      <area_effect>    
+         <name>ae_hellcannon_fire_fear</name>
+         <type>nausea</type>
+         <radius>8.0</radius>
+         <duration>45</duration>
+         <banner_colour>
+            <red>175</red>
+            <green>0</green>
+            <blue>0</blue>
+		 </banner_colour>
+         <banner_colour_alpha_min>32</banner_colour_alpha_min>
+         <banner_colour_alpha_max>160</banner_colour_alpha_max>
+         <morale_effect>-500</morale_effect>
+         <morale_max>0</morale_max>
+      </area_effect>
+      <area_effect>    
+         <name>ae_hellcannon_kernel</name>
+         <type>explosion</type>
+         <impulse_radius>12.0</impulse_radius>         
+         <impulse_force>425.0</impulse_force>
+         <effective_radius>7.0</effective_radius>
+         <effective_damage>5.0</effective_damage>
+         <kill_radius>3.0</kill_radius>
+         <kill_damage>0.0</kill_damage>
+         <fiery>1</fiery>
+      </area_effect>
+      <area_effect>    
+         <name>ae_hellcannon_fire</name>
+         <type>fire</type>
+         <radius>2.0</radius>
+         <height>2.0</height>
+         <delay>1000</delay>
+         <duration>45</duration>
+      </area_effect>      
+	  <area_effect>    
+         <name>aeset_hellcannon_shot</name>
+         <type>area_effect_set</type>
+        
+		<effect delay="0.1">ae_hellcannon_kernel</effect>
+		<effect delay="0.1">ae_hellcannon_fire_fear</effect>
+		<effect delay="0.1">ae_hellcannon_fire</effect>		
+	  </area_effect>
+      <area_effect>    
+         <name>ae_rocket_shot</name>
+         <type>explosion</type>
+         <impulse_radius>6.0</impulse_radius>         
+         <impulse_force>425.0</impulse_force>
+         <effective_radius>3.5</effective_radius>
+         <effective_damage>2.5</effective_damage>
+         <kill_radius>1.0</kill_radius>
+         <kill_damage>5.0</kill_damage>
+         <fiery>1</fiery>
+      </area_effect>
+      <area_effect>    
+         <name>ae_nahptha_shot</name>
+         <type>explosion</type>
+         <effect>ae_medium_fire</effect>
+         <impulse_radius>0.5</impulse_radius>         
+         <impulse_force>5.0</impulse_force>
+         <effective_radius>0.5</effective_radius>
+         <effective_damage>0.5</effective_damage>
+         <kill_radius>0.25</kill_radius>
+         <kill_damage>0.0</kill_damage>
+         <fiery>1</fiery>
+      </area_effect>
+      <area_effect>    
+         <name>aeset_cannon_shot_large_fiery</name>
+         <type>area_effect_set</type>
+	 <effect delay="1">ae_medium_fire</effect>
+      </area_effect> 
+	  <area_effect>    
+         <name>ae_net_shot</name>
+         <type>explosion</type>
+         <impulse_radius>4.0</impulse_radius>         
+         <impulse_force>300.0</impulse_force>
+         <effective_radius>2.0</effective_radius>
+         <effective_damage>0.0</effective_damage>
+         <kill_radius>0.0</kill_radius>
+         <kill_damage>0.0</kill_damage>
+         <fiery>0</fiery>
+      </area_effect> 
+     <area_effect>    
+         <name>aeset_greek_fire</name>
+         <type>area_effect_set</type>
+	 <effect delay="0.2">ae_greek_fire</effect>
+	 <effect delay="0.2">ae_greek_fire_fear</effect>
+	 <effect delay="0.4">ae_greek_fire_burn</effect>
+	 <effect delay="0.6">ae_greek_fire_burn</effect>
+	 <effect delay="0.8">ae_greek_fire_burn</effect>
+	 <effect delay="1.0">ae_greek_fire_burn</effect>
+	 
+	 <effect delay="1.2">ae_greek_fire_burn</effect>
+	 <effect delay="1.4">ae_greek_fire_burn</effect>
+	 <effect delay="1.6">ae_greek_fire_burn</effect>
+	 <effect delay="1.8">ae_greek_fire_burn</effect>
+	 <effect delay="2.0">ae_greek_fire_burn</effect>
+	 
+	 <effect delay="2.2">ae_greek_fire_burn</effect>
+	 <effect delay="2.4">ae_greek_fire_burn</effect>
+	 <effect delay="2.6">ae_greek_fire_burn</effect>
+	 <effect delay="2.8">ae_greek_fire_burn</effect>
+	 <effect delay="3.0">ae_greek_fire_burn</effect>
+	 
+	 <effect delay="3.2">ae_greek_fire_burn</effect>
+	 <effect delay="3.4">ae_greek_fire_burn</effect>
+	 <effect delay="3.6">ae_greek_fire_burn</effect>
+	 <effect delay="3.8">ae_greek_fire_burn</effect>
+	 <effect delay="4.0">ae_greek_fire_burn</effect>
+	 
+	 <effect delay="4.2">ae_greek_fire_burn</effect>
+	 <effect delay="4.4">ae_greek_fire_burn</effect>
+	 <effect delay="4.6">ae_greek_fire_burn</effect>
+	 <effect delay="4.8">ae_greek_fire_burn</effect>
+	 <effect delay="5.0">ae_greek_fire_burn</effect>
+	 
+	 <effect delay="5.2">ae_greek_fire_burn</effect>
+	 <effect delay="5.4">ae_greek_fire_burn</effect>
+	 <effect delay="5.6">ae_greek_fire_burn</effect>
+	 <effect delay="5.8">ae_greek_fire_burn</effect>
+	 <effect delay="6.0">ae_greek_fire_burn</effect>
+	 
+	 <effect delay="6.2">ae_greek_fire_burn</effect>
+	 <effect delay="6.4">ae_greek_fire_burn</effect>
+	 <effect delay="6.6">ae_greek_fire_burn</effect>
+	 <effect delay="6.8">ae_greek_fire_burn</effect>
+	 <effect delay="7.0">ae_greek_fire_burn</effect>
+	 
+	 <effect delay="7.2">ae_greek_fire_burn</effect>
+	 <effect delay="7.4">ae_greek_fire_burn</effect>
+	 <effect delay="7.6">ae_greek_fire_burn</effect>
+	 <effect delay="7.8">ae_greek_fire_burn</effect>
+	 <effect delay="8.0">ae_greek_fire_burn</effect>
+	  </area_effect>
+	       <area_effect>    
+         <name>aeset_mangonel_fire</name>
+         <type>area_effect_set</type>
+	 <effect delay="0.2">ae_greek_fire</effect>
+	 <effect delay="0.4">ae_greek_fire_burn</effect>
+	 <effect delay="0.6">ae_greek_fire_burn</effect>
+	 <effect delay="0.8">ae_greek_fire_burn</effect>
+	 <effect delay="1.0">ae_greek_fire_burn</effect>
+	 
+	 <effect delay="1.2">ae_greek_fire_burn</effect>
+	 <effect delay="1.4">ae_greek_fire_burn</effect>
+	 <effect delay="1.6">ae_greek_fire_burn</effect>
+	 <effect delay="1.8">ae_greek_fire_burn</effect>
+	 <effect delay="2.0">ae_greek_fire_burn</effect>
+	 
+	 <effect delay="2.2">ae_greek_fire_burn</effect>
+	 <effect delay="2.4">ae_greek_fire_burn</effect>
+	 <effect delay="2.6">ae_greek_fire_burn</effect>
+	 <effect delay="2.8">ae_greek_fire_burn</effect>
+	 <effect delay="3.0">ae_greek_fire_burn</effect>
+	 
+	 <effect delay="3.2">ae_greek_fire_burn</effect>
+	 <effect delay="3.4">ae_greek_fire_burn</effect>
+	 <effect delay="3.6">ae_greek_fire_burn</effect>
+	 <effect delay="3.8">ae_greek_fire_burn</effect>
+	 <effect delay="4.0">ae_greek_fire_burn</effect>
+	 
+	 <effect delay="4.2">ae_greek_fire_burn</effect>
+	 <effect delay="4.4">ae_greek_fire_burn</effect>
+	 <effect delay="4.6">ae_greek_fire_burn</effect>
+	 <effect delay="4.8">ae_greek_fire_burn</effect>
+	 <effect delay="5.0">ae_greek_fire_burn</effect>
+	 
+	 <effect delay="5.2">ae_greek_fire_burn</effect>
+	 <effect delay="5.4">ae_greek_fire_burn</effect>
+	 <effect delay="5.6">ae_greek_fire_burn</effect>
+	 <effect delay="5.8">ae_greek_fire_burn</effect>
+	 <effect delay="6.0">ae_greek_fire_burn</effect>
+	 
+	 <effect delay="6.2">ae_greek_fire_burn</effect>
+	 <effect delay="6.4">ae_greek_fire_burn</effect>
+	 <effect delay="6.6">ae_greek_fire_burn</effect>
+	 <effect delay="6.8">ae_greek_fire_burn</effect>
+	 <effect delay="7.0">ae_greek_fire_burn</effect>
+	 
+	 <effect delay="7.2">ae_greek_fire_burn</effect>
+	 <effect delay="7.4">ae_greek_fire_burn</effect>
+	 <effect delay="7.6">ae_greek_fire_burn</effect>
+	 <effect delay="7.8">ae_greek_fire_burn</effect>
+	 <effect delay="8.0">ae_greek_fire_burn</effect>
+	  </area_effect>
+      <area_effect>    
+         <name>ae_boiling_oil</name>
+         <type>explosion</type>
+         <impulse_radius>3.0</impulse_radius>         
+         <impulse_force>0.0</impulse_force>
+         <effective_radius>1.5</effective_radius>
+         <effective_damage>1.0</effective_damage>
+         <kill_radius>1.5</kill_radius>
+         <kill_damage>1.5</kill_damage>
+         <fiery>1</fiery>
+      </area_effect>
+      <area_effect>    
+         <name>aeset_boiling_oil</name>
+         <type>area_effect_set</type>
+	 <effect delay="0.2">ae_boiling_oil</effect>
+	 <effect delay="0.2">ae_boiling_oil</effect>
+	 <effect delay="0.4">ae_boiling_oil</effect>
+	 <effect delay="0.6">ae_boiling_oil</effect>
+	 <effect delay="0.8">ae_boiling_oil</effect>
+	 <effect delay="1.0">ae_boiling_oil</effect>
+	 
+	 <effect delay="1.2">ae_boiling_oil</effect>
+	 <effect delay="1.4">ae_boiling_oil</effect>
+	 <effect delay="1.6">ae_boiling_oil</effect>
+	 <effect delay="1.8">ae_boiling_oil</effect>
+	 <effect delay="2.0">ae_boiling_oil</effect>
+	 
+      </area_effect>   
+   <area_effect>    
+         <name>grape_shot_cannon</name>
+         <type>projectile</type>
+         <projectile_type>grape_bullet_cannon</projectile_type>
+         <explosion_force_min>5</explosion_force_min>
+         <explosion_force_max>20</explosion_force_max>
+         <preserve_momentum>true</preserve_momentum>
+         <direction>backwards</direction>
+         <scatter_angle>30</scatter_angle>         
+         <projectile_number>80</projectile_number>
+      </area_effect>  
+   <area_effect>    
+         <name>grape_shot</name>
+         <type>projectile</type>
+         <projectile_type>grape_bullet_bp</projectile_type>
+         <explosion_force_min>15</explosion_force_min>
+         <explosion_force_max>25</explosion_force_max>
+         <preserve_momentum>true</preserve_momentum>
+         <direction>horizontal</direction>
+         <scatter_angle>15</scatter_angle>         
+         <projectile_number>20</projectile_number>
+      </area_effect>  
+	  <area_effect>    
+         <name>wraith_scream_fear</name>
+         <type>nausea</type>
+         <radius>15.0</radius>
+         <duration>30</duration>
+         <banner_colour>
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+		 </banner_colour>
+         <banner_colour_alpha_min>32</banner_colour_alpha_min>
+         <banner_colour_alpha_max>160</banner_colour_alpha_max>
+         <morale_effect>-25</morale_effect>
+         <morale_max>16</morale_max>
+      </area_effect>
+	<area_effect>    
+         <name>ph_fire_burn1</name>
+         <type>explosion</type>
+         <impulse_radius>0.0</impulse_radius>         
+         <impulse_force>0.0</impulse_force>
+         <effective_radius>1.0</effective_radius>
+         <effective_damage>1.0</effective_damage>
+         <kill_radius>1.2</kill_radius>
+         <kill_damage>0.0</kill_damage>
+         <fiery>1</fiery>
+      </area_effect>
+      <area_effect>    
+         <name>ph_fire_burn2</name>
+         <type>explosion</type>
+         <impulse_radius>0.0</impulse_radius>         
+         <impulse_force>0.0</impulse_force>
+         <effective_radius>1.5</effective_radius>
+         <effective_damage>2.0</effective_damage>
+         <kill_radius>1.2</kill_radius>
+         <kill_damage>0.0</kill_damage>
+         <fiery>1</fiery>
+      </area_effect>
+      <area_effect>    
+         <name>ph_fire_burn3</name>
+         <type>explosion</type>
+         <impulse_radius>0.0</impulse_radius>         
+         <impulse_force>0.0</impulse_force>
+         <effective_radius>2.0</effective_radius>
+         <effective_damage>3.0</effective_damage>
+         <kill_radius>1.2</kill_radius>
+         <kill_damage>0.0</kill_damage>
+         <fiery>1</fiery>
+      </area_effect>
+      <area_effect>    
+         <name>ph_fire_burn4</name>
+         <type>explosion</type>
+         <impulse_radius>0.0</impulse_radius>         
+         <impulse_force>0.0</impulse_force>
+         <effective_radius>2.5</effective_radius>
+         <effective_damage>4.0</effective_damage>
+         <kill_radius>1.2</kill_radius>
+         <kill_damage>0.0</kill_damage>
+         <fiery>1</fiery>
+      </area_effect>
+      <area_effect>    
+         <name>ph_fire_burn5</name>
+         <type>explosion</type>
+         <impulse_radius>0.0</impulse_radius>         
+         <impulse_force>0.0</impulse_force>
+         <effective_radius>3.0</effective_radius>
+         <effective_damage>5.0</effective_damage>
+         <kill_radius>1.2</kill_radius>
+         <kill_damage>0.0</kill_damage>
+         <fiery>1</fiery>
+     </area_effect>
+     <area_effect>    
+         <name>ph_fire_burn6</name>
+         <type>explosion</type>
+         <impulse_radius>0.0</impulse_radius>         
+         <impulse_force>0.0</impulse_force>
+         <effective_radius>3.5</effective_radius>
+         <effective_damage>6.0</effective_damage>
+         <kill_radius>1.2</kill_radius>
+         <kill_damage>0.0</kill_damage>
+         <fiery>1</fiery>
+     </area_effect>
+     <area_effect>    
+         <name>aeset_phoenix_fire</name>
+         <type>area_effect_set</type>
+	 <effect delay="0.2">ph_fire_burn1</effect>
+	 <effect delay="1.2">ph_fire_burn1</effect>
+	 <effect delay="2.2">ph_fire_burn2</effect>
+	 <effect delay="3.2">ph_fire_burn2</effect>
+	 <effect delay="4.2">ph_fire_burn3</effect>
+	 <effect delay="5.2">ph_fire_burn3</effect>
+	 <effect delay="6.2">ph_fire_burn4</effect>
+	 <effect delay="7.2">ph_fire_burn4</effect>
+	 <effect delay="8.2">ph_fire_burn5</effect>
+	 <effect delay="9.2">ph_fire_burn5</effect>
+	 <effect delay="10.2">ph_fire_burn6</effect>
+	 <effect delay="11.2">ph_fire_burn6</effect>
+     </area_effect>
+    <area_effect>    
+         <name>ae_gork_stomp</name>
+         <type>explosion</type>
+         <impulse_radius>15.0</impulse_radius>         
+         <impulse_force>425.0</impulse_force>
+         <effective_radius>6.0</effective_radius>
+         <effective_damage>10.5</effective_damage>
+         <kill_radius>2.5</kill_radius>
+         <kill_damage>500.0</kill_damage>
+         <fiery>0</fiery>
+      </area_effect>     
+   <area_effect>    
+         <name>warhh_split</name>
+         <type>projectile</type>
+         <projectile_type>green_lighting_ork</projectile_type>
+         <explosion_force_min>0.5</explosion_force_min>
+         <explosion_force_max>0.5</explosion_force_max>
+         <preserve_momentum>true</preserve_momentum>
+         <direction>down</direction>
+         <scatter_angle>50</scatter_angle>         
+         <projectile_number>2</projectile_number>
+      </area_effect>  
+   <area_effect>    
+         <name>warhh_split1</name>
+         <type>projectile</type>
+         <projectile_type>green_lighting_ork</projectile_type>
+         <explosion_force_min>0.5</explosion_force_min>
+         <explosion_force_max>0.5</explosion_force_max>
+         <preserve_momentum>true</preserve_momentum>
+         <direction>down</direction>
+         <scatter_angle>50</scatter_angle>         
+         <projectile_number>2</projectile_number>
+      </area_effect>  
+   <area_effect>    
+         <name>warhh_split2</name>
+         <type>projectile</type>
+         <projectile_type>green_lighting_ork</projectile_type>
+         <explosion_force_min>0.5</explosion_force_min>
+         <explosion_force_max>0.5</explosion_force_max>
+         <preserve_momentum>true</preserve_momentum>
+         <direction>down</direction>
+         <scatter_angle>50</scatter_angle>         
+         <projectile_number>20</projectile_number>
+      </area_effect>  
+   <area_effect>    
+         <name>warhh_split3</name>
+         <type>projectile</type>
+         <projectile_type>phoenix_fire_missile</projectile_type>
+         <explosion_force_min>0.5</explosion_force_min>
+         <explosion_force_max>0.5</explosion_force_max>
+         <preserve_momentum>true</preserve_momentum>
+         <direction>down</direction>
+         <scatter_angle>50</scatter_angle>         
+         <projectile_number>20</projectile_number>
+      </area_effect>  
+      <area_effect>    
+         <name>ae_cannon_shot_very_large</name>
+         <type>explosion</type>
+         <impulse_radius>12.0</impulse_radius>         
+         <impulse_force>625.0</impulse_force>
+         <effective_radius>8.0</effective_radius>
+         <effective_damage>5.0</effective_damage>
+         <kill_radius>3.5</kill_radius>
+         <kill_damage>0.0</kill_damage>
+         <fiery>0</fiery>
+      </area_effect>
+	  <area_effect>    
+         <name>earthshaker_blast</name>
+         <type>area_effect_set</type>
+	 <effect delay="0.1">ae_earthshaker_blast0</effect>
+	 <effect delay="3.0">ae_earthshaker_blast1</effect>
+	 <effect delay="3.2">ae_earthshaker_blast2</effect>
+	 <effect delay="3.4">ae_earthshaker_blast3</effect>
+	 <effect delay="3.6">ae_earthshaker_blast4</effect>
+	 <effect delay="3.8">ae_earthshaker_blast5</effect>
+      </area_effect>   
+    <area_effect>    
+         <name>ae_earthshaker_blast0</name>
+         <type>explosion</type>
+         <impulse_radius>1.0</impulse_radius>         
+         <impulse_force>425.0</impulse_force>
+         <effective_radius>1.0</effective_radius>
+         <effective_damage>0.0</effective_damage>
+         <kill_radius>1.0</kill_radius>
+         <kill_damage>5000.0</kill_damage>
+         <fiery>0</fiery>
+      </area_effect>
+    <area_effect>    
+         <name>ae_earthshaker_blast1</name>
+         <type>explosion</type>
+         <impulse_radius>3.0</impulse_radius>         
+         <impulse_force>425.0</impulse_force>
+         <effective_radius>3.0</effective_radius>
+         <effective_damage>0.0</effective_damage>
+         <kill_radius>3.0</kill_radius>
+         <kill_damage>500.0</kill_damage>
+         <fiery>0</fiery>
+      </area_effect>
+    <area_effect>    
+         <name>ae_earthshaker_blast2</name>
+         <type>explosion</type>
+         <impulse_radius>8.0</impulse_radius>         
+         <impulse_force>425.0</impulse_force>
+         <effective_radius>1.0</effective_radius>
+         <effective_damage>0.0</effective_damage>
+         <kill_radius>4.0</kill_radius>
+         <kill_damage>450.0</kill_damage>
+         <fiery>0</fiery>
+      </area_effect>
+    <area_effect>    
+         <name>ae_earthshaker_blast3</name>
+         <type>explosion</type>
+         <impulse_radius>15.0</impulse_radius>         
+         <impulse_force>425.0</impulse_force>
+         <effective_radius>1.0</effective_radius>
+         <effective_damage>0.0</effective_damage>
+         <kill_radius>5.0</kill_radius>
+         <kill_damage>400.0</kill_damage>
+         <fiery>0</fiery>
+      </area_effect>
+    <area_effect>    
+         <name>ae_earthshaker_blast4</name>
+         <type>explosion</type>
+         <impulse_radius>23.0</impulse_radius>         
+         <impulse_force>425.0</impulse_force>
+         <effective_radius>1.0</effective_radius>
+         <effective_damage>0.0</effective_damage>
+         <kill_radius>6.0</kill_radius>
+         <kill_damage>350.0</kill_damage>
+         <fiery>0</fiery>
+      </area_effect>
+    <area_effect>    
+         <name>ae_earthshaker_blast5</name>
+         <type>explosion</type>
+         <impulse_radius>34.0</impulse_radius>         
+         <impulse_force>425.0</impulse_force>
+         <effective_radius>1.0</effective_radius>
+         <effective_damage>0.0</effective_damage>
+         <kill_radius>7.0</kill_radius>
+         <kill_damage>300.0</kill_damage>
+         <fiery>0</fiery>
+      </area_effect>
+   </area_effects>
+</root>
