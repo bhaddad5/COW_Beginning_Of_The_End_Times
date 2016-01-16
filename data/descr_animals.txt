@@ -1,0 +1,34 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+;
+;	This file contains the animal linkages; it gets parsed on application 
+;	startup but is not otherwise referred to. The data format is thus:
+;
+;	Fields should be entered in the order shown.
+;
+;	;						indicates a comment ;-)
+;	[]						indicates optional
+;
+;	type					indicates a new mount type, must be followed by id name string
+;	class					animal class (current possibilities - wardog, pig)
+;	model					model id from descr_model_battle 
+;	radius					animal radius
+;	[ x_radius ]			animal x axis radius for elliptical mounts (radius is y radius in this case) 
+;	height					animal height
+;	mass					animal mass
+
+type		wardog
+class		wardog
+model		Squig ;Chaos_hound
+radius		0.5
+x_radius	0.25
+height		1.0
+mass		1.5
+
+
+type		pig
+class		pig
+model		pig
+radius		0.35
+x_radius	0.35
+height		1.0
+mass		1.5

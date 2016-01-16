@@ -1,0 +1,63 @@
+religions
+{
+	catholic
+	orthodox
+	islam
+	pagan
+	heretic
+	dwarven
+	chaos
+	vampire
+	dark_elf
+	khemri
+}
+
+religion catholic
+{
+	pip_path	ui/pips/pip_catholic.tga
+}
+
+religion orthodox
+{
+	pip_path	ui/pips/pip_orthodox.tga
+}
+
+religion islam
+{
+	pip_path	ui/pips/pip_islam.tga
+}
+
+religion pagan
+{
+	pip_path	ui/pips/pip_pagan.tga
+}
+
+religion heretic
+{
+	pip_path	ui/pips/pip_heretic.tga
+}
+
+religion dwarven
+{
+	pip_path	ui/pips/pip_dwarven.tga
+}
+
+religion chaos
+{
+	pip_path	ui/pips/pip_chaos.tga
+}
+
+religion vampire
+{
+	pip_path	ui/pips/pip_vampire.tga
+}
+
+religion dark_elf
+{
+	pip_path	ui/pips/pip_dark_elf.tga
+}
+
+religion khemri
+{
+	pip_path	ui/pips/pip_khemri.tga
+}

@@ -1,0 +1,113 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;	descr_mounted_engines
+;
+;	This file contains data for mounted engine attachments such as those mounted on elephant artillery.  It
+;	is a subset of the data used for engines (see descr_engines.txt).  The layout is:
+;
+;	type:			type of mounted engine
+;	culture:		cultures that can have this engine
+;	reference_points:	[optional] path to reference points file
+;	artillery record as laid out in descr_engines.txt
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;Dodgy entries
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;type				elephant_serpentine
+;culture				all
+;reference_points		siege_engines/Elephant_cannon_lod0.modelReferencePoints
+;missile_pos			0.0 1.0 0.0
+;crew_animations
+;    crank           		elephant_crew_reload
+;    crank_attachment		Right_Load, 	none, 	       	none,			cannon_ball, 	  	cannon_ball, 		none, 		  	none
+;    fire            		elephant_crew_fire	
+;end
+;shot_pfx_front			cannon_shot_culverin
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;type				elephant_rocket_launcher
+;culture				all
+;reference_points		siege_engines/Elephant_rocket_lod0.modelReferencePoints
+;missile_pos			0.0 1.0 0.0
+;crew_animations
+;    crank           		elephant_crew_reload
+;    crank_attachment		Right_Load, 	none, 	       	none,			cannon_ball, 	  	cannon_ball, 		none, 		  	none
+;    fire            		elephant_crew_fire
+;end
+;normal_shots			6	;36 for the bad boy
+;shot_delay			6
+;shot_pfx_front			cannon_shot_rocket_launcher_front
+;shot_pfx_back			cannon_shot_rocket_launcher_back
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;Proper entries
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+type				elephant_serpentine
+culture				all
+class				serpentine
+reference_points		siege_engines/basilisk_idle.modelReferencePoints
+missile_pos			0.0 1.0 0.0
+crew_animations
+    fire            	Crew_Rear, crew_right_load_1, crew_right_load_2, crew_right_load_3, crew_right_load_4cycle, crew_right_load_5, crew_right_load_4cycle, crew_right_load_5, crew_right, crew_rear_fire_idle
+end
+shot_pfx_front			cannon_shot_Culverin_set
+shot_sfx			ANIM_Serpentine_Fire
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+type				elephant_rocket_launcher
+culture				all
+class				rocket_launcher
+reference_points		siege_engines/basilisk_idle.modelReferencePoints
+missile_pos			0.0 1.0 0.0
+crew_animations
+    crank           		Rocket_Crew,  	elephant_crew_reload,	elephant_crew_idle, 
+;    crank_attachment		Right_Load,  	none, 	       		none,	
+    fire            		Rocket_Crew,  	elephant_crew_fire,	elephant_crew_idle
+end
+normal_shots			1	;36 for the bad boy
+shot_delay			160
+shot_pfx_front			cannon_shot_Culverin_set
+shot_sfx			ANIM_Serpentine_Fire
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+type				ratling_guns
+culture				all
+class				rocket_launcher
+reference_points		siege_engines/siege_mortar.modelreferencepoints
+missile_pos			0.0 0.0 0.0
+crew_animations
+    crank           				
+;    crank_attachment			
+    fire            		Rocket_Crew,  	elephant_crew_fire, elephant_crew_idle
+end
+normal_shots			10	;36 for the bad boy
+shot_delay			6
+shot_pfx_front			ratling_effect_set
+shot_sfx			Ribault_Fire
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+type				elephant_daemon
+culture				all
+class				serpentine
+reference_points		siege_engines/basilisk_idle.modelReferencePoints
+missile_pos			0.0 1.0 0.0
+crew_animations
+    fire            	Crew_Rear, crew_right_load_1, crew_right_load_2, crew_right_load_3, crew_right_load_4cycle, crew_right_load_5, crew_right_load_4cycle, crew_right_load_5, crew_right, crew_rear_fire_idle
+end
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

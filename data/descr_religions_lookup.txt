@@ -1,0 +1,10 @@
+catholic
+orthodox
+islam
+pagan
+heretic
+dwarven
+chaos
+vampire
+dark_elf
+khemri

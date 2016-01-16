@@ -1,0 +1,62 @@
+; Naimad's faction standing File  (XAI V3.2 PDER Oct 2008)
+; Removed all "papacy" rules, but the missions
+; Reworked all the rules to give more weight to religion 
+; Removed duplicated rules
+; Increase effects of all rules.
+; faction standing parameters
+; ===========================
+
+; initialisation parameters
+
+min_faction_standing	-1.0
+max_faction_standing	1.0
+
+relations_improved_thresholds
+{
+    0.25
+    0.4
+    0.8
+}
+
+relations_worsened_thresholds
+{
+    -0.8
+    -0.4
+    -0.25
+}
+
+; trigger information
+; faction_standing updated with the command:
+;   FactionStanding [AFFECTED_HANDLE] [affected_handle_parameters] opt:[MODIFER_HANDLE] opt:[modifier_handle_parameter_1] opt:[modifier_handle_parameter_1]
+;
+; Available AFFECTED_HANDLE's and their parameters are as follows:
+;
+;    factions { [faction_label_1] [faction_label_2] [etc] }		--> A list of factions to be affected, (own faction automatically excluded)
+;    target_faction							--> the target_faction attached to the event, (own faction automatically excluded)
+;    religion [religion_label]						--> all factions of the specified religion, (own faction automatically excluded)
+;    own_religion							--> all factions of the same religion as the faction of the event, (own faction automatically excluded)
+;    target_religion							--> all factions of the same religion as the target faction of the event, (own faction automatically excluded)
+;    global								--> the faction of the event (i.e. own faction)
+;    exclude_factions { [faction_label_1] [faction_label_2] [etc] }	--> A list of factions not to be affected, (own faction automatically excluded)
+;    allies								--> all factions allied with the faction attached to the trigger
+;    enemies								--> all factions at war with the faction attached to the trigger
+;    target_allies							--> all factions allied with the target faction attached to the trigger
+;    target_enemies							--> all factions at war with the target_faction attached to the trigger
+;
+; Available MODIFIER_HANDLE's and their corresponding parameters
+;
+;    [value]					--> add this 'value' to the affected faction standings
+;    amount [divisor] [value]			--> for every 'divisor' unit of the event amount, add 'value' to the affected faction standings
+;    income [divisor] [value]			--> for every 'divisor' unit of the event factions income, add 'value' to the affected faction standings
+;    normalise [target_faction_standing] [divisor]	--> for each affected faction standing, add (target_faction_standing - faction_standing)/divisor
+;    per_unit [value]				--> for each unit in the events army, add 'value' to the affected faction standings
+
+
+;RULES with religious buildings
+;Same religion factions will like you a little more, but all other will like you less as you are a threat to their "gods"
+;Huge catholic/muslim buildings will make your own religion mates to like you less.., yes.. they are jealows.. / Orthodox will act the opposite.
+;There should be more rules when you reach X buildings.. (under work)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; BUILD RELIGIOUS STRUCTURE CATHOLICS;;
+;;;;;;;;;;;;;;;;;;;;;------------------------------------------

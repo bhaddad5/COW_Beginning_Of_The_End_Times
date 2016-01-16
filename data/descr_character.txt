@@ -1,0 +1,1773 @@
+;
+;	This file contains the character profession attributes, the idea being that a
+;	character has a certain set of skills and a current profession. The character
+;	is represented by his profession: if he is acting as a general, he will get
+;	represented as a general of a strat_model dictated by his combat skills.
+;
+;	This file gets parsed on application startup but is not otherwise referred to.
+;	The data format is thus:
+;
+;	;						indicates a comment ;-)
+;
+;	type					indicates a new character type
+;
+;								must be followed by id name string (phrase)
+;
+;	faction					indicates one or more factions which use the following
+;								strat_model descriptions, valid entries are these:
+;
+;								venice, sicily, milan, denmark,
+;								egypt, scotland, aztecs, mongols, turks, france,
+;								hre, england, portugal, poland, byzantium, moors,
+;								russia, spain, hungary, slave
+;
+;								if a given faction is not present in a given character
+;								type listing, that faction cannot use characters of that
+;								type - so not all factions have access to all character
+;								professions
+;
+;	dictionary				specifies dictionary entry for character type name
+;
+;								note that there is one dictionary entry per type per
+;								faction set, allowing different names for the same
+;								character type - ie a diplomat barabarian could be a
+;								'chieftain', while a southern_european might be a 'legatus'
+;
+;	strat_model				model to represent the character on the strategy map
+;
+;	battle_model			model to represent the character on the battle map (optional)
+;	battle_equip			equipment character has on the battle field must be followed by a  weapon type,
+;							(not missile weapon type) and armour type
+;
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+starting_action_points	160	; default value for all characters and pathfinding calculations
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+type			named character
+
+actions			moving_normal, moving_quickmarch, garrison, assault, attack, besiege, entrench, ambush, diplomacy, bribe, exchange, building_fort, building_watchtower
+wage_base		200
+starting_action_points	160
+
+faction			venice
+dictionary		15
+strat_model		Empire_general_strat3
+strat_model		Empire_general_strat3
+strat_model		Marius
+strat_model		Pirazzo
+strat_model		Rikko
+strat_model		Bright_Wizard
+strat_model		Roderigo
+strat_model		Leopoldo
+strat_model		Vogel
+strat_model		Bernhard
+strat_model		Ragnar
+battle_model	Empire_general
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			sicily
+dictionary		15
+strat_model		Empire_general_strat3
+strat_model		Empire_general_strat3
+strat_model		Teoderik
+strat_model		Pirazzo
+strat_model		Rikko
+strat_model		Bright_Wizard
+strat_model		Roderigo
+strat_model		Leopoldo
+strat_model		Empire_general
+strat_model		Bernhard
+strat_model		Ragnar
+battle_model	Empire_general
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			milan
+dictionary		15
+strat_model		Empire_general_strat1
+strat_model		Empire_general_strat1
+strat_model		Hoh_count
+strat_model		Pirazzo
+strat_model		Rikko
+strat_model		Bright_Wizard
+strat_model		Roderigo
+strat_model		Leopoldo
+strat_model		Empire_general
+strat_model		Bernhard
+strat_model		Ragnar
+battle_model	Empire_general
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			papal_states
+dictionary		15
+strat_model		warpriest
+strat_model		warpriest
+battle_model	Warpriest_book
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			denmark
+dictionary		2
+strat_model		Chaoss_captain
+strat_model		Chaoss_captain
+strat_model		Archaon
+strat_model		Archaon
+strat_model		Lord_of_Khorne
+strat_model		Lord_of_Slaanesh
+strat_model		Lord_of_Tzeentch
+strat_model		Lord_of_Nurgl
+strat_model		Krom
+strat_model		Rykarth
+strat_model		Daemon_prince
+battle_model	Chaoss_general 
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			norway
+dictionary		2
+strat_model		Khorne_general
+strat_model		Khorne_geroldd
+strat_model		Lord_of_Khorne
+strat_model		Archaon
+strat_model		Lord_of_Khorne
+strat_model		Lord_of_Slaanesh
+strat_model		Lord_of_Tzeentch
+strat_model		Lord_of_Nurgl
+strat_model		Krom
+strat_model		Valkia
+strat_model		Daemon_prince
+battle_model	Khorne_general
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			teutonic_order
+dictionary		2
+strat_model		Slaane_general
+strat_model		Slaane_general
+strat_model		Lord_of_Slaanesh
+strat_model		Archaon
+strat_model		Lord_of_Khorne
+strat_model		Lord_of_Slaanesh
+strat_model		Lord_of_Tzeentch
+strat_model		Lord_of_Nurgl
+strat_model		Krom
+strat_model		Rykarth
+strat_model		keeperofsecrets
+battle_model	Slaane_general
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			lithuania
+dictionary		2
+strat_model		Tzeentch_general
+strat_model		Tzeentch_gerold
+strat_model		Lord_of_Tzeentch
+strat_model		Archaon
+strat_model		Lord_of_Khorne
+strat_model		Lord_of_Slaanesh
+strat_model		Lord_of_Tzeentch
+strat_model		Lord_of_Nurgl
+strat_model		Krom
+strat_model		Rykarth
+strat_model		changer
+battle_model	Tzeent_general
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			novgorod
+dictionary		2
+strat_model		NURG_general
+strat_model		NURG_general
+strat_model		Lord_of_Nurgl
+strat_model		Archaon
+strat_model		Lord_of_Khorne
+strat_model		Lord_of_Slaanesh
+strat_model		Lord_of_Tzeentch
+strat_model		Lord_of_Nurgl
+strat_model		Krom
+strat_model		Rykarth
+strat_model		Daemon_prince
+battle_model	Nurgll_general
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			egypt
+dictionary		2
+strat_model		bestigor
+strat_model		bestigor
+strat_model		bestigor
+battle_model	Bestigor
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			scotland
+dictionary		2
+strat_model		Empire_general_strat5
+strat_model		Empire_general_strat5
+strat_model		Todbringer
+strat_model		Pirazzo
+strat_model		Rikko
+strat_model		Bright_Wizard
+strat_model		Roderigo
+strat_model		Leopoldo
+strat_model		Wolf
+strat_model		Bernhard
+strat_model		Ragnar
+battle_model	Empire_general
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			aztecs
+dictionary		2
+strat_model		Chaos_Dwarf_General
+strat_model		Chaos_Dwarf_General
+strat_model		Rykarth
+strat_model		Oglah_khan
+strat_model		Chaos_Dwarf_General
+strat_model		Chaos_Dwarf_General
+strat_model		Ruglud
+strat_model		ork_capitan
+strat_model		ork_capitan
+battle_model	Chaos_dwarfs_general
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			mongols
+dictionary		2
+strat_model		DE_Executioner
+strat_model		DE_general
+strat_model		DE_general
+strat_model		DE_general_1
+strat_model		Anakonda
+strat_model		hag
+strat_model		DE_mages_lod0
+battle_model	DE_new_oficier
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			turks
+dictionary		2
+strat_model		ork_general
+strat_model		ork_heir
+strat_model		Grimgor
+strat_model		Oglah_khan
+strat_model		savage
+strat_model		Troll
+strat_model		Ruglud
+strat_model		ork_shaman_gen
+strat_model		ork_capitan
+battle_model	Boss_Black_orcs
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			france
+dictionary		2
+strat_model		Empire_general_strat1
+strat_model		Kessell
+strat_model		Oster_count
+strat_model		Pirazzo
+strat_model		Rikko
+strat_model		Bright_Wizard
+strat_model		Roderigo
+strat_model		Leopoldo
+strat_model		Empire_general
+strat_model		Bernhard
+strat_model		Ragnar
+battle_model	Empire_general
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			hre
+dictionary		2
+strat_model		Empire_general_strat2
+strat_model		Empire_general_strat2
+strat_model		Emperor
+strat_model		Pirazzo
+strat_model		Rikko
+strat_model		Bright_Wizard
+strat_model		Roderigo
+strat_model		Leopoldo
+strat_model		Helborg
+strat_model		Bernhard
+strat_model		Ragnar
+battle_model	Empire_general
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			saxons
+dictionary		2
+strat_model		Empire_general_strat4
+strat_model		Empire_general_strat4
+strat_model		Stir_count
+strat_model		Pirazzo
+strat_model		Rikko
+strat_model		Bright_Wizard
+strat_model		Roderigo
+strat_model		Leopoldo
+strat_model		Empire_general
+strat_model		Bernhard
+strat_model		Ragnar
+battle_model	Empire_general
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			england
+dictionary		2
+strat_model		HE_guard
+strat_model		HE_guard
+strat_model		HE_guard
+strat_model		HE_mage
+battle_model	HE_guard
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			normans
+dictionary		2
+strat_model		Chaoss_captain
+strat_model		Chaoss_captain
+strat_model		Chaoss_captain
+strat_model		Chaoss_captain
+strat_model		Chaoss_captain
+strat_model		Chaoss_captain
+strat_model		Chaoss_captain
+strat_model		Chaoss_captain
+strat_model		Chaoss_captain
+strat_model		Bernhard
+strat_model		Ragnar
+battle_model	Keorl_Thunderhand
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			portugal
+dictionary		2
+strat_model		Empire_general_strat5
+strat_model		Empire_general_strat5
+strat_model		Wiss_count
+strat_model		Pirazzo
+strat_model		Rikko
+strat_model		Bright_Wizard
+strat_model		Roderigo
+strat_model		Leopoldo
+strat_model		Empire_general
+strat_model		Bernhard
+strat_model		Ragnar
+battle_model	Empire_general
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			poland
+dictionary		2
+strat_model		Dwarf_lord
+strat_model		Dwarf_lord
+strat_model		DWKing
+strat_model		Slayer
+strat_model		KingSlayer
+strat_model		Gotrek
+strat_model		Dwarf_Miner
+strat_model		Longdrong
+strat_model		Bugman
+strat_model		Ulther
+battle_model	Dwarven_lord
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			byzantium
+dictionary		2
+strat_model		Empire_general_strat2
+strat_model		Empire_general_strat2
+strat_model		Raukov
+strat_model		Pirazzo
+strat_model		Rikko
+strat_model		Bright_Wizard
+strat_model		Roderigo
+strat_model		Leopoldo
+strat_model		Bulllo
+strat_model		Bernhard
+strat_model		Ragnar
+battle_model	Empire_general
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			moors
+dictionary		2
+strat_model		Gob_shaman
+strat_model		Gob_shaman
+strat_model		Gob_shaman1
+strat_model		Oglah_khan
+strat_model		Gob_shaman
+strat_model		Gob_shaman
+strat_model		Ruglud
+strat_model		Gob_shaman
+strat_model		ork_capitan
+battle_model	Night_Goblin_Shaman
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			russia
+dictionary		2
+strat_model		Kislev_general
+strat_model		Kislev_general
+strat_model		Tzar
+strat_model		Pirazzo
+strat_model		Rikko
+strat_model		ICE_mage
+strat_model		Pashenko
+strat_model		Kajetan
+strat_model		Empire_general
+strat_model		Bernhard
+strat_model		Ragnar
+battle_model	kislev_general
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			spain
+dictionary		2
+strat_model		Empire_general_strat4
+strat_model		Empire_general_strat4
+strat_model		Helmut
+strat_model		Pirazzo
+strat_model		Rikko
+strat_model		Bright_Wizard
+strat_model		Roderigo
+strat_model		Leopoldo
+strat_model		Empire_general
+strat_model		Bernhard
+strat_model		Ragnar
+battle_model	Empire_general
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			hungary
+dictionary		2
+strat_model		Karshtain_general
+strat_model		Vampire_heir
+strat_model		Mannfried
+strat_model		Wraith
+strat_model		VAM_mage
+strat_model		Krell
+strat_model		vampire_leader
+strat_model		crypt_keeper
+strat_model		vampire_general
+strat_model		iseara
+battle_model	Karshtain_gene
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			slave
+dictionary		2
+strat_model		Empire_general
+strat_model		Empire_general
+strat_model		Empire_general
+strat_model		ork_general
+strat_model		Chaoss_captain
+strat_model		Troll
+strat_model		Kislev_general
+battle_model	Empire_general
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			timurids
+dictionary		2
+strat_model		skeleton2
+strat_model		skeleton2
+strat_model		skeleton2
+battle_model	anubis_officer
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			kalmar_union
+dictionary		2
+strat_model		rus_general
+strat_model		rus_heir
+strat_model		rus_grand_duke_kiy
+strat_model		Pirazzo
+strat_model		Rikko
+strat_model		rus_grand_duke_nov
+strat_model		Roderigo
+strat_model		Leopoldo
+strat_model		Sven_Carlsson
+strat_model		Bernhard
+battle_model	rus_general
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			skaven
+dictionary		2
+strat_model		Chaos_Dwarf_General
+strat_model		Chaos_Dwarf_General
+strat_model		Chaos_Dwarf_General
+strat_model		Chaos_Dwarf_General
+strat_model		Chaos_Dwarf_General
+strat_model		Chaos_Dwarf_General
+strat_model		Chaos_Dwarf_General
+strat_model		Chaos_Dwarf_General
+strat_model		Chaos_Dwarf_General
+battle_model	Skaven_Warlord
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+;faction			wood_elves
+;dictionary		2
+;strat_model		HE_guard
+;strat_model		HE_guard
+;strat_model		HE_guard
+;battle_model	HE_guard
+;battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+type			general
+
+actions	moving_normal, moving_quickmarch, garrison, assault, attack, besiege, entrench, ambush, exchange
+wage_base		0
+starting_action_points	160
+
+faction			venice
+dictionary		15
+strat_model		Empire_capitan_strat1
+battle_model	Empire_capitan
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			sicily
+dictionary		15
+strat_model		Empire_capitan_strat3
+battle_model	Empire_capitan
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			milan
+dictionary		15
+strat_model		Empire_capitan_strat1
+battle_model	Empire_capitan
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			papal_states
+dictionary		15
+strat_model		Empire_capitan_strat4
+battle_model	Warpriest
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			denmark
+dictionary		2
+strat_model		Chaoss_captain
+battle_model	Chaoss_captain
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			norway
+dictionary		2
+strat_model		Khorne_capitan
+battle_model	Khorne_capitan
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			teutonic_order
+dictionary		2
+strat_model		Slaanesh_capitan
+battle_model	Slaane_capitan
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			lithuania
+dictionary		2
+strat_model		Tzeent_capitan
+battle_model	Tzeent_capitan
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			novgorod
+dictionary		2
+strat_model		Nurgll_capitan
+battle_model	Nurgll_capitan
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			egypt
+dictionary		2
+strat_model		gor
+battle_model	Bestigor
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			scotland
+dictionary		2
+strat_model		Empire_capitan_strat5
+battle_model	Empire_capitan
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			aztecs
+dictionary		1
+strat_model		Chaos_Dwarf_Capitan
+battle_model	Chaos_dwarfs_warriors_1
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			mongols
+dictionary		2
+strat_model		DE_capitan
+battle_model	fabius_de_kapitan
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			turks
+dictionary		2
+strat_model		ork_capitan
+battle_model	Boss_Black_orcs
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			france
+dictionary		2
+strat_model		Empire_capitan_strat5
+battle_model	Empire_capitan
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			hre
+dictionary		2
+strat_model		Empire_capitan_strat3
+battle_model	Empire_capitan
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			saxons
+dictionary		2
+strat_model		Empire_capitan_strat2
+battle_model	Empire_capitan
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			england
+dictionary		2
+strat_model		HE_capitan
+battle_model	HE_capitan
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			normans
+dictionary		2
+strat_model		Chaoss_captain
+battle_model	Keorl_Thunderhand
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			portugal
+dictionary		2
+strat_model		Empire_capitan_strat3
+battle_model	Empire_capitan
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			poland
+dictionary		2
+strat_model		Longbeard
+battle_model	Dwarven_lord
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			byzantium
+dictionary		2
+strat_model		Empire_capitan_strat4
+battle_model	Empire_capitan
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			moors
+dictionary		2
+strat_model		Night_Goblin
+battle_model	Night_Goblin_Shaman
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			russia
+dictionary		2
+strat_model		kislev_captan
+battle_model	kislev_captan 
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			spain
+dictionary		2
+strat_model		Empire_capitan_strat2
+battle_model	Empire_capitan
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			hungary
+dictionary		2
+strat_model		Karshtain
+battle_model	Karshtain_capi
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			slave
+dictionary		2
+strat_model		Empire_capitan_strat3
+battle_model	Empire_capitan
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			timurids
+dictionary		2
+strat_model		skeleton2
+battle_model	Tomb_capitan
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			kalmar_union
+dictionary		2
+strat_model		rus_captain
+battle_model	rus_capitan
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			skaven
+dictionary		1
+strat_model		Chaos_Dwarf_Capitan
+battle_model	Skaven_Warlord
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+;faction			wood_elves
+;dictionary		2
+;strat_model		HE_capitan
+;battle_model	HE_capitan
+;battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+type			spy
+
+actions			moving_normal, spying
+wage_base		100
+starting_action_points	250
+
+faction			venice
+dictionary		15
+strat_model		euro_spy
+strat_model		byz_princes
+
+faction			sicily
+dictionary		15
+strat_model		euro_spy
+strat_model		byz_princes
+
+faction			milan
+dictionary		15
+strat_model		euro_spy
+strat_model		byz_princes
+
+faction			papal_states
+dictionary		15
+strat_model		euro_spy
+
+faction			denmark
+dictionary		2
+strat_model		fanatic_spy
+
+faction			norway
+dictionary		2
+strat_model		fanatic_spy
+
+faction			lithuania
+dictionary		2
+strat_model		fanatic_spy
+
+faction			teutonic_order
+dictionary		2
+strat_model		fanatic_spy
+
+faction			novgorod
+dictionary		2
+strat_model		fanatic_spy
+
+faction			egypt
+dictionary		2
+strat_model		islamic_spy
+
+faction			scotland
+dictionary		2
+strat_model		euro_spy
+strat_model		byz_princes
+
+faction			aztecs
+dictionary		1
+strat_model		Night_Goblin_spy
+
+faction			mongols
+dictionary		2
+strat_model		DE_spy
+
+faction			turks
+dictionary		2
+strat_model		Night_Goblin_spy
+
+faction			france
+dictionary		2
+strat_model		euro_spy
+strat_model		byz_princes
+
+faction			hre
+dictionary		2
+strat_model		euro_spy
+strat_model		byz_princes
+
+faction			saxons
+dictionary		2
+strat_model		euro_spy
+strat_model		byz_princes
+
+faction			england
+dictionary		2
+strat_model		HE_spy
+
+faction			normans
+dictionary		2
+strat_model		euro_spy
+
+faction			portugal
+dictionary		2
+strat_model		euro_spy
+strat_model		byz_princes
+
+faction			poland
+dictionary		2
+strat_model		northern_spy
+strat_model		euro_spy
+
+faction			byzantium
+dictionary		2
+strat_model		euro_spy
+strat_model		byz_princes
+
+faction			moors
+dictionary		2
+strat_model		Night_Goblin_spy
+
+faction			russia
+dictionary		2
+strat_model		rus_spy
+
+faction			spain
+dictionary		2
+strat_model		euro_spy
+strat_model		byz_princes
+
+faction			hungary
+dictionary		2
+strat_model		euro_spy
+
+;faction			slave
+;dictionary		2
+;strat_model		northern_spy
+
+faction			timurids
+dictionary		2
+strat_model		islamic_spy
+
+faction			kalmar_union
+dictionary		2
+strat_model		euro_spy
+
+faction			skaven
+dictionary		1
+strat_model		spy
+
+;faction			wood_elves
+;dictionary		2
+;strat_model		HE_spy
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+type			assassin
+
+actions			moving_normal, assassinate, sabotage
+wage_base		200
+starting_action_points	200
+
+faction			venice
+dictionary		15
+strat_model		witch_hunter_1
+strat_model		witch_hunter_2
+strat_model		witch_hunter_3
+
+faction			sicily
+dictionary		15
+strat_model		witch_hunter_1
+strat_model		witch_hunter_2
+strat_model		witch_hunter_3
+
+faction			milan
+dictionary		15
+strat_model		witch_hunter_1
+strat_model		witch_hunter_2
+strat_model		witch_hunter_3
+
+faction			papal_states
+dictionary		15
+strat_model		witch_hunter_1
+strat_model		witch_hunter_2
+strat_model		witch_hunter_3
+
+faction			denmark
+dictionary		2
+strat_model		fanatic_assassin
+
+faction			norway
+dictionary		2
+strat_model		fanatic_assassin
+
+faction			lithuania
+dictionary		2
+strat_model		fanatic_assassin
+
+faction			teutonic_order
+dictionary		2
+strat_model		fanatic_assassin
+
+faction			novgorod
+dictionary		2
+strat_model		fanatic_assassin
+
+faction			egypt
+dictionary		2
+strat_model		islamic_assassin
+
+faction			scotland
+dictionary		2
+strat_model		witch_hunter_1
+strat_model		witch_hunter_2
+strat_model		witch_hunter_3
+
+faction			aztecs
+dictionary		1
+strat_model		Night_Goblin_ass
+
+faction			mongols
+dictionary		2
+strat_model		DE_asassin
+
+faction			turks
+dictionary		2
+strat_model		Night_Goblin_ass
+
+faction			france
+dictionary		2
+strat_model		witch_hunter_1
+strat_model		witch_hunter_2
+strat_model		witch_hunter_3
+
+faction			hre
+dictionary		2
+strat_model		witch_hunter_1
+strat_model		witch_hunter_2
+strat_model		witch_hunter_3
+
+faction			saxons
+dictionary		2
+strat_model		witch_hunter_1
+strat_model		witch_hunter_2
+strat_model		witch_hunter_3
+
+faction			england
+dictionary		2
+strat_model		HE_assassin
+
+faction			normans
+dictionary		2
+strat_model		euro_assassin
+
+faction			portugal
+dictionary		2
+strat_model		witch_hunter_1
+strat_model		witch_hunter_2
+strat_model		witch_hunter_3
+
+faction			poland
+dictionary		2
+strat_model		northern_assassin
+
+faction			byzantium
+dictionary		2
+strat_model		witch_hunter_1
+strat_model		witch_hunter_2
+strat_model		witch_hunter_3
+
+faction			moors
+dictionary		2
+strat_model		Night_Goblin_ass
+
+faction			russia
+dictionary		2
+strat_model		rus_assassin
+
+faction			spain
+dictionary		2
+strat_model		witch_hunter_1
+strat_model		witch_hunter_2
+strat_model		witch_hunter_3
+
+faction			hungary
+dictionary		2
+strat_model		euro_assassin
+
+;faction			slave
+;dictionary		2
+;strat_model		assassin
+
+faction			timurids
+dictionary		2
+strat_model		islamic_assassin
+
+faction			kalmar_union
+dictionary		2
+strat_model		rus_assassin
+
+faction			skaven
+dictionary		1
+strat_model		assassin
+
+;faction			wood_elves
+;dictionary		2
+;strat_model		HE_assassin
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+type			diplomat
+
+actions			moving_normal, diplomacy, bribe
+wage_base		50
+starting_action_points	200
+
+faction			venice
+dictionary		15
+strat_model		euro_ambassador
+
+faction			sicily
+dictionary		15
+strat_model		euro_ambassador
+
+faction			milan
+dictionary		15
+strat_model		euro_ambassador
+
+faction			papal_states
+dictionary		15
+strat_model		euro_ambassador
+
+faction			denmark
+dictionary		2
+strat_model		northern_ambassador
+
+faction			egypt
+dictionary		2
+strat_model		northern_ambassador
+
+faction			scotland
+dictionary		2
+strat_model		euro_ambassador
+
+faction			aztecs
+dictionary		1
+strat_model		Longbeard_Diplomat
+
+faction			mongols
+dictionary		2
+strat_model		DE_spy
+
+faction			turks
+dictionary		2
+strat_model		Night_Goblin
+
+faction			france
+dictionary		2
+strat_model		euro_ambassador
+
+faction			hre
+dictionary		2
+strat_model		euro_ambassador
+
+faction			saxons
+dictionary		2
+strat_model		euro_ambassador
+
+faction			england
+dictionary		2
+strat_model		he_diplomat_strat
+
+faction			normans
+dictionary		2
+strat_model		northern_ambassador
+
+faction			portugal
+dictionary		2
+strat_model		euro_ambassador
+
+faction			poland
+dictionary		2
+strat_model		Longbeard_Diplomat
+
+faction			byzantium
+dictionary		2
+strat_model		euro_ambassador
+
+faction			moors
+dictionary		2
+strat_model		Night_Goblin
+
+faction			russia
+dictionary		2
+strat_model		rus_diplomat
+
+faction			spain
+dictionary		2
+strat_model		euro_ambassador
+
+faction			hungary
+dictionary		2
+strat_model		euro_ambassador
+
+;faction			slave
+;dictionary		2
+;strat_model		diplomat
+
+faction			timurids
+dictionary		2
+strat_model		byz_diplomat
+
+faction			kalmar_union
+dictionary		2
+strat_model		byz_diplomat
+
+faction			norway
+dictionary		2
+strat_model		fanatic
+
+faction			teutonic_order
+dictionary		2
+strat_model		fanatic
+
+faction			lithuania
+dictionary		2
+strat_model		Fanatic_tzeench
+
+faction			novgorod
+dictionary		2
+strat_model		fanatic
+
+faction			skaven
+dictionary		1
+strat_model		Longbeard_Diplomat
+
+;faction			wood_elves
+;dictionary		2
+;strat_model		he_diplomat_strat
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+type			admiral
+
+actions			moving_normal, quick_sail, blockade, disembark, exchange
+wage_base		50
+starting_action_points	280
+
+faction			lithuania
+dictionary		15
+strat_model		tzeench_admiral
+
+
+faction			novgorod
+dictionary		15
+strat_model		nurgl_admiral
+
+
+faction			denmark
+dictionary		15
+strat_model		khorne_admiral
+
+
+faction			norway
+dictionary		15
+strat_model		khorne_admiral
+
+
+faction			teutonic_order
+dictionary		15
+strat_model		chaos_admiral
+
+
+faction			venice
+dictionary		15
+strat_model		brutii_admiral
+
+faction			sicily
+dictionary		15
+strat_model		brutii_admiral
+
+faction			milan
+dictionary		15
+strat_model		brutii_admiral
+
+faction			papal_states
+dictionary		15
+strat_model		brutii_admiral
+
+faction			egypt
+dictionary		2
+strat_model		egypt_admiral
+
+faction			scotland
+dictionary		2
+strat_model		brutii_admiral
+
+faction			aztecs
+dictionary		1
+strat_model		chaos_dwarfs_admiral
+
+faction			mongols
+dictionary		2
+strat_model		dark_elven_admiral
+
+faction			turks
+dictionary		2
+strat_model		pontus_admiral
+
+faction			france
+dictionary		2
+strat_model		brutii_admiral
+
+faction			hre
+dictionary		2
+strat_model		brutii_admiral
+
+faction			saxons
+dictionary		2
+strat_model		brutii_admiral
+
+faction			england
+dictionary		2
+strat_model		high_elf_admiral
+
+faction			normans
+dictionary		2
+strat_model		norse_admiral
+
+faction			portugal
+dictionary		2
+strat_model		brutii_admiral
+
+faction			poland
+dictionary		2
+strat_model		dacia_admiral
+
+faction			byzantium
+dictionary		2
+strat_model		brutii_admiral
+
+faction			moors
+dictionary		2
+strat_model		numidia_admiral
+
+faction			russia
+dictionary		2
+strat_model		kislev_admiral
+
+faction			spain
+dictionary		2
+strat_model		brutii_admiral
+
+faction			hungary
+dictionary		2
+strat_model		thrace_admiral
+
+faction			kalmar_union
+dictionary		2
+strat_model		brutii_admiral
+
+faction			slave
+dictionary		2
+strat_model		slave_admiral
+
+faction			timurids
+dictionary		2
+strat_model		khemri_admiral
+
+faction			skaven
+dictionary		1
+strat_model		khorne_admiral
+
+;faction			wood_elves
+;dictionary		2
+;strat_model		high_elf_admiral
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+type			princess
+
+actions			moving_normal, diplomacy, bribe, marry
+wage_base		0
+starting_action_points	200
+
+faction			venice
+dictionary		15
+strat_model		southern_princess
+
+faction			sicily
+dictionary		15
+strat_model		southern_princess
+
+faction			milan
+dictionary		15
+strat_model		southern_princess
+
+faction			papal_states
+dictionary		15
+strat_model		southern_princess
+
+faction			denmark
+dictionary		2
+strat_model		northern_princess
+
+faction			egypt
+dictionary		2
+strat_model		princess
+
+faction			scotland
+dictionary		2
+strat_model		northern_princess
+
+faction			aztecs
+dictionary		1
+strat_model		princess
+
+faction			mongols
+dictionary		2
+strat_model		princess
+
+faction			turks
+dictionary		2
+strat_model		princess
+
+faction			france
+dictionary		2
+strat_model		northern_princess
+
+faction			hre
+dictionary		2
+strat_model		northern_princess
+
+faction			saxons
+dictionary		2
+strat_model		northern_princess
+
+faction			england
+dictionary		2
+strat_model		northern_princess
+
+faction			normans
+dictionary		2
+strat_model		northern_princess
+
+faction			portugal
+dictionary		2
+strat_model		southern_princess
+
+faction			poland
+dictionary		2
+strat_model		northern_princess
+
+faction			byzantium
+dictionary		2
+strat_model		southern_princess
+
+faction			moors
+dictionary		2
+strat_model		princess
+
+faction			russia
+dictionary		2
+strat_model		northern_princess
+
+faction			spain
+dictionary		2
+strat_model		southern_princess
+
+faction			hungary
+dictionary		2
+strat_model		northern_princess
+
+;faction			slave
+;dictionary		2
+;strat_model		princess
+
+faction			timurids
+dictionary		2
+strat_model		princess
+
+faction			teutonic_order
+dictionary		15
+strat_model		southern_princess
+
+faction			skaven
+dictionary		1
+strat_model		princess
+
+;faction			wood_elves
+;dictionary		2
+;strat_model		northern_princess
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+type			merchant
+
+actions			moving_normal, acquire
+wage_base		0
+starting_action_points	180
+
+faction			venice
+dictionary		15
+strat_model		euro_merchant
+strat_model		Dwarf_Miner_Merchant
+
+faction			sicily
+dictionary		15
+strat_model		euro_merchant
+strat_model		Dwarf_Miner_Merchant
+
+faction			milan
+dictionary		15
+strat_model		euro_merchant
+strat_model		Dwarf_Miner_Merchant
+
+faction			papal_states
+dictionary		15
+strat_model		euro_merchant
+
+faction			denmark
+dictionary		2
+strat_model		northern_merchant
+
+faction			teutonic_order
+dictionary		2
+strat_model		fanatic
+
+faction			norway
+dictionary		2
+strat_model		fanatic
+
+faction			novgorod
+dictionary		2
+strat_model		fanatic
+
+faction			lithuania
+dictionary		2
+strat_model		fanatic
+
+faction			egypt
+dictionary		2
+strat_model		islamic_merchant
+
+faction			scotland
+dictionary		2
+strat_model		euro_merchant
+strat_model		Dwarf_Miner_Merchant
+
+faction			aztecs
+dictionary		1
+strat_model		Dwarf_Miner_Merchant
+
+faction			mongols
+dictionary		2
+strat_model		islamic_merchant
+
+faction			turks
+dictionary		2
+strat_model		Night_Goblin_mer
+
+faction			france
+dictionary		2
+strat_model		euro_merchant
+strat_model		Dwarf_Miner_Merchant
+
+faction			hre
+dictionary		2
+strat_model		euro_merchant
+strat_model		Dwarf_Miner_Merchant
+
+faction			saxons
+dictionary		2
+strat_model		euro_merchant
+strat_model		Dwarf_Miner_Merchant
+
+faction			england
+dictionary		2
+strat_model		he_merch_strat
+strat_model		Dwarf_Miner_Merchant
+
+faction			normans
+dictionary		2
+strat_model		euro_merchant
+
+faction			portugal
+dictionary		2
+strat_model		euro_merchant
+strat_model		Dwarf_Miner_Merchant
+
+faction			poland
+dictionary		2
+strat_model		Dwarf_Miner_Merchant
+strat_model		Dwarf_Miner_Merchant
+
+faction			byzantium
+dictionary		2
+strat_model		euro_merchant
+strat_model		Dwarf_Miner_Merchant
+
+faction			moors
+dictionary		2
+strat_model		Night_Goblin_mer
+
+faction			russia
+dictionary		2
+strat_model		rus_merchant
+strat_model		Dwarf_Miner_Merchant
+
+faction			spain
+dictionary		2
+strat_model		euro_merchant
+strat_model		Dwarf_Miner_Merchant
+
+faction			hungary
+dictionary		2
+strat_model		sil_merchant
+
+;faction			slave
+;dictionary		2
+;strat_model		merchant
+
+faction			timurids
+dictionary		2
+strat_model		tomb_kings_merchant
+
+faction			kalmar_union
+dictionary		2
+strat_model		byz_merchant
+strat_model		Dwarf_Miner_Merchant
+
+faction			skaven
+dictionary		1
+strat_model		merchant
+
+;faction			wood_elves
+;dictionary		2
+;strat_model		he_merch_strat
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+type			priest
+
+actions			moving_normal, denounce
+wage_base		100
+starting_action_points	180
+
+faction			venice
+dictionary		15
+strat_model		warpriest_book						; default model
+strat_model		warpriest_book						; medium level priest
+strat_model		warpriest_book					; advanced priest
+
+faction			sicily
+dictionary		15
+strat_model		warpriest_book						; default model
+strat_model		warpriest_book						; medium level priest
+strat_model		warpriest_book					; advanced priest
+
+faction			milan
+dictionary		15
+strat_model		warpriest_book						; default model
+strat_model		warpriest_book						; medium level priest
+strat_model		warpriest_book					; advanced priest
+
+faction			papal_states
+dictionary		15
+strat_model		warpriest_book						; default model
+strat_model		warpriest_book						; medium level priest
+strat_model		warpriest_book					; advanced priest
+
+faction			egypt
+dictionary		2
+strat_model		muslim_iman						; default model
+strat_model		muslim_iman						; medium level priest
+strat_model		muslim_iman					; advanced priest
+
+faction			scotland
+dictionary		2
+strat_model		warpriest_book						; default model
+strat_model		warpriest_book						; medium level priest
+strat_model		warpriest_book					; advanced priest
+
+faction			aztecs
+dictionary		1
+strat_model		priest						; default model
+strat_model		bishop						; medium level priest
+strat_model		cardinal					; advanced priest
+
+faction			mongols
+dictionary		2
+strat_model		muslim_iman						; default model
+strat_model		muslim_iman						; medium level priest
+strat_model		muslim_iman					; advanced priest
+
+faction			turks
+dictionary		2
+strat_model		ork_shaman						; default model
+strat_model		ork_shaman						; medium level priest
+strat_model		ork_shaman					; advanced priest
+
+faction			france
+dictionary		2
+strat_model		warpriest_book						; default model
+strat_model		warpriest_book						; medium level priest
+strat_model		warpriest_book					; advanced priest
+
+faction			hre
+dictionary		2
+strat_model		warpriest_book						; default model
+strat_model		warpriest_book						; medium level priest
+strat_model		warpriest_book					; advanced priest
+
+faction			saxons
+dictionary		2
+strat_model		warpriest_book						; default model
+strat_model		warpriest_book						; medium level priest
+strat_model		warpriest_book					; advanced priest
+
+faction			england
+dictionary		2
+strat_model		HE_priest						; default model
+strat_model		HE_priest						; medium level priest
+strat_model		HE_priest					; advanced priest
+
+faction			normans
+dictionary		2
+strat_model		warpriest_book						; default model
+strat_model		warpriest_book						; medium level priest
+strat_model		warpriest_book					; advanced priest
+
+faction			portugal
+dictionary		2
+strat_model		warpriest_book						; default model
+strat_model		warpriest_book						; medium level priest
+strat_model		warpriest_book					; advanced priest
+
+faction			poland
+dictionary		2
+strat_model		Longbeard_Diplomat						; default model
+strat_model		Longbeard_Diplomat						; medium level priest
+strat_model		Longbeard_Diplomat					; advanced priest
+
+faction			byzantium
+dictionary		2
+strat_model		warpriest_book						; default model
+strat_model		warpriest_book						; medium level priest
+strat_model		warpriest_book					; advanced priest
+
+faction			moors
+dictionary		2
+strat_model		Gob_priest						; default model
+strat_model		Gob_priest						; medium level priest
+strat_model		Gob_priest					; advanced priest
+
+faction			russia
+dictionary		2
+strat_model		rus_priest					; default model
+strat_model		rus_bishop					; medium level priest
+strat_model		rus_bishop					; advanced priest
+
+faction			spain
+dictionary		2
+strat_model		warpriest_book						; default model
+strat_model		warpriest_book						; medium level priest
+strat_model		warpriest_book					; advanced priest
+
+faction			hungary
+dictionary		2
+strat_model		Wraith_priest						; default model
+strat_model		Wraith_priest						; medium level priest
+strat_model		Wraith_priest					; advanced priest
+
+;faction			slave
+;dictionary		2
+;strat_model		priest						; default model
+;strat_model		bishop						; medium level priest
+;strat_model		cardinal					; advanced priest
+
+faction			timurids
+dictionary		2
+strat_model		muslim_iman						; default model
+strat_model		muslim_iman						; medium level priest
+strat_model		muslim_iman					; advanced priest
+
+faction			denmark
+dictionary		2
+strat_model		fanatic						; default model
+strat_model		fanatic						; medium level priest
+strat_model		fanatic					; advanced priest
+
+faction			norway
+dictionary		2
+strat_model		fanatic						; default model
+strat_model		fanatic						; medium level priest
+strat_model		fanatic					; advanced priest
+
+faction			lithuania
+dictionary		2
+strat_model		Fanatic_tzeench						; default model
+strat_model		Fanatic_tzeench						; medium level priest
+strat_model		Fanatic_tzeench					; advanced priest
+
+faction			teutonic_order
+dictionary		2
+strat_model		fanatic						; default model
+strat_model		fanatic						; medium level priest
+strat_model		fanatic					; advanced priest
+
+faction			novgorod
+dictionary		2
+strat_model		fanatic						; default model
+strat_model		fanatic						; medium level priest
+strat_model		fanatic					; advanced priest
+
+faction			slave
+dictionary		2
+strat_model		fanatic
+
+faction			kalmar_union
+dictionary		2
+strat_model		euro_priest						; default model
+strat_model		euro_bishop						; medium level priest
+strat_model		euro_bishop
+
+faction			skaven
+dictionary		1
+strat_model		priest						; default model
+strat_model		bishop						; medium level priest
+strat_model		cardinal					; advanced priest
+
+;faction			wood_elves
+;dictionary		2
+;strat_model		HE_priest						; default model
+;strat_model		HE_priest						; medium level priest
+;strat_model		HE_priest					; advanced priest
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+type			heretic
+
+actions			moving_normal
+wage_base		0
+starting_action_points	140
+
+faction			denmark
+dictionary		2
+strat_model		fanatic
+
+faction			norway
+dictionary		2
+strat_model		fanatic
+
+faction			lithuania
+dictionary		2
+strat_model		fanatic
+
+faction			teutonic_order
+dictionary		2
+strat_model		fanatic
+
+faction			novgorod
+dictionary		2
+strat_model		fanatic
+
+faction			slave
+dictionary		2
+strat_model		fanatic
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+type			witch
+
+actions			moving_normal
+wage_base		0
+starting_action_points	140
+
+faction			denmark
+dictionary		2
+strat_model		witch
+
+faction			slave
+dictionary		2
+strat_model		witch
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+type			inquisitor
+
+actions			moving_normal, denounce
+wage_base		0
+starting_action_points	70
+
+faction			hre
+dictionary		15
+strat_model		witch_hunter_1
+strat_model		witch_hunter_2
+strat_model		witch_hunter_3
+
+
+faction			papal_states
+dictionary		15
+strat_model		witch_hunter_1
+strat_model		witch_hunter_2
+strat_model		witch_hunter_3
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+

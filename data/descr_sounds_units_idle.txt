@@ -1,0 +1,1206 @@
+;;
+
+DEFAULT: 3d mindist 5 minPitch .8 maxPitch 1.1 volume -40 priority 60 probability 1 distancepriority -2 fadein 0 fadeout 0 randomdelay 0  effect_level .25 rndvolume -15
+
+
+
+
+BANK: unit_idle
+
+;;;;;;;;;;;;;;;;    WOMEN    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;; Light Women ;;;;;;
+type amazon, amazon bodyguard
+    event lod 1
+        folder data/sounds/SFX/Individual/Movement
+            Cloth_Move_01 volume -40 mindist .5 probability 0.03
+            Cloth_Move_02 volume -40 mindist .5 probability 0.03
+            Cloth_Move_03 volume -40 mindist .5 probability 0.03
+            Cloth_Move_04 volume -40 mindist .5 probability 0.03
+            Cloth_Move_05 volume -40 mindist .5 probability 0.03
+            Cloth_Move_06 volume -40 mindist .5 probability 0.03
+            Cloth_Move_07 volume -40 mindist .5 probability 0.03
+            Cloth_Move_08 volume -40 mindist .5 probability 0.03
+            Cloth_Move_09 volume -40 mindist .5 probability 0.03
+            Cloth_Move_10 volume -40 mindist .5 probability 0.03
+            Cloth_Move_11 volume -40 mindist .5 probability 0.03
+            Cloth_Move_12 volume -40 mindist .5 probability 0.03
+            Cloth_Move_13 volume -40 mindist .5 probability 0.03
+            Cloth_Move_14 volume -40 mindist .5 probability 0.03
+            Cloth_Move_15 volume -40 mindist .5 probability 0.03
+            
+
+
+        folder data/sounds/Voice/Human/Generic
+            Women_Cough_2 volume -20 mindist .5 probability 0.03
+            Women_Cough_3 volume -20 mindist .5 probability 0.03
+            Women_Cough_4 volume -20 mindist .5 probability 0.03
+            Women_Cough_5 volume -20 mindist .5 probability 0.03
+            Women_Cough_6 volume -20 mindist .5 probability 0.03
+            Women_hum_1 volume -20 mindist .5 probability 0.03
+            Women_hum_2 volume -20 mindist .5 probability 0.03
+            Women_Whistle_1 volume -20 mindist .5 probability 0.03 
+            Women_Whistle_2 volume -20 mindist .5 probability 0.03
+            Women_Whistle_3 volume -20 mindist .5 probability 0.03
+            Women_sneeze_2 volume -20 mindist .5 probability 0.03
+            Women_sneeze_3 volume -20 mindist .5 probability 0.03
+            Women_sneeze_4 volume -20 mindist .5 probability 0.03
+            women_sneeze_5 volume -20 mindist .5 probability 0.03
+            Women_Sigh_1 volume -20 mindist .5 probability 0.03
+            Women_Sigh_2 volume -20 mindist .5 probability 0.03
+            Women_Sigh_3 volume -20 mindist .5 probability 0.03
+            Women_Sigh_4 volume -20 mindist .5 probability 0.03
+            Women_Sigh_5 volume -20 mindist .5 probability 0.03
+                         
+            end
+
+
+
+
+            
+    event lod 10
+folder data/sounds/SFX/Individual/Movement
+            Cloth_Move_01 volume -40 mindist 1 probability 0.06
+            Cloth_Move_02 volume -40 mindist 1 probability 0.06
+            Cloth_Move_03 volume -40 mindist 1 probability 0.06
+            Cloth_Move_04 volume -40 mindist 1 probability 0.06
+            Cloth_Move_05 volume -40 mindist 1 probability 0.06
+            Cloth_Move_06 volume -40 mindist 1 probability 0.06
+            Cloth_Move_07 volume -40 mindist 1 probability 0.06
+            Cloth_Move_08 volume -40 mindist 1 probability 0.06
+            Cloth_Move_09 volume -40 mindist 1 probability 0.06
+            Cloth_Move_10 volume -40 mindist 1 probability 0.06
+            Cloth_Move_11 volume -40 mindist 1 probability 0.06
+            Cloth_Move_12 volume -40 mindist 1 probability 0.06
+            Cloth_Move_13 volume -40 mindist 1 probability 0.06
+            Cloth_Move_14 volume -40 mindist 1 probability 0.06
+            Cloth_Move_15 volume -40 mindist 1 probability 0.06
+            
+        folder data/sounds/Voice/Human/Generic
+            Women_Cough_2 volume -20 mindist 1 probability 0.04
+            Women_Cough_3 volume -20 mindist 1 probability 0.04
+            Women_Cough_4 volume -20 mindist 1 probability 0.04
+            Women_Cough_5 volume -20 mindist 1 probability 0.04
+            Women_Cough_6 volume -20 mindist 1 probability 0.04
+            Women_hum_1 volume -20 mindist 1 probability 0.04
+            Women_hum_2 volume -20 mindist 1 probability 0.04
+            Women_Whistle_1 volume -20 mindist 1 probability 0.04
+            Women_Whistle_2 volume -20 mindist 1 probability 0.04
+            Women_Whistle_3 volume -20 mindist 1 probability 0.04
+            Women_sneeze_1 volume -20 mindist 1 probability 0.04
+            Women_sneeze_2 volume -20 mindist 1 probability 0.04
+            Women_sneeze_3 volume -20 mindist 1 probability 0.04
+            Women_sneeze_4 volume -20 mindist 1 probability 0.04
+            women_sneeze_5 volume -20 mindist 1 probability 0.04
+            Women_Sigh_1 volume -20 mindist 1 probability 0.04
+            Women_Sigh_2 volume -20 mindist 1 probability 0.04
+            Women_Sigh_3 volume -20 mindist 1 probability 0.04
+            Women_Sigh_4 volume -20 mindist 1 probability 0.04
+            Women_Sigh_5 volume -20 mindist 1 probability 0.04
+                     
+            end        
+            
+            
+            
+    event lod 30
+folder data/sounds/SFX/Individual/Movement
+            Cloth_Move_01 volume -40 mindist 1 probability 0.1
+            Cloth_Move_02 volume -40 mindist 1 probability 0.1
+            Cloth_Move_03 volume -40 mindist 1 probability 0.1
+            Cloth_Move_04 volume -40 mindist 1 probability 0.1
+            Cloth_Move_05 volume -40 mindist 1 probability 0.1
+            Cloth_Move_06 volume -40 mindist 1 probability 0.1
+            Cloth_Move_07 volume -40 mindist 1 probability 0.1
+            Cloth_Move_08 volume -40 mindist 1 probability 0.1
+            Cloth_Move_09 volume -40 mindist 1 probability 0.1
+            Cloth_Move_10 volume -40 mindist 1 probability 0.1
+            Cloth_Move_11 volume -40 mindist 1 probability 0.1
+            Cloth_Move_12 volume -40 mindist 1 probability 0.1
+            Cloth_Move_13 volume -40 mindist 1 probability 0.1
+            Cloth_Move_14 volume -40 mindist 1 probability 0.1
+            Cloth_Move_15 volume -40 mindist 1 probability 0.1
+                                
+        folder data/sounds/Voice/Human/Generic
+            Women_Cough_2 volume -20 mindist 1 probability 0.06
+            Women_Cough_3 volume -20 mindist 1 probability 0.06
+            Women_Cough_4 volume -20 mindist 1 probability 0.06
+            Women_Cough_5 volume -20 mindist 1 probability 0.06
+            Women_Cough_6 volume -20 mindist 1 probability 0.06
+            Women_hum_1 volume -20 mindist 1 probability 0.06
+            Women_hum_2 volume -20 mindist 1 probability 0.06
+            Women_Whistle_1 volume -20 mindist 1 probability 0.06
+            Women_Whistle_2 volume -20 mindist 1 probability 0.06
+            Women_Whistle_3 volume -20 mindist 1 probability 0.06
+            Women_sneeze_1 volume -20 mindist 1 probability 0.06
+            Women_sneeze_2 volume -20 mindist 1 probability 0.06
+            Women_sneeze_3 volume -20 mindist 1 probability 0.06
+            Women_sneeze_4 volume -20 mindist 1 probability 0.06
+            women_sneeze_5 volume -20 mindist 1 probability 0.06
+            Women_Sigh_1 volume -20 mindist 1 probability 0.04
+            Women_Sigh_2 volume -20 mindist 1 probability 0.04
+            Women_Sigh_3 volume -20 mindist 1 probability 0.04
+            Women_Sigh_4 volume -20 mindist 1 probability 0.04
+            Women_Sigh_5 volume -20 mindist 1 probability 0.04
+             
+                
+            end        
+            
+            
+            
+            
+;;;;   Heavy Women  ;;;;;;;
+type Norse shield maidens
+ 
+  event lod 1
+folder data/sounds/SFX/Individual/Movement
+            Armour_Clink_01 probability 0.2 mindist 1 volume 0
+            Armour_Clink_02 probability 0.2 mindist 1 volume 0
+            Armour_Clink_03 probability 0.2 mindist 1 volume 0
+            Armour_Clink_04 probability 0.2 mindist 1 volume 0
+            Armour_Clink_05 probability 0.2 mindist 1 volume 0
+            Armour_Clink_06 probability 0.2 mindist 1 volume 0
+            Armour_Clink_07 probability 0.2 mindist 1 volume 0
+            Armour_Clink_08 probability 0.2 mindist 1 volume 0
+            Armour_Clink_09 probability 0.2 mindist 1 volume 0
+            Armour_Clink_10 probability 0.2 mindist 1 volume 0
+            Armour_Clink_11 probability 0.2 mindist 1 volume 0
+            Armour_Clink_12 probability 0.2 mindist 1 volume 0
+            Armour_Clink_13 probability 0.2 mindist 1 volume 0
+            Armour_Squeak_01 probability 0.2 mindist 1 volume 0
+            Armour_Squeak_02 probability 0.2 mindist 1 volume 0
+        
+            Armour_Clink_14 probability 0.1 mindist 1 volume -20
+            Armour_Clink_15 probability 0.1 mindist 1 volume -20
+            Armour_Clink_16 probability 0.1 mindist 1 volume -20
+            Armour_Clink_17 probability 0.1 mindist 1 volume -20
+            Armour_Clink_18 probability 0.1 mindist 1 volume -20
+            Armour_Clink_19 probability 0.1 mindist 1 volume -20
+            Armour_Clink_20 probability 0.1 mindist 1 volume -20
+            Armour_Clink_21 probability 0.1 mindist 1 volume -20
+            Armour_Clink_22 probability 0.1 mindist 1 volume -20
+            Armour_Clink_23 probability 0.1 mindist 1 volume -20
+            Armour_Clink_24 probability 0.1 mindist 1 volume -20
+            Armour_Clink_25 probability 0.1 mindist 1 volume -20
+            Armour_Clink_26 probability 0.1 mindist 1 volume -20
+            Armour_Clink_27 probability 0.1 mindist 1 volume -20
+            Armour_Clink_28 probability 0.1 mindist 1 volume -20
+            Armour_Clink_29 probability 0.1 mindist 1 volume -20
+            Armour_Clink_30 probability 0.1 mindist 1 volume -20
+            Armour_Clink_31 probability 0.1 mindist 1 volume -20
+            Armour_Clink_32 probability 0.1 mindist 1 volume -20
+            Armour_Clink_33 probability 0.1 mindist 1 volume -20
+  
+            folder data/sounds/SFX/Individual/Movement
+            Cloth_Move_01 volume -40 mindist 1 probability 0.01
+            Cloth_Move_02 volume -40 mindist 1 probability 0.01
+            Cloth_Move_03 volume -40 mindist 1 probability 0.01
+            Cloth_Move_04 volume -40 mindist 1 probability 0.01
+            Cloth_Move_05 volume -40 mindist 1 probability 0.01
+            Cloth_Move_06 volume -40 mindist 1 probability 0.01
+            Cloth_Move_07 volume -40 mindist 1 probability 0.01
+            Cloth_Move_08 volume -40 mindist 1 probability 0.01
+            Cloth_Move_09 volume -40 mindist 1 probability 0.01
+            Cloth_Move_10 volume -40 mindist 1 probability 0.01
+            Cloth_Move_11 volume -40 mindist 1 probability 0.01
+            Cloth_Move_12 volume -40 mindist 1 probability 0.01
+            Cloth_Move_13 volume -40 mindist 1 probability 0.01
+            Cloth_Move_14 volume -40 mindist 1 probability 0.01
+            Cloth_Move_15 volume -40 mindist 1 probability 0.01
+                    
+            folder data/sounds/Voice/Human/Generic
+            Women_Cough_2 volume -20 mindist 1 probability 0.1
+            Women_Cough_3 volume -20 mindist 1 probability 0.1
+            Women_Cough_4 volume -20 mindist 1 probability 0.1
+            Women_Cough_5 volume -20 mindist 1 probability 0.1
+            Women_Cough_6 volume -20 mindist 1 probability 0.1
+            Women_hum_1 volume -20 mindist 1 probability 0.1
+            Women_hum_2 volume -20 mindist 1 probability 0.1
+            Women_Whistle_1 volume -20 mindist 1 probability 0.1
+            Women_Whistle_2 volume -20 mindist 1 probability 0.1
+            Women_Whistle_3 volume -20 mindist 1 probability 0.1
+            Women_sneeze_2 volume -20 mindist 1 probability 0.1
+            Women_sneeze_3 volume -20 mindist 1 probability 0.1
+            Women_sneeze_4 volume -20 mindist 1 probability 0.1
+            women_sneeze_5 volume -20 mindist 1 probability 0.1
+            Women_Sigh_1 volume -20 mindist 1 probability 0.1
+            Women_Sigh_2 volume -20 mindist 1 probability 0.1
+            Women_Sigh_3 volume -20 mindist 1 probability 0.1
+            Women_Sigh_4 volume -20 mindist 1 probability 0.1
+            Women_Sigh_5 volume -20 mindist 1 probability 0.1
+            
+                        
+            end
+
+
+  event lod 10
+folder data/sounds/SFX/Individual/Movement
+            Armour_Clink_01 probability 0.3 mindist 1 volume 0
+            Armour_Clink_02 probability 0.3 mindist 1 volume 0
+            Armour_Clink_03 probability 0.3 mindist 1 volume 0
+            Armour_Clink_04 probability 0.3 mindist 1 volume 0
+            Armour_Clink_05 probability 0.3 mindist 1 volume 0
+            Armour_Clink_06 probability 0.3 mindist 1 volume 0
+            Armour_Clink_07 probability 0.3 mindist 1 volume 0
+            Armour_Clink_08 probability 0.3 mindist 1 volume 0
+            Armour_Clink_09 probability 0.3 mindist 1 volume 0
+            Armour_Clink_10 probability 0.3 mindist 1 volume 0
+            Armour_Clink_11 probability 0.3 mindist 1 volume 0
+            Armour_Clink_12 probability 0.3 mindist 1 volume 0
+            Armour_Clink_13 probability 0.3 mindist 1 volume 0
+            Armour_Squeak_01 probability 0.3 mindist 1 volume 0
+            Armour_Squeak_02 probability 0.3 mindist 1 volume 0
+        
+            Armour_Clink_14 probability 0.2 mindist 1 volume -20
+            Armour_Clink_15 probability 0.2 mindist 1 volume -20
+            Armour_Clink_16 probability 0.2 mindist 1 volume -20
+            Armour_Clink_17 probability 0.2 mindist 1 volume -20
+            Armour_Clink_18 probability 0.2 mindist 1 volume -20
+            Armour_Clink_19 probability 0.2 mindist 1 volume -20
+            Armour_Clink_20 probability 0.2 mindist 1 volume -20
+            Armour_Clink_21 probability 0.2 mindist 1 volume -20
+            Armour_Clink_22 probability 0.2 mindist 1 volume -20
+            Armour_Clink_23 probability 0.2 mindist 1 volume -20
+            Armour_Clink_24 probability 0.2 mindist 1 volume -20
+            Armour_Clink_25 probability 0.2 mindist 1 volume -20
+            Armour_Clink_26 probability 0.2 mindist 1 volume -20
+            Armour_Clink_27 probability 0.2 mindist 1 volume -20
+            Armour_Clink_28 probability 0.2 mindist 1 volume -20
+            Armour_Clink_29 probability 0.2 mindist 1 volume -20
+            Armour_Clink_30 probability 0.2 mindist 1 volume -20
+            Armour_Clink_31 probability 0.2 mindist 1 volume -20
+            Armour_Clink_32 probability 0.2 mindist 1 volume -20
+            Armour_Clink_33 probability 0.2 mindist 1 volume -20
+  
+            folder data/sounds/SFX/Individual/Movement
+            Cloth_Move_01 volume -40 mindist 1 probability 0.03
+            Cloth_Move_02 volume -40 mindist 1 probability 0.03
+            Cloth_Move_03 volume -40 mindist 1 probability 0.03
+            Cloth_Move_04 volume -40 mindist 1 probability 0.03
+            Cloth_Move_05 volume -40 mindist 1 probability 0.03
+            Cloth_Move_06 volume -40 mindist 1 probability 0.03
+            Cloth_Move_07 volume -40 mindist 1 probability 0.03
+            Cloth_Move_08 volume -40 mindist 1 probability 0.03
+            Cloth_Move_09 volume -40 mindist 1 probability 0.03
+            Cloth_Move_10 volume -40 mindist 1 probability 0.03
+            Cloth_Move_11 volume -40 mindist 1 probability 0.03
+            Cloth_Move_12 volume -40 mindist 1 probability 0.03
+            Cloth_Move_13 volume -40 mindist 1 probability 0.03
+            Cloth_Move_14 volume -40 mindist 1 probability 0.03
+            Cloth_Move_15 volume -40 mindist 1 probability 0.03
+                    
+            folder data/sounds/Voice/Human/Generic
+            Women_Cough_2 volume -20 mindist 1 probability 0.25
+            Women_Cough_3 volume -20 mindist 1 probability 0.25
+            Women_Cough_4 volume -20 mindist 1 probability 0.25
+            Women_Cough_5 volume -20 mindist 1 probability 0.25
+            Women_Cough_6 volume -20 mindist 1 probability 0.25
+            Women_hum_1 volume -20 mindist 1 probability 0.25
+            Women_hum_2 volume -20 mindist 1 probability 0.25
+            Women_Whistle_1 volume -20 mindist 1 probability 0.25
+            Women_Whistle_2 volume -20 mindist 1 probability 0.25
+            Women_Whistle_3 volume -20 mindist 1 probability 0.25
+            Women_sneeze_1 volume -20 mindist 1 probability 0.25
+            Women_sneeze_2 volume -20 mindist 1 probability 0.25
+            Women_sneeze_3 volume -20 mindist 1 probability 0.25
+            Women_sneeze_4 volume -20 mindist 1 probability 0.25
+            women_sneeze_5 volume -20 mindist 1 probability 0.25
+            Women_Sigh_1 volume -20 mindist 1 probability 0.25
+            Women_Sigh_2 volume -20 mindist 1 probability 0.25
+            Women_Sigh_3 volume -20 mindist 1 probability 0.25
+            Women_Sigh_4 volume -20 mindist 1 probability 0.25
+            Women_Sigh_5 volume -20 mindist 1 probability 0.25
+            
+                        
+            end
+
+
+ event lod 30
+folder data/sounds/SFX/Individual/Movement
+            Armour_Clink_01 probability 0.4 mindist 1 volume 0
+            Armour_Clink_02 probability 0.4 mindist 1 volume 0
+            Armour_Clink_03 probability 0.4 mindist 1 volume 0
+            Armour_Clink_04 probability 0.4 mindist 1 volume 0
+            Armour_Clink_05 probability 0.4 mindist 1 volume 0
+            Armour_Clink_06 probability 0.4 mindist 1 volume 0
+            Armour_Clink_07 probability 0.4 mindist 1 volume 0
+            Armour_Clink_08 probability 0.4 mindist 1 volume 0
+            Armour_Clink_09 probability 0.4 mindist 1 volume 0
+            Armour_Clink_10 probability 0.4 mindist 1 volume 0
+            Armour_Clink_11 probability 0.4 mindist 1 volume 0
+            Armour_Clink_12 probability 0.4 mindist 1 volume 0
+            Armour_Clink_13 probability 0.4 mindist 1 volume 0
+            Armour_Squeak_01 probability 0.4 mindist 1 volume 0
+            Armour_Squeak_02 probability 0.4 mindist 1 volume 0
+        
+            Armour_Clink_14 probability 0.3 mindist 1 volume -20
+            Armour_Clink_15 probability 0.3 mindist 1 volume -20
+            Armour_Clink_16 probability 0.3 mindist 1 volume -20
+            Armour_Clink_17 probability 0.3 mindist 1 volume -20
+            Armour_Clink_18 probability 0.3 mindist 1 volume -20
+            Armour_Clink_19 probability 0.3 mindist 1 volume -20
+            Armour_Clink_20 probability 0.3 mindist 1 volume -20
+            Armour_Clink_21 probability 0.3 mindist 1 volume -20
+            Armour_Clink_22 probability 0.3 mindist 1 volume -20
+            Armour_Clink_23 probability 0.3 mindist 1 volume -20
+            Armour_Clink_24 probability 0.3 mindist 1 volume -20
+            Armour_Clink_25 probability 0.3 mindist 1 volume -20
+            Armour_Clink_26 probability 0.3 mindist 1 volume -20
+            Armour_Clink_27 probability 0.3 mindist 1 volume -20
+            Armour_Clink_28 probability 0.3 mindist 1 volume -20
+            Armour_Clink_29 probability 0.3 mindist 1 volume -20
+            Armour_Clink_30 probability 0.3 mindist 1 volume -20
+            Armour_Clink_31 probability 0.3 mindist 1 volume -20
+            Armour_Clink_32 probability 0.3 mindist 1 volume -20
+            Armour_Clink_33 probability 0.3 mindist 1 volume -20
+  
+            folder data/sounds/SFX/Individual/Movement
+            Cloth_Move_01 volume -40 mindist 1 probability 0.05
+            Cloth_Move_02 volume -40 mindist 1 probability 0.05
+            Cloth_Move_03 volume -40 mindist 1 probability 0.05
+            Cloth_Move_04 volume -40 mindist 1 probability 0.05
+            Cloth_Move_05 volume -40 mindist 1 probability 0.05
+            Cloth_Move_06 volume -40 mindist 1 probability 0.05
+            Cloth_Move_07 volume -40 mindist 1 probability 0.05
+            Cloth_Move_08 volume -40 mindist 1 probability 0.05
+            Cloth_Move_09 volume -40 mindist 1 probability 0.05
+            Cloth_Move_10 volume -40 mindist 1 probability 0.05
+            Cloth_Move_11 volume -40 mindist 1 probability 0.05
+            Cloth_Move_12 volume -40 mindist 1 probability 0.05
+            Cloth_Move_13 volume -40 mindist 1 probability 0.05
+            Cloth_Move_14 volume -40 mindist 1 probability 0.05
+            Cloth_Move_15 volume -40 mindist 1 probability 0.05
+                    
+            folder data/sounds/Voice/Human/Generic
+            Women_Cough_2 volume -20 mindist 1 probability 0.3
+            Women_Cough_3 volume -20 mindist 1 probability 0.3
+            Women_Cough_4 volume -20 mindist 1 probability 0.3
+            Women_Cough_5 volume -20 mindist 1 probability 0.3
+            Women_Cough_6 volume -20 mindist 1 probability 0.3
+            Women_hum_1 volume -20 mindist 1 probability 0.3
+            Women_hum_2 volume -20 mindist 1 probability 0.3
+            Women_Whistle_1 volume -20 mindist 1 probability 0.3
+            Women_Whistle_2 volume -20 mindist 1 probability 0.3
+            Women_Whistle_3 volume -20 mindist 1 probability 0.3
+            Women_sneeze_1 volume -20 mindist 1 probability 0.3
+            Women_sneeze_2 volume -20 mindist 1 probability 0.3
+            Women_sneeze_3 volume -20 mindist 1 probability 0.3
+            Women_sneeze_4 volume -20 mindist 1 probability 0.3
+            women_sneeze_5 volume -20 mindist 1 probability 0.3
+            Women_Sigh_1 volume -20 mindist 1 probability 0.2
+            Women_Sigh_2 volume -20 mindist 1 probability 0.2
+            Women_Sigh_3 volume -20 mindist 1 probability 0.2
+            Women_Sigh_4 volume -20 mindist 1 probability 0.2
+            Women_Sigh_5 volume -20 mindist 1 probability 0.2
+            
+                        
+            end
+
+; Other units are anim based idle sounds
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;            ANIMALS                    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;   Get Your Meat While It's hot !    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+BANK: animal_idle
+
+
+;;;;;;;;;;;;;   CAMELS   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+    mount camel
+        event lod 1 probability 0.04 volume -25 mindist 4
+            folder data/sounds/Voice/Animal/Camel
+            Camel_Groan_02
+            Camel_Groan_03
+            Camel_Groan_04
+            Camel_Groan_06
+            Camel_Groan_09
+            Camel_Groan_22
+            Camel_Groan_23
+            Camel_Groan_24
+            Camel_Groan_25
+            Camel_Groan_26
+            Camel_Groan_27
+            Camel_Groan_28
+            Camel_Groan_29
+            Camel_Groan_30
+            Camel_Groan_31
+            Camel_Groan_32
+            Camel_Groan_33
+            
+        end
+
+    event lod 10 probability 0.06 volume -20 mindist 5
+            folder  data/sounds/Voice/Animal/Camel
+            Camel_Groan_02
+            Camel_Groan_03
+            Camel_Groan_04
+            Camel_Groan_06
+            Camel_Groan_09
+            Camel_Groan_22
+            Camel_Groan_23
+            Camel_Groan_24
+            Camel_Groan_25
+            Camel_Groan_26
+            Camel_Groan_27
+            Camel_Groan_28
+            Camel_Groan_29
+            Camel_Groan_30
+            Camel_Groan_31
+            Camel_Groan_32
+            Camel_Groan_33
+            
+        end
+
+        event lod 20 probability 0.08 volume -20 mindist 6
+            folder data/sounds/Voice/Animal/Camel
+            Camel_Groan_02
+            Camel_Groan_03
+            Camel_Groan_04
+            Camel_Groan_06
+            Camel_Groan_09
+            Camel_Groan_22
+            Camel_Groan_23
+            Camel_Groan_24
+            Camel_Groan_25
+            Camel_Groan_26
+            Camel_Groan_27
+            Camel_Groan_28
+            Camel_Groan_29
+            Camel_Groan_30
+            Camel_Groan_31
+            Camel_Groan_32
+            Camel_Groan_33
+            
+        end
+
+
+
+;;;;;;;;;;;;;;;;;;   HORSES    ;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+    mount eastern armoured horse, Encarmine Armoured Horse, goldli armoured horse, panthe armoured horse, black armoured horse, morr armoured horse, Vampire Elector Horse, Elector count armored horse, Reikguard armored horse, White wolf  armored horse, bull  armored horse, Venator armoured horse, Bret graal barded horse, Bret questing barded horse, Bret barded horse, Bret errant barded horse, HE Light horse, HE AR Horse, Light horse k, Light horse ragnar, Light horse dark, Light horse, mount_heavy_horse_marka, horse marka, horse marka 1, horse marka_E, horse marka_G, Dragon prince armoured horse, tiranoc_chariot
+        event lod 1 probability 0.07 volume -45 mindist 3
+            folder data/sounds/Voice/Animal/Horse
+            horse_snort_01
+            horse_snort_02
+            horse_snort_03
+            horse_snort_04
+            folder data/sounds/Voice/Animal/Horse
+            horse_nay_01
+            horse_nay_06
+            horse_nay_07
+            horse_nay_09
+            horse_nay_10
+            horse_nay_11
+            horse_nay_12
+            
+        end
+
+
+
+        event lod 10 probability 0.08 volume -40 mindist 4
+            folder data/sounds/Voice/Animal/Horse
+            horse_snort_01
+            horse_snort_02
+            horse_snort_03
+            horse_snort_04
+            folder data/sounds/Voice/Animal/Horse
+            horse_nay_01
+            horse_nay_06
+            horse_nay_07
+            horse_nay_09
+            horse_nay_10
+            horse_nay_11
+            horse_nay_12
+            horse_nay_21
+            horse_nay_22
+        end
+
+
+        event lod 20 probability 0.09 volume -40 mindist 5
+            folder data/sounds/Voice/Animal/Horse
+            horse_snort_01
+            horse_snort_02
+            horse_snort_03
+            horse_snort_04
+            folder data/sounds/Voice/Animal/Horse
+            horse_nay_01
+            horse_nay_06
+            horse_nay_07
+            horse_nay_09
+            horse_nay_10
+            horse_nay_11
+            horse_nay_12
+            horse_nay_21
+            horse_nay_22
+        end
+        
+        
+;;;;;;;;;;;;;;;;;; CHAOS HORSES    ;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+    mount Chaos armoured horse, Chaos armoured horse of Khorne, Chaos armoured horse of Tzeentch, Chaos armoured horse of Slaanesh, Chaos armoured horse of Nurgl, Champion horse, Khorne champion horse, Tzeentch champion horse, Slaanesh champion horse, Nurgl champion horse, Light horse Chaos, Light horse Chaos of Khorne, Light horse Chaos of Tzeentch, Light horse Chaos of Slaanesh, Light horse Chaos of Nurgl
+        event lod 1 probability 0.07 volume -45 mindist 3
+            folder data/sounds/Voice/Animal/Horse
+            horsechaos_grunt_01
+            horsechaos_grunt_02
+            horsechaos_grunt_03
+            horsechaos_grunt_04
+            chaoscavwhiney1
+            horsechaos_greeting_01
+            chaoscavwhiney2
+            horsechaos_greeting_02
+            chaoscavwhiney3
+            horsechaos_greeting_03
+            chaoscavwhiney4
+            horsechaos_greeting_04
+            chaoscavwhiney5
+            horsechaos_greeting_05
+            horsechaos_greeting_06
+            horsechaos_greeting_07
+            
+        end
+
+
+
+        event lod 10 probability 0.08 volume -40 mindist 4
+            folder data/sounds/Voice/Animal/Horse
+            horsechaos_grunt_01
+            horsechaos_grunt_02
+            horsechaos_grunt_03
+            horsechaos_grunt_04
+            chaoscavwhiney1
+            horsechaos_greeting_01
+            chaoscavwhiney2
+            horsechaos_greeting_02
+            chaoscavwhiney3
+            horsechaos_greeting_03
+            chaoscavwhiney4
+            horsechaos_greeting_04
+            chaoscavwhiney5
+            horsechaos_greeting_05
+            horsechaos_greeting_06
+            horsechaos_greeting_07
+        end
+
+
+        event lod 20 probability 0.09 volume -40 mindist 5
+            folder data/sounds/Voice/Animal/Horse
+            horsechaos_grunt_01
+            horsechaos_grunt_02
+            horsechaos_grunt_03
+            horsechaos_grunt_04
+            chaoscavwhiney1
+            horsechaos_greeting_01
+            chaoscavwhiney2
+            horsechaos_greeting_02
+            chaoscavwhiney3
+            horsechaos_greeting_03
+            chaoscavwhiney4
+            horsechaos_greeting_04
+            chaoscavwhiney5
+            horsechaos_greeting_05
+            horsechaos_greeting_06
+            horsechaos_greeting_07
+        end    
+;;;;;;;;;;;;;;;;;; SKELETON HORSES    ;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+    mount skeleton horse, skeleton horse chaos, Armored skeleton horse, Grail skeleton horse
+        event lod 1 probability 0.07 volume -45 mindist 3
+            folder data/sounds/Voice/Animal/Horse
+            horsezombie_grunt_01
+            horsezombie_grunt_02
+            horsezombie_grunt_03
+            horsezombie_grunt_04
+            horsezombie_shout_01
+            horsezombie_pain_01
+            horsezombie_aggro_01
+            horsezombie_pain_02
+            horsezombie_pain_03
+            horsezombie_aggro_01
+            horsezombie_pain_04
+            horsezombie_shout_01
+            horsezombie_pain_01
+        end
+
+
+
+        event lod 10 probability 0.08 volume -40 mindist 4
+            folder data/sounds/Voice/Animal/Horse
+            horsezombie_grunt_01
+            horsezombie_grunt_02
+            horsezombie_grunt_03
+            horsezombie_grunt_04
+            horsezombie_shout_01
+            horsezombie_pain_01
+            horsezombie_aggro_01
+            horsezombie_pain_02
+            horsezombie_pain_03
+            horsezombie_aggro_01
+            horsezombie_pain_04
+            horsezombie_shout_01
+            horsezombie_pain_01
+        end
+
+
+        event lod 20 probability 0.09 volume -40 mindist 5
+            folder data/sounds/Voice/Animal/Horse
+            horsezombie_grunt_01
+            horsezombie_grunt_02
+            horsezombie_grunt_03
+            horsezombie_grunt_04
+            horsezombie_shout_01
+            horsezombie_pain_01
+            horsezombie_aggro_01
+            horsezombie_pain_02
+            horsezombie_pain_03
+            horsezombie_aggro_01
+            horsezombie_pain_04
+            horsezombie_shout_01
+            horsezombie_pain_01
+        end            
+
+;;;;;;;;;;;;;;;;;;  INVISIBLE MOUNT(HORSE)   ;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+    mount flamer fly, Disc of Tzeentch, Screemer fly, Wraith fly
+        event lod 1 probability 0.07 volume -45 mindist 3
+            folder data/sounds/Voice/Animal/Horse
+            
+        end
+
+        event lod 10 probability 0.08 volume -40 mindist 4
+            folder data/sounds/Voice/Animal/Horse
+            
+        end
+
+        event lod 20 probability 0.09 volume -40 mindist 5
+            folder data/sounds/Voice/Animal/Horse
+            
+        end
+
+
+;;;;;;;;;;;;;;;;;;   BOARS    ;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+    mount Boar, S_Boar
+        event lod 1 probability 0.07 volume -25 mindist 3
+            folder data/sounds/Voice/Animal/Boar
+            boar1
+            boar2
+            boar3
+            boar4
+            boar5
+            boar6
+            boar7
+            boar8
+            boar9    
+        end
+
+
+
+        event lod 10 probability 0.08 volume -20 mindist 4
+            folder data/sounds/Voice/Animal/Boar
+            boar1
+            boar2
+            boar3
+            boar4
+            boar5
+            boar6
+            boar7
+            boar8
+            boar9
+        end
+
+
+        event lod 20 probability 0.09 volume -20 mindist 5
+            folder data/sounds/Voice/Animal/Boar
+            boar1
+            boar2
+            boar3
+            boar4
+            boar5
+            boar6
+            boar7
+            boar8
+            boar9
+        end
+
+;;;;;;;;;;;;;;; BEARS  ;;;;;;;;;;;
+    mount Bear, White Bear
+    
+        event    lod 1 probability .06 volume -10 mindist 2
+            folder data/sounds/Voice/Animal/Bear
+            bear_greeting_01
+            bear_aggro_01
+            bear_greeting_02
+            bear_pain_01
+            bear_groan_01
+            bear_greeting_03
+            bear_grunt_01
+            bear_greeting_04
+            bear_grunt_02
+            bear_pain_02
+            bear_greeting_05
+            bear_grunt_03
+            bear_greeting_06
+            bear_grunt_04
+            bear_pain_04
+            bear_greeting_07
+            bear_shout_01
+            bear_greeting_08
+            bear_pain_03
+            bear_greeting_01
+        end
+
+        event    lod 10 probability .07 volume -10 mindist 8
+            folder data/sounds/Voice/Animal/Bear
+            bear_greeting_01
+            bear_aggro_01
+            bear_greeting_02
+            bear_pain_01
+            bear_groan_01
+            bear_greeting_03
+            bear_grunt_01
+            bear_greeting_04
+            bear_grunt_02
+            bear_pain_02
+            bear_greeting_05
+            bear_grunt_03
+            bear_greeting_06
+            bear_grunt_04
+            bear_pain_04
+            bear_greeting_07
+            bear_shout_01
+            bear_greeting_08
+            bear_pain_03
+            bear_greeting_01
+        end
+
+        event    lod 20 probability 0.08 volume -10 mindist 5
+            folder data/sounds/Voice/Animal/Bear
+            bear_greeting_01
+            bear_aggro_01
+            bear_greeting_02
+            bear_pain_01
+            bear_groan_01
+            bear_greeting_03
+            bear_grunt_01
+            bear_greeting_04
+            bear_grunt_02
+            bear_pain_02
+            bear_greeting_05
+            bear_grunt_03
+            bear_greeting_06
+            bear_grunt_04
+            bear_pain_04
+            bear_greeting_07
+            bear_shout_01
+            bear_greeting_08
+            bear_pain_03
+            bear_greeting_01
+        end
+
+;;;;;;;;;;;;;;;;;;  SQUIGS   ;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+    mount Squig mount, Squigs, Squi1
+        event lod 1 probability 0.07 volume -15 mindist 3
+            folder data/sounds/Voice/Animal/Squig
+            squigvocals1
+            squigvocals2
+            squigvocals3
+            squigvocals4
+            squigvocals5
+            squigvocals6
+            squigvocals7
+            squigvocals8
+            squigvocals9
+            squigvocals10
+            squigvocals11
+            squigvocals12
+            squigvocals13
+            squigvocals14
+            squigvocals15
+            squigvocals16
+        end
+
+
+
+        event lod 10 probability 0.08 volume -10 mindist 4
+            folder data/sounds/Voice/Animal/Squig
+            squigvocals1
+            squigvocals2
+            squigvocals3
+            squigvocals4
+            squigvocals5
+            squigvocals6
+            squigvocals7
+            squigvocals8
+            squigvocals9
+            squigvocals10
+            squigvocals11
+            squigvocals12
+            squigvocals13
+            squigvocals14
+            squigvocals15
+            squigvocals16
+        end
+
+
+        event lod 20 probability 0.09 volume -10 mindist 5
+            folder data/sounds/Voice/Animal/Squig
+            squigvocals1
+            squigvocals2
+            squigvocals3
+            squigvocals4
+            squigvocals5
+            squigvocals6
+            squigvocals7
+            squigvocals8
+            squigvocals9
+            squigvocals10
+            squigvocals11
+            squigvocals12
+            squigvocals13
+            squigvocals14
+            squigvocals15
+            squigvocals16
+        end
+
+
+;;;;;;;;;;;;;;;;;;  GOBLIN WOLVES   ;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+    mount Wolf mount, Wolf hob mount, Wolf hob arch mount
+        event lod 1 probability 0.07 volume -35 mindist 3
+            folder data/sounds/Voice/Animal/Wolf
+            warhoundsvox8
+            wolf_greeting_01
+            warhoundsvox9
+            wolf_greeting_02
+            warhoundsvox14
+            wolf_greeting_03
+            wolf_painhowl_01
+            wolf_greeting_04
+            wolf_shout_01
+            wolf_greeting_05
+            wolf_painhowl_02
+            wolf_greeting_06
+            warhoundsattack2
+            wolf_greeting_07
+            wolf_grunt_01
+            wolf_greeting_08
+            wolf_grunt_02
+        end
+
+
+
+        event lod 10 probability 0.08 volume -30 mindist 4
+            folder data/sounds/Voice/Animal/Wolf
+            warhoundsvox8
+            wolf_greeting_01
+            warhoundsvox9
+            wolf_greeting_02
+            warhoundsvox14
+            wolf_greeting_03
+            wolf_painhowl_01
+            wolf_greeting_04
+            wolf_shout_01
+            wolf_greeting_05
+            wolf_painhowl_02
+            wolf_greeting_06
+            warhoundsattack2
+            wolf_greeting_07
+            wolf_grunt_01
+            wolf_greeting_08
+            wolf_grunt_02
+        end
+
+
+        event lod 20 probability 0.09 volume -30 mindist 5
+            folder data/sounds/Voice/Animal/Wolf
+            warhoundsvox8
+            wolf_greeting_01
+            warhoundsvox9
+            wolf_greeting_02
+            warhoundsvox14
+            wolf_greeting_03
+            wolf_painhowl_01
+            wolf_greeting_04
+            wolf_shout_01
+            wolf_greeting_05
+            wolf_painhowl_02
+            wolf_greeting_06
+            warhoundsattack2
+            wolf_greeting_07
+            wolf_grunt_01
+            wolf_greeting_08
+            wolf_grunt_02
+        end
+
+;;;;;;;;;;;;;;;;;;   STEAM TANK    ;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+
+    mount steam_tank
+
+    event lod 1 probability 0.06 volume -40 mindist 6
+            folder data/sounds/SFX/Individual/Footsteps/Tank
+            steam_mechanical_1_01
+            steamtank_mechanical_01
+            steam_mechanical_1_03
+            steamtank_mechanical_02
+            steam_mechanical_2_01
+            steamtank_mechanical_03
+            steam_mechanical_2_03
+            steamtank_mechanical_04
+            steam_mechanical_3_01
+            steamtank_mechanical_01
+            steam_mechanical_3_03
+            steamtank_mechanical_02
+
+    end
+    event lod 3 probability 0.07 volume -35 mindist 7
+            folder data/sounds/SFX/Individual/Footsteps/Tank
+            steam_mechanical_1_01
+            steamtank_mechanical_01
+            steam_mechanical_1_03
+            steamtank_mechanical_02
+            steam_mechanical_2_01
+            steamtank_mechanical_03
+            steam_mechanical_2_03
+            steamtank_mechanical_04
+            steam_mechanical_3_01
+            steamtank_mechanical_01
+            steam_mechanical_3_03
+            steamtank_mechanical_02
+    end
+        event lod 5 probability 0.08 volume -35 mindist 8
+           folder data/sounds/SFX/Individual/Footsteps/Tank
+            steam_mechanical_1_01
+            steamtank_mechanical_01
+            steam_mechanical_1_03
+            steamtank_mechanical_02
+            steam_mechanical_2_01
+            steamtank_mechanical_03
+            steam_mechanical_2_03
+            steamtank_mechanical_04
+            steam_mechanical_3_01
+            steamtank_mechanical_01
+            steam_mechanical_3_03
+            steamtank_mechanical_02
+            
+        end
+
+;;;;;;;;;;;;;;;;   ELEPHANTS   ;;;;;;;;;;;;;;;;;;;;;;;
+;
+;
+;
+;    mount elephant_cannon, elephant_rocket, elephant
+;        event lod 1 probability 0.06 volume -40 mindist 6
+;            folder data/sounds/Voice/Animal/Elephant
+;            Elephant_Trumpet_11
+;            Elephant_Trumpet_12
+;            Elephant_Trumpet_15
+;            Elephant_Trumpet_18
+;            Elephant_Trumpet_42
+;            Elephant_Ambient_03
+;            Elephant_Ambient_04
+;            Elephant_Ambient_05
+;            Elephant_Ambient_06
+;            Elephant_Ambient_07
+;            Elephant_Ambient_08
+;            Elephant_Ambient_10
+;            Elephant_Snort_04
+;            Elephant_Snort_05
+;            Elephant_Snort_06
+;            Elephant_Snort_08
+;            Elephant_Snort_09
+;        end
+;
+;
+;
+;        event lod 3 probability 0.07 volume -35 mindist 7
+;            folder data/sounds/Voice/Animal/Elephant
+;            Elephant_Trumpet_11
+;            Elephant_Trumpet_12
+;            Elephant_Trumpet_15
+;            Elephant_Trumpet_18
+;            Elephant_Trumpet_42
+;            Elephant_Ambient_03
+;            Elephant_Ambient_04
+;            Elephant_Ambient_05
+;            Elephant_Ambient_06
+;            Elephant_Ambient_07
+;            Elephant_Ambient_08
+;            Elephant_Ambient_10
+;            Elephant_Snort_04
+;            Elephant_Snort_05
+;            Elephant_Snort_06
+;            Elephant_Snort_08
+;            Elephant_Snort_09
+;        end
+;
+;
+;    
+;        event lod 5 probability 0.08 volume -35 mindist 8
+;            folder data/sounds/Voice/Animal/Elephant
+;            Elephant_Trumpet_11
+;            Elephant_Trumpet_12
+;            Elephant_Trumpet_15
+;            Elephant_Trumpet_18
+;            Elephant_Trumpet_42
+;            Elephant_Ambient_03
+;            Elephant_Ambient_04
+;            Elephant_Ambient_05
+;            Elephant_Ambient_06
+;            Elephant_Ambient_07
+;            Elephant_Ambient_08
+;            Elephant_Ambient_10
+;            Elephant_Snort_04
+;            Elephant_Snort_05
+;;            Elephant_Snort_06
+;            Elephant_Snort_08
+;            Elephant_Snort_09
+;        end
+
+;;;;;;;;;;;JUGGERNAUT ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    mount mount_juggernaut
+        event lod 1 probability 0.04 volume -25 mindist 4
+            folder data/sounds/Voice/Animal/juggernaut
+            juggernaut_aggro_01
+            juggernaut_grunt_01
+            juggernaut_pain_01
+            juggernaut_grunt_02
+            juggernaut_pain_02
+            juggernaut_grunt_03
+            juggernaut_pain_03
+            juggernaut_grunt_04
+            juggernaut_shout_01
+            juggernaut_pain_04
+        end
+
+    event lod 10 probability 0.06 volume -20 mindist 5
+            folder  data/sounds/Voice/Animal/juggernaut
+            juggernaut_aggro_01
+            juggernaut_grunt_01
+            juggernaut_pain_01
+            juggernaut_grunt_02
+            juggernaut_pain_02
+            juggernaut_grunt_03
+            juggernaut_pain_03
+            juggernaut_grunt_04
+            juggernaut_shout_01
+            juggernaut_pain_04
+        end
+
+        event lod 20 probability 0.08 volume -20 mindist 6
+            folder data/sounds/Voice/Animal/juggernaut
+            juggernaut_aggro_01
+            juggernaut_grunt_01
+            juggernaut_pain_01
+            juggernaut_grunt_02
+            juggernaut_pain_02
+            juggernaut_grunt_03
+            juggernaut_pain_03
+            juggernaut_grunt_04
+            juggernaut_shout_01
+            juggernaut_pain_04
+        end
+
+;;;;;;;;;;;COLD ONE ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    mount Cold one
+        event lod 1 probability 0.04 volume -25 mindist 4
+            folder data/sounds/Voice/Animal/Coldone
+            coldonevocals1
+            coldonevocals2
+            coldonevocals3
+            coldonevocals4
+            coldonevocals5
+            coldonevocals6
+            coldonevocals7
+            coldonevocals8
+        end
+
+    event lod 10 probability 0.06 volume -20 mindist 5
+            folder  data/sounds/Voice/Animal/Coldone
+            coldonevocals1
+            coldonevocals2
+            coldonevocals3
+            coldonevocals4
+            coldonevocals5
+            coldonevocals6
+            coldonevocals7
+            coldonevocals8
+        end
+
+        event lod 20 probability 0.08 volume -20 mindist 6
+            folder data/sounds/Voice/Animal/Coldone
+            coldonevocals1
+            coldonevocals2
+            coldonevocals3
+            coldonevocals4
+            coldonevocals5
+            coldonevocals6
+            coldonevocals7
+            coldonevocals8
+        end		
+;;;;;;;;;;;LIZARDS   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    mount Slaanesh creaturs
+        event lod 1 probability 0.04 volume -25 mindist 4
+            folder data/sounds/Voice/Animal/Lizard
+            lizard_greeting_01
+            lizard_greeting_02
+            lizard_aggro_01
+            lizard_greeting_03
+            lizard_greeting_04
+            lizard_shout_01
+            lizard_greeting_05
+            lizard_greeting_06
+            lizard_shout_01
+            lizard_greeting_07
+            lizard_greeting_08
+            lizard_shout_01
+            lizard_greeting_09
+        end
+
+    event lod 10 probability 0.06 volume -20 mindist 5
+            folder  data/sounds/Voice/Animal/Lizard
+            lizard_greeting_01
+            lizard_greeting_02
+            lizard_aggro_01
+            lizard_greeting_03
+            lizard_greeting_04
+            lizard_shout_01
+            lizard_greeting_05
+            lizard_greeting_06
+            lizard_shout_01
+            lizard_greeting_07
+            lizard_greeting_08
+            lizard_shout_01
+            lizard_greeting_09
+        end
+
+        event lod 20 probability 0.08 volume -20 mindist 6
+            folder data/sounds/Voice/Animal/Lizard
+            lizard_greeting_01
+            lizard_greeting_02
+            lizard_aggro_01
+            lizard_greeting_03
+            lizard_greeting_04
+            lizard_shout_01
+            lizard_greeting_05
+            lizard_greeting_06
+            lizard_shout_01
+            lizard_greeting_07
+            lizard_greeting_08
+            lizard_shout_01
+            lizard_greeting_09
+        end		

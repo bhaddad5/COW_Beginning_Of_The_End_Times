@@ -1,0 +1,221 @@
+; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+ DEFAULT: 3d mindist 10 minPitch .8 maxPitch 1.1 fadein 0 fadeout 1 volume -25 priority 170 probability 1 
+ DEFAULT: distancepriority -1 effect_level .25 delay 2.0 randomdelay .5 pref SFX
+ BANK: unit_charge
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;	ALL UNITS ;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;Orks&Goblins;;;;;;;;
+
+
+;;;;Orks;;;;
+
+
+type Orcs boar boyz, Savage Orcs boar boyz, Orcz boyz, Orcz spear boyz, Savage Orcs boyz, Big`un Orcz boyz, Black Orcs, Black orcs destroyer, Orcz Arrerz, Savage Orcs arrer, Orcz boyz rebel, Orcz Arrerz rebel
+ 		event lod 5  
+ 			folder data/sounds/Voice/human/Generic
+ 			triumphorcsmall1
+		        triumphorcsmall2
+                        triumphorcsmall3
+ 					end
+ 	
+ 		event lod 10
+ 			folder data/sounds/Voice/human/Generic
+ 			triumphorcmedium
+ 		     
+ 			end
+ 		
+ 		event lod 30 
+ 			folder data/sounds/Voice/human/Generic
+ 			triumphorclarge
+
+ 		end
+
+
+;;;;Goblins;;;;;;
+
+type Goblin wolf rider, Goblinz, Goblinz spearz, Night Goblinz, Night Goblinz spearz, Night Goblins Netters, Goblinz Arrerz, Night Goblin Arrerz, Night Goblin Squig, Night Goblin Squig rider, Night Goblin Squig rider bodyguard, Night Goblin Squig bodyguard, Chukka, Rock Lobba, tortoise ram orks, siege tower goblins
+ 		event lod 5  
+ 			folder data/sounds/Voice/human/Generic
+ 			triumphgoblinsmall1
+		        triumphgoblinsmall2
+                        triumphgoblinsmall3
+ 			end
+ 	
+ 		event lod 10
+ 			folder data/sounds/Voice/human/Generic
+ 			triumphgoblinmedium
+ 		     
+ 			end
+ 		
+ 		event lod 30 
+ 			folder data/sounds/Voice/human/Generic
+ 			triumphgoblinlarge
+
+ 		end
+
+;;;;STEAM TANK;;;;;;
+
+type Steam Tank
+ 		event volume 0 mindist 20
+ 			folder data/sounds/SFX/Individual/Melee
+ 			steamtank_whistle_01
+
+ 		end
+
+
+	unit infantry light, heavy, spearmen, skirmish, missile
+	
+		event lod 5
+			folder data/sounds/SFX/group/Infantry
+			infantry_group_charge_small_01
+		end
+
+		event lod 10
+			folder data/sounds/SFX/group/Infantry
+			infantry_group_charge_medium_01
+
+			end
+
+		event lod 30
+			folder data/sounds/SFX/group/Infantry
+			infantry_group_charge_large_01
+			infantry_group_charge_large_02
+			end
+			
+			
+;;;;;;;;;;;;;;;;;;;;;;;
+
+
+			
+	unit cavalry light, heavy, spearmen, skirmish, missile
+	
+		event lod 5
+			folder data/sounds/SFX/group/Infantry
+			infantry_group_charge_small_01
+		end
+
+		event lod 10
+			folder data/sounds/SFX/group/Infantry
+			infantry_group_charge_medium_01
+
+			end
+
+		event lod 30
+			folder data/sounds/SFX/group/Infantry
+			infantry_group_charge_large_01
+			infantry_group_charge_large_02
+			end
+
+			
+	
+;;;;;;;;;;;;;;;;;;;;;		
+			
+			
+	unit handler light, heavy, spearmen, skirmish, missile	
+			
+		event lod 5
+			folder data/sounds/SFX/group/Infantry
+			infantry_group_charge_small_01
+		end
+
+		event lod 10
+			folder data/sounds/SFX/group/Infantry
+			infantry_group_charge_medium_01
+
+			end
+
+		event lod 30
+			folder data/sounds/SFX/group/Infantry
+			infantry_group_charge_large_01
+			infantry_group_charge_large_02
+			end
+
+			
+;;;;;;;;;;;;;;;;;;;	
+			
+	unit siege light, heavy, spearmen, skirmish, missile
+			
+			event lod 5
+			folder data/sounds/SFX/group/Infantry
+			infantry_group_charge_small_01
+		end
+
+		event lod 10
+			folder data/sounds/SFX/group/Infantry
+			infantry_group_charge_medium_01
+
+			end
+
+		event lod 30
+			folder data/sounds/SFX/group/Infantry
+			infantry_group_charge_large_01
+			infantry_group_charge_large_02
+			end
+
+ 
+ ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
+;;;;;;;;;;;	FEMALE
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+	type amazon bodyguard, amazon
+		event lod 5  volume 0 minpitch .7 maxpitch .7 
+			folder data/sounds/Voice/human/localized/group
+			woman_screecher_group_charge_small_01
+			woman_screecher_group_charge_small_02
+			
+		end
+
+		event lod 10 volume 0 minpitch .7 maxpitch .7 
+			folder data/sounds/Voice/human/localized/group
+			woman_screecher_group_charge_med_01
+			woman_screecher_group_charge_med_02
+			
+			
+			end
+		
+		event lod 20 volume 0 minpitch .7 maxpitch .7 
+			folder data/sounds/Voice/human/localized/group
+			woman_screecher_group_charge_large_01
+			woman_screecher_group_charge_large_02
+			
+			end
+
+			
+		
+	type Norse shield maidens
+		event lod 5  minpitch 1.0 maxpitch 1.1
+			folder data/sounds/Voice/human/localized/group
+			woman_group_charge_small_01
+			woman_group_charge_small_02
+			
+		end
+
+		event lod 10 minpitch 1.0 maxpitch 1.1
+			folder data/sounds/Voice/human/localized/group
+			woman_group_charge_med_01
+			woman_group_charge_med_02
+			
+			
+			end
+		
+		event lod 20 minpitch 1.0 maxpitch 1.1
+			folder data/sounds/Voice/human/localized/group
+			woman_group_charge_large_01
+			woman_group_charge_large_02
+			
+			end
+			
+
+
+
+
+
+

@@ -1,0 +1,1705 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	This file contains the mount linkages; it gets parsed on application
+;	startup but is not otherwise referred to. The data format is thus:
+;
+;	Fields should be entered in the order shown.
+;
+;	;						indicates a comment ;-)
+;	/ /						indicates a section
+;	[]						indicates optional
+;
+;	/generic/
+;
+;	type					indicates a new mount type, must be followed by id name string
+;	class					mount class (current possibilities - horse, camel, elephant)
+;	model*					model id from descr_model_battle
+;	radius					mount radius
+;	[ x_radius ]			mount x axis radius for elliptical mounts (radius is y radius in this case)
+;   [ y_offset ]			mount y offset for elliptical mounts
+;	height					mount height
+;	mass					mount mass
+;	banner_height			height of banners above mount
+;	bouyancy_offset			bouyancy offset of mount above root node
+;	water_trail_effect		display effect for moving through water
+;
+;	/horse, camel or elephant specific/
+;
+;	root_node_height		height of the horse, camel or elephants root node above the ground
+;
+;	/horse and camel specific/
+;
+;	rider_offset			(x, y, z) for the rider relative to horse or camel root node
+;
+;	/elephant specific/
+;
+;	attack_delay			delay between mount attacks (tusks and scythes) in seconds
+;
+;	/elephant specific/
+;
+;	dead_radius				radius of dead obstacle
+;	tusk_z					distance along the z axis of tusks from centre
+;	tusk_radius				radius of tusk attack
+;	riders					number of riders
+;	rider_offset			(x, y, z) for each rider relative to elephant root node
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; camels
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+type				camel
+class				camel
+model				Mount_Camel
+radius				1.9
+x_radius			1.0
+y_offset			1.0
+height				2.8
+mass				1.8
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect  camel_water_trail
+root_node_height	1.52
+;rider_offset		0, 0.43, -0.2
+rider_offset		0.0, 0.60, -0.23
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; horses
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+type				eastern armoured horse
+class				horse
+model				Mount_Eastern_Armoured_Horse
+radius				1.7
+x_radius			0.75
+y_offset			0.8
+height				2.5
+mass				2.5
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.38, 0.70
+
+
+type				Encarmine Armoured Horse
+class				horse
+model				Encarmine_Armoured_Horse
+radius				1.5
+x_radius			0.5
+y_offset			0.9
+height				2.5
+mass				2.5
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.38, 0.70
+
+type				mount_juggernaut
+class				horse
+model				mount_juggernaut
+radius				1.8
+x_radius			0.7
+y_offset			1.1
+height				3.0
+mass				5.5
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.4, 0.75
+
+;;scythedchariot
+type				tiranoc_chariot
+class				elephant
+model				banzai_mount_scythed_chariot_seleucid
+radius				3                    ; was 5.5
+x_radius			1.3
+y_offset			0
+height				2.5
+mass				10
+banner_height			1
+bouyancy_offset			3
+water_trail_effect		elephant_water_trail
+root_node_height		1.0	;was 2.84
+attack_delay			0
+dead_radius			3.5
+tusk_z				3.0
+tusk_radius			2.3
+riders				3
+rider_offset			0.0, -0.3, 0.2	
+rider_offset			0.4, -0.95, -1.08	
+rider_offset			-0.4, -0.95, -0.48	
+
+;;scythedchariot
+type				orc_chariot
+class				elephant
+model				banzai_mount_scythed_chariot_seleuci3
+radius				3                    ; was 5.5
+x_radius			1.3
+y_offset			3.5
+height				2.5
+mass				15
+banner_height			1
+bouyancy_offset			3
+water_trail_effect		elephant_water_trail
+root_node_height		1.0	;was 2.84
+attack_delay			0
+dead_radius			3.5
+tusk_z				3.0
+tusk_radius			2.3
+riders				3
+rider_offset			0.0, -0.90, 0.2	
+rider_offset			0.4, -0.95, -0.98	
+rider_offset			-0.4, -0.95, -0.48	
+
+
+
+;;scythedchariot
+type				chaos_chariot
+class				elephant
+model				banzai_mount_scythed_chariot_seleucid1
+radius				2.5                    ; was 5.5
+x_radius			1.3
+y_offset			0
+height				2.5
+mass				10
+banner_height			1
+bouyancy_offset			3
+water_trail_effect		elephant_water_trail
+root_node_height		1.0	;was 2.84
+attack_delay			0
+dead_radius			3.5
+tusk_z				3.0
+tusk_radius			2.3
+riders				3
+rider_offset			0.0, -0.90, 0.34	
+rider_offset			0.40, -0.95, -0.66	
+rider_offset			-0.40, -0.95, -0.34	
+
+
+
+;;scythedchariot
+type				chaos1_chariot
+class				elephant
+model				chaos_chariot
+radius				2.5                    ; was 5.5
+x_radius			1.3
+y_offset			0
+height				2.5
+mass				15
+banner_height			1
+bouyancy_offset			3
+water_trail_effect		elephant_water_trail
+root_node_height		1.0	;was 2.84
+attack_delay			0
+dead_radius			3.5
+tusk_z				3.0
+tusk_radius			2.3
+riders				3
+rider_offset			0.0, 0.00, 0.34	
+rider_offset			0.45, -0.95, -0.66	
+rider_offset			-0.45, -0.95, -0.34	
+
+
+
+;;scythedchariot
+type				steam_tank
+class				elephant
+model				steam_tank
+radius				3.5                    ; was 5.5
+x_radius			2.0
+y_offset			4.5
+height				4
+mass				80
+banner_height			1
+bouyancy_offset			3
+water_trail_effect		elephant_water_trail
+root_node_height		1.0	;was 2.84
+attack_delay			0
+dead_radius			4.5
+tusk_z				3.0
+tusk_radius			4.0
+riders				2
+rider_offset			0.0, -2.0, -0.6	
+rider_offset			0.0, -2.0, 0.0	
+
+type				war_wagon
+class				elephant
+model				banzai_mount_war_wagon
+radius				5.4                    ; was 5.5
+x_radius			1.5
+y_offset			0
+height				2
+mass				25
+banner_height			1
+bouyancy_offset			3
+water_trail_effect		elephant_water_trail
+root_node_height		1.0	;was 2.84
+attack_delay			0
+dead_radius			3.5
+tusk_z				3.0
+tusk_radius			0.5
+riders				4
+rider_offset			0.12, 0.4, 0.2	
+rider_offset			0.0, -0.96, -0.9	
+rider_offset			0.0, -0.96, -2.0	
+rider_offset			0.0, -0.96, -3.2	
+
+type				Chaos armoured horse
+class				horse
+model				Chaos_Mount_Armoured_Horse
+radius				1.5
+x_radius			0.5
+y_offset			0.9
+height				2.5
+mass				2.5
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.4, 0.70
+
+type				Chaos armoured horse of Khorne
+class				horse
+model				Chaos_Mount_Armoured_Horse_of_Khorne
+radius				1.5
+x_radius			0.5
+y_offset			0.9
+height				2.5
+mass				2.5
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.4, 0.70
+
+type				Chaos armoured horse of Tzeentch
+class				horse
+model				Chaos_Mount_Armoured_Horse_of_Tzeentch
+radius				1.5
+x_radius			0.5
+y_offset			0.9
+height				2.5
+mass				2.5
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.4, 0.70
+
+type				Chaos armoured horse of Slaanesh
+class				horse
+model				Chaos_Mount_Armoured_Horse_of_Slaanesh
+radius				1.5
+x_radius			0.5
+y_offset			0.9
+height				2.5
+mass				2.5
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.4, 0.70
+
+type				Chaos armoured horse of Nurgl
+class				horse
+model				Chaos_Mount_Armoured_Horse_of_Nurgl
+radius				1.5
+x_radius			0.5
+y_offset			0.9
+height				2.5
+mass				2.5
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.4, 0.70
+
+type				Champion horse
+class				horse
+model				Champion_armoured_horse
+radius				1.5
+x_radius			0.5
+y_offset			0.9
+height				2.5
+mass				2.5
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.4, 0.75
+
+type				Khorne champion horse
+class				horse
+model				Khorne_champion_armoured_horse
+radius				1.5
+x_radius			0.5
+y_offset			0.9
+height				2.5
+mass				2.5
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.4, 0.75
+
+type				Tzeentch champion horse
+class				horse
+model				Tzeentch_champion_armoured_horse
+radius				1.5
+x_radius			0.5
+y_offset			0.9
+height				2.5
+mass				2.5
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.4, 0.75
+
+type				Slaanesh champion horse
+class				horse
+model				Slaanesh_champion_armoured_horse
+radius				1.5
+x_radius			0.5
+y_offset			0.9
+height				2.5
+mass				2.5
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.4, 0.75
+
+type				Nurgl champion horse
+class				horse
+model				Nurgl_champion_armoured_horse
+radius				1.5
+x_radius			0.5
+y_offset			0.9
+height				2.5
+mass				2.5
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.4, 0.75
+
+type				panthe armoured horse
+class				horse
+model				pante_Mount_Armoured_Horse
+radius				1.5
+x_radius			0.5
+y_offset			0.9
+height				2.5
+mass				2.4
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.38, 0.70
+
+type				goldli armoured horse
+class				horse
+model				Goldl_Mount_Armoured_Horse 
+radius				1.5
+x_radius			0.5
+y_offset			0.9
+height				2.5
+mass				2.4
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.38, 0.70
+
+type				black armoured horse
+class				horse
+model				Black_Mount_Armoured_Horse
+radius				1.5
+x_radius			0.5
+y_offset			0.9
+height				2.5
+mass				2.5
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.38, 0.70
+
+type				morr armoured horse
+class				horse
+model				Morr_Mount_Armoured_Horse
+radius				1.5
+x_radius			0.5
+y_offset			0.9
+height				2.5
+mass				2.5
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.38, 0.70
+
+type				Vampire Elector Horse
+class				horse
+model				Electorcount_AH2
+radius				1.5
+x_radius			0.5
+y_offset			0.9
+height				2.5
+mass				2.5
+banner_height		0
+bouyancy_offset		2
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.38, 0.70
+
+type				Elector count armored horse
+class				horse
+model				Electorcount_AH
+radius				1.5
+x_radius			0.5
+y_offset			0.9
+height				2.5
+mass				2.5
+banner_height		0
+bouyancy_offset		2
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.38, 0.70
+
+type				Reikguard armored horse
+class				horse
+model				Reikguard_AH
+radius				1.5
+x_radius			0.5
+y_offset			0.9
+height				2.5
+mass				2.5
+banner_height		0
+bouyancy_offset		2
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.38, 0.70
+
+type				White wolf  armored horse
+class				horse
+model				White_wolf_AH
+radius				1.5
+x_radius			0.5
+y_offset			0.9
+height				2.5
+mass				2.5
+banner_height		0
+bouyancy_offset		2
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.38, 0.70
+
+type				bull  armored horse
+class				horse
+model				bull_AH
+radius				1.5
+x_radius			0.5
+y_offset			0.9
+height				2.5
+mass				2.5
+banner_height		0
+bouyancy_offset		2
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.38, 0.70
+
+type				Sig Hunt armored horse
+class				horse
+model				Sig_Hunt_AH
+radius				1.5
+x_radius			0.85
+y_offset			1.3
+height				2.5
+mass				5.5
+banner_height		0
+bouyancy_offset		2
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.38, 0.80
+
+type				Venator armoured horse
+class				horse
+model				Venator_Mount_Armoured_Horse
+radius				1.5
+x_radius			0.5
+y_offset			0.9
+height				2.5
+mass				2.5
+banner_height		0
+bouyancy_offset		2
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.38, 0.70
+
+type				Bear
+class				horse
+model				Bear
+radius				1.5
+x_radius			0.85
+y_offset			0.9
+height				2.5
+mass				3
+banner_height		0
+bouyancy_offset		2
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.43, 0.45
+
+type				White Bear
+class				horse
+model				White_Bear
+radius				1.5
+x_radius			0.85
+y_offset			0.9
+height				2.5
+mass				3
+banner_height		0
+bouyancy_offset		2
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.43, 0.45
+
+type				Bret graal barded horse
+class				horse
+model				graal_barded_horse
+radius				1.75
+x_radius			0.75
+y_offset			0.8
+height				2.5
+mass				2.5
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.45, 0.70
+
+type				Bret questing barded horse
+class				horse
+model				quest_barded_horse
+radius				1.5
+x_radius			0.85
+y_offset			0.8
+height				2.5
+mass				2.5
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.45, 0.70
+
+
+type				Bret barded horse
+class				horse
+model				Bret_barded_horse
+radius				1.7
+x_radius			0.7
+y_offset			0.8
+height				2.5
+mass				2.25
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.45, 0.70
+
+
+type				Bret errant barded horse
+class				horse
+model				Bret_errant_barded_horse
+radius				1.7
+x_radius			0.7
+y_offset			0.8
+height				2.5
+mass				2
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.45, 0.70
+
+type				HE Light horse
+class				horse
+model				HE_Light_horse
+radius				1.5
+x_radius			0.5
+y_offset			0.7
+height				2.5
+mass				1.5
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+;rider_offset		0.0, 0.45, 0.35
+rider_offset		0.0, 0.11, 0.70
+
+type				HE AR Horse
+class				horse
+model				HE_AR_Horse
+radius				1.5
+x_radius			0.5
+y_offset			0.7
+height				2.5
+mass				2
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+;rider_offset		0.0, 0.45, 0.35
+rider_offset		0.0, 0.38, 0.70
+
+
+type				Dragon prince armoured horse
+class				horse
+model				Dragon_prince_AH
+radius				1.5
+x_radius			0.5
+y_offset			0.7
+height				2.5
+mass				2.5
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+;rider_offset		0.0, 0.45, 0.35
+rider_offset		0.0, 0.38, 0.70
+
+type				Wolf mount
+class				horse
+model				Wolf_mount
+radius				1.3
+x_radius			0.25
+y_offset			0.5
+height				1.25
+mass				1.4
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+;rider_offset		0.0, 0.45, 0.35
+rider_offset		0.0, 0.75, -0.35
+
+type				Wolf hob mount
+class				horse
+model				Wolf_hob_mount
+radius				1.5
+x_radius			0.25
+y_offset			0.5
+height				1.25
+mass				1.8
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+;rider_offset		0.0, 0.45, 0.35
+rider_offset		0.0, 0.3, 0.4
+
+type				Wolf hob arch mount
+class				horse
+model				Wolf_hob_arch_mount
+radius				1.0
+x_radius			0.25
+y_offset			0.5
+height				1.25
+mass				1.4
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+;rider_offset		0.0, 0.45, 0.35
+rider_offset		0.0, 0.3, 0.3
+
+type				Squig mount
+class				horse
+model				Squig
+radius				1.0
+x_radius			0.25
+y_offset			0.5
+height				1.25
+mass				1
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+;rider_offset		0.0, 0.45, 0.35
+rider_offset		0.0, 0.3, 0.3
+
+type				Slaanesh creaturs
+class				horse
+model				Slaanesh_creaturs
+radius				1.5
+x_radius			0.5
+y_offset			0.7
+height				1.5
+mass				1.5
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+;rider_offset		0.0, 0.45, 0.35
+rider_offset		0.0, 0.4, 0.3
+
+type				Disc of Tzeentch
+class				horse
+model				Disc_of_Tzeentch
+radius				1
+x_radius			0.5
+y_offset			1
+height				1.5
+mass				1.5
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+;rider_offset		0.0, 0.45, 0.35
+rider_offset		0.0, 0.42, 0.3
+
+
+type				Screemer fly
+class				horse
+model				Screemer_fly
+radius				1
+x_radius			0.5
+y_offset			1
+height				1.5
+mass				1.5
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+;rider_offset		0.0, 0.45, 0.35
+rider_offset		0.0, 0.3, 0.3
+
+type				Wraith fly
+class				horse
+model				Screemer_fly
+radius				0.1
+x_radius			0.1
+y_offset			0.1
+height				0.1
+mass				1.0
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+;rider_offset		0.0, 0.45, 0.35
+rider_offset		0.0, -0.8, 0.0
+
+type				flamer fly
+class				horse
+model				Screemer_fly
+radius				0.1
+x_radius			0.1
+y_offset			0.1
+height				0.1
+mass				1.0
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+;rider_offset		0.0, 0.45, 0.35
+rider_offset		0.0, -0.2, 0.0
+
+type				Light horse k
+class				horse
+model				Light_horse_k
+radius				1.5
+x_radius			0.5
+y_offset			0.7
+height				2.1
+mass				2
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+;rider_offset		0.0, 0.45, 0.35
+rider_offset		0.0, 0.38, 0.70
+
+
+type				Light horse ragnar
+class				horse
+model				Light_horse_r
+radius				1.5
+x_radius			0.5
+y_offset			0.7
+height				2.1
+mass				1.5
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+;rider_offset		0.0, 0.45, 0.35
+rider_offset		0.0, 0.38, 0.70
+
+type				Light horse dark
+class				horse
+model				Light_horse_d
+radius				1.5
+x_radius			0.5
+y_offset			0.7
+height				2.1
+mass				1.5
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+;rider_offset		0.0, 0.45, 0.35
+rider_offset		0.0, 0.38, 0.70
+
+type				Light horse
+class				horse
+model				Light_horse
+radius				1.5
+x_radius			0.5
+y_offset			0.7
+height				2.1
+mass				1.5
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+;rider_offset		0.0, 0.45, 0.35
+rider_offset		0.0, 0.38, 0.70
+
+type				Centigor_mount
+class				horse
+model				Centigor_mount
+radius				1.5
+x_radius			0.5
+y_offset			0.7
+height				2.1
+mass				1.5
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.15, 1.4
+
+
+type				mount_heavy_horse_marka
+class				horse
+model				mount_heavy_horse_marka
+radius				1.5
+x_radius			0.5
+y_offset			0.7
+height				2.1
+mass				1.5
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+;rider_offset		0.0, 0.45, 0.35
+rider_offset		0.0, 0.38, 0.70
+
+type				horse marka
+class				horse
+model				mount_horse_marka
+radius				1.8
+x_radius			0.8
+y_offset			0.7
+height				2.5
+mass				1.25
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+;rider_offset		0.0, 0.45, 0.35
+rider_offset		0.0, 0.38, 0.70
+
+
+type				horse marka 1
+class				horse
+model				mount_horse_marka
+radius				1.3
+x_radius			0.1
+y_offset			0.7
+height				2.5
+mass				1.25
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+;rider_offset		0.0, 0.45, 0.35
+rider_offset		0.0, 0.38, 0.70
+
+type				horse marka_E
+class				horse
+model				mount_horse_marka_E
+radius				1.8
+x_radius			0.8
+y_offset			0.7
+height				2.5
+mass				1.25
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+;rider_offset		0.0, 0.45, 0.35
+rider_offset		0.0, 0.38, 0.70
+
+type				horse marka_G
+class				horse
+model				mount_horse_marka_G
+radius				1.8
+x_radius			0.8
+y_offset			0.7
+height				2.5
+mass				1.25
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+;rider_offset		0.0, 0.45, 0.35
+rider_offset		0.0, 0.38, 0.70
+
+type				Light horse Chaos 
+class				horse
+model				Light_horse_Chaos 
+radius				1.5
+x_radius			0.5
+y_offset			0.7
+height				2.1
+mass				1.5
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+;rider_offset		0.0, 0.45, 0.35
+rider_offset		0.0, 0.38, 0.70
+
+
+;values on 2nd aug:
+
+;rider_offset			0.05, 1.25, 1.37
+;rider_offset			-0.3, 1.22, 0.4		;y was 1.54
+;rider_offset			0.3, 1.22, -.35		;y was 1.54
+
+type				Doomflayer
+class				horse
+model				Doom_flayer
+radius				1.5
+x_radius			0.5
+y_offset			0.7
+height				2.5
+mass				2.5	;changed from 4.0 29/4/05
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.45, 0.50
+
+type				Boar
+class				horse
+model				mount_boar
+radius				1.5
+x_radius			0.5
+y_offset			0.7
+height				2.5
+mass				2.5	;changed from 4.0 29/4/05
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.45, 0.50
+
+type				S_Boar
+class				horse
+model				S_mount_boar
+radius				1.5
+x_radius			0.5
+y_offset			0.7
+height				2.5
+mass				2.5	;changed from 4.0 29/4/05
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.45, 0.50
+
+type				fast pony
+class				horse
+model				Mount_Fast_Pony
+radius				1.8
+x_radius			0.8
+y_offset			0.7
+height				2.1
+mass				1.7
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+;rider_offset		0.0, 0.45, 0.35
+rider_offset		0.0, 0.38, 0.70
+
+type				heavy horse
+class				horse
+model				Mount_Heavy_Horse
+radius				1.9
+x_radius			0.9
+y_offset			0.7
+height				2.5
+mass				2.35	;changed from 4.0 29/4/05
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.38, 0.70
+
+type				skeleton horse
+class				horse
+model				skeleton_horse
+radius				1.8
+x_radius			0.8
+y_offset			0.7
+height				2.1
+mass				1.3	;changed from 4.0 29/4/05
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.20, 0.60
+
+type				skeleton horse khemri
+class				horse
+model				skeleton_horse_khemri
+radius				1.5
+x_radius			0.5
+y_offset			0.7
+height				2.5
+mass				2.0	;changed from 4.0 29/4/05
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.20, 0.60
+
+type				Armored skeleton horse
+class				horse
+model				Armored_skeleton_horse
+radius				1.5
+x_radius			0.5
+y_offset			0.7
+height				2.5
+mass				2.0	;changed from 4.0 29/4/05
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.38, 0.70
+
+type				Grail skeleton horse
+class				horse
+model				Grail_skeleton_horse
+radius				1.5
+x_radius			0.5
+y_offset			0.7
+height				2.5
+mass				2.0	;changed from 4.0 29/4/05
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect	horse_water_trail
+root_node_height	1.0
+rider_offset		0.0, 0.38, 0.70
+
+type				mount griffon
+class				horse
+model				mount_griffon
+radius				1.5
+x_radius			0.5
+y_offset			1.0
+height				2
+mass				10
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect  camel_water_trail
+root_node_height	1.52
+rider_offset			0.00, 0.6, 0.40
+
+type				Cold one
+class				camel
+model				Cold_one
+radius				1.5
+x_radius			0.5
+y_offset			0.8
+height				3
+mass				3
+banner_height		0
+bouyancy_offset		1.8
+water_trail_effect  camel_water_trail
+root_node_height	1.52
+rider_offset		0.0, 0.60, -0.45
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Dragons
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+type				HE Dragon
+class				horse
+model				Dragon_prince_AH
+radius				0.01
+x_radius			0.1
+y_offset			0.1
+height				5
+mass				4
+banner_height		5
+bouyancy_offset		5
+water_trail_effect	horse_water_trail
+root_node_height	5.0
+;rider_offset		0.0, 0.45, 0.35
+rider_offset		0.0, 0.38, 0.70
+
+type				Troll
+class				elephant
+model				Troll
+radius				1.5
+x_radius			0.8
+y_offset			1
+height				2
+mass				30
+banner_height			1
+bouyancy_offset			3
+water_trail_effect		elephant_water_trail
+root_node_height		2.84
+attack_delay			1
+dead_radius			3.0
+tusk_z				2.5
+tusk_radius			2.5
+riders				3
+rider_offset			1.05, 0.52, 0.37
+rider_offset			-0.3, -1.52, 0.4		;y was 1.54
+rider_offset			0.3, -1.52, -.35		;y was 1.54
+
+type				imortalz
+class				elephant
+model				Black_orcs1
+radius				1.5
+x_radius			0.8
+y_offset			1
+height				2
+mass				40
+banner_height			1
+bouyancy_offset			3
+water_trail_effect		elephant_water_trail
+root_node_height		2.84
+attack_delay			0
+dead_radius			3.0
+tusk_z				2.5
+tusk_radius			2.5
+riders				3
+rider_offset			1.05, 0.52, 0.37
+rider_offset			-0.3, -1.52, 0.4		;y was 1.54
+rider_offset			0.3, -1.52, -.35		;y was 1.54
+
+type				lead_belcher
+class				elephant
+model				lead_belcher
+radius				1.5
+x_radius			0.8
+y_offset			1
+height				2
+mass				30
+banner_height			1
+bouyancy_offset			3
+water_trail_effect		elephant_water_trail
+root_node_height		2.84
+attack_delay			1
+dead_radius			3.0
+tusk_z				2.5
+tusk_radius			2.5
+riders				2
+rider_offset			0.05, 1.35, 1.37
+rider_offset			0.0, 1.22, 0.4		;y was 1.54
+
+type				giant
+class				elephant
+model				giant
+radius				1.3	;3
+x_radius			1.1	;1.3
+y_offset			0
+height				2	;3
+mass				40	;40
+banner_height			1
+bouyancy_offset			3
+water_trail_effect		elephant_water_trail
+root_node_height		2.84	;was 2.52
+attack_delay			0
+dead_radius			3.5
+tusk_z				2.0	;3
+tusk_radius			2.2
+riders 				3
+rider_offset 			0.05, -5.0, 1.37
+rider_offset 			-0.3, -1.52, 0.4 ;y was 1.54
+rider_offset 			0.3, -1.52, -.35 ;y was 1.54 
+
+type				Daemon_Prince
+class				elephant
+model				Daemon_prince_1
+radius				1.5
+x_radius			1.3
+y_offset			1
+height				2
+mass				50
+banner_height			1
+bouyancy_offset			3
+water_trail_effect		elephant_water_trail
+root_node_height		2.84
+attack_delay			1
+dead_radius			3.5
+tusk_z				2.0
+tusk_radius			4.0
+riders				3
+rider_offset			1.20, -5.0, 0.40
+rider_offset			-0.3, -1.52, 0.4		;y was 1.54
+rider_offset			0.3, -1.52, -.35		;y was 1.54
+
+type				tzeentch_changer
+class				elephant
+model				tzeentch_changer_1
+radius				1.5
+x_radius			1.3
+y_offset			1
+height				2
+mass				50
+banner_height			1
+bouyancy_offset			3
+water_trail_effect		elephant_water_trail
+root_node_height		2.84
+attack_delay			1
+dead_radius			3.5
+tusk_z				2.0
+tusk_radius			4.0
+riders				3
+rider_offset			0.05, -5.0, 1.37
+rider_offset			-0.3, -1.52, 0.4		;y was 1.54
+rider_offset			0.3, -1.52, -.35		;y was 1.54
+
+type				keeper_of_secrets
+class				elephant
+model				keeper_of_secrets_1
+radius				1.5
+x_radius			1.3
+y_offset			1
+height				2
+mass				50
+banner_height			1
+bouyancy_offset			3
+water_trail_effect		elephant_water_trail
+root_node_height		2.84
+attack_delay			1
+dead_radius			3.5
+tusk_z				2.0
+tusk_radius			4.0
+riders				3
+rider_offset			0.05, -5.0, 1.37
+rider_offset			-0.3, -1.52, 0.4		;y was 1.54
+rider_offset			0.3, -1.52, -.35		;y was 1.54
+
+type				unclean_one
+class				elephant
+model				unclean_one
+radius				2
+x_radius			1.3
+y_offset			1
+height				2
+mass				65
+banner_height			1
+bouyancy_offset			3
+water_trail_effect		elephant_water_trail
+root_node_height		2.84
+attack_delay			1
+dead_radius			3.5
+tusk_z				2.0
+tusk_radius			4.0
+riders				3
+rider_offset			0.05, -5.0, 1.37
+rider_offset			-0.3, -1.52, 0.4		;y was 1.54
+rider_offset			0.3, -1.52, -.35		;y was 1.54
+
+type				Squigs
+class				elephant
+model				squig
+radius				1.5                    
+x_radius			1
+y_offset			0
+height				1
+mass				1.5
+banner_height			1
+bouyancy_offset			1
+water_trail_effect		elephant_water_trail
+root_node_height		1	
+attack_delay			1
+dead_radius			0.5
+tusk_z				1
+tusk_radius			0.0
+riders				1
+rider_offset			0.0, -1.52, 1.37
+
+type		                Squi1
+class				elephant
+model				Squi1
+radius				1                    ; was 5.5
+x_radius			1.0
+y_offset			1
+height				1.75
+mass				3
+banner_height			1
+bouyancy_offset			1.8
+water_trail_effect		elephant_water_trail
+root_node_height		2.84	;was 2.52
+attack_delay			0
+dead_radius			1
+tusk_z				1.0
+tusk_radius			1.5
+riders				2
+rider_offset			0.05, 1.35, 1.37
+rider_offset			-0.3, 1.22, 0.4		;y was 1.54
+
+type		                Dire_Wolf
+class				elephant
+model				Dire_Wolf_mount
+radius				1                    ; was 5.5
+x_radius			1.0
+y_offset			1
+height				1.75
+mass				3
+banner_height			1
+bouyancy_offset			1.8
+water_trail_effect		elephant_water_trail
+root_node_height		2.84	;was 2.52
+attack_delay			0
+dead_radius			1
+tusk_z				1.0
+tusk_radius			1.5
+riders				2
+rider_offset			0.05, 1.35, 1.37
+rider_offset			-0.3, 1.22, 0.4		;y was 1.54
+
+type		                Dire_Wolf1
+class				elephant
+model				Dire_Wolf_mount1
+radius				3.0                    ; was 5.5
+x_radius			0.5
+y_offset			1
+height				1.75
+mass				30
+banner_height			1
+bouyancy_offset			1.8
+water_trail_effect		elephant_water_trail
+root_node_height		2.84	;was 2.52
+attack_delay			0
+dead_radius			1
+tusk_z				2.0
+tusk_radius			3.0
+riders				2
+rider_offset			0.05, 7.35, 1.37
+rider_offset			-0.3, 1.22, 0.4		;y was 1.54
+
+type		                Chaos_hound
+class				elephant
+model				Chaos_hound
+radius				1.0                    ; was 5.5
+x_radius			1.0
+y_offset			1
+height				1.75
+mass				2
+banner_height			1
+bouyancy_offset			1.8
+water_trail_effect		elephant_water_trail
+root_node_height		2.84	;was 2.52
+attack_delay			0
+dead_radius			1
+tusk_z				1.0
+tusk_radius			1.5
+riders				2
+rider_offset			0.05, 1.35, 1.37
+rider_offset			-0.3, 1.22, 0.4		;y was 1.54
+
+type				bone_giant
+class				elephant
+model				bone_giant
+radius				1.5	;3
+x_radius			1.1	;1.3
+y_offset			0
+height				2	;3
+mass				50	;40
+banner_height			1
+bouyancy_offset			3
+water_trail_effect		elephant_water_trail
+root_node_height		2.84	;was 2.52
+attack_delay			0
+dead_radius			4.5
+tusk_z				2.5	;3
+tusk_radius			3.0
+riders 				3
+rider_offset 			0.05, -1.52, 1.37
+rider_offset 			-0.3, -1.52, 0.4 ;y was 1.54
+rider_offset 			0.3, -1.52, -.35 ;y was 1.54 
+
+type				bone_giant2
+class				elephant
+model				bone_giant_ug1
+radius				2	;3
+x_radius			1.1	;1.3
+y_offset			0
+height				2	;3
+mass				50	;40
+banner_height			1
+bouyancy_offset			3
+water_trail_effect		elephant_water_trail
+root_node_height		2.84	;was 2.52
+attack_delay			0
+dead_radius			4.5
+tusk_z				2.6	;3
+tusk_radius			3.2
+riders 				3
+rider_offset 			0.05, -1.52, 1.37
+rider_offset 			-0.3, -1.52, 0.4 ;y was 1.54
+rider_offset 			0.3, -1.52, -.35 ;y was 1.54 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; elephants
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+type				elephant_cannon
+class				elephant
+model				Mount_Elephant_Cannon
+radius				3                    ; was 5.5
+x_radius			1.3
+y_offset			0
+height				3
+mass				20
+banner_height			1
+bouyancy_offset			3
+water_trail_effect		elephant_water_trail
+root_node_height		2.84	;was 2.52
+attack_delay			1
+dead_radius			2.5
+tusk_z				3.0
+tusk_radius			2.0
+riders				2
+rider_offset			0.05, 1.35, 1.37
+rider_offset			0.0, 1.22, 0.4		;y was 1.54
+
+type				elephant_cannons
+class				elephant
+model				Mount_Elephant_Cannon1
+radius				3                    ; was 5.5
+x_radius			1.3
+y_offset			3.2
+height				3
+mass				20
+banner_height			1
+bouyancy_offset			3
+water_trail_effect		elephant_water_trail
+root_node_height		2.84	;was 2.52
+attack_delay			1
+dead_radius			2.5
+tusk_z				3.0
+tusk_radius			2.0
+riders				3
+rider_offset			0.0, -1.0, 0.2	
+rider_offset			0.4, -1.0, -1.08	
+rider_offset			-0.4, -1.0, -0.48	
+
+type				elephant
+class				elephant
+model				Mount_Elephant
+radius				4                    ; was 5.5
+x_radius			1.3
+y_offset			0
+height				3
+mass				40
+banner_height			1
+bouyancy_offset			3
+water_trail_effect		elephant_water_trail
+root_node_height		2.84	;was 2.52
+attack_delay			0.5
+dead_radius			4.5
+tusk_z				2.8
+tusk_radius			2.0
+riders				6
+rider_offset			0.05, 2.29, -3.0
+rider_offset			0.0, 1.24, -2.0		;y was 1.54
+rider_offset			0.7, 1.24, -2.4		;y was 1.54
+rider_offset			0.00, 1.24, -1.10
+rider_offset			-0.8, 1.24, -3.2		;y was 1.54
+rider_offset			-0.4, 1.24, -1.5		;y was 1.54
+
+type				alephant
+class				elephant
+model				mount_alephant
+radius				3                    ; was 5.5
+x_radius			1.3
+y_offset			0
+height				3
+mass				40
+banner_height			1
+bouyancy_offset			3
+water_trail_effect		elephant_water_trail
+root_node_height		2.84	;was 2.52
+attack_delay			0.5
+dead_radius			4.5
+tusk_z				2.8
+tusk_radius			2.0
+riders				6
+rider_offset			0.05, 2.29, -3.0
+rider_offset			0.0, 1.24, -2.0		;y was 1.54
+rider_offset			0.7, 1.24, -2.4		;y was 1.54
+rider_offset			0.00, 1.24, -1.10
+rider_offset			-0.8, 1.24, -3.2		;y was 1.54
+rider_offset			-0.4, 1.24, -1.5		;y was 1.54
+
+type				mammoth
+class				elephant
+model				mount_mammoth
+radius				4                    ; was 5.5
+x_radius			1.3
+y_offset			0
+height				3
+mass				40
+banner_height			1
+bouyancy_offset			3
+water_trail_effect		elephant_water_trail
+root_node_height		2.84	;was 2.52
+attack_delay			1
+dead_radius			4.5
+tusk_z				2.8
+tusk_radius			2.0
+riders				6
+rider_offset			0.05, 3.62, -1.0
+rider_offset			0.0, 3.30, 2.0		;y was 1.54
+rider_offset			1.1, 3.64, 0.4		;y was 1.54
+rider_offset			0.00, 3.64, 0.10
+rider_offset			-1.0, 3.64, -0.2		;y was 1.54
+rider_offset			-0.4, 3.64, -0.5		;y was 1.54
+
+type				stegadon
+class				elephant
+model				mount_stegadon
+radius				3                    ; was 5.5
+x_radius			1.3
+y_offset			0
+height				2
+mass				30
+banner_height			1
+bouyancy_offset			3
+water_trail_effect		elephant_water_trail
+root_node_height		2.84	;was 2.52
+attack_delay			1
+dead_radius			4.5
+tusk_z				2.8
+tusk_radius			2.0
+riders				6
+rider_offset			0.05, 3.62, -1.0
+rider_offset			0.0, 3.30, 2.0		;y was 1.54
+rider_offset			1.1, 3.64, 0.4		;y was 1.54
+rider_offset			0.00, 3.64, 0.10
+rider_offset			-1.0, 3.64, -0.2		;y was 1.54
+rider_offset			-0.4, 3.64, -0.5		;y was 1.54
+
+
+
+;
+; chariots 
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+
+type				Tiranoc chariot
+class				elephant
+model				Tiranoc_chariot
+radius				3                    ; was 5.5
+x_radius			2.0
+y_offset			1.1
+height				2.5
+mass				8
+banner_height			0
+bouyancy_offset			1.8
+water_trail_effect		elephant_water_trail
+root_node_height		1.0	;was 2.84
+attack_delay			0
+dead_radius			3.5
+tusk_z				3.0
+tusk_radius			2.3
+riders				3
+rider_offset			0.0, -0.3, 0.2	
+rider_offset			0.4, -0.95, -1.08	
+rider_offset			-0.4, -0.95, -0.48	
+
+type				Chaos_chariots
+class				elephant
+model				Mount_Elephant
+radius				2                    ; was 5.5
+x_radius			2
+y_offset			2
+height				2.5
+mass				8
+banner_height			0
+bouyancy_offset			1.5
+water_trail_effect		elephant_water_trail
+root_node_height		1.8	;was 2.52
+attack_delay			25
+dead_radius			1.5
+tusk_z				1.0
+tusk_radius			2.0
+riders				2
+rider_offset			-0.3, 1.22, 0.4		;y was 1.54
+rider_offset			0.3, 1.22, -.35		;y was 1.54
+
+type				chariot
+class				elephant
+model				Mount_chariot
+radius				3                    ; was 5.5
+x_radius			1.3
+y_offset			0
+height				2.5
+mass				40
+banner_height			1
+bouyancy_offset			3
+water_trail_effect		elephant_water_trail
+root_node_height		1.0	;was 2.84
+attack_delay			1
+dead_radius			2.5
+tusk_z				3.0
+tusk_radius			2.0
+riders				3
+rider_offset			0.0, 0.0, -0.35	
+rider_offset			-0.3, -1.0, -0.45
+rider_offset			0.3, -1.0, -.45	
+
+type				ratling_gunner
+class				elephant
+model				Skaven_Ratling_Gun
+radius				1                    ; was 5.5
+x_radius			1
+y_offset			0
+height				3
+mass				1
+banner_height			1
+bouyancy_offset			3
+water_trail_effect		elephant_water_trail
+root_node_height		1	;was 2.52
+attack_delay			0
+dead_radius			0.1
+tusk_z				1.5
+tusk_radius			1.5
+riders				2
+rider_offset			0.05, 0, 1.37
+rider_offset			0.0, 0, 0.4		;y was 1.54

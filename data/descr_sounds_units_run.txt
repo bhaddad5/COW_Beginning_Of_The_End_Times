@@ -1,0 +1,2980 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;     RUN RUN RUN RUN RUN RUN RUN          ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+DEFAULT: 3d minDist 6 minPitch .9 maxPitch 1.1 fadein 0 fadeout 1 volume -10 priority 70 probability 1 distancepriority 0 randomdelay 0  effect_level .25
+
+required_samples_cutoff 4
+
+BANK: unit_run
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;  OGRE                ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; All SURFACES, except water & snow 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+	type Ogres, Golfags Ogres bodyguard, Golfags Ogres, Ogres chaos
+
+		season summer, winter
+			terrain  grass_short, grass_long, sand, forest_dense, scrub_dense, rock, wood, mud_road, mud, swamp, dirt, stone_road
+			event lod 0 mindist 2 minPitch .5 maxPitch 1.5 volume -10 rndvolume -10 priority 190 distancepriority -5 probability .8 probradius 7
+				folder data/sounds/SFX/Individual/Footsteps/Elephants
+				Elephant_Footstep_01
+				Elephant_Footstep_02
+				Elephant_Footstep_03
+				Elephant_Footstep_04
+				Elephant_Footstep_05
+				Elephant_Footstep_06
+				Elephant_Footstep_07
+				Elephant_Footstep_08
+				Elephant_Footstep_09
+			end
+
+			event lod 5 mindist 9 fadein 1 fadeout 2 volume 0
+				folder data/sounds/SFX/Group/Elephant
+				ogre_Group_run_small
+			end
+
+			event lod 10 mindist 9 fadein 1 fadeout 2 volume 0
+				folder data/sounds/SFX/Group/Elephant
+				ogre_Group_run_medium
+			end
+			event lod 30 mindist 9 fadein 1 fadeout 2 volume 0
+				folder data/sounds/SFX/Group/Elephant
+				ogre_Group_run_medium
+			end
+						
+;;;;;;;;;;;;;;;;;;;;;;;
+;;;  SNOW  ;;;;
+;;;;;;;;;;;;;;;;;;;;;;;
+
+	type Ogres, Golfags Ogres bodyguard, Golfags Ogres, Ogres chaos
+		season winter
+		climates steppe, temperate_deciduous_forest, temperate_coniferous_forest, highland, alpine, tropical
+			terrain  grass_short, grass_long, sand, forest_dense, scrub_dense, rock
+			event lod 0 mindist 2 minPitch .5 maxPitch 1.5 volume -10 rndvolume -10 priority 190 distancepriority -5 probability .8 probradius 7
+		       	folder data/sounds/SFX/Individual/Footsteps/Elephants/Snow
+				Elephant_Footstep_Snow_01
+			   	Elephant_Footstep_Snow_02
+				Elephant_Footstep_Snow_03
+				Elephant_Footstep_Snow_04
+				Elephant_Footstep_Snow_05
+				Elephant_Footstep_Snow_06
+				Elephant_Footstep_Snow_07
+				Elephant_Footstep_Snow_08
+				Elephant_Footstep_Snow_09
+				Elephant_Footstep_Snow_10
+				Elephant_Footstep_Snow_11
+				Elephant_Footstep_Snow_12
+
+			end			
+		
+			
+			event lod 5 mindist 9 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Elephant
+				ogre_Group_run_small
+			end
+
+			event lod 10 mindist 9 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Elephant
+				ogre_Group_run_medium
+			end
+			event lod 30 mindist 9 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Elephant
+				ogre_Group_run_medium
+			end		
+			
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;  WATER       ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+		season summer, winter
+			terrain water
+
+			event lod 0 minPitch .9 maxPitch 1.1 volume -40 priority 190 rndvolume -15 probability .5 probradius 7 distancepriority -5
+				folder data/sounds/SFX/Individual/Footsteps/Elephants/Water
+				Elephant_Footstep_Water_01
+				Elephant_Footstep_Water_02
+				Elephant_Footstep_Water_03
+				Elephant_Footstep_Water_04
+				Elephant_Footstep_Water_05
+				Elephant_Footstep_Water_06
+				Elephant_Footstep_Water_07
+				Elephant_Footstep_Water_08
+				Elephant_Footstep_Water_09
+
+			end
+
+			event lod 5 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry/water
+				;inf_group_walk_S_water
+			end
+			event lod 10 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry/water
+				;inf_group_walk_M_water
+			end
+			event lod 30 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry/water
+				;inf_group_walk_L_water02
+			end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;  TROLL AND MINOTAUR       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; All SURFACES, except water & snow 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+	type Chaos Troll, Troll, Stone Troll, minotaur
+
+		season summer, winter
+			terrain  grass_short, grass_long, sand, forest_dense, scrub_dense, rock, wood, mud_road, mud, swamp, dirt, stone_road
+			event lod 0 mindist 2 minPitch .5 maxPitch 1.5 volume -5 rndvolume -10 priority 190 distancepriority -5 probability .8 probradius 7
+				folder data/sounds/SFX/Individual/Footsteps/Elephants
+				Elephant_Footstep_01
+				Elephant_Footstep_02
+				Elephant_Footstep_03
+				Elephant_Footstep_04
+				Elephant_Footstep_05
+				Elephant_Footstep_06
+				Elephant_Footstep_07
+				Elephant_Footstep_08
+				Elephant_Footstep_09
+			end
+
+			event lod 5 mindist 9 fadein 1 fadeout 2 volume 0
+				folder data/sounds/SFX/Group/Elephant
+				ogre_Group_run_small
+			end
+
+			event lod 10 mindist 9 fadein 1 fadeout 2 volume 0
+				folder data/sounds/SFX/Group/Elephant
+				ogre_Group_run_medium
+			end
+			event lod 30 mindist 9 fadein 1 fadeout 2 volume 0
+				folder data/sounds/SFX/Group/Elephant
+				ogre_Group_run_medium
+			end
+						
+;;;;;;;;;;;;;;;;;;;;;;;
+;;;  SNOW  ;;;;
+;;;;;;;;;;;;;;;;;;;;;;;
+
+	type Chaos Troll, Troll, Stone Troll, minotaur
+		season winter
+		climates steppe, temperate_deciduous_forest, temperate_coniferous_forest, highland, alpine, tropical
+			terrain  grass_short, grass_long, sand, forest_dense, scrub_dense, rock
+			event lod 0 mindist 2 minPitch .5 maxPitch 1.5 volume -5 rndvolume -10 priority 190 distancepriority -5 probability .8 probradius 7
+		       	folder data/sounds/SFX/Individual/Footsteps/Elephants/Snow
+				Elephant_Footstep_Snow_01
+			   	Elephant_Footstep_Snow_02
+				Elephant_Footstep_Snow_03
+				Elephant_Footstep_Snow_04
+				Elephant_Footstep_Snow_05
+				Elephant_Footstep_Snow_06
+				Elephant_Footstep_Snow_07
+				Elephant_Footstep_Snow_08
+				Elephant_Footstep_Snow_09
+				Elephant_Footstep_Snow_10
+				Elephant_Footstep_Snow_11
+				Elephant_Footstep_Snow_12
+
+			end			
+		
+			
+			event lod 5 mindist 9 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Elephant
+				ogre_Group_run_small
+			end
+
+			event lod 10 mindist 9 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Elephant
+				ogre_Group_run_medium
+			end
+			event lod 30 mindist 9 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Elephant
+				ogre_Group_run_medium
+			end		
+			
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;  WATER       ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+		season summer, winter
+			terrain water
+
+			event lod 0 minPitch .9 maxPitch 1.1 volume -40 priority 190 rndvolume -15 probability .5 probradius 7 distancepriority -5
+				folder data/sounds/SFX/Individual/Footsteps/Elephants/Water
+				Elephant_Footstep_Water_01
+				Elephant_Footstep_Water_02
+				Elephant_Footstep_Water_03
+				Elephant_Footstep_Water_04
+				Elephant_Footstep_Water_05
+				Elephant_Footstep_Water_06
+				Elephant_Footstep_Water_07
+				Elephant_Footstep_Water_08
+				Elephant_Footstep_Water_09
+
+			end
+
+			event lod 5 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry/water
+				;inf_group_walk_S_water
+			end
+			event lod 10 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry/water
+				;inf_group_walk_M_water
+			end
+			event lod 30 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry/water
+				;inf_group_walk_L_water02
+			end
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;  ORKS INFANTRY ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;;;;;;;;;;;;;;;
+;;;; DIRT  ;;;;;
+;;;;;;;;;;;;;;;;
+
+    type Black Orcs bodyguard, Armored orcs bodyguard, Big`un Orcz boyz, Black Orcs, Black orcs destroyer, Armored orcs, Orcz boyz, Orcz spear boyz, Savage Orcs boyz, Orcz Arrerz, Savage Orcs arrer, Orc shaman, Hobgoblin Despoilers bodyguard, Hobgoblin Despoilers, Mountain Boys Giant bodyguard, Mountain Boys Giant, Black Mountain Boys, Half Orc Maniacs bodyguard, Half Orc Maniacs
+		season summer
+			terrain rock, mud_road, mud, swamp, dirt
+				event lod 0 mindist 1 minPitch .5 maxPitch 1.5 volume -20 priority 10 distancepriority -2 probability .5 probradius 7
+					folder data/sounds/SFX/Individual/Footsteps/Infantry
+					orcheavyfeetone1
+					orcheavyfeetone2
+					orcheavyfeetone3
+					orcheavyfeetone4
+					orcheavyfeetone5
+					orcheavyfeetone6
+					orcheavyfeetone7
+				 	orcheavyfeetone8
+					orcheavyfeetone9
+					orcheavyfeetone10
+					
+														
+					end
+					
+			event lod 5 fadein 1 fadeout 2 volume -15
+				folder data/sounds/SFX/Group/Infantry
+				orcheavyrunsmallfeet1
+				orcheavyrunsmallfeet2
+				orcheavyrunsmallfeet3
+				orcheavyrunlarger1
+				orcheavyrunsmallfeet1
+				orcheavyrunlarger2
+				orcheavyrunsmallfeet2
+				orcheavyrunlarger3
+				orcheavyrunsmallfeet3
+				orcheavyrunsmalll1
+				orcheavyrunsmallfeet1
+				orcheavyrunsmalll2
+				orcheavyrunsmallfeet2
+				orcheavyrunsmalll3
+			end
+
+			event lod 10 fadein 1 fadeout 2 volume -15
+				folder data/sounds/SFX/Group/Infantry
+				orcheavyrunlargefeet1
+				orcheavyrunlargefeet2
+				orcheavyrunlargefeet3
+				
+			end
+			event lod 30 fadein 1 fadeout 2 volume -15
+				folder data/sounds/SFX/Group/Infantry
+				orcheavyrunlargefeet1
+				orcheavyrunlargefeet2
+				orcheavyrunlargefeet3
+			end
+
+
+			
+;;;;;;;;;;;;;;;;
+;;;; GRASS ;;;;;
+;;;;;;;;;;;;;;;;
+
+    type Black Orcs bodyguard, Armored orcs bodyguard, Big`un Orcz boyz, Black Orcs, Black orcs destroyer, Armored orcs, Orcz boyz, Orcz spear boyz, Savage Orcs boyz, Orcz Arrerz, Savage Orcs arrer, Orc shaman, Hobgoblin Despoilers bodyguard, Hobgoblin Despoilers, Mountain Boys Giant bodyguard, Mountain Boys Giant, Black Mountain Boys, Half Orc Maniacs bodyguard, Half Orc Maniacs
+		season summer
+		terrain  grass_short, grass_long, forest_dense, scrub_dense
+			event lod 0 mindist 1 minPitch .8 maxPitch 1.2 volume -30 priority 10 distancepriority -2 probability .5 probradius 7 rndvolume -10
+				folder data/sounds/SFX/Individual/Footsteps/Infantry
+					orcheavyfeetone1
+					orcheavyfeetone2
+					orcheavyfeetone3
+					orcheavyfeetone4
+					orcheavyfeetone5
+					orcheavyfeetone6
+					orcheavyfeetone7
+				 	orcheavyfeetone8
+					orcheavyfeetone9
+					orcheavyfeetone10
+					
+														
+					end
+					
+			event lod 5 fadein 1 fadeout 2 volume -15
+				folder data/sounds/SFX/Group/Infantry
+				orcheavyrunsmallfeet1
+				orcheavyrunsmallfeet2
+				orcheavyrunsmallfeet3
+				orcheavyrunlarger1
+				orcheavyrunsmallfeet1
+				orcheavyrunlarger2
+				orcheavyrunsmallfeet2
+				orcheavyrunlarger3
+				orcheavyrunsmallfeet3
+				orcheavyrunsmalll1
+				orcheavyrunsmallfeet1
+				orcheavyrunsmalll2
+				orcheavyrunsmallfeet2
+				orcheavyrunsmalll3
+			end
+
+			event lod 10 fadein 1 fadeout 2 volume -15
+				folder data/sounds/SFX/Group/Infantry
+				orcheavyrunlargefeet1
+				orcheavyrunlargefeet2
+				orcheavyrunlargefeet3
+			end
+			event lod 30 fadein 1 fadeout 2 volume -15
+				folder data/sounds/SFX/Group/Infantry
+				orcheavyrunlargefeet1
+				orcheavyrunlargefeet2
+				orcheavyrunlargefeet3
+			end		
+			
+			
+		
+			
+
+;;;;;;;;;;;;;;;;
+;;;; SNOW  ;;;;;
+;;;;;;;;;;;;;;;;
+
+    type Black Orcs bodyguard, Armored orcs bodyguard, Big`un Orcz boyz, Black Orcs, Black orcs destroyer, Armored orcs, Orcz boyz, Orcz spear boyz, Savage Orcs boyz, Orcz Arrerz, Savage Orcs arrer, Orc shaman, Hobgoblin Despoilers bodyguard, Hobgoblin Despoilers, Mountain Boys Giant bodyguard, Mountain Boys Giant, Black Mountain Boys, Half Orc Maniacs bodyguard, Half Orc Maniacs
+		season winter
+		climates unused1, steppe, temperate_deciduous_forest, temperate_coniferous_forest, highland, alpine, tropical
+		
+		terrain  grass_short, grass_long, sand, forest_dense, scrub_dense, rock, ice, dirt, snow
+		        
+			event lod 0 mindist 1 minPitch .5 maxPitch 1.5 volume -35 priority 10 distancepriority -2 rndvolume -20 probability .5 probradius 7
+		       		folder data/sounds/SFX/Individual/Footsteps/Infantry
+					orcheavyfeetsnowone1
+				orcheavyfeetsnowone2
+				orcheavyfeetsnowone3
+				orcheavyfeetsnowone4
+				orcheavyfeetsnowone5
+				orcheavyfeetsnowone6
+				orcheavyfeetsnowone7
+				orcheavyfeetsnowone8
+				orcheavyfeetsnowone9
+
+			end
+
+			event lod 5 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry
+				orcheavyrunsnowsmallfeet1
+				orcheavyrunsnowsmallfeet2
+				orcheavyrunsnowsmallfeet3
+			end
+
+			event lod 10 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry
+				orcheavyrunsnowlargefeet1
+				orcheavyrunsnowlargefeet2
+				orcheavyrunsnowlargefeet3
+			end
+			event lod 30 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry
+				orcheavyrunsnowlargefeet1
+				orcheavyrunsnowlargefeet2
+				orcheavyrunsnowlargefeet3
+			end	
+
+
+
+
+
+
+
+;;;;;;;;;;;;;;;;
+;;;; SAND  ;;;;;
+;;;;;;;;;;;;;;;;
+
+    type Black Orcs bodyguard, Armored orcs bodyguard, Big`un Orcz boyz, Black Orcs, Black orcs destroyer, Armored orcs, Orcz boyz, Orcz spear boyz, Savage Orcs boyz, Orcz Arrerz, Savage Orcs arrer, Orc shaman, Hobgoblin Despoilers bodyguard, Hobgoblin Despoilers, Mountain Boys Giant bodyguard, Mountain Boys Giant, Black Mountain Boys, Half Orc Maniacs bodyguard, Half Orc Maniacs
+		season summer
+			terrain sand
+				event lod 0 mindist 1 minPitch .6 maxPitch 1.2 volume -65 priority 10 distancepriority -2 probability .5 probradius 7
+					folder data/sounds/SFX/Individual/Footsteps/Infantry
+					orcheavyfeetone1
+					orcheavyfeetone2
+					orcheavyfeetone3
+					orcheavyfeetone4
+					orcheavyfeetone5
+					orcheavyfeetone6
+					orcheavyfeetone7
+				 	orcheavyfeetone8
+					orcheavyfeetone9
+					orcheavyfeetone10
+					end
+					
+					
+				event lod 5 fadein 1 fadeout 2 volume -40
+					folder data/sounds/SFX/Group/Infantry
+					orcheavyrunsmallfeet1
+				orcheavyrunsmallfeet2
+				orcheavyrunsmallfeet3
+				orcheavyrunlarger1
+				orcheavyrunsmallfeet1
+				orcheavyrunlarger2
+				orcheavyrunsmallfeet2
+				orcheavyrunlarger3
+				orcheavyrunsmallfeet3
+				orcheavyrunsmalll1
+				orcheavyrunsmallfeet1
+				orcheavyrunsmalll2
+				orcheavyrunsmallfeet2
+				orcheavyrunsmalll3
+
+				end
+				event lod 10 fadein 1 fadeout 2 volume -40
+					folder data/sounds/SFX/Group/Infantry
+					orcheavyrunlargefeet1
+				orcheavyrunlargefeet2
+				orcheavyrunlargefeet3
+
+				end
+				event lod 30 fadein 1 fadeout 2 volume -40
+					folder data/sounds/SFX/Group/Infantry
+					orcheavyrunlargefeet1
+				orcheavyrunlargefeet2
+				orcheavyrunlargefeet3
+
+				end
+
+
+	;;;; WINTER SAND ;;;;
+
+    type Black Orcs bodyguard, Armored orcs bodyguard, Big`un Orcz boyz, Black Orcs, Black orcs destroyer, Armored orcs, Orcz boyz, Orcz spear boyz, Savage Orcs boyz, Orcz Arrerz, Savage Orcs arrer, Orc shaman, Hobgoblin Despoilers bodyguard, Hobgoblin Despoilers, Mountain Boys Giant bodyguard, Mountain Boys Giant, Black Mountain Boys, Half Orc Maniacs bodyguard, Half Orc Maniacs
+		season winter
+		climates steppe, temperate_deciduous_forest, temperate_coniferous_forest, highland, alpine, tropical
+			terrain sand
+				event lod 0 mindist 1 minPitch .5 maxPitch 1.5 volume -60 priority 10 distancepriority -2 probability .5 probradius 7
+						folder data/sounds/SFX/Individual/Footsteps/Infantry
+					orcheavyfeetone1
+					orcheavyfeetone2
+					orcheavyfeetone3
+					orcheavyfeetone4
+					orcheavyfeetone5
+					orcheavyfeetone6
+					orcheavyfeetone7
+				 	orcheavyfeetone8
+					orcheavyfeetone9
+					orcheavyfeetone10
+					end
+					
+					
+				event lod 5 fadein 1 fadeout 2 volume -30
+					folder data/sounds/SFX/Group/Infantry
+					orcheavyrunsmallfeet1
+				orcheavyrunsmallfeet2
+				orcheavyrunsmallfeet3
+				orcheavyrunlarger1
+				orcheavyrunsmallfeet1
+				orcheavyrunlarger2
+				orcheavyrunsmallfeet2
+				orcheavyrunlarger3
+				orcheavyrunsmallfeet3
+				orcheavyrunsmalll1
+				orcheavyrunsmallfeet1
+				orcheavyrunsmalll2
+				orcheavyrunsmallfeet2
+				orcheavyrunsmalll3
+				end
+				event lod 10 fadein 1 fadeout 2 volume -30
+					folder data/sounds/SFX/Group/Infantry
+					orcheavyrunlargefeet1
+				orcheavyrunlargefeet2
+				orcheavyrunlargefeet3
+				end
+				event lod 30 fadein 1 fadeout 2 volume -30
+					folder data/sounds/SFX/Group/Infantry
+					orcheavyrunlargefeet1
+				orcheavyrunlargefeet2
+				orcheavyrunlargefeet3
+
+				end
+
+
+
+;;;;;;;;;;;;;;;;
+;;;; STONE ;;;;;
+;;;;;;;;;;;;;;;;
+
+    type Black Orcs bodyguard, Armored orcs bodyguard, Big`un Orcz boyz, Black Orcs, Black orcs destroyer, Armored orcs, Orcz boyz, Orcz spear boyz, Savage Orcs boyz, Orcz Arrerz, Savage Orcs arrer, Orc shaman, Hobgoblin Despoilers bodyguard, Hobgoblin Despoilers, Mountain Boys Giant bodyguard, Mountain Boys Giant, Black Mountain Boys, Half Orc Maniacs bodyguard, Half Orc Maniacs
+		season summer, winter
+		terrain  stone_road
+			event lod 0 mindist 1 minPitch .6 maxPitch 1.2 volume -10 priority 10 distancepriority -2 probability .5 probradius 7
+		       	folder data/sounds/SFX/Individual/Footsteps/Infantry
+				orcheavyfeetone1
+					orcheavyfeetone2
+					orcheavyfeetone3
+					orcheavyfeetone4
+					orcheavyfeetone5
+					orcheavyfeetone6
+					orcheavyfeetone7
+				 	orcheavyfeetone8
+					orcheavyfeetone9
+					orcheavyfeetone10
+					
+				
+			end
+
+			event lod 5 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry
+				orcheavyrunsmallfeet1
+				orcheavyrunsmallfeet2
+				orcheavyrunsmallfeet3
+				orcheavyrunlarger1
+				orcheavyrunsmallfeet1
+				orcheavyrunlarger2
+				orcheavyrunsmallfeet2
+				orcheavyrunlarger3
+				orcheavyrunsmallfeet3
+				orcheavyrunsmalll1
+				orcheavyrunsmallfeet1
+				orcheavyrunsmalll2
+				orcheavyrunsmallfeet2
+				orcheavyrunsmalll3
+			end
+
+			event lod 10 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry
+				orcheavyrunlargefeet1
+				orcheavyrunlargefeet2
+				orcheavyrunlargefeet3
+			end
+			event lod 30 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry
+				orcheavyrunlargefeet1
+				orcheavyrunlargefeet2
+				orcheavyrunlargefeet3
+			end	
+
+
+;;;;;;;;;;;;;;;;
+;;;; WATER ;;;;;
+;;;;;;;;;;;;;;;;
+
+    type Black Orcs bodyguard, Armored orcs bodyguard, Big`un Orcz boyz, Black Orcs, Black orcs destroyer, Armored orcs, Orcz boyz, Orcz spear boyz, Savage Orcs boyz, Orcz Arrerz, Savage Orcs arrer, Orc shaman, Hobgoblin Despoilers bodyguard, Hobgoblin Despoilers, Mountain Boys Giant bodyguard, Mountain Boys Giant, Black Mountain Boys, Half Orc Maniacs bodyguard, Half Orc Maniacs
+		season summer, winter
+		terrain  water
+			event lod 0 mindist 1 minPitch .5 maxPitch 1.5 volume -35 priority 10 distancepriority -2 rndvolume -15 probability .5 probradius 7
+		       		folder data/sounds/SFX/Individual/Footsteps/Infantry/Water
+				Inf_Footsteps_WaterC_01
+				Inf_Footsteps_WaterC_02
+				Inf_Footsteps_WaterC_03
+				Inf_Footsteps_WaterC_04
+				Inf_Footsteps_WaterC_05
+				Inf_Footsteps_WaterC_06
+				Inf_Footsteps_WaterC_07
+				Inf_Footsteps_WaterC_08
+				Inf_Footsteps_WaterC_09
+				Inf_Footsteps_WaterC_10
+				Inf_Footsteps_WaterC_11
+				Inf_Footsteps_WaterC_12
+				Inf_Footsteps_WaterC_13
+				Inf_Footsteps_WaterC_14
+				Inf_Footsteps_WaterC_15
+
+			end
+
+			event lod 5 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry/water
+				;inf_group_walk_S_water
+			end
+			event lod 10 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry/water
+				;inf_group_walk_M_water
+			end
+			event lod 30 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry/water
+				;inf_group_walk_L_water02
+			end
+
+
+
+
+;;;;;;;;;;;;;;;;
+;;;;  WOOD  ;;;;
+;;;;;;;;;;;;;;;;
+
+    type Black Orcs bodyguard, Armored orcs bodyguard, Big`un Orcz boyz, Black Orcs, Black orcs destroyer, Armored orcs, Orcz boyz, Orcz spear boyz, Savage Orcs boyz, Orcz Arrerz, Savage Orcs arrer, Orc shaman, Hobgoblin Despoilers bodyguard, Hobgoblin Despoilers, Mountain Boys Giant bodyguard, Mountain Boys Giant, Black Mountain Boys, Half Orc Maniacs bodyguard, Half Orc Maniacs
+		season summer, winter
+		terrain  wood
+			event lod 0 mindist 1 minPitch .5 maxPitch 1.3 volume -20 priority 10 distancepriority -2 rndvolume -10 probability .5 probradius 7
+		       		folder data/sounds/SFX/Individual/Footsteps/Infantry
+				orcheavyfeetone1
+					orcheavyfeetone2
+					orcheavyfeetone3
+					orcheavyfeetone4
+					orcheavyfeetone5
+					orcheavyfeetone6
+					orcheavyfeetone7
+				 	orcheavyfeetone8
+					orcheavyfeetone9
+					orcheavyfeetone10
+
+
+
+			end
+
+	       		event lod 5 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry
+				orcheavyrunsmallfeet1
+				orcheavyrunsmallfeet2
+				orcheavyrunsmallfeet3
+				orcheavyrunlarger1
+				orcheavyrunsmallfeet1
+				orcheavyrunlarger2
+				orcheavyrunsmallfeet2
+				orcheavyrunlarger3
+				orcheavyrunsmallfeet3
+				orcheavyrunsmalll1
+				orcheavyrunsmallfeet1
+				orcheavyrunsmalll2
+				orcheavyrunsmallfeet2
+				orcheavyrunsmalll3
+			end
+
+			event lod 10 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry
+				orcheavyrunlargefeet1
+				orcheavyrunlargefeet2
+				orcheavyrunlargefeet3
+			end
+			event lod 30 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry
+				orcheavyrunlargefeet1
+				orcheavyrunlargefeet2
+				orcheavyrunlargefeet3
+			end
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;  INFANTRY ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;;;;;;;;;;;;;;;
+;;;; DIRT  ;;;;;
+;;;;;;;;;;;;;;;;
+
+	unit infantry light, skirmish, missile, heavy, spearmen
+		season summer
+			terrain rock, mud_road, mud, swamp, dirt
+				event lod 0 mindist 1 minPitch .5 maxPitch 1.5 volume -20 priority 10 distancepriority -2 probability .5 probradius 7
+					folder data/sounds/SFX/Individual/Footsteps/Infantry
+					Infantry_run_dirt_01
+					Infantry_run_dirt_02
+					Infantry_run_dirt_03
+					Infantry_run_dirt_04
+					Infantry_run_dirt_05
+					Infantry_run_dirt_06
+					Infantry_run_dirt_07
+					Infantry_run_dirt_08
+					Infantry_run_dirt_09
+					Infantry_run_dirt_10
+					Infantry_run_dirt_11
+					Infantry_run_dirt_12
+					Infantry_run_dirt_13
+					
+														
+					end
+					
+			event lod 5 fadein 1 fadeout 2 volume -15
+				folder data/sounds/SFX/Group/Infantry
+				infantry_group_run_small_dirt
+			end
+
+			event lod 10 fadein 1 fadeout 2 volume -15
+				folder data/sounds/SFX/Group/Infantry
+				infantry_group_run_medium_dirt
+			end
+			event lod 30 fadein 1 fadeout 2 volume -15
+				folder data/sounds/SFX/Group/Infantry
+				infantry_group_run_large_dirt
+			end
+
+
+			
+;;;;;;;;;;;;;;;;
+;;;; GRASS ;;;;;
+;;;;;;;;;;;;;;;;
+
+	unit infantry light, missile, skirmish, heavy, spearmen
+		season summer
+		terrain  grass_short, grass_long, forest_dense, scrub_dense
+			event lod 0 mindist 1 minPitch .8 maxPitch 1.2 volume -30 priority 10 distancepriority -2 probability .5 probradius 7 rndvolume -10
+				folder data/sounds/SFX/Individual/Footsteps/Infantry
+					Infantry_run_dirt_01
+					Infantry_run_dirt_02
+					Infantry_run_dirt_03
+					Infantry_run_dirt_04
+					Infantry_run_dirt_05
+					Infantry_run_dirt_06
+					Infantry_run_dirt_07
+					Infantry_run_dirt_08
+					Infantry_run_dirt_09
+					Infantry_run_dirt_10
+					Infantry_run_dirt_11
+					Infantry_run_dirt_12
+					Infantry_run_dirt_13
+					
+														
+					end
+					
+			event lod 5 fadein 1 fadeout 2 volume -15
+				folder data/sounds/SFX/Group/Infantry
+				infantry_group_run_small_dirt
+			end
+
+			event lod 10 fadein 1 fadeout 2 volume -15
+				folder data/sounds/SFX/Group/Infantry
+				infantry_group_run_medium_dirt
+			end
+			event lod 30 fadein 1 fadeout 2 volume -15
+				folder data/sounds/SFX/Group/Infantry
+				infantry_group_run_large_dirt
+			end		
+			
+			
+		
+			
+
+;;;;;;;;;;;;;;;;
+;;;; SNOW  ;;;;;
+;;;;;;;;;;;;;;;;
+
+	unit infantry light, skirmish, missile, heavy, spearmen
+		season winter
+		climates unused1, steppe, temperate_deciduous_forest, temperate_coniferous_forest, highland, alpine, tropical
+		
+		terrain  grass_short, grass_long, sand, forest_dense, scrub_dense, rock, ice, dirt, snow
+		        
+			event lod 0 mindist 1 minPitch .5 maxPitch 1.5 volume -35 priority 10 distancepriority -2 rndvolume -20 probability .5 probradius 7
+		       		folder data/sounds/SFX/Individual/Footsteps/Infantry/Snow
+				Inf_Footsteps_Snow_01
+				Inf_Footsteps_Snow_02
+				Inf_Footsteps_Snow_03
+				Inf_Footsteps_Snow_04
+				Inf_Footsteps_Snow_05
+				Inf_Footsteps_Snow_06
+				Inf_Footsteps_Snow_07
+				Inf_Footsteps_Snow_08
+				Inf_Footsteps_Snow_09
+				Inf_Footsteps_Snow_10
+				Inf_Footsteps_Snow_11
+				Inf_Footsteps_Snow_12
+				Inf_Footsteps_Snow_13
+				Inf_Footsteps_Snow_14
+				Inf_Footsteps_Snow_15
+				Inf_Footsteps_Snow_16
+
+			end
+
+			event lod 5 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry/snow
+				inf_group_run_s_snow_02
+			end
+
+			event lod 10 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry/snow
+				inf_group_run_m_snow_02
+			end
+			event lod 30 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry/snow
+				inf_group_run_l_snow_02
+			end	
+
+
+
+
+
+
+
+;;;;;;;;;;;;;;;;
+;;;; SAND  ;;;;;
+;;;;;;;;;;;;;;;;
+
+	unit infantry light, skirmish, missile, heavy, spearmen
+		season summer
+			terrain sand
+				event lod 0 mindist 1 minPitch .6 maxPitch 1.2 volume -65 priority 10 distancepriority -2 probability .5 probradius 7
+					folder data/sounds/SFX/Individual/Footsteps/Infantry
+					infantry_walk_sand_01
+					infantry_walk_sand_02
+					infantry_walk_sand_03
+					infantry_walk_sand_04
+					infantry_walk_sand_05
+					infantry_walk_sand_06
+					infantry_walk_sand_07
+					infantry_walk_sand_08
+					infantry_walk_sand_09
+					infantry_walk_sand_10
+					infantry_walk_sand_11
+					infantry_walk_sand_12
+					infantry_walk_sand_13
+					infantry_walk_sand_14
+					infantry_walk_sand_15
+					infantry_walk_sand_16
+					infantry_walk_sand_17
+					infantry_walk_sand_18
+					infantry_walk_sand_19
+					infantry_walk_sand_20
+					infantry_walk_sand_21
+					infantry_walk_sand_22
+					infantry_walk_sand_23
+					infantry_walk_sand_24
+					infantry_walk_sand_25
+					infantry_walk_sand_26
+					infantry_walk_sand_27
+					infantry_walk_sand_28
+					infantry_walk_sand_29
+					infantry_walk_sand_30
+					infantry_walk_sand_31
+					infantry_walk_sand_32
+					infantry_walk_sand_33
+					infantry_walk_sand_34
+					infantry_walk_sand_35
+					infantry_walk_sand_36
+					infantry_walk_sand_37
+					infantry_walk_sand_38
+					infantry_walk_sand_39
+					infantry_walk_sand_40
+					infantry_walk_sand_41
+					infantry_walk_sand_42
+					infantry_walk_sand_43
+					infantry_walk_sand_44
+					infantry_walk_sand_45
+					infantry_walk_sand_46
+					end
+					
+					
+				event lod 5 fadein 1 fadeout 2 volume -40
+					folder data/sounds/SFX/Group/Infantry
+					infantry_group_run_small_sand
+
+				end
+				event lod 10 fadein 1 fadeout 2 volume -40
+					folder data/sounds/SFX/Group/Infantry
+					infantry_group_run_medium_sand
+
+				end
+				event lod 30 fadein 1 fadeout 2 volume -40
+					folder data/sounds/SFX/Group/Infantry
+					infantry_group_run_large_sand
+
+				end
+
+
+	;;;; WINTER SAND ;;;;
+
+	unit infantry light, skirmish, missile, heavy, spearmen
+		season winter
+		climates steppe, temperate_deciduous_forest, temperate_coniferous_forest, highland, alpine, tropical
+			terrain sand
+				event lod 0 mindist 1 minPitch .5 maxPitch 1.5 volume -60 priority 10 distancepriority -2 probability .5 probradius 7
+						folder data/sounds/SFX/Individual/Footsteps/Infantry
+					infantry_walk_sand_01
+					infantry_walk_sand_02
+					infantry_walk_sand_03
+					infantry_walk_sand_04
+					infantry_walk_sand_05
+					infantry_walk_sand_06
+					infantry_walk_sand_07
+					infantry_walk_sand_08
+					infantry_walk_sand_09
+					infantry_walk_sand_10
+					infantry_walk_sand_11
+					infantry_walk_sand_12
+					infantry_walk_sand_13
+					infantry_walk_sand_14
+					infantry_walk_sand_15
+					infantry_walk_sand_16
+					infantry_walk_sand_17
+					infantry_walk_sand_18
+					infantry_walk_sand_19
+					infantry_walk_sand_20
+					infantry_walk_sand_21
+					infantry_walk_sand_22
+					infantry_walk_sand_23
+					infantry_walk_sand_24
+					infantry_walk_sand_25
+					infantry_walk_sand_26
+					infantry_walk_sand_27
+					infantry_walk_sand_28
+					infantry_walk_sand_29
+					infantry_walk_sand_30
+					infantry_walk_sand_31
+					infantry_walk_sand_32
+					infantry_walk_sand_33
+					infantry_walk_sand_34
+					infantry_walk_sand_35
+					infantry_walk_sand_36
+					infantry_walk_sand_37
+					infantry_walk_sand_38
+					infantry_walk_sand_39
+					infantry_walk_sand_40
+					infantry_walk_sand_41
+					infantry_walk_sand_42
+					infantry_walk_sand_43
+					infantry_walk_sand_44
+					infantry_walk_sand_45
+					infantry_walk_sand_46
+					end
+					
+					
+				event lod 5 fadein 1 fadeout 2 volume -30
+					folder data/sounds/SFX/Group/Infantry
+					infantry_group_run_small_sand
+
+				end
+				event lod 10 fadein 1 fadeout 2 volume -30
+					folder data/sounds/SFX/Group/Infantry
+					infantry_group_run_medium_sand
+
+				end
+				event lod 30 fadein 1 fadeout 2 volume -30
+					folder data/sounds/SFX/Group/Infantry
+					infantry_group_run_large_sand
+
+				end
+
+
+
+;;;;;;;;;;;;;;;;
+;;;; STONE ;;;;;
+;;;;;;;;;;;;;;;;
+
+	unit infantry light, missile, skirmish, heavy, spearmen
+		season summer, winter
+		terrain  stone_road
+			event lod 0 mindist 1 minPitch .6 maxPitch 1.2 volume -10 priority 10 distancepriority -2 probability .5 probradius 7
+		       	folder data/sounds/SFX/Individual/Footsteps/Infantry/Stone
+				Inf_Footsteps_Stone_01
+				Inf_Footsteps_Stone_02
+				Inf_Footsteps_Stone_03
+				Inf_Footsteps_Stone_04
+				Inf_Footsteps_Stone_05
+				Inf_Footsteps_Stone_06
+				Inf_Footsteps_Stone_07
+				Inf_Footsteps_Stone_08
+				Inf_Footsteps_Stone_09
+				Inf_Footsteps_Stone_10
+				Inf_Footsteps_Stone_11
+				Inf_Footsteps_Stone_12
+				Inf_Footsteps_Stone_13
+				Inf_Footsteps_Stone_14
+				Inf_Footsteps_Stone_15
+				Inf_Footsteps_Stone_16
+					
+				
+			end
+
+			event lod 5 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry
+				infantry_group_run_small_dirt
+			end
+
+			event lod 10 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry
+				infantry_group_run_medium_dirt
+			end
+			event lod 30 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry
+				infantry_group_run_large_dirt
+			end	
+
+
+;;;;;;;;;;;;;;;;
+;;;; WATER ;;;;;
+;;;;;;;;;;;;;;;;
+
+	unit infantry light, skirmish, missile, heavy, spearmen
+		season summer, winter
+		terrain  water
+			event lod 0 mindist 1 minPitch .5 maxPitch 1.5 volume -35 priority 10 distancepriority -2 rndvolume -15 probability .5 probradius 7
+		       		folder data/sounds/SFX/Individual/Footsteps/Infantry/Water
+				Inf_Footsteps_WaterC_01
+				Inf_Footsteps_WaterC_02
+				Inf_Footsteps_WaterC_03
+				Inf_Footsteps_WaterC_04
+				Inf_Footsteps_WaterC_05
+				Inf_Footsteps_WaterC_06
+				Inf_Footsteps_WaterC_07
+				Inf_Footsteps_WaterC_08
+				Inf_Footsteps_WaterC_09
+				Inf_Footsteps_WaterC_10
+				Inf_Footsteps_WaterC_11
+				Inf_Footsteps_WaterC_12
+				Inf_Footsteps_WaterC_13
+				Inf_Footsteps_WaterC_14
+				Inf_Footsteps_WaterC_15
+
+			end
+
+			event lod 5 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry/water
+				;inf_group_walk_S_water
+			end
+			event lod 10 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry/water
+				;inf_group_walk_M_water
+			end
+			event lod 30 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry/water
+				;inf_group_walk_L_water02
+			end
+
+
+
+
+;;;;;;;;;;;;;;;;
+;;;;  WOOD  ;;;;
+;;;;;;;;;;;;;;;;
+
+	unit infantry light, skirmish, missile, heavy, spearmen
+		season summer, winter
+		terrain  wood
+			event lod 0 mindist 1 minPitch .5 maxPitch 1.3 volume -20 priority 10 distancepriority -2 rndvolume -10 probability .5 probradius 7
+		       		folder data/sounds/SFX/Individual/Footsteps/Infantry/Wood
+				Inf_Footsteps_Wood_01
+				Inf_Footsteps_Wood_02
+				Inf_Footsteps_Wood_03
+				Inf_Footsteps_Wood_04
+				Inf_Footsteps_Wood_05
+				Inf_Footsteps_Wood_06
+				Inf_Footsteps_Wood_07
+				Inf_Footsteps_Wood_08
+				Inf_Footsteps_Wood_09
+				Inf_Footsteps_Wood_10
+				Inf_Footsteps_Wood_11
+				Inf_Footsteps_Wood_12
+				Inf_Footsteps_Wood_13
+
+
+
+			end
+
+	       		event lod 5 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry
+				infantry_group_run_small_dirt
+			end
+
+			event lod 10 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry
+				infantry_group_run_medium_dirt
+			end
+			event lod 30 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry
+				infantry_group_run_large_dirt
+			end	
+
+
+
+
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;  INFANTRY WITH SIEGE ENGINES    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;
+;;;; DIRT  ;;;;;
+;;;;;;;;;;;;;;;;
+
+	unit infantry light, skirmish, missile, heavy, spearmen
+		season summer, winter
+			terrain rock, mud_road, mud, swamp, dirt, stone_road
+				event lod 0 mindist 1 minPitch .5 maxPitch 1.5 volume -10 priority 10 distancepriority -2 probability .5 probradius 7
+					folder data/sounds/SFX/Individual/Footsteps/Infantry
+					Infantry_run_dirt_01
+					Infantry_run_dirt_02
+					Infantry_run_dirt_03
+					Infantry_run_dirt_04
+					Infantry_run_dirt_05
+					Infantry_run_dirt_06
+					Infantry_run_dirt_07
+					Infantry_run_dirt_08
+					Infantry_run_dirt_09
+					Infantry_run_dirt_10
+					Infantry_run_dirt_11
+					Infantry_run_dirt_12
+					Infantry_run_dirt_13
+					
+														
+					end
+					
+			event lod 5 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry
+				infantry_group_run_small_dirt
+			end
+
+			event lod 10 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry
+				infantry_group_run_medium_dirt
+			end
+			event lod 30 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry
+				infantry_group_run_large_dirt
+			end
+
+
+			
+;;;;;;;;;;;;;;;;
+;;;; GRASS ;;;;;
+;;;;;;;;;;;;;;;;
+
+	unit infantry light, missile, skirmish, heavy, spearmen
+		season summer
+		terrain  grass_short, grass_long, forest_dense, scrub_dense
+			event lod 0 mindist 1 minPitch .8 maxPitch 1.2 volume -30 priority 10 distancepriority -2 probability .5 probradius 7 rndvolume -10
+				folder data/sounds/SFX/Individual/Footsteps/Infantry
+					Infantry_run_dirt_01
+					Infantry_run_dirt_02
+					Infantry_run_dirt_03
+					Infantry_run_dirt_04
+					Infantry_run_dirt_05
+					Infantry_run_dirt_06
+					Infantry_run_dirt_07
+					Infantry_run_dirt_08
+					Infantry_run_dirt_09
+					Infantry_run_dirt_10
+					Infantry_run_dirt_11
+					Infantry_run_dirt_12
+					Infantry_run_dirt_13
+					
+														
+					end
+					
+			event lod 5 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry
+				infantry_group_run_small_dirt
+			end
+
+			event lod 10 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry
+				infantry_group_run_medium_dirt
+			end
+			event lod 30 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry
+				infantry_group_run_large_dirt
+			end		
+			
+			
+		
+			
+
+;;;;;;;;;;;;;;;;
+;;;; SNOW  ;;;;;
+;;;;;;;;;;;;;;;;
+
+	unit infantry light, skirmish, missile, heavy, spearmen
+		season winter
+		climates steppe, temperate_deciduous_forest, temperate_coniferous_forest, highland, alpine, tropical
+		terrain  grass_short, grass_long, sand, forest_dense, scrub_dense, rock, ice, snow
+			event lod 0 mindist 1 minPitch .5 maxPitch 1.5 volume -35 priority 10 distancepriority -2 rndvolume -20 probability .5 probradius 7
+		       		folder data/sounds/SFX/Individual/Footsteps/Infantry/Snow
+				Inf_Footsteps_Snow_01
+				Inf_Footsteps_Snow_02
+				Inf_Footsteps_Snow_03
+				Inf_Footsteps_Snow_04
+				Inf_Footsteps_Snow_05
+				Inf_Footsteps_Snow_06
+				Inf_Footsteps_Snow_07
+				Inf_Footsteps_Snow_08
+				Inf_Footsteps_Snow_09
+				Inf_Footsteps_Snow_10
+				Inf_Footsteps_Snow_11
+				Inf_Footsteps_Snow_12
+				Inf_Footsteps_Snow_13
+				Inf_Footsteps_Snow_14
+				Inf_Footsteps_Snow_15
+				Inf_Footsteps_Snow_16
+
+			end
+
+			event lod 5 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry/snow
+				inf_group_run_s_snow_02
+			end
+
+			event lod 10 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry/snow
+				inf_group_run_m_snow_02
+			end
+			event lod 30 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry/snow
+				inf_group_run_l_snow_02
+			end	
+
+
+
+
+
+
+
+;;;;;;;;;;;;;;;;
+;;;; SAND  ;;;;;
+;;;;;;;;;;;;;;;;
+
+	unit infantry light, skirmish, missile, heavy, spearmen
+		season summer
+			terrain sand
+				event lod 0 mindist 1 minPitch .6 maxPitch 1.2 volume -65 priority 10 distancepriority -2 probability .5 probradius 7
+					folder data/sounds/SFX/Individual/Footsteps/Infantry
+					infantry_walk_sand_01
+					infantry_walk_sand_02
+					infantry_walk_sand_03
+					infantry_walk_sand_04
+					infantry_walk_sand_05
+					infantry_walk_sand_06
+					infantry_walk_sand_07
+					infantry_walk_sand_08
+					infantry_walk_sand_09
+					infantry_walk_sand_10
+					infantry_walk_sand_11
+					infantry_walk_sand_12
+					infantry_walk_sand_13
+					infantry_walk_sand_14
+					infantry_walk_sand_15
+					infantry_walk_sand_16
+					infantry_walk_sand_17
+					infantry_walk_sand_18
+					infantry_walk_sand_19
+					infantry_walk_sand_20
+					infantry_walk_sand_21
+					infantry_walk_sand_22
+					infantry_walk_sand_23
+					infantry_walk_sand_24
+					infantry_walk_sand_25
+					infantry_walk_sand_26
+					infantry_walk_sand_27
+					infantry_walk_sand_28
+					infantry_walk_sand_29
+					infantry_walk_sand_30
+					infantry_walk_sand_31
+					infantry_walk_sand_32
+					infantry_walk_sand_33
+					infantry_walk_sand_34
+					infantry_walk_sand_35
+					infantry_walk_sand_36
+					infantry_walk_sand_37
+					infantry_walk_sand_38
+					infantry_walk_sand_39
+					infantry_walk_sand_40
+					infantry_walk_sand_41
+					infantry_walk_sand_42
+					infantry_walk_sand_43
+					infantry_walk_sand_44
+					infantry_walk_sand_45
+					infantry_walk_sand_46
+					end
+					
+					
+				event lod 5 fadein 1 fadeout 2 volume -40
+					folder data/sounds/SFX/Group/Infantry
+					infantry_group_run_small_sand
+
+				end
+				event lod 10 fadein 1 fadeout 2 volume -40
+					folder data/sounds/SFX/Group/Infantry
+					infantry_group_run_medium_sand
+
+				end
+				event lod 30 fadein 1 fadeout 2 volume -40
+					folder data/sounds/SFX/Group/Infantry
+					infantry_group_run_large_sand
+
+				end
+
+
+	;;;; WINTER SAND ;;;;
+
+	unit infantry light, skirmish, missile, heavy, spearmen
+		season winter
+		climates steppe, temperate_deciduous_forest, temperate_coniferous_forest, highland, alpine, tropical
+			terrain sand
+				event lod 0 mindist 1 minPitch .5 maxPitch 1.5 volume -60 priority 10 distancepriority -2 probability .5 probradius 7
+						folder data/sounds/SFX/Individual/Footsteps/Infantry
+					infantry_walk_sand_01
+					infantry_walk_sand_02
+					infantry_walk_sand_03
+					infantry_walk_sand_04
+					infantry_walk_sand_05
+					infantry_walk_sand_06
+					infantry_walk_sand_07
+					infantry_walk_sand_08
+					infantry_walk_sand_09
+					infantry_walk_sand_10
+					infantry_walk_sand_11
+					infantry_walk_sand_12
+					infantry_walk_sand_13
+					infantry_walk_sand_14
+					infantry_walk_sand_15
+					infantry_walk_sand_16
+					infantry_walk_sand_17
+					infantry_walk_sand_18
+					infantry_walk_sand_19
+					infantry_walk_sand_20
+					infantry_walk_sand_21
+					infantry_walk_sand_22
+					infantry_walk_sand_23
+					infantry_walk_sand_24
+					infantry_walk_sand_25
+					infantry_walk_sand_26
+					infantry_walk_sand_27
+					infantry_walk_sand_28
+					infantry_walk_sand_29
+					infantry_walk_sand_30
+					infantry_walk_sand_31
+					infantry_walk_sand_32
+					infantry_walk_sand_33
+					infantry_walk_sand_34
+					infantry_walk_sand_35
+					infantry_walk_sand_36
+					infantry_walk_sand_37
+					infantry_walk_sand_38
+					infantry_walk_sand_39
+					infantry_walk_sand_40
+					infantry_walk_sand_41
+					infantry_walk_sand_42
+					infantry_walk_sand_43
+					infantry_walk_sand_44
+					infantry_walk_sand_45
+					infantry_walk_sand_46
+					end
+					
+					
+				event lod 5 fadein 1 fadeout 2 volume -30
+					folder data/sounds/SFX/Group/Infantry
+					infantry_group_run_small_sand
+
+				end
+				event lod 10 fadein 1 fadeout 2 volume -30
+					folder data/sounds/SFX/Group/Infantry
+					infantry_group_run_medium_sand
+
+				end
+				event lod 30 fadein 1 fadeout 2 volume -30
+					folder data/sounds/SFX/Group/Infantry
+					infantry_group_run_large_sand
+
+				end
+
+
+
+;;;;;;;;;;;;;;;;
+;;;; STONE ;;;;;
+;;;;;;;;;;;;;;;;
+
+	unit infantry light, missile, skirmish, heavy, spearmen
+		season summer, winter
+		terrain  stone_road
+			event lod 0 mindist 1 minPitch .5 maxPitch 1.3 volume -10 priority 10 distancepriority -2 probability .5 probradius 7
+		       		folder data/sounds/SFX/Individual/Footsteps/Infantry/Stone
+				Inf_Footsteps_Stone_01
+				Inf_Footsteps_Stone_02
+				Inf_Footsteps_Stone_03
+				Inf_Footsteps_Stone_04
+				Inf_Footsteps_Stone_05
+				Inf_Footsteps_Stone_06
+				Inf_Footsteps_Stone_07
+				Inf_Footsteps_Stone_08
+				Inf_Footsteps_Stone_09
+				Inf_Footsteps_Stone_10
+				Inf_Footsteps_Stone_11
+				Inf_Footsteps_Stone_12
+				Inf_Footsteps_Stone_13
+				Inf_Footsteps_Stone_14
+				Inf_Footsteps_Stone_15
+				Inf_Footsteps_Stone_16
+				
+				
+				
+			end
+
+			event lod 5 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry
+				infantry_group_run_small_dirt
+			end
+
+			event lod 10 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry
+				infantry_group_run_medium_dirt
+			end
+			event lod 30 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry
+				infantry_group_run_large_dirt
+			end	
+
+
+;;;;;;;;;;;;;;;;
+;;;; WATER ;;;;;
+;;;;;;;;;;;;;;;;
+
+	unit infantry light, skirmish, missile, heavy, spearmen
+		season summer, winter
+		terrain  water
+			event lod 0 mindist 1 minPitch .5 maxPitch 1.5 volume -35 priority 10 distancepriority -2 rndvolume -15 probability .5 probradius 7
+		       		folder data/sounds/SFX/Individual/Footsteps/Infantry/Water
+				Inf_Footsteps_WaterC_01
+				Inf_Footsteps_WaterC_02
+				Inf_Footsteps_WaterC_03
+				Inf_Footsteps_WaterC_04
+				Inf_Footsteps_WaterC_05
+				Inf_Footsteps_WaterC_06
+				Inf_Footsteps_WaterC_07
+				Inf_Footsteps_WaterC_08
+				Inf_Footsteps_WaterC_09
+				Inf_Footsteps_WaterC_10
+				Inf_Footsteps_WaterC_11
+				Inf_Footsteps_WaterC_12
+				Inf_Footsteps_WaterC_13
+				Inf_Footsteps_WaterC_14
+				Inf_Footsteps_WaterC_15
+
+			end
+
+			event lod 5 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry/water
+				;inf_group_walk_S_water
+			end
+			event lod 10 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry/water
+				;inf_group_walk_M_water
+			end
+			event lod 30 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry/water
+				;inf_group_walk_L_water02
+			end
+
+
+
+
+;;;;;;;;;;;;;;;;
+;;;;  WOOD  ;;;;
+;;;;;;;;;;;;;;;;
+
+	unit infantry light, skirmish, missile, heavy, spearmen
+		season summer, winter
+		terrain  wood
+			event lod 0 mindist 1 minPitch .5 maxPitch 1.3 volume -20 priority 10 distancepriority -2 rndvolume -10 probability .5 probradius 7
+		       		folder data/sounds/SFX/Individual/Footsteps/Infantry/Wood
+				Inf_Footsteps_Wood_01
+				Inf_Footsteps_Wood_02
+				Inf_Footsteps_Wood_03
+				Inf_Footsteps_Wood_04
+				Inf_Footsteps_Wood_05
+				Inf_Footsteps_Wood_06
+				Inf_Footsteps_Wood_07
+				Inf_Footsteps_Wood_08
+				Inf_Footsteps_Wood_09
+				Inf_Footsteps_Wood_10
+				Inf_Footsteps_Wood_11
+				Inf_Footsteps_Wood_12
+				Inf_Footsteps_Wood_13
+
+
+
+			end
+
+	       		event lod 5 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry
+				infantry_group_run_small_dirt
+			end
+
+			event lod 10 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry
+				infantry_group_run_medium_dirt
+			end
+			event lod 30 fadein 1 fadeout 2
+				folder data/sounds/SFX/Group/Infantry
+				infantry_group_run_large_dirt
+			end	
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;; CHARIOTS ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+DEFAULT: volume -10 fadein 1 fadeout 2
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; GRASS and others ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+	type Tiranoc chariot
+		season summer, winter
+		terrain  grass_short, grass_long, rock, forest_dense, scrub_dense, mud_road, mud, swamp, sand, stone_road, wood, dirt
+
+
+			event lod 2 priority 10
+				folder data/sounds/SFX/Group/Chariot/Grass
+				char_group_run_small_grass
+			end
+
+			event lod 4 priority 10
+				folder data/sounds/SFX/Group/Chariot/Grass
+				char_group_run_med_grass
+			end
+			event lod 8 priority 10
+				folder data/sounds/SFX/Group/Chariot/Grass
+				char_group_run_large_grass
+			end
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; WATER ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+	type Tiranoc chariot
+		season summer
+		terrain  water
+
+			event lod 2 priority 10
+				folder data/sounds/SFX/Group/Chariot/water
+				char_group_run_s_water
+			end
+
+			event lod 4 priority 10
+				folder data/sounds/SFX/Group/Chariot/water
+				char_group_run_m_water
+			end
+			event lod 8 priority 10
+				folder data/sounds/SFX/Group/Chariot/water
+				char_group_run_l_water
+			end
+
+
+
+
+;;;;;;;;;;;;;;;;
+;;;; SNOW  ;;;;;
+;;;;;;;;;;;;;;;;
+
+	type Tiranoc chariot
+		season winter
+		climates steppe, temperate_deciduous_forest, temperate_coniferous_forest, highland, alpine, tropical
+		terrain  grass_short, grass_long, sand, rock, forest_dense, scrub_dense
+
+
+
+			event lod 2 priority 10
+				folder data/sounds/SFX/Group/Chariot/snow
+				char_group_run_s_snow
+			end
+
+			event lod 4 priority 10
+				folder data/sounds/SFX/Group/Chariot/snow
+				char_group_run_m_snow
+			end
+			event lod 8 priority 10
+				folder data/sounds/SFX/Group/Chariot/snow
+				char_group_run_l_snow
+			end
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;  HORSE GROUP RUN  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+DEFAULT: mindist 8 volume 0 priority 70 fadein .5 fadeout 1
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;  GRASS  ;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+
+	unit cavalry light, heavy, spearmen, skirmish, missile
+		season summer, winter
+			terrain  grass_short, grass_long, sand, forest_dense, scrub_dense, rock, mud_road, mud, swamp, dirt
+
+; 			event lod 5 minPitch .9 maxPitch 1.1
+; 				folder data/sounds/SFX/Group/Horse/dirt
+; 				;horse_group_run_small_dirt
+; 			end
+			
+			event lod 5 minPitch .9 maxPitch 1.1 volume -20
+				folder data/sounds/SFX/Group/horse
+				horse_group_run_small_dirt
+			end
+			
+			event lod 20 minPitch .9 maxPitch 1.1 volume -20
+				folder data/sounds/SFX/Group/horse
+				horse_group_run_medium_dirt
+			end
+			
+			event lod 50 minPitch .9 maxPitch 1.1 volume -20
+				folder data/sounds/SFX/Group/horse
+				horse_group_run_large_dirt
+			end
+
+			
+			
+			
+
+;;;;;;;;;;;;;;;;;;;;;
+;;;;  STONE / ICE ;;;
+;;;;;;;;;;;;;;;;;;;;;
+
+	unit cavalry light, heavy, spearmen, skirmish, missile
+		season summer, winter
+			terrain  stone_road, ice
+
+			event lod 5 minPitch .8 maxPitch 1.1
+				folder data/sounds/SFX/Group/Horse
+				horse_group_run_Small_stone
+			end
+			event lod 20 minPitch .8 maxPitch 1.1
+				folder data/sounds/SFX/Group/Horse
+				horse_group_run_Medium_stone
+			end
+			event lod 50 minPitch .8 maxPitch 1.1
+				folder data/sounds/SFX/Group/Horse
+				horse_group_run_Large_stone
+			end
+
+
+
+;;;;;;;;;;;;;;;;
+;;;;  WATER ;;;;
+;;;;;;;;;;;;;;;;
+
+	unit cavalry light, heavy, spearmen, skirmish, missile
+		season summer
+			terrain water
+
+			event lod 5 volume -15
+				folder data/sounds/SFX/Group/Horse/water
+				;horse_group_walk_S_water
+			end
+			event lod 20 volume -20
+				folder data/sounds/SFX/Group/Horse/water
+				;horse_group_walk_M_water
+			end
+			event lod 50 volume -20
+				folder data/sounds/SFX/Group/Horse/water
+				;horse_group_walk_L_water
+			end
+
+
+;;;;;;;;;;;;;;;;
+;;;;  SNOW   ;;;
+;;;;;;;;;;;;;;;;
+
+	unit cavalry light, heavy, spearmen, skirmish, missile
+		season winter
+		climates steppe, temperate_deciduous_forest, temperate_coniferous_forest, highland, alpine, tropical
+			terrain  grass_short, grass_long, sand, forest_dense, scrub_dense, rock
+
+			event lod 5 minPitch .9 maxPitch 1.1 volume -20
+				folder data/sounds/SFX/Group/Horse
+				horse_group_run_small_dirt
+			end
+			
+			event lod 20 minPitch .9 maxPitch 1.1 volume -20
+				folder data/sounds/SFX/Group/Horse
+				horse_group_run_medium_dirt
+			end
+			
+			event lod 50 minPitch .9 maxPitch 1.1 volume -20
+				folder data/sounds/SFX/Group/Horse
+				horse_group_run_large_dirt
+			end
+
+;;;;;;;;;;;;;;;;
+;;;;  WOOD  ;;;;
+;;;;;;;;;;;;;;;;
+
+	unit cavalry light, heavy, spearmen, skirmish, missile
+		season summer, winter
+			terrain  wood
+
+			event lod 5 volume -20
+				folder data/sounds/SFX/Group/Horse
+				horse_group_run_Small_wood
+			end
+			event lod 20 volume -20
+				folder data/sounds/SFX/Group/Horse
+				horse_group_run_Medium_wood
+			end
+			event lod 50 volume -20
+				folder data/sounds/SFX/Group/Horse
+				horse_group_run_Large_wood
+			end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;  SQIUGS GROUP RUN             ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; ALL SURFACES, except water & snow
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    type Night Goblin Squig, Night Goblin Squig bodyguard, Night Goblin Squig rider, Night Goblin Squig rider bodyguard
+        season summer, winter
+
+            event lod 7 minPitch .9 maxPitch 1.1 volume -10
+                folder data/sounds/SFX/Group/Squig
+                squigsmallwalkr1
+                squigsmallwalkr2
+                squigsmallwalkr3
+            end
+            event lod 18 minPitch .9 maxPitch 1.1 volume -25
+                folder data/sounds/SFX/Group/Squig
+                squigsmallwalkl1
+                squigsmallwalkl2
+                squigsmallwalkl3
+            end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;  SNOW  ;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    type Night Goblin Squig, Night Goblin Squig bodyguard, Night Goblin Squig rider, Night Goblin Squig rider bodyguard
+        season winter
+        climates unused1, steppe, temperate_deciduous_forest, temperate_coniferous_forest, highland, alpine, tropical
+            terrain  grass_short, grass_long, sand, forest_dense, scrub_dense, rock
+             event lod 7 minPitch .9 maxPitch 1.1 volume -10
+                   folder data/sounds/SFX/Group/Squig
+                squigfeetsnowsmallr1
+                squigfeetsnowsmallr2
+                squigfeetsnowsmallr3
+                
+            end
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;  WATER ;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    type Night Goblin Squig, Night Goblin Squig bodyguard, Night Goblin Squig rider, Night Goblin Squig rider bodyguard
+        season summer
+			terrain water
+
+			event lod 5 volume -15
+				folder data/sounds/SFX/Group/Horse/water
+				;horse_group_walk_S_water
+			end
+			event lod 20 volume -20
+				folder data/sounds/SFX/Group/Horse/water
+				;horse_group_walk_M_water
+			end
+			event lod 50 volume -20
+				folder data/sounds/SFX/Group/Horse/water
+				;horse_group_walk_L_water
+			end
+			
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;  WOLF GROUP RUN  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+	type Hoboblins wolf arch, Hoboblins wolf, Goblin wolf rider, Wolfboyz bodyguard, Wolfboyz
+		season summer, winter
+
+			event lod 5 minPitch .9 maxPitch 1.1 volume -10
+				folder data/sounds/SFX/Group/Wolf
+				warhoundsrunsmalll1
+				warhoundsrunsmalll2
+				warhoundsrunsmalll3
+			end			
+			event lod 20 minPitch .9 maxPitch 1.1 volume -10
+				folder data/sounds/SFX/Group/Wolf
+				warhoundsrunsmallr1
+				warhoundsrunsmallr2
+				warhoundsrunsmallr3
+			end
+			
+			event lod 50 minPitch .9 maxPitch 1.1 volume -10
+				folder data/sounds/SFX/Group/Wolf
+				warhoundsrunlarger1
+				warhoundsrunlarger2
+				warhoundsrunlarger3
+			end
+
+;;;;;;;;;;;;;;;;
+;;;;  WATER ;;;;
+;;;;;;;;;;;;;;;;
+
+	type Hoboblins wolf arch, Hoboblins wolf, Goblin wolf rider, Wolfboyz bodyguard, Wolfboyz
+		season summer
+			terrain water
+
+			event lod 5 volume -15
+				folder data/sounds/SFX/Group/Horse/water
+				;horse_group_walk_S_water
+			end
+			event lod 20 volume -20
+				folder data/sounds/SFX/Group/Horse/water
+				;horse_group_walk_M_water
+			end
+			event lod 50 volume -20
+				folder data/sounds/SFX/Group/Horse/water
+				;horse_group_walk_L_water
+			end
+
+
+;;;;;;;;;;;;;;;;
+;;;;  SNOW   ;;;
+;;;;;;;;;;;;;;;;
+
+	type Hoboblins wolf arch, Hoboblins wolf, Goblin wolf rider, Wolfboyz bodyguard, Wolfboyz
+		season winter
+		climates steppe, temperate_deciduous_forest, temperate_coniferous_forest, highland, alpine, tropical
+			terrain  grass_short, grass_long, sand, forest_dense, scrub_dense, rock
+
+			event lod 5 minPitch .9 maxPitch 1.1 volume -20
+				folder data/sounds/SFX/Group/Wolf
+				warhoundrunsnowsmalll1
+				warhoundrunsnowsmalll2
+				warhoundrunsnowsmalll3
+			end
+			
+			event lod 20 minPitch .9 maxPitch 1.1 volume -20
+				folder data/sounds/SFX/Group/Wolf
+				warhoundrunsnowsmalll1
+				warhoundrunsnowsmalll2
+				warhoundrunsnowsmalll3
+			end
+			
+			event lod 50 minPitch .9 maxPitch 1.1 volume -20
+				folder data/sounds/SFX/Group/Wolf
+				warhoundrunsnowsmalll1
+				warhoundrunsnowsmalll2
+				warhoundrunsnowsmalll3
+			end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;  BOAR GROUP RUN  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+	type Orcz bodyguard, Orcs boar boyz, Savage Orcs boar boyz, Savage Orcs boar boyz bodyguard, Orcz
+		season summer, winter
+
+			event lod 5 minPitch .9 maxPitch 1.1 volume -10
+				folder data/sounds/SFX/Group/Horse
+				boarrunsmallfeet1
+				;boarrunsmalll1
+				boarrunsmallfeet2
+				;boarrunsmalll2
+				boarrunsmallfeet3
+			end			
+			event lod 20 minPitch .9 maxPitch 1.1 volume -10
+				folder data/sounds/SFX/Group/Horse
+				boarrunlargefeet1
+				;boarrunlargel1
+				boarrunlargefeet2
+				;boarrunlargel2
+				boarrunlargefeet3
+			end
+			
+			event lod 50 minPitch .9 maxPitch 1.1 volume -20
+				folder data/sounds/SFX/Group/Horse
+				boarrunlargefeet1
+				;boarrunlargel1
+				boarrunlargefeet2
+				;boarrunlargel2
+				boarrunlargefeet3
+			end
+
+;;;;;;;;;;;;;;;;
+;;;;  WATER ;;;;
+;;;;;;;;;;;;;;;;
+
+	type Orcz bodyguard, Orcs boar boyz, Savage Orcs boar boyz, Savage Orcs boar boyz bodyguard, Orcz
+		season summer
+			terrain water
+
+			event lod 5 volume -15
+				folder data/sounds/SFX/Group/Horse/water
+				;horse_group_walk_S_water
+			end
+			event lod 20 volume -20
+				folder data/sounds/SFX/Group/Horse/water
+				;horse_group_walk_M_water
+			end
+			event lod 50 volume -20
+				folder data/sounds/SFX/Group/Horse/water
+				;horse_group_walk_L_water
+			end
+
+
+;;;;;;;;;;;;;;;;
+;;;;  SNOW   ;;;
+;;;;;;;;;;;;;;;;
+
+	type Orcz bodyguard, Orcs boar boyz, Savage Orcs boar boyz, Savage Orcs boar boyz bodyguard, Orcz
+		season winter
+		climates steppe, temperate_deciduous_forest, temperate_coniferous_forest, highland, alpine, tropical
+			terrain  grass_short, grass_long, sand, forest_dense, scrub_dense, rock
+
+			event lod 5 minPitch .9 maxPitch 1.1 volume -20
+				folder data/sounds/SFX/Group/Horse
+				boarrunsnowsmallfeet1
+				;boarrunsmalll1
+				boarrunsnowsmallfeet2
+				;boarrunsmalll1
+				boarrunsnowsmallfeet3
+			end
+			
+			event lod 20 minPitch .9 maxPitch 1.1 volume -20
+				folder data/sounds/SFX/Group/Horse
+				boarrunsnowlargefeet1
+				;boarrunlargel1
+				boarrunsnowlargefeet2
+				;boarrunlargel2
+				boarrunsnowlargefeet3
+			end
+			
+			event lod 50 minPitch .9 maxPitch 1.1 volume -25
+				folder data/sounds/SFX/Group/Horse
+				boarrunsnowlargefeet1
+				;boarrunlargel1
+				boarrunsnowlargefeet2
+				;boarrunlargel2
+				boarrunsnowlargefeet3
+			end	
+			
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; COLDONE AND LIZARD GROUP MARCH      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+	type Cold one knights bodyguard, Cold one knights, mounted daemonettes bodyguard, Pleasureseekers
+		season summer, winter
+
+			event lod 5 minPitch .9 maxPitch 1.1 volume -20
+				folder data/sounds/SFX/Group/Coldone
+				coldonerunsmallfeet1
+				;coldonerunsmalll1
+				coldonerunsmallfeet2
+				;coldonerunsmalll3
+				coldonerunsmallfeet3
+			end			
+			event lod 20 minPitch .9 maxPitch 1.1 volume -20
+				folder data/sounds/SFX/Group/Coldone
+				coldonerunlargefeet1
+				;coldonerunlargel2
+				coldonerunlargefeet2
+				;coldonerunlarger2
+				coldonerunlargefeet3
+			end
+			
+			event lod 50 minPitch .9 maxPitch 1.1 volume -30
+				folder data/sounds/SFX/Group/Coldone
+				coldonerunlargefeet1
+				coldonerunlargel2
+				coldonerunlargefeet2
+				coldonerunlarger2
+				coldonerunlargefeet3
+			end
+
+;;;;;;;;;;;;;;;;
+;;;;  WATER ;;;;
+;;;;;;;;;;;;;;;;
+
+	type Cold one knights bodyguard, Cold one knights, mounted daemonettes bodyguard, Pleasureseekers
+		season summer
+			terrain water
+
+			event lod 5 volume -15
+				folder data/sounds/SFX/Group/Horse/water
+				;horse_group_walk_S_water
+			end
+			event lod 20 volume -20
+				folder data/sounds/SFX/Group/Horse/water
+				;horse_group_walk_M_water
+			end
+			event lod 50 volume -20
+				folder data/sounds/SFX/Group/Horse/water
+				;horse_group_walk_L_water
+			end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;  INVISIBLE MOUNT(HORSE)  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+	type Flamers, TZ mage upg, Screemer
+			terrain  grass_short, grass_long, forest_dense, scrub_dense, rock, mud_road, mud, swamp, dirt, sand, stone_road, ice, water, wood
+		
+			event lod 5 minPitch .9 maxPitch 1.1 volume -20
+				folder data/sounds/SFX/Group/horse
+				
+			end
+			
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;  CAMEL (BEAR AND JUGGERNAUT) GROUP RUN           ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+DEFAULT: mindist 8 volume -25 priority 150
+
+
+;;;;;;;;;;;;;;;;
+;;;; GRASS ;;;;;
+;;;;;;;;;;;;;;;;
+
+
+    type type Kislev Nobel, Kislev Nobel bodyguard, Tzar guard, Champions Knights of Khorne juggernaut, Juggernauts
+		season summer, winter
+		
+			event lod 1 volume -10
+				folder data/sounds/SFX/Group/Camel
+				cam_group_run_small_grass4
+			end
+			event lod 3 volume -10
+				folder data/sounds/SFX/Group/Camel
+				cam_group_run_med_grass4
+			end
+			event lod 5 volume -10
+				folder data/sounds/SFX/Group/Camel
+				cam_group_run_large_grass4
+			end
+
+
+
+;;;;;;;;;;;;;;;;
+;;;;  SNOW  ;;;;
+;;;;;;;;;;;;;;;;
+
+	type type Kislev Nobel, Kislev Nobel bodyguard, Tzar guard, Champions Knights of Khorne juggernaut, Juggernauts
+		season winter
+		climates steppe, temperate_deciduous_forest, temperate_coniferous_forest, highland, alpine, tropical
+			terrain  grass_short, grass_long, sand, forest_dense, scrub_dense, rock
+
+			event lod 5
+				folder data/sounds/SFX/Group/Camel
+				cam_group_run_S_snow
+			end
+			event lod 10
+				folder data/sounds/SFX/Group/Camel
+				cam_group_run_M_snow
+			end
+			event lod 20
+				folder data/sounds/SFX/Group/Camel
+				cam_group_run_L_snow
+			end
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;
+;;;;  WATER ;;;;
+;;;;;;;;;;;;;;;;;;;;;;;
+
+	type type Kislev Nobel, Kislev Nobel bodyguard, Tzar guard, Champions Knights of Khorne juggernaut, Juggernauts
+		season summer
+			terrain water
+
+			event lod 5 volume -10
+				folder data/sounds/SFX/Group/Horse/water
+				;horse_group_walk_S_water
+			end
+			event lod 10 volume -15
+				folder data/sounds/SFX/Group/Horse/water
+				;horse_group_walk_M_water
+			end
+			event lod 20 volume -15
+				folder data/sounds/SFX/Group/Horse/water
+				;horse_group_walk_L_water
+			end
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;  ELEPHANT GROUP  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+DEFAULT: mindist 12 volume 0 priority 170
+
+;;;;;;;;;;;;;;;;
+;;;; GRASS ;;;;;
+;;;;;;;;;;;;;;;;
+
+
+	type Elephants, Elephant Artillery, Elephants Mercs, Elephant Artillery Mercs, Elephant Rocketeer
+		season summer
+			terrain  grass_short, grass_long, sand, forest_dense, scrub_dense, rock, wood, stone_road, mud_road, mud, swamp
+
+			event lod 1 volume -10
+				folder data/sounds/SFX/Group/Elephant
+				Elephant_Group_run_small
+			end
+			event lod 3 volume -10
+				folder data/sounds/SFX/Group/Elephant
+				Elephant_Group_run_medium
+			end
+			event lod 5 volume -10
+				folder data/sounds/SFX/Group/Elephant
+				Elephant_Group_run_medium
+			end
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;  STONE ROAD winter ;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	type Elephants, Elephant Artillery, Elephants Mercs, Elephant Artillery Mercs, Elephant Rocketeer
+		season winter
+		climates steppe, temperate_deciduous_forest, temperate_coniferous_forest, highland, alpine, tropical
+			terrain stone_road
+
+			event lod 1 volume -10
+				folder data/sounds/SFX/Group/Elephant
+				Elephant_Group_run_small
+			end
+			event lod 3 volume -10
+				folder data/sounds/SFX/Group/Elephant
+				Elephant_Group_run_medium
+			end
+			event lod 5 volume -10
+				folder data/sounds/SFX/Group/Elephant
+				Elephant_Group_run_medium
+			end
+
+
+
+;;;;;;;;;;;;;;;;
+;;;;  WATER ;;;;
+;;;;;;;;;;;;;;;;
+
+	type Elephants, Elephant Artillery, Elephants Mercs, Elephant Artillery Mercs, Elephant Rocketeer
+		season summer, winter
+			terrain water
+
+		    event lod 1
+				folder data/sounds/SFX/Group/Elephant/water
+				;ele_group_walk_S_water
+			end
+			event lod 3
+			     folder  data/sounds/SFX/Group/Elephant/water
+				;ele_group_walk_M_water
+			end
+			event lod 5
+				folder data/sounds/SFX/Group/Elephant/water
+				;ele_group_walk_L_water
+			end
+
+
+
+;;;;;;;;;;;;;;;;
+;;;;  SNOW  ;;;;
+;;;;;;;;;;;;;;;;
+
+	type Elephants, Elephant Artillery, Elephants Mercs, Elephant Artillery Mercs, Elephant Rocketeer
+		season winter
+		climates steppe, temperate_deciduous_forest, temperate_coniferous_forest, highland, alpine, tropical
+			terrain  grass_short, grass_long, sand, forest_dense, scrub_dense, rock
+
+
+			event lod 1 volume -10
+				folder data/sounds/SFX/Group/Elephant
+				Elephant_Group_run_small
+			end
+			event lod 3 volume -10
+				folder data/sounds/SFX/Group/Elephant
+				Elephant_Group_run_medium
+			end
+			event lod 5 volume -10
+				folder data/sounds/SFX/Group/Elephant
+				Elephant_Group_run_medium
+			end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;; STEAM TANK ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+DEFAULT: mindist 12 volume 0 priority 220
+
+	type Steam Tank
+		
+			event lod 1 volume -10
+				folder data/sounds/SFX/Individual/Footsteps/Tank
+				steamtank_ride_01
+			end
+			event lod 3 volume -10
+				folder data/sounds/SFX/Individual/Footsteps/Tank
+				steamtank_ride_01
+			end
+			event lod 5 volume -10
+				folder data/sounds/SFX/Individual/Footsteps/Tank
+				steamtank_ride_01
+			end
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;                 ANIMAL INDIVIDUAL RUN          ;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;	     -Fast Food & Meat On the Run-      ;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Animal footstep bank
+;;
+;; animals: wardogs
+;;			pigs
+;;
+;; mounts:	camel
+;;			camel cataphract
+;;			horse cataphract
+;;			light horse
+;;			medium horse
+;;			heavy horse
+;;			elephant forest
+;;			elephant african
+;;			elephant african cataphract
+;;
+;; BANK: animal_footstep_run
+;;	animal wardogs
+;;		season summer
+;;			terrain  grass_short, grass_long, sand, forest_dense, scrub_dense, rock
+;;				event
+;;					folder data/sounds/SFX
+;;					silent
+;;				end
+;;	mount light horse, medium horse, heavy horse
+;;		season summer
+;;			terrain  grass_short, grass_long, sand, forest_dense, scrub_dense, rock
+;;				event
+;;					folder data/sounds/SFX
+;;					silent
+;;				end
+;;
+;;
+;;
+;;
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+DEFAULT: 3D mindist 1 priority 10 fadein 0 fadeout 0 distancepriority -2 rndvolume -20
+
+ BANK: animal_footstep_run
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;  HORSE INDIVIDUAL   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;  GRASS  ;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;
+
+	mount eastern armoured horse, Chaos armoured horse, Champion horse, Khorne champion horse, Tzeentch champion horse, Slaanesh champion horse, Nurgl champion horse, Encarmine Armoured Horse, tiranoc_chariot, panthe armoured horse, goldli armoured horse, morr armoured horse, Vampire Elector Horse, Elector count armored horse, Reikguard armored horse, White wolf  armored horse, bull  armored horse, Venator armoured horse, Bret questing barded horse, Bret barded horse, Bret errant barded horse, HE Light horse, HE AR Horse, Dragon prince armoured horse, Light horse k, Light horse ragnar, Light horse dark, Light horse, mount_heavy_horse_marka, horse marka, horse marka 1, horse marka_E, horse marka_G, fast pony, heavy horse, Light horse Chaos
+		season summer, winter
+			terrain  grass_short, grass_long, forest_dense, scrub_dense, rock, mud_road, mud, swamp, dirt
+			event lod 0 minPitch .8 maxPitch 1.2 volume 0 priority 20 mindist 1 rndvolume -5 probability 1 probradius 7
+				folder data/sounds/SFX/Individual/Footsteps/Horse
+
+				horse_footstep_dirt_01
+				horse_footstep_dirt_02
+				horse_footstep_dirt_03
+				horse_footstep_dirt_04
+				horse_footstep_dirt_05
+				horse_footstep_dirt_06
+				horse_footstep_dirt_07
+				horse_footstep_dirt_08
+				horse_footstep_dirt_09
+				horse_footstep_dirt_10
+				horse_footstep_dirt_11
+				horse_footstep_dirt_12
+				horse_footstep_dirt_13
+				horse_footstep_dirt_14
+				horse_footstep_dirt_15
+				horse_footstep_dirt_16
+				
+				horse_footstep_dirt_18
+				horse_footstep_dirt_19
+				horse_footstep_dirt_20
+				horse_footstep_dirt_21
+				horse_footstep_dirt_22
+				horse_footstep_dirt_23
+				horse_footstep_dirt_24
+				horse_footstep_dirt_25
+
+
+			end
+
+
+;;;;;;;;;;;;;;;;;;;;;;
+;;;;  SAND  ;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+
+	
+		season summer, winter
+			terrain sand
+			event lod 0 minPitch .8 maxPitch 1.2 volume 0 priority 20 mindist 1 rndvolume -5 probability 1 probradius 7
+ 				folder data/sounds/SFX/Individual/Footsteps/Horse
+				horse_footstep_dirt_01
+				horse_footstep_dirt_02
+				horse_footstep_dirt_03
+				horse_footstep_dirt_04
+				horse_footstep_dirt_05
+				horse_footstep_dirt_06
+				horse_footstep_dirt_07
+				horse_footstep_dirt_08
+				horse_footstep_dirt_09
+				horse_footstep_dirt_10
+				horse_footstep_dirt_11
+				horse_footstep_dirt_12
+				horse_footstep_dirt_13
+				horse_footstep_dirt_14
+				horse_footstep_dirt_15
+				horse_footstep_dirt_16
+				
+				horse_footstep_dirt_18
+				horse_footstep_dirt_19
+				horse_footstep_dirt_20
+				horse_footstep_dirt_21
+				horse_footstep_dirt_22
+				horse_footstep_dirt_23
+				horse_footstep_dirt_24
+				horse_footstep_dirt_25
+				
+				folder data/sounds/SFX/Individual/Footsteps/Infantry
+				infantry_walk_sand_01	volume -55	probability .2
+				infantry_walk_sand_02	volume -55	probability .2
+				infantry_walk_sand_03	volume -55	probability .2
+				infantry_walk_sand_04	volume -55	probability .2
+				infantry_walk_sand_05	volume -55	probability .2
+				infantry_walk_sand_06	volume -55	probability .2
+				infantry_walk_sand_07	volume -55	probability .2
+				infantry_walk_sand_08	volume -55	probability .2
+				infantry_walk_sand_09	volume -55	probability .2
+				infantry_walk_sand_10	volume -55	probability .2
+				infantry_walk_sand_11	volume -55	probability .2
+				infantry_walk_sand_12	volume -55	probability .2
+				infantry_walk_sand_13	volume -55	probability .2
+				infantry_walk_sand_14	volume -55	probability .2
+				infantry_walk_sand_15	volume -55	probability .2
+				infantry_walk_sand_16	volume -55	probability .2
+				infantry_walk_sand_17	volume -55	probability .2
+				infantry_walk_sand_18	volume -55	probability .2
+				infantry_walk_sand_19	volume -55	probability .2
+				infantry_walk_sand_20	volume -55	probability .2
+				infantry_walk_sand_21	volume -55	probability .2
+				infantry_walk_sand_22	volume -55	probability .2
+				infantry_walk_sand_23	volume -55	probability .2
+				infantry_walk_sand_24	volume -55	probability .2
+				infantry_walk_sand_25	volume -55	probability .2
+				infantry_walk_sand_26	volume -55	probability .2
+				infantry_walk_sand_27	volume -55	probability .2
+				infantry_walk_sand_28	volume -55	probability .2
+				infantry_walk_sand_29	volume -55	probability .2
+				infantry_walk_sand_30	volume -55	probability .2
+				infantry_walk_sand_31	volume -55	probability .2
+				infantry_walk_sand_32	volume -55	probability .2
+				infantry_walk_sand_33	volume -55	probability .2
+				infantry_walk_sand_34	volume -55	probability .2
+				infantry_walk_sand_35	volume -55	probability .2
+				infantry_walk_sand_36	volume -55	probability .2
+				infantry_walk_sand_37	volume -55	probability .2
+				infantry_walk_sand_38	volume -55	probability .2
+				infantry_walk_sand_39	volume -55	probability .2
+				infantry_walk_sand_40	volume -55	probability .2
+				infantry_walk_sand_41	volume -55	probability .2
+				infantry_walk_sand_42	volume -55	probability .2
+				infantry_walk_sand_43	volume -55	probability .2
+				infantry_walk_sand_44	volume -55	probability .2
+				infantry_walk_sand_45	volume -55	probability .2
+				infantry_walk_sand_46	volume -55	probability .2
+				
+			end
+
+;;;;;;;;;;;;;;;;
+;;;;  SNOW   ;;;
+;;;;;;;;;;;;;;;;
+
+
+		season winter
+		climates steppe, temperate_deciduous_forest, temperate_coniferous_forest, highland, alpine, tropical
+
+			terrain  grass_short, grass_long, forest_dense, scrub_dense, rock
+			event lod 0 mindist 1 minPitch .5 maxPitch 1.5 volume 0 priority 20 rndvolume -5 probability .5 probradius 7
+		       	folder data/sounds/SFX/Individual/Footsteps/Cavalry/Snow
+				Horse_Footstep_Snow_01
+				Horse_Footstep_Snow_02
+				Horse_Footstep_Snow_03
+				Horse_Footstep_Snow_04
+				Horse_Footstep_Snow_05
+				Horse_Footstep_Snow_06
+				Horse_Footstep_Snow_07
+				Horse_Footstep_Snow_08
+				Horse_Footstep_Snow_09
+				Horse_Footstep_Snow_10
+				Horse_Footstep_Snow_11
+				Horse_Footstep_Snow_12
+
+
+			end
+
+
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;  STONE / ICE ;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+		season summer, winter
+			terrain  stone_road, ice
+			event lod 0 minPitch .7 maxPitch 1.1 volume 0 priority 20 mindist 1 rndvolume -35 probability .5 probradius 7
+				folder data/sounds/SFX/Individual/Footsteps/Cavalry/Stone
+				Footstep_Horse_Stone_01a
+				Footstep_Horse_Stone_02a
+				Footstep_Horse_Stone_03a
+				Footstep_Horse_Stone_04a
+				Footstep_Horse_Stone_05a
+				Footstep_Horse_Stone_06a
+				Footstep_Horse_Stone_07a
+				Footstep_Horse_Stone_08a
+				Footstep_Horse_Stone_09a
+				Footstep_Horse_Stone_10a
+				Footstep_Horse_Stone_11a
+				Footstep_Horse_Stone_12a
+
+			end
+
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;  WATER ;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+		season summer, winter
+			terrain water
+			    event lod 0 minPitch .8 maxPitch 1.2 volume -40 priority 20 mindist 1 rndvolume -20 probability .5 probradius 7
+				folder data/sounds/SFX/Individual/Footsteps/Cavalry/Water
+				Horse_Footstep_Water_01
+				Horse_Footstep_Water_02
+				Horse_Footstep_Water_03
+				Horse_Footstep_Water_04
+				Horse_Footstep_Water_05
+				Horse_Footstep_Water_06
+				Horse_Footstep_Water_07
+				Horse_Footstep_Water_08
+				Horse_Footstep_Water_09
+				Horse_Footstep_Water_10
+				Horse_Footstep_Water_11
+				Horse_Footstep_Water_12
+			end
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;  WOOD  ;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+		season summer, winter
+			terrain  wood
+			event lod 0 mindist 1 minPitch .5 maxPitch 1.5 volume 0 priority 20 rndvolume -10 probability .5 probradius 7
+		       		folder data/sounds/SFX/Individual/Footsteps/Cavalry/Wood
+				Horse_Footstep_Wood_01
+				Horse_Footstep_Wood_02
+				Horse_Footstep_Wood_03
+				Horse_Footstep_Wood_04
+				Horse_Footstep_Wood_05
+				Horse_Footstep_Wood_06
+				Horse_Footstep_Wood_07
+				Horse_Footstep_Wood_08
+				Horse_Footstep_Wood_09
+				Horse_Footstep_Wood_10
+				Horse_Footstep_Wood_11
+				Horse_Footstep_Wood_12
+				Horse_Footstep_Wood_13
+				Horse_Footstep_Wood_14
+				Horse_Footstep_Wood_15
+
+			end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;  INVISIBLE MOUNT(HORSE)   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+
+
+	mount flamer fly, Disc of Tzeentch, Screemer fly, Wraith fly
+			event lod 0 minPitch .8 maxPitch 1.2 volume 0 priority 20 mindist 1 rndvolume -5 probability 1 probradius 7
+				folder data/sounds/SFX/Individual/Footsteps/Horse
+
+
+			end
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;  STEAM TANK INDIVIDUAL ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;	mount steam_tank
+;		
+;			event lod 0 minPitch .8 maxPitch 1.2 volume 0 priority 20 mindist 1 rndvolume -5 probability 1 probradius 7
+;				folder data/sounds/SFX/Individual/Footsteps/Tank
+;				steamtank_ride_01
+;			end
+;
+	mount steam_tank
+
+			event lod 0 minPitch .9 maxPitch 1.1 volume -10 priority 220 mindist 2 rndvolume -10 probability 1 probradius 7 distancepriority -5
+				folder data/sounds/SFX/Individual/Footsteps/Tank
+				steamtank_ride_01
+				steamtank_ride_01
+				steamtank_ride_01
+				steamtank_ride_01
+				steamtank_ride_01
+				steamtank_ride_01
+				steamtank_ride_01
+				steamtank_ride_01
+				steamtank_ride_01
+			end
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;  CAMEL INDIVIDUAL(BEAR JUGGERNAUT)  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; GRASS, WOOD ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+	mount camel, mount_juggernaut, Bear, White Bear
+		season summer, winter
+		terrain  grass_short, grass_long, sand, forest_dense, scrub_dense, rock, ice, wood, mud_road, mud, swamp, dirt
+
+		event lod 0 minPitch .8 maxPitch 1.4 volume -25 priority 20 mindist 1 rndvolume -10 probability 1 probradius 7
+				folder data/sounds/SFX/Individual/Footsteps/Camel
+				Camel_Footstep_01
+				Camel_Footstep_02
+				Camel_Footstep_03
+				Camel_Footstep_04
+				Camel_Footstep_05
+				Camel_Footstep_06
+				Camel_Footstep_07
+				Camel_Footstep_08
+				Camel_Footstep_09
+			end
+
+
+
+
+;;;;;;;;;;;;;;;
+;;;  SNOW  ;;;;
+;;;;;;;;;;;;;;;
+
+mount camel, mount_juggernaut, Bear, White Bear
+		season winter
+		climates steppe, temperate_deciduous_forest, temperate_coniferous_forest, highland, alpine, tropical
+			terrain  grass_short, grass_long, sand, forest_dense, scrub_dense, rock
+			event lod 0 mindist 1 minPitch .5 maxPitch 1.5 volume -10 priority 20 rndvolume -20 probability .5 probradius 7
+		       		folder data/sounds/SFX/Individual/Footsteps/Camel/Snow
+				Camel_Footstep_Snow_01
+				Camel_Footstep_Snow_02
+				Camel_Footstep_Snow_03
+				Camel_Footstep_Snow_04
+				Camel_Footstep_Snow_05
+				Camel_Footstep_Snow_06
+				Camel_Footstep_Snow_07
+				Camel_Footstep_Snow_08
+				Camel_Footstep_Snow_09
+				Camel_Footstep_Snow_10
+				Camel_Footstep_Snow_11
+				Camel_Footstep_Snow_12
+
+
+			end
+
+
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; STONE / ICE  ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+mount camel, mount_juggernaut, Bear, White Bear
+		season summer, winter
+			terrain  stone_road, ice
+
+				event lod 0 minPitch .8 maxPitch 1.4 volume -25 priority 20 mindist 1 rndvolume -10 probability 1 probradius 7
+				folder data/sounds/SFX/Individual/Footsteps/Camel
+				Camel_Footstep_01
+				Camel_Footstep_02
+				Camel_Footstep_03
+				Camel_Footstep_04
+				Camel_Footstep_05
+				Camel_Footstep_06
+				Camel_Footstep_07
+				Camel_Footstep_08
+				Camel_Footstep_09
+			end
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;  WATER ;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+mount mount_juggernaut, Bear, White Bear
+		season summer, winter
+			terrain water
+
+			event lod 0 minPitch .8 maxPitch 1.2 volume -40 priority 20 mindist 1 rndvolume -15 probability .5 probradius 7
+				folder data/sounds/SFX/Individual/Footsteps/Elephants/Water
+				Elephant_Footstep_Water_01
+				Elephant_Footstep_Water_02
+				Elephant_Footstep_Water_03
+				Elephant_Footstep_Water_04
+				Elephant_Footstep_Water_05
+				Elephant_Footstep_Water_06
+				Elephant_Footstep_Water_07
+				Elephant_Footstep_Water_08
+				Elephant_Footstep_Water_09
+
+			end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;  WOLF INDIVIDUAL  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;
+;;;; GRASS ;;;;;
+;;;;;;;;;;;;;;;;
+
+	mount Wolf mount, Wolf hob mount, Wolf hob arch mount
+			;terrain  grass_short, grass_long, sand, forest_dense, scrub_dense, rock, mud_road, mud, swamp, dirt
+			event mindist 1 minPitch .5 maxPitch 1.5 volume -45 rndvolume -15 probability .5 probradius 7
+
+			folder data/sounds/SFX/Individual/Footsteps/Wardog/grass
+				Wardog_Footstep_Grass_01
+			    Wardog_Footstep_Grass_02
+				Wardog_Footstep_Grass_03
+				Wardog_Footstep_Grass_04
+				Wardog_Footstep_Grass_05
+				Wardog_Footstep_Grass_06
+       			Wardog_Footstep_Grass_07
+			    Wardog_Footstep_Grass_08
+				Wardog_Footstep_Grass_09
+				Wardog_Footstep_Grass_10
+			end
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;  STONE / ICE  ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;
+
+    mount Wolf mount, Wolf hob mount, Wolf hob arch mount
+			terrain stone_road, ice
+			event mindist 1 minPitch .5 maxPitch 1.5 volume -10 rndvolume -15 probability .5 probradius 7
+				folder data/sounds/SFX/Individual/Footsteps/Wardog/Stone
+				Wardog_Footstep_Stone_01
+			    Wardog_Footstep_Stone_02
+				Wardog_Footstep_Stone_03
+				Wardog_Footstep_Stone_04
+				Wardog_Footstep_Stone_05
+				Wardog_Footstep_Stone_06
+       			Wardog_Footstep_Stone_07
+				Wardog_Footstep_Stone_08
+				Wardog_Footstep_Stone_09
+				Wardog_Footstep_Stone_10
+
+			end
+
+;;;;;;;;;;;;;;;;;;
+;;;;  WATER  ;;;;;
+;;;;;;;;;;;;;;;;;;
+
+    mount Wolf mount, Wolf hob mount, Wolf hob arch mount
+			terrain water
+			event mindist 1 minPitch .5 maxPitch 1.5 volume -40 rndvolume -10 probability .5 probradius 7
+				folder data/sounds/SFX/Individual/Footsteps/Wardog/Water
+				Wardog_Footstep_Water_01
+			    Wardog_Footstep_Water_02
+				Wardog_Footstep_Water_03
+				Wardog_Footstep_Water_04
+			    Wardog_Footstep_Water_05
+			    Wardog_Footstep_Water_06
+				Wardog_Footstep_Water_07
+				Wardog_Footstep_Water_08
+				Wardog_Footstep_Water_09
+			    Wardog_Footstep_Water_10
+				Wardog_Footstep_Water_11
+				Wardog_Footstep_Water_12
+			end
+
+
+;;;;;;;;;;;;;;;;;;
+;;;;  WOOD   ;;;;;
+;;;;;;;;;;;;;;;;;;
+
+    mount Wolf mount, Wolf hob mount, Wolf hob arch mount
+			terrain wood
+			event mindist 1 minPitch .5 maxPitch 1.5 volume -20 rndvolume -15 probability .5 probradius 7
+				folder data/sounds/SFX/Individual/Footsteps/Wardog/Wood
+				Wardog_Footstep_Wood_01
+			    Wardog_Footstep_Wood_02
+				Wardog_Footstep_Wood_03
+				Wardog_Footstep_Wood_04
+			    Wardog_Footstep_Wood_05
+				Wardog_Footstep_Wood_06
+			    Wardog_Footstep_Wood_07
+			    Wardog_Footstep_Wood_08
+				Wardog_Footstep_Wood_09
+			    Wardog_Footstep_Wood_10
+			end
+
+
+;;;;;;;;;;;;;;;;
+;;;; SNOW  ;;;;;
+;;;;;;;;;;;;;;;;
+
+     mount Wolf mount, Wolf hob mount, Wolf hob arch mount
+		season winter
+		climates steppe, temperate_deciduous_forest, temperate_coniferous_forest, highland, alpine, tropical
+			terrain  grass_short, grass_long, sand, forest_dense, scrub_dense, rock
+			event mindist 1 minPitch .5 maxPitch 1.5 volume -45 rndvolume -30 probability .5 probradius 7
+				folder data/sounds/SFX/Individual/Footsteps/Wardog/grass
+				Wardog_Footstep_Grass_01
+			    Wardog_Footstep_Grass_02
+				Wardog_Footstep_Grass_03
+				Wardog_Footstep_Grass_04
+				Wardog_Footstep_Grass_05
+				Wardog_Footstep_Grass_06
+       			Wardog_Footstep_Grass_07
+			    Wardog_Footstep_Grass_08
+				Wardog_Footstep_Grass_09
+				Wardog_Footstep_Grass_10
+			end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;  BOAR INDIVIDUAL   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+	mount Boar, S_Boar
+		season summer, winter
+			event lod 0 minPitch .8 maxPitch 1.2 volume 0 priority 20 mindist 1 rndvolume -5 probability 1 probradius 7
+				folder data/sounds/SFX/Individual/Footsteps/Boar
+
+				boarrunone1
+				boarrunone2
+				boarrunone3
+                end
+;;;;;;;;;;;;;;;;
+;;;;  SNOW   ;;;
+;;;;;;;;;;;;;;;;
+
+    mount Boar, S_Boar
+		season winter
+		climates steppe, temperate_deciduous_forest, temperate_coniferous_forest, highland, alpine, tropical
+
+			terrain  grass_short, grass_long, forest_dense, scrub_dense, rock
+			event lod 0 mindist 1 minPitch .5 maxPitch 1.5 volume 0 priority 20 rndvolume -5 probability .5 probradius 7
+		       	folder data/sounds/SFX/Individual/Footsteps/Boar
+				boarrunsnowone1
+				boarrunsnowone2
+				boarrunsnowone3
+			end
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;  WATER ;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;
+
+    mount Boar, S_Boar
+		season summer, winter
+			terrain water
+			    event lod 0 minPitch .8 maxPitch 1.2 volume -40 priority 20 mindist 1 rndvolume -20 probability .5 probradius 7
+				folder data/sounds/SFX/Individual/Footsteps/Cavalry/Water
+				Horse_Footstep_Water_01
+				Horse_Footstep_Water_02
+				Horse_Footstep_Water_03
+				Horse_Footstep_Water_04
+				Horse_Footstep_Water_05
+				Horse_Footstep_Water_06
+				Horse_Footstep_Water_07
+				Horse_Footstep_Water_08
+				Horse_Footstep_Water_09
+				Horse_Footstep_Water_10
+				Horse_Footstep_Water_11
+				Horse_Footstep_Water_12
+			end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;  SQUIG INDIVIDUAL   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+	mount Squig mount, Squigs, Squi1
+		season summer, winter
+			event lod 0 minPitch .8 maxPitch 1.2 volume 0 priority 20 mindist 1 rndvolume -5 probability 1 probradius 7
+				folder data/sounds/SFX/Individual/Footsteps/Squig
+                squigfeet1
+                squigfeet2
+                squigfeet3
+                squigfeet4
+                squigfeet5
+                squigfeet6
+                squigfeet7
+                squigfeet8
+                squigfeet9
+                squigfeet10
+                end
+;;;;;;;;;;;;;;;;
+;;;;  SNOW   ;;;
+;;;;;;;;;;;;;;;;
+
+    mount Squig mount, Squigs, Squi1
+		season winter
+		climates steppe, temperate_deciduous_forest, temperate_coniferous_forest, highland, alpine, tropical
+			terrain  grass_short, grass_long, forest_dense, scrub_dense, rock
+			event lod 0 mindist 1 minPitch .5 maxPitch 1.5 volume 0 priority 20 rndvolume -5 probability .5 probradius 7
+		       	folder data/sounds/SFX/Individual/Footsteps/Squig
+				squigfeetsnow1
+                squigfeetsnow2
+                squigfeetsnow3
+                squigfeetsnow4
+                squigfeetsnow5
+                squigfeetsnow6
+                squigfeetsnow7
+                squigfeetsnow8
+                squigfeetsnow9
+                squigfeetsnow10
+			end
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;  WATER ;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;
+
+    mount Squig mount, Squigs, Squi1
+		season summer, winter
+			terrain water
+			    event lod 0 minPitch .8 maxPitch 1.2 volume -40 priority 20 mindist 1 rndvolume -20 probability .5 probradius 7
+				folder data/sounds/SFX/Individual/Footsteps/Cavalry/Water
+				Horse_Footstep_Water_01
+				Horse_Footstep_Water_02
+				Horse_Footstep_Water_03
+				Horse_Footstep_Water_04
+				Horse_Footstep_Water_05
+				Horse_Footstep_Water_06
+				Horse_Footstep_Water_07
+				Horse_Footstep_Water_08
+				Horse_Footstep_Water_09
+				Horse_Footstep_Water_10
+				Horse_Footstep_Water_11
+				Horse_Footstep_Water_12
+			end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;  COLDONE AND LIZARD INDIVIDUAL   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+	mount Slaanesh creaturs, Cold one
+		season summer, winter
+			event lod 0 minPitch .8 maxPitch 1.2 volume 0 priority 20 mindist 1 rndvolume -5 probability 1 probradius 7
+				folder data/sounds/SFX/Individual/Footsteps/Coldone
+				coldonerunone1
+				coldonerunone2
+				coldonerunone3
+				coldonerunone4
+				coldonerunone5
+				coldonerunone6
+				coldonerunone7
+				coldonerunone8
+				coldonerunone9
+				coldonerunone10
+                end
+;;;;;;;;;;;;;;;;
+;;;;  SNOW   ;;;
+;;;;;;;;;;;;;;;;
+
+    mount Slaanesh creaturs, Cold one
+		season winter
+		climates steppe, temperate_deciduous_forest, temperate_coniferous_forest, highland, alpine, tropical
+
+			terrain  grass_short, grass_long, forest_dense, scrub_dense, rock
+			event lod 0 mindist 1 minPitch .5 maxPitch 1.5 volume 0 priority 20 rndvolume -5 probability .5 probradius 7
+		       	folder data/sounds/SFX/Individual/Footsteps/Coldone
+				coldonerunone1
+				coldonerunone2
+				coldonerunone3
+				coldonerunone4
+				coldonerunone5
+				coldonerunone6
+				coldonerunone7
+				coldonerunone8
+				coldonerunone9
+				coldonerunone10
+			end
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;  WATER ;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;
+
+    mount Slaanesh creaturs, Cold one
+		season summer, winter
+			terrain water
+			    event lod 0 minPitch .8 maxPitch 1.2 volume -40 priority 20 mindist 1 rndvolume -20 probability .5 probradius 7
+				folder data/sounds/SFX/Individual/Footsteps/Cavalry/Water
+				Horse_Footstep_Water_01
+				Horse_Footstep_Water_02
+				Horse_Footstep_Water_03
+				Horse_Footstep_Water_04
+				Horse_Footstep_Water_05
+				Horse_Footstep_Water_06
+				Horse_Footstep_Water_07
+				Horse_Footstep_Water_08
+				Horse_Footstep_Water_09
+				Horse_Footstep_Water_10
+				Horse_Footstep_Water_11
+				Horse_Footstep_Water_12
+			end

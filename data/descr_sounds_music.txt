@@ -1,0 +1,2305 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;MUSIC
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+DEFAULT: priority 9999 randomdelay 0 pan .5 volume 0
+DEFAULT: dry_level 1.0 wet_level 0.0 fadeout 1
+DEFAULT: pref MUSIC STREAMED
+
+required_samples_cutoff 3
+
+;; music events timeout in seconds
+;; music state will change to the previous one if no events occured within the time out
+music_timeout   60
+music_retrigger 5
+
+;; music events fade time in seconds
+;; fading is used when the music changes from one state to another
+music_fade_in 0
+music_fade_out 3
+music_fade_out_timeout 10
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Hastings Tutorial Custom Music
+
+	
+event Hastings_Tutorial_Tension
+	folder data/sounds/music
+	(Euro_Tension_1)_BladeGrass.mp3
+end
+
+event Hastings_Tutorial_Mobilize
+	folder data/sounds/music
+	(Euro_Mobilize_1)_Sister_Davul.mp3
+end
+
+event Hastings_Tutorial_Battle
+	folder data/sounds/music
+	(Euro_Battle_1)_Duke_of_Death.mp3
+
+end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; Historical Battle Music
+
+
+event  Arabic_Tension
+		folder data/sounds/music
+			(Arabic_Tension_1)_Kebabka.mp3
+            (Arabic_Tension_2)_Starsand.mp3
+end
+
+
+
+event Mediterranean_Tension
+		folder data/sounds/music
+			(Mediterranean_Tension_1)_By_The_Marmara.mp3
+			(Mediterranean_Tension_2)_Secret_Sandals.mp3
+           
+end
+
+
+event  Euro_Tension
+		folder data/sounds/music
+			(Euro_Tension_1)_BladeGrass.mp3
+			(Euro_Tension_2)_Call_Of_The_Sheep.mp3
+			(Euro_Tension_3)_Fear_Frozen.mp3
+end
+
+
+event  Aztec_Tension
+		folder data/sounds/music
+			(Aztec_Tension_1)_Octli.mp3
+			(Aztec_Tension_2)_Memories_of_Mictlan.mp3
+end
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+DEFAULT: streamed
+
+
+BANK: music_bank
+
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;; Империя ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+			
+	music_type southern_european
+
+
+	
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+;;;;;;;;;;;;;;;;;;;;;  FRONTEND  ;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+		state MUSIC_FRONTEND
+			event 
+				folder data/sounds/music/empire
+				imp_maintheme1.mp3
+			end
+
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;			
+			
+			
+			
+					
+;;; BAttlE MAP			
+			
+			
+		state MUSIC_BATTLE_TENSION
+			event 
+				folder data/sounds/music/empire
+				imp_rasstanovka1.mp3
+                imp_rasstanovka2.mp3
+                imp_rasstanovka3.mp3
+				imp_rasstanovka4.mp3				
+			end
+			
+		state MUSIC_BATTLE_MOBILIZE
+			event
+				folder data/sounds/music/empire
+				imp_mobilise1.mp3
+				imp_mobilise2.mp3
+                imp_mobilise3.mp3
+				imp_mobilise4.mp3
+				imp_mobilise5.mp3
+				imp_mobilise6.mp3
+				imp_mobilise7.mp3
+			end
+			
+		state MUSIC_BATTLE_BATTLE
+			event
+				folder data/sounds/music/empire
+                imp_battle1.mp3
+ 				imp_battle2.mp3
+				imp_battle4.mp3
+				imp_battle5.mp3
+				imp_battle6.mp3
+				imp_battle7.mp3
+				imp_battle8.mp3
+				imp_battle9.mp3
+				imp_battle10.mp3
+            end     
+
+
+;;; BATTLE MAP RESULT			
+			
+					
+		state MUSIC_RESULT_WIN_CLOSE
+			event 
+				folder data/sounds/music/empire
+				imp_winclose1.mp3
+			end
+		state MUSIC_RESULT_WIN_AVERAGE
+			event 
+				folder data/sounds/music/empire
+				imp_winawerage1.mp3
+			end
+		state MUSIC_RESULT_WIN_CRUSHING
+			event 
+				folder data/sounds/music/empire
+				imp_wincrushing1.mp3
+			end
+		state MUSIC_RESULT_LOSE_CLOSE
+			event 
+				folder data/sounds/music/empire
+				imp_loseclose1.mp3
+			end
+		state MUSIC_RESULT_LOSE_AVERAGE
+			event 
+				folder data/sounds/music/empire
+				imp_loseawerage1.mp3
+			end
+		state MUSIC_RESULT_LOSE_CRUSHING
+			event 
+				folder data/sounds/music/empire
+				imp_losecrushing1.mp3
+			end
+		state MUSIC_RESULT_DRAW
+			event 
+				folder data/sounds/music/empire
+				imp_draw1.mp3
+			end
+
+
+						
+;;; CAMPMAP			
+				
+			
+			
+		state MUSIC_STRATMAP_SUMMER
+			event delay 5 
+				folder data/sounds/music/empire
+				imp_spring1.mp3
+				imp_spring2.mp3
+				imp_spring3.mp3
+				imp_spring4.mp3
+				imp_spring5.mp3
+				imp_spring6.mp3
+				imp_spring7.mp3
+				imp_spring10.mp3	
+				imp_spring11.mp3
+				imp_winter1.mp3
+		        imp_winter2.mp3
+                imp_winter3.mp3
+                imp_winter4.mp3
+                imp_winter5.mp3
+				imp_winter6.mp3
+				imp_winter7.mp3
+				imp_winter9.mp3
+				imp_winter10.mp3
+				imp_winter11.mp3
+				imp_winter12.mp3
+				imp_winter13.mp3
+			end
+        state MUSIC_STRATMAP_WINTER
+     		event delay 5
+	            folder data/sounds/music/empire
+            end
+		state MUSIC_CAMPAIGN_LOADING
+			event 
+				folder data/sounds/music/empire
+				imp_campaign_load.mp3
+				imp_wincrushing_strat2.mp3				
+			end	
+			
+		
+		state MUSIC_PREBATTLE_SCROLL
+			event  
+				folder data/sounds/music/empire
+				imp_prebattle.mp3
+			end
+			
+			
+			
+			
+		state MUSIC_RESULT_STRAT_WIN_CLOSE
+			event 
+				folder data/sounds/music/empire
+				imp_win_close_strat1.mp3	
+			end
+		state MUSIC_RESULT_STRAT_WIN_AVERAGE
+			event 
+				folder data/sounds/music/empire
+				imp_win_awera_strat1.mp3	
+			end
+		state MUSIC_RESULT_STRAT_WIN_CRUSHING
+			event 
+				folder data/sounds/music/empire
+				imp_wincrushing_strat1.mp3
+				imp_wincrushing_strat3.mp3	
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CLOSE
+			event 
+				folder data/sounds/music/empire
+				imp_battlelost_close_strat1.mp3		
+			end
+		state MUSIC_RESULT_STRAT_LOSE_AVERAGE
+			event 
+				folder data/sounds/music/empire
+				imp_loseawerage_strat1.mp3			
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CRUSHING
+			event 
+				folder data/sounds/music/empire
+				imp_losecrushing_strat1.mp3
+			end
+		state MUSIC_RESULT_STRAT_DRAW
+			event 
+				folder data/sounds/music/empire
+				imp_draw.mp3			
+			end	
+
+			
+;;; CAMPAIGN RESULT				
+			
+			
+		state MUSIC_CAMPAIGN_VICTORY
+			event  looped
+				folder data/sounds/music/empire
+				imp_company_win.mp3
+							
+			end	
+		state MUSIC_CAMPAIGN_DEFEAT
+			event  looped
+				folder data/sounds/music/empire
+                imp_company_defeat.mp3		
+			end	
+			
+
+;;; CREDITS
+
+	state MUSIC_CREDITS1 delay 3
+			event 
+				folder data/sounds/music/empire
+				imp_maintheme1.mp3
+			end	
+			
+	state MUSIC_CREDITS2
+			event 
+				folder data/sounds/music/empire
+				imp_company_win.mp3
+                                imp_prebattle.mp3
+                                imp_spring1.mp3
+				imp_spring2.mp3
+				imp_spring3.mp3
+				imp_spring4.mp3
+				imp_spring5.mp3
+				imp_spring6.mp3	
+			end
+
+
+			
+
+						
+			
+;;;;;;;;;;;;;;;;;;;;; Кислев ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;			
+			
+			
+	music_type eastern_european
+
+
+	
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+;;;;;;;;;;;;;;;;;;;;;  FRONTEND  ;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+		state MUSIC_FRONTEND
+			event 
+				folder data/sounds/music/kislev
+				Kislev_mobilise4.mp3
+			end
+
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;			
+			
+			
+			
+					
+;;; BAttlE MAP			
+			
+			
+		state MUSIC_BATTLE_TENSION
+			event 
+				folder data/sounds/music/kislev
+				Kislev_rasstanovka2.mp3
+				Kislev_tension1.mp3
+				Kislev_rasstanovka1.mp3
+			end
+			
+		state MUSIC_BATTLE_MOBILIZE
+			event
+				folder data/sounds/music/kislev
+				Kislev_mobilise1.mp3
+				Kislev_mobilise2.mp3
+				Kislev_mobilise3.mp3
+				Kislev_mobilise4.mp3
+			end
+			
+		state MUSIC_BATTLE_BATTLE
+			event
+				folder data/sounds/music/kislev
+				kislev_battle1.mp3
+			    Kislev_battle2.mp3
+			    Kislev_battle3.mp3
+				Kislev_battle4.mp3
+				Kislev_battle5.mp3
+				Kislev_battle6.mp3
+            end     
+
+
+;;; BATTLE MAP RESULT			
+			
+					
+		state MUSIC_RESULT_WIN_CLOSE
+			event 
+				folder data/sounds/music/kislev
+				Kislev_battlewin_close1.mp3
+			end
+		state MUSIC_RESULT_WIN_AVERAGE
+			event 
+				folder data/sounds/music/kislev
+				Kislev_winawerage_tactic1.mp3
+			end
+		state MUSIC_RESULT_WIN_CRUSHING
+			event 
+				folder data/sounds/music/kislev
+				Kislev_wincrushing.mp3
+			end
+		state MUSIC_RESULT_LOSE_CLOSE
+			event 
+				folder data/sounds/music/kislev
+				Kislev_lostclose_tact.mp3
+			end
+		state MUSIC_RESULT_LOSE_AVERAGE
+			event 
+				folder data/sounds/music/kislev
+				Kislev_lostaverage_tact.mp3
+			end
+		state MUSIC_RESULT_LOSE_CRUSHING
+			event 
+				folder data/sounds/music/kislev
+				Kislev_battlelost_crushing1.mp3
+			end
+		state MUSIC_RESULT_DRAW
+			event 
+				folder data/sounds/music/kislev
+				Kislev_draw1.mp3
+			end
+
+
+						
+;;; CAMPMAP			
+				
+			
+		state MUSIC_STRATMAP_SUMMER
+			event delay 5 
+				folder data/sounds/music/kislev			
+				Kislev_summer1.mp3
+				Kislev_summer2.mp3 
+				Kislev_summer3.mp3 
+				Kislev_summer4.mp3 
+				Kislev_summer5.mp3 
+				Kislev_summer6.mp3 
+				Kislev_summer7.mp3
+				Kislev_summer8.mp3
+				Kislev_winter1.mp3 
+				Kislev_winter3.mp3 
+				Kislev_winter2.mp3 
+				kislev_winter4.mp3
+				Kislev_winter5.mp3 
+				Kislev_winter6.mp3 
+				Kislev_winter7.mp3
+				Kislev_winter8.mp3				
+			end	
+		
+		state MUSIC_STRATMAP_WINTER
+			event delay 5 
+				folder data/sounds/music/kislev			
+			end		
+				
+		state MUSIC_CAMPAIGN_LOADING
+			event 
+				folder data/sounds/music/kislev
+				Kislev_loading1.mp3
+			end	
+			
+		
+		state MUSIC_PREBATTLE_SCROLL
+			event  
+				folder data/sounds/music/kislev
+				Kislev_prebattle_scroll.mp3
+				
+			end
+			
+			
+			
+			
+		state MUSIC_RESULT_STRAT_WIN_CLOSE
+			event 
+				folder data/sounds/music/empire
+				imp_winclose1.mp3		
+			end
+		state MUSIC_RESULT_STRAT_WIN_AVERAGE
+			event 
+				folder data/sounds/music/kislev
+				kislev_battelwin_average1.mp3		
+			end
+		state MUSIC_RESULT_STRAT_WIN_CRUSHING
+			event 
+				folder data/sounds/music/kislev
+				kislev_wincrushing.mp3		
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CLOSE
+			event 
+				folder data/sounds/music/kislev
+				Kislev_loseclose_strat1.mp3	
+			end
+		state MUSIC_RESULT_STRAT_LOSE_AVERAGE
+			event 
+				folder data/sounds/music/kislev
+				Kislev_loseaverage_strat1.mp3		
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CRUSHING
+			event 
+				folder data/sounds/music/kislev
+				Kislev_losecrushimg_strat.mp3	
+			end
+		state MUSIC_RESULT_STRAT_DRAW
+			event 
+				folder data/sounds/music/kislev
+				Kislev_draw_strat.mp3		
+			end	
+
+			
+;;; CAMPAIGN RESULT				
+			
+			
+		state MUSIC_CAMPAIGN_VICTORY
+			event looped 
+				folder data/sounds/music/kislev
+				Kislev_campain_win.mp3			
+			end	
+			
+		state MUSIC_CAMPAIGN_DEFEAT
+			event looped 
+				folder data/sounds/music/kislev
+		        imp_company_defeat.mp3
+			end	
+			
+
+;;; CREDITS
+
+	state MUSIC_CREDITS1 delay 3
+			event 
+				folder data/sounds/music/empire
+				imp_maintheme1.mp3
+			end	
+			
+	state MUSIC_CREDITS2
+			event 
+				folder data/sounds/music/empire
+				imp_company_win.mp3
+                imp_prebattle.mp3
+                imp_spring1.mp3
+				imp_spring2.mp3
+				imp_spring3.mp3
+				imp_spring4.mp3
+				imp_spring5.mp3
+				imp_spring6.mp3	
+				
+			end
+
+
+	
+
+			
+;;;;;;;;;;;;;;;;;;;;; Орки и гоблины ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;			
+	
+					
+	music_type middle_eastern
+			
+			
+;;; BATTLE MAP			
+			
+			
+		state MUSIC_BATTLE_TENSION
+			event 
+				folder data/sounds/music/orcs
+                orc_rasstanovka1.mp3
+                orc_rasstanovka2.mp3
+				orc_rasstanovka3.mp3
+			end
+			
+		state MUSIC_BATTLE_MOBILIZE
+			event 
+				folder data/sounds/music/orcs
+				orc_mobilise1.mp3
+                orc_mobilise2.mp3
+                orc_mobilise3.mp3
+                orc_mobilise4.mp3                
+			end
+			
+		state MUSIC_BATTLE_BATTLE
+			event 
+				folder data/sounds/music/orcs
+				orc_battle1.mp3
+                orc_battle2.mp3
+                orc_battle3.mp3
+                orc_battle4.mp3
+                orc_battle5.mp3
+				orc_battle6.mp3
+				orc_battle7.mp3
+				orc_battle8.mp3
+				orc_battle9.mp3
+			end
+
+			
+;;;; BATTLE MAP RESULT			
+			
+		
+		state MUSIC_RESULT_WIN_CLOSE
+			event 
+				folder data/sounds/music/orcs
+				orc_win_close1.mp3
+				
+			end
+		state MUSIC_RESULT_WIN_AVERAGE
+			event 
+				folder data/sounds/music/orcs
+				orc_win_awerage1.mp3
+				
+			end
+		state MUSIC_RESULT_WIN_CRUSHING
+			event 
+				folder data/sounds/music/orcs
+				orc_win_crushing1.mp3
+				
+			end
+		state MUSIC_RESULT_LOSE_CLOSE
+			event 
+				folder data/sounds/music/orcs
+				orc_loseclose.mp3
+				
+			end
+		state MUSIC_RESULT_LOSE_AVERAGE
+			event 
+				folder data/sounds/music/orcs
+				orc_loseawerage.mp3
+			end
+		state MUSIC_RESULT_LOSE_CRUSHING
+			event 
+				folder data/sounds/music/orcs
+				orc_losecrushing1.mp3
+			end
+		state MUSIC_RESULT_DRAW
+			event 
+				folder data/sounds/music/orcs
+				orc_draw.mp3
+			end
+
+			
+			
+;;; CAMPMAP
+						
+			
+			
+		state MUSIC_STRATMAP_SUMMER
+			event delay 5 
+				folder data/sounds/music/orcs
+				orc_summer1.mp3
+				orc_summer2.mp3
+				orc_summer3.mp3
+				orc_summer4.mp3
+				orc_summer5.mp3
+				orc_summer6.mp3
+				orc_summer7.mp3
+				orc_summer8.mp3
+				orc_winter1.mp3
+			    orc_winter2.mp3
+				orc_winter3.mp3 
+                orc_winter4.mp3
+				orc_winter5.mp3
+				orc_winter6.mp3
+				orc_winter7.mp3
+			end
+
+	state MUSIC_STRATMAP_WINTER
+			event delay 5 
+				folder data/sounds/music/orcs			
+			end			
+
+
+		state MUSIC_CAMPAIGN_LOADING
+			event 
+				folder data/sounds/music/orcs
+				Orc_load.mp3
+			end							
+						
+			
+		state MUSIC_PREBATTLE_SCROLL
+			event  
+				folder data/sounds/music/orcs
+				orc_mobilise1.mp3		
+			end
+			
+			
+			
+			
+		state MUSIC_RESULT_STRAT_WIN_CLOSE
+			event 
+				folder data/sounds/music/orcs
+				orc_winclose_strat1.mp3
+							
+			end
+		state MUSIC_RESULT_STRAT_WIN_AVERAGE
+			event 
+				folder data/sounds/music/orcs
+				orc_win_awerage1.mp3
+							
+			end
+		state MUSIC_RESULT_STRAT_WIN_CRUSHING
+			event 
+				folder data/sounds/music/orcs
+				orc_wincrushing_strat.mp3
+							
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CLOSE
+			event 
+				folder data/sounds/music/orcs
+				orc_battlelost_close_strat1.mp3		
+			end
+		state MUSIC_RESULT_STRAT_LOSE_AVERAGE
+			event 
+				folder data/sounds/music/orcs
+				orc_loseawerage_strat1.mp3		
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CRUSHING
+			event 
+				folder data/sounds/music/orcs
+				orc_losecrushing_strat.mp3		
+			end
+		state MUSIC_RESULT_STRAT_DRAW
+			event 
+				folder data/sounds/music/orcs
+				ork_draw_strat.mp3		
+			end					
+
+			
+;;; CAMPAIGN RESULT			
+			
+			
+			
+		state MUSIC_CAMPAIGN_VICTORY
+			event  looped
+				folder data/sounds/music/orcs
+				orc_camp_win.mp3			
+			end	
+		state MUSIC_CAMPAIGN_DEFEAT
+			event  looped
+				folder data/sounds/music/orcs
+				orc_loseawerage_strat1.mp3		
+			end
+						
+;;; CREDITS
+
+	state MUSIC_CREDITS1 delay 3
+			event 
+				folder data/sounds/music/empire
+				imp_maintheme1.mp3
+			end	
+			
+	state MUSIC_CREDITS2
+			event 
+				folder data/sounds/music/empire
+				imp_company_win.mp3				
+                imp_prebattle.mp3
+                imp_spring1.mp3
+				imp_spring2.mp3
+				imp_spring3.mp3
+				imp_spring4.mp3
+				imp_spring5.mp3
+				imp_spring6.mp3	
+			end	
+
+
+;;;;;;;;;;;;;;;;;;;;; Хаос ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+			
+	music_type Nord_culture
+
+
+	
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+;;;;;;;;;;;;;;;;;;;;;  FRONTEND  ;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+		state MUSIC_FRONTEND
+			event 
+				folder data/sounds/music/chaos
+				chaos_maintheme.mp3
+			end
+
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;			
+			
+			
+			
+					
+;;; BAttlE MAP			
+			
+			
+		state MUSIC_BATTLE_TENSION
+			event 
+				folder data/sounds/music/chaos
+				chaos_tensor1.mp3
+                chaos_tensor2.mp3
+                chaos_tensor3.mp3
+				chaos_tensor4.mp3
+				chaos_tensor5.mp3
+			end
+			
+		state MUSIC_BATTLE_MOBILIZE
+			event
+				folder data/sounds/music/chaos
+				chaos_mobilise2.mp3
+				chaos_mobilise1.mp3
+                chaos_mobilise3.mp3
+                chaos_mobilise4.mp3
+				chaos_mobilise5.mp3
+				chaos_mobilise6.mp3
+			end
+			
+		state MUSIC_BATTLE_BATTLE
+			event
+				folder data/sounds/music/chaos
+                chaos_battle1.mp3
+ 				chaos_battle2.mp3
+				Chaos_battle3.mp3
+				chaos_battle4.mp3
+                chaos_battle5.mp3
+				chaos_battle6.mp3
+				chaos_battle7.mp3
+				chaos_battle8.mp3
+            end     
+
+
+;;; BATTLE MAP RESULT			
+			
+					
+		state MUSIC_RESULT_WIN_CLOSE
+			event 
+				folder data/sounds/music/chaos
+				chaos_winclose1.mp3
+			end
+		state MUSIC_RESULT_WIN_AVERAGE
+			event 
+				folder data/sounds/music/chaos
+				chaos_winawerage1.mp3
+			end
+		state MUSIC_RESULT_WIN_CRUSHING
+			event 
+				folder data/sounds/music/chaos
+				chaos_wincrushing1.mp3
+			end
+		state MUSIC_RESULT_LOSE_CLOSE
+			event 
+				folder data/sounds/music/chaos
+				chaos_loseclose_tact1.mp3
+			end
+		state MUSIC_RESULT_LOSE_AVERAGE
+			event 
+				folder data/sounds/music/chaos
+				chaos_loseawerage_tact1.mp3
+			end
+		state MUSIC_RESULT_LOSE_CRUSHING
+			event 
+				folder data/sounds/music/chaos
+				chaos_losecrushin_tact.mp3
+			end
+		state MUSIC_RESULT_DRAW
+			event 
+				folder data/sounds/music/chaos
+				chaos_draw.mp3
+			end
+
+
+						
+;;; CAMPMAP			
+				
+			
+			
+		state MUSIC_STRATMAP_SUMMER
+			event delay 5 
+				folder data/sounds/music/chaos
+				chaos_spring1.mp3
+				Chaos_spring6.mp3
+				Chaos_spring2.mp3
+				chaos_spring3.mp3
+				chaos_spring4.mp3
+				chaos_spring5.mp3
+				Chaos_spring7.mp3
+				Chaos_spring8.mp3
+				chaos_winter1.mp3
+			    chaos_winter2.mp3
+                chaos_winter3.mp3
+                chaos_winter4.mp3
+                chaos_winter5.mp3
+				chaos_winter6.mp3
+				chaos_winter7.mp3
+				chaos_winter8.mp3
+			end
+        state MUSIC_STRATMAP_WINTER
+            event delay 5
+	            folder data/sounds/music/chaos
+            end
+		state MUSIC_CAMPAIGN_LOADING
+			event 
+				folder data/sounds/music/chaos
+				chaos_camploading.mp3	
+			end	
+			
+		
+		state MUSIC_PREBATTLE_SCROLL
+			event  
+				folder data/sounds/music/chaos
+				Chaos_prebattle_scroll.mp3
+			end
+			
+			
+			
+			
+		state MUSIC_RESULT_STRAT_WIN_CLOSE
+			event 
+				folder data/sounds/music/chaos
+				chaos_winclose_strat.mp3	
+			end
+		state MUSIC_RESULT_STRAT_WIN_AVERAGE
+			event 
+				folder data/sounds/music/chaos
+				Chaos_winawer_strat.mp3	
+			end
+		state MUSIC_RESULT_STRAT_WIN_CRUSHING
+			event 
+				folder data/sounds/music/chaos
+				chaos_wincrushing_strat.mp3		
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CLOSE
+			event 
+				folder data/sounds/music/chaos
+				chaos_loseclose_strat1.mp3		
+			end
+		state MUSIC_RESULT_STRAT_LOSE_AVERAGE
+			event 
+				folder data/sounds/music/chaos
+				chaos_loseawerage_strat1.mp3			
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CRUSHING
+			event 
+				folder data/sounds/music/chaos
+				chaos_losecrushing_strat.mp3			
+			end
+		state MUSIC_RESULT_STRAT_DRAW
+			event 
+				folder data/sounds/music/chaos
+				chaos_draw.mp3			
+			end	
+
+			
+;;; CAMPAIGN RESULT				
+			
+			
+		state MUSIC_CAMPAIGN_VICTORY
+			event  looped
+				folder data/sounds/music/chaos
+				chaos_camp_win.mp3
+							
+			end	
+		state MUSIC_CAMPAIGN_DEFEAT
+			event  looped
+				folder data/sounds/music/chaos
+                chaos_camp_lose.mp3		
+			end	
+			
+
+;;; CREDITS
+
+	state MUSIC_CREDITS1 delay 3
+			event 
+				folder data/sounds/music/empire
+				imp_maintheme1.mp3
+			end	
+			
+	state MUSIC_CREDITS2
+			event 
+				folder data/sounds/music/empire
+				imp_company_win.mp3				
+                                imp_prebattle.mp3
+                                imp_spring1.mp3
+				imp_spring2.mp3
+				imp_spring3.mp3
+				imp_spring4.mp3
+				imp_spring5.mp3
+				imp_spring6.mp3
+				
+			end
+
+
+			
+;;;;;;;;;;;;;;;;;;;;; Гномы ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+			
+	music_type greek
+
+
+	
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+;;;;;;;;;;;;;;;;;;;;;  FRONTEND  ;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+		state MUSIC_FRONTEND
+			event 
+				folder data/sounds/music/dwarf
+				dwarf_mainthem.mp3
+			end
+
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;			
+			
+			
+			
+					
+;;; BAttlE MAP			
+			
+			
+		state MUSIC_BATTLE_TENSION
+			event 
+				folder data/sounds/music/dwarf
+				dwarf_tension1.mp3
+                dwarf_tensor2.mp3
+                dwarf_tensor3.mp3
+				dwarf_tensor4.mp3
+				dwarf_tensor5.mp3
+				dwarf_tensor6.mp3
+			end
+			
+		state MUSIC_BATTLE_MOBILIZE
+			event
+				folder data/sounds/music/dwarf
+				dwarf_mobilise1.mp3
+				dwarf_mobilise2.mp3
+                dwarf_mobilise3.mp3
+				dwarf_mobilise4.mp3
+			end
+			
+		state MUSIC_BATTLE_BATTLE
+			event
+				folder data/sounds/music/dwarf
+                dwarf_battle1.mp3
+				dwarf_battle2.mp3
+ 				dwarf_battle3.mp3
+				dwarf_battle4.mp3
+				dwarf_battle5.mp3
+                dwarf_battle6.mp3
+                dwarf_battle8.mp3
+            end     
+
+
+;;; BATTLE MAP RESULT			
+			
+					
+		state MUSIC_RESULT_WIN_CLOSE
+			event 
+				folder data/sounds/music/dwarf
+				dwarf_winclose_tact1.mp3
+			end
+		state MUSIC_RESULT_WIN_AVERAGE
+			event 
+				folder data/sounds/music/dwarf
+				dwarf_winavwrage_tact.mp3
+			end
+		state MUSIC_RESULT_WIN_CRUSHING
+			event 
+				folder data/sounds/music/dwarf
+				dwarf_wincrush_tactic1.mp3
+			end
+		state MUSIC_RESULT_LOSE_CLOSE
+			event 
+				folder data/sounds/music/dwarf
+				dwarf_loseclose_tact.mp3
+			end
+		state MUSIC_RESULT_LOSE_AVERAGE
+			event 
+				folder data/sounds/music/dwarf
+				dwarf_loseawerage_tact.mp3
+			end
+		state MUSIC_RESULT_LOSE_CRUSHING
+			event 
+				folder data/sounds/music/dwarf
+				dwarf_losecrushing_tact1.mp3
+			end
+		state MUSIC_RESULT_DRAW
+			event 
+				folder data/sounds/music/dwarf
+				dwarf_battleresult_draw1.mp3
+			end
+
+
+						
+;;; CAMPMAP			
+				
+			
+			
+		state MUSIC_STRATMAP_SUMMER
+			event delay 5 
+				folder data/sounds/music/dwarf
+				dwarf_summer1.mp3
+				dwarf_summer2.mp3
+				dwarf_summer3.mp3
+				dwarf_summer4.mp3
+				dwarf_summer5.mp3
+				dwarf_summer6.mp3
+				dwarf_summer7.mp3
+				dwarf_summer8.mp3
+				dwarf_summer9.mp3
+				dwarf_summer10.mp3
+				dwarf_winter1.mp3
+			    dwarf_winter2.mp3
+                dwarf_winter3.mp3
+                dwarf_winter4.mp3
+                dwarf_winter5.mp3
+                dwarf_winter6.mp3
+				dwarf_winter7.mp3
+				dwarf_winter8.mp3
+				dwarf_winter9.mp3
+			end
+        state MUSIC_STRATMAP_WINTER
+            event delay 5
+	            folder data/sounds/music/dwarf
+            end
+		state MUSIC_CAMPAIGN_LOADING
+			event 
+				folder data/sounds/music/dwarf
+			    dwarf_loading.mp3
+				dwarf_load_1.mp3
+			end	
+			
+		
+		state MUSIC_PREBATTLE_SCROLL
+			event  
+				folder data/sounds/music/dwarf
+				dwarf_prebattle_scroll.mp3
+			end
+		
+		
+			
+		state MUSIC_RESULT_STRAT_WIN_CLOSE
+			event 
+				folder data/sounds/music/dwarf
+				dwarf_winclose_strat2.mp3	
+			end
+		state MUSIC_RESULT_STRAT_WIN_AVERAGE
+			event 
+				folder data/sounds/music/dwarf
+				dwarf_winawerage_strat2.mp3	
+			end
+		state MUSIC_RESULT_STRAT_WIN_CRUSHING
+			event 
+				folder data/sounds/music/dwarf
+				dwarf_wincrushing_strat2.mp3		
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CLOSE
+			event 
+				folder data/sounds/music/dwarf
+				dwarf_loseclose_strat.mp3		
+			end
+		state MUSIC_RESULT_STRAT_LOSE_AVERAGE
+			event 
+				folder data/sounds/music/dwarf
+				dwarf_loseawer_strat.mp3			
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CRUSHING
+			event 
+				folder data/sounds/music/dwarf
+				dwarf_losecrushing_strat.mp3			
+			end
+		state MUSIC_RESULT_STRAT_DRAW
+			event 
+				folder data/sounds/music/dwarf
+				dwarf_battleresult_draw_strat.mp3			
+			end	
+
+			
+;;; CAMPAIGN RESULT				
+			
+			
+		state MUSIC_CAMPAIGN_VICTORY
+			event  looped
+				folder data/sounds/music/dwarf
+				dwarf_compain_win.mp3
+							
+			end	
+		state MUSIC_CAMPAIGN_DEFEAT
+			event  looped
+				folder data/sounds/music/dwarf
+                dwarf_compain_lose.mp3
+			end	
+;;; CREDITS
+
+	state MUSIC_CREDITS1 delay 3
+			event 
+				folder data/sounds/music/empire
+				imp_maintheme1.mp3
+			end	
+			
+	state MUSIC_CREDITS2
+			event 
+				folder data/sounds/music/empire
+				imp_company_win.mp3				
+                imp_prebattle.mp3
+                imp_spring1.mp3
+				imp_spring2.mp3
+				imp_spring3.mp3
+				imp_spring4.mp3
+				imp_spring5.mp3
+				imp_spring6.mp3
+				
+			end
+
+
+
+;;;;;;;;;;;;;;;;;;;;; Порубежные княжества ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+			
+	music_type kalmar_union
+
+
+	
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+;;;;;;;;;;;;;;;;;;;;;  FRONTEND  ;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+		state MUSIC_FRONTEND
+			event 
+				folder data/sounds/music/borderlands
+				border_fronted.mp3
+			end
+
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;			
+			
+			
+			
+					
+;;; BAttlE MAP			
+			
+			
+		state MUSIC_BATTLE_TENSION
+			event 
+				folder data/sounds/music/borderlands
+				border_tension_2.mp3
+				border_tension_3.mp3
+				border_tension_1.mp3
+			end
+			
+		state MUSIC_BATTLE_MOBILIZE
+			event
+				folder data/sounds/music/borderlands
+				border_mobilise_1.mp3
+				border_mobilise_2.mp3
+				border_mobilise_3.mp3
+			end
+			
+		state MUSIC_BATTLE_BATTLE
+			event
+				folder data/sounds/music/borderlands
+                border_battle_1.mp3
+				border_battle_2.mp3
+				border_battle_3.mp3
+				border_battle_4.mp3
+				border_battle_5.mp3
+            end     
+
+
+;;; BATTLE MAP RESULT			
+			
+					
+		state MUSIC_RESULT_WIN_CLOSE
+			event 
+				folder data/sounds/music/borderlands
+				border_win_close.mp3
+			end
+		state MUSIC_RESULT_WIN_AVERAGE
+			event 
+				folder data/sounds/music/borderlands
+				border_win_average.mp3
+			end
+		state MUSIC_RESULT_WIN_CRUSHING
+			event 
+				folder data/sounds/music/borderlands
+				border_win_crushing.mp3
+			end
+		state MUSIC_RESULT_LOSE_CLOSE
+			event 
+				folder data/sounds/music/borderlands
+				border_loose_close.mp3
+			end
+		state MUSIC_RESULT_LOSE_AVERAGE
+			event 
+				folder data/sounds/music/borderlands
+				border_loose_average.mp3
+			end
+		state MUSIC_RESULT_LOSE_CRUSHING
+			event 
+				folder data/sounds/music/borderlands
+				border_loose_crushing.mp3
+			end
+		state MUSIC_RESULT_DRAW
+			event 
+				folder data/sounds/music/borderlands
+				border_tactic_draw.mp3
+			end
+
+
+						
+;;; CAMPMAP			
+				
+			
+			
+		state MUSIC_STRATMAP_SUMMER
+			event delay 5 
+				folder data/sounds/music/borderlands
+				border_summer_1.mp3
+				border_summer_2.mp3
+				border_summer_4.mp3
+				border_summer_5.mp3
+				border_summer_6.mp3
+				border_summer_7.mp3
+				border_summer_8.mp3
+				border_summer_9.mp3
+				border_winter_1.mp3
+				border_winter_3.mp3
+				border_winter_4.mp3
+				border_winter_5.mp3
+				border_winter_6.mp3
+				border_winter_7.mp3
+			end
+        state MUSIC_STRATMAP_WINTER
+            event delay 5
+	            folder data/sounds/music/borderlands
+            end
+		state MUSIC_CAMPAIGN_LOADING
+			event 
+				folder data/sounds/music/borderlands
+			    border_campaign_load.mp3						
+			end	
+			
+		
+		state MUSIC_PREBATTLE_SCROLL
+			event  
+				folder data/sounds/music/borderlands
+				border_prebattle_scroll.mp3
+			end
+		
+		
+			
+		state MUSIC_RESULT_STRAT_WIN_CLOSE
+			event 
+				folder data/sounds/music/borderlands
+				border_strat_win_close.mp3	
+			end
+		state MUSIC_RESULT_STRAT_WIN_AVERAGE
+			event 
+				folder data/sounds/music/borderlands
+				border_strat_win_average.mp3	
+			end
+		state MUSIC_RESULT_STRAT_WIN_CRUSHING
+			event 
+				folder data/sounds/music/borderlands
+				border_strat_win_crushing.mp3		
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CLOSE
+			event 
+				folder data/sounds/music/borderlands
+				border_lose_close_strat.mp3		
+			end
+		state MUSIC_RESULT_STRAT_LOSE_AVERAGE
+			event 
+				folder data/sounds/music/borderlands
+				border_lose_average_strat.mp3			
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CRUSHING
+			event 
+				folder data/sounds/music/borderlands
+				border_lose_crushing_strat.mp3			
+			end
+		state MUSIC_RESULT_STRAT_DRAW
+			event 
+				folder data/sounds/music/borderlands
+				border_strat_draw.mp3			
+			end	
+
+			
+;;; CAMPAIGN RESULT				
+			
+			
+		state MUSIC_CAMPAIGN_VICTORY
+			event  looped
+				folder data/sounds/music/borderlands
+				border_campaign_victory.mp3						
+			end	
+		state MUSIC_CAMPAIGN_DEFEAT
+			event  looped
+				folder data/sounds/music/borderlands
+                border_lose_crushing_strat.mp3
+			end	
+;;; CREDITS
+
+	state MUSIC_CREDITS1 delay 3
+			event 
+				folder data/sounds/music/borderlands
+				border_fronted.mp3
+			end	
+			
+	state MUSIC_CREDITS2
+			event 
+				folder data/sounds/music/borderlands
+				border_summer_1.mp3
+				border_summer_2.mp3
+				border_summer_3.mp3
+				border_summer_4.mp3
+				border_summer_5.mp3
+				border_summer_6.mp3
+				border_summer_7.mp3
+				border_summer_8.mp3
+				border_winter_1.mp3
+				border_winter_2.mp3
+				border_winter_3.mp3
+				border_winter_4.mp3
+				border_winter_5.mp3
+				border_winter_6.mp3
+				border_winter_7.mp3
+			end
+			
+			
+			
+
+;;;;;;;;;;;;;;;;;;;;; Тёмные эльфы ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+			
+	music_type mongols
+
+
+	
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+;;;;;;;;;;;;;;;;;;;;;  FRONTEND  ;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+		state MUSIC_FRONTEND
+			event 
+				folder data/sounds/music/DE
+				DE_fronted.mp3
+			end
+
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;			
+			
+			
+			
+					
+;;; BAttlE MAP			
+			
+			
+		state MUSIC_BATTLE_TENSION
+			event 
+				folder data/sounds/music/DE
+				DE_tension_1.mp3
+				DE_tension_2.mp3
+				DE_tension_3.mp3
+				DE_tension_4.mp3
+			end
+			
+		state MUSIC_BATTLE_MOBILIZE
+			event
+				folder data/sounds/music/DE
+				DE_mobilise_1.mp3
+				DE_mobilise_2.mp3
+				DE_mobilise_3.mp3
+				DE_mobilise_4.mp3
+			end
+			
+		state MUSIC_BATTLE_BATTLE
+			event
+				folder data/sounds/music/DE
+                DE_battle_1.mp3
+				DE_battle_2.mp3
+				DE_battle_3.mp3
+				DE_battle_4.mp3
+				DE_battle_5.mp3
+				DE_battle_6.mp3
+				DE_battle_7.mp3
+				DE_battle_8.mp3
+				DE_battle_9.mp3
+            end     
+
+
+;;; BATTLE MAP RESULT			
+			
+					
+		state MUSIC_RESULT_WIN_CLOSE
+			event 
+				folder data/sounds/music/DE
+				DE_win_close.mp3
+			end
+		state MUSIC_RESULT_WIN_AVERAGE
+			event 
+				folder data/sounds/music/DE
+				DE_win_average.mp3
+			end
+		state MUSIC_RESULT_WIN_CRUSHING
+			event 
+				folder data/sounds/music/DE
+				DE_win_crushing.mp3
+			end
+		state MUSIC_RESULT_LOSE_CLOSE
+			event 
+				folder data/sounds/music/DE
+				DE_lose_close.mp3
+			end
+		state MUSIC_RESULT_LOSE_AVERAGE
+			event 
+				folder data/sounds/music/DE
+				DE_lose_average.mp3
+			end
+		state MUSIC_RESULT_LOSE_CRUSHING
+			event 
+				folder data/sounds/music/DE
+				DE_lose_crushing.mp3
+			end
+		state MUSIC_RESULT_DRAW
+			event 
+				folder data/sounds/music/DE
+				DE_draw.mp3
+			end
+
+
+						
+;;; CAMPMAP			
+				
+			
+			
+		state MUSIC_STRATMAP_SUMMER
+			event delay 5 
+				folder data/sounds/music/DE
+				DE_summer_1.mp3
+				DE_summer_2.mp3
+				DE_summer_3.mp3
+				DE_summer_4.mp3
+				DE_summer_5.mp3
+				DE_summer_6.mp3
+				DE_summer_7.mp3
+				DE_summer_8.mp3
+				DE_winter_1.mp3
+				DE_winter_2.mp3
+				DE_winter_3.mp3
+				DE_winter_4.mp3
+				DE_winter_5.mp3
+				DE_winter_6.mp3
+				DE_winter_7.mp3
+				DE_winter_8.mp3
+			end
+        state MUSIC_STRATMAP_WINTER
+            event delay 5
+	            folder data/sounds/music/DE
+            end
+		state MUSIC_CAMPAIGN_LOADING
+			event 
+				folder data/sounds/music/DE
+			    DE_load.mp3						
+			end	
+			
+		
+		state MUSIC_PREBATTLE_SCROLL
+			event  
+				folder data/sounds/music/DE
+				DE_prebattle_scroll.mp3
+			end
+		
+		
+			
+		state MUSIC_RESULT_STRAT_WIN_CLOSE
+			event 
+				folder data/sounds/music/DE
+				DE_strat_win_close.mp3	
+			end
+		state MUSIC_RESULT_STRAT_WIN_AVERAGE
+			event 
+				folder data/sounds/music/DE
+				DE_strat_win_average.mp3	
+			end
+		state MUSIC_RESULT_STRAT_WIN_CRUSHING
+			event 
+				folder data/sounds/music/DE
+				DE_strat_win_crushing.mp3		
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CLOSE
+			event 
+				folder data/sounds/music/DE
+				DE_strat_lose_close.mp3		
+			end
+		state MUSIC_RESULT_STRAT_LOSE_AVERAGE
+			event 
+				folder data/sounds/music/DE
+				DE_strat_lose_average.mp3			
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CRUSHING
+			event 
+				folder data/sounds/music/DE
+				DE_strat_lose_crushing.mp3			
+			end
+		state MUSIC_RESULT_STRAT_DRAW
+			event 
+				folder data/sounds/music/DE
+				DE_draw_strat.mp3			
+			end	
+
+			
+;;; CAMPAIGN RESULT				
+			
+			
+		state MUSIC_CAMPAIGN_VICTORY
+			event  looped
+				folder data/sounds/music/DE
+				DE_strat_win_crushing.mp3						
+			end	
+		state MUSIC_CAMPAIGN_DEFEAT
+			event  looped
+				folder data/sounds/music/DE
+                DE_defeat.mp3
+			end	
+;;; CREDITS
+
+	state MUSIC_CREDITS1 delay 3
+			event 
+				folder data/sounds/music/DE
+				DE_fronted.mp3
+			end	
+			
+	state MUSIC_CREDITS2
+			event 
+				folder data/sounds/music/DE
+				DE_summer_1.mp3
+				DE_summer_2.mp3
+				DE_summer_3.mp3
+				DE_summer_4.mp3
+				DE_summer_5.mp3
+				DE_summer_6.mp3
+				DE_summer_7.mp3
+				DE_summer_8.mp3
+				DE_winter_1.mp3
+				DE_winter_2.mp3
+				DE_winter_3.mp3
+				DE_winter_4.mp3
+				DE_winter_5.mp3
+				DE_winter_6.mp3
+				DE_winter_7.mp3
+			end
+
+
+
+			
+;;;;;;;;;;;;;;;;;;;;; вампиры ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+			
+	music_type hungary
+
+
+	
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+;;;;;;;;;;;;;;;;;;;;;  FRONTEND  ;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+		state MUSIC_FRONTEND
+			event 
+				folder data/sounds/music/vamp
+				wamp_mainthem.mp3
+			end
+
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;			
+			
+			
+			
+					
+;;; BAttlE MAP			
+			
+			
+		state MUSIC_BATTLE_TENSION
+			event 
+				folder data/sounds/music/vamp
+				wamp_tension1.mp3
+                wamp_tension2.mp3
+                wamp_tension3.mp3
+				wamp_tension4.mp3
+				wamp_tension5.mp3
+				wamp_tension6.mp3
+				wamp_tension7.mp3
+				wamp_tension8.mp3
+			end
+			
+		state MUSIC_BATTLE_MOBILIZE
+			event
+				folder data/sounds/music/vamp
+				wamp_mobilise1.mp3
+				wamp_mobilise2.mp3
+                wamp_mobilise3.mp3
+				wamp_mobilise4.mp3  
+				wamp_mobilise5.mp3
+				wamp_mobilise6.mp3
+				wamp_mobilise7.mp3
+			end
+			
+		state MUSIC_BATTLE_BATTLE
+			event
+				folder data/sounds/music/vamp
+                wamp_battle1.mp3
+ 				wamp_battle2.mp3
+                wamp_battle4.mp3
+				wamp_battle5.mp3
+				wamp_battle6.mp3
+				wamp_battle7.mp3
+				wamp_battle9.mp3
+				wamp_battle10.mp3
+            end     
+
+
+;;; BATTLE MAP RESULT			
+			
+					
+		state MUSIC_RESULT_WIN_CLOSE
+			event 
+				folder data/sounds/music/vamp
+				wamp_winclose_tact.mp3
+			end
+		state MUSIC_RESULT_WIN_AVERAGE
+			event 
+				folder data/sounds/music/vamp
+				wamp_winaver_tact.mp3
+			end
+		state MUSIC_RESULT_WIN_CRUSHING
+			event 
+				folder data/sounds/music/vamp
+				wamp_wincrushing_tact.mp3
+			end
+		state MUSIC_RESULT_LOSE_CLOSE
+			event 
+				folder data/sounds/music/vamp
+				wamp_loseclose_tact.mp3
+			end
+		state MUSIC_RESULT_LOSE_AVERAGE
+			event 
+				folder data/sounds/music/vamp
+				wamp_loseawer_tact.mp3
+			end
+		state MUSIC_RESULT_LOSE_CRUSHING
+			event 
+				folder data/sounds/music/vamp
+				wamp_losecrush_tact.mp3
+			end
+		state MUSIC_RESULT_DRAW
+			event 
+				folder data/sounds/music/vamp
+				wamp_draw.mp3
+			end
+
+
+						
+;;; CAMPMAP			
+				
+			
+			
+		state MUSIC_STRATMAP_SUMMER
+			event delay 5 
+				folder data/sounds/music/vamp
+				wamp_summer1.mp3
+				wamp_summer2.mp3
+				wamp_summer3.mp3
+				wamp_summer4.mp3
+				wamp_summer5.mp3
+				wamp_summer7.mp3
+				wamp_summer8.mp3
+				wamp_summer9.mp3
+				wamp_summer10.mp3
+				wamp_summer11.mp3
+				wamp_summer12.mp3
+				wamp_winter1.mp3
+		        wamp_winter2.mp3
+                wamp_winter3.mp3
+                wamp_winter5.mp3
+				wamp_winter6.mp3
+				wamp_winter7.mp3
+				wamp_winter8.mp3
+				wamp_winter9.mp3
+				wamp_winter10.mp3
+				wamp_winter11.mp3
+				wamp_winter12.mp3
+				wamp_winter13.mp3
+			end
+        state MUSIC_STRATMAP_WINTER
+            event delay 5
+	            folder data/sounds/music/vamp
+            end
+		state MUSIC_CAMPAIGN_LOADING
+			event 
+				folder data/sounds/music/vamp
+				vamp_camp_load.mp3
+				vamp_load_2.mp3
+			end	
+			
+		
+		state MUSIC_PREBATTLE_SCROLL
+			event  
+				folder data/sounds/music/vamp
+				wamp_prebattle.mp3
+			end
+			
+			
+			
+			
+		state MUSIC_RESULT_STRAT_WIN_CLOSE
+			event 
+				folder data/sounds/music/vamp
+				wamp_winclose_strat.mp3	
+			end
+		state MUSIC_RESULT_STRAT_WIN_AVERAGE
+			event 
+				folder data/sounds/music/vamp
+				wamp_winawer_strat.mp3	
+			end
+		state MUSIC_RESULT_STRAT_WIN_CRUSHING
+			event 
+				folder data/sounds/music/vamp
+				wamp_wincrush_strat.mp3		
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CLOSE
+			event 
+				folder data/sounds/music/vamp
+				wamp_loseclose_strat.mp3		
+			end
+		state MUSIC_RESULT_STRAT_LOSE_AVERAGE
+			event 
+				folder data/sounds/music/vamp
+				wamp_loseawer_strat.mp3			
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CRUSHING
+			event 
+				folder data/sounds/music/vamp
+				wamp_losecrush_strat.mp3			
+			end
+		state MUSIC_RESULT_STRAT_DRAW
+			event 
+				folder data/sounds/music/vamp
+				wamp_draw.mp3			
+			end	
+
+			
+;;; CAMPAIGN RESULT				
+			
+			
+		state MUSIC_CAMPAIGN_VICTORY
+			event  looped
+				folder data/sounds/music/vamp
+				wamp_company_win.mp3
+							
+			end	
+		state MUSIC_CAMPAIGN_DEFEAT
+			event  looped
+				folder data/sounds/music/vamp
+                wamp_campain_lose.mp3
+		
+			end	
+			
+
+;;; CREDITS
+
+	state MUSIC_CREDITS1 delay 3
+			event 
+				folder data/sounds/music/empire
+				imp_maintheme1.mp3
+			end	
+			
+	state MUSIC_CREDITS2
+			event 
+				folder data/sounds/music/empire
+				imp_company_win.mp3				
+                imp_prebattle.mp3
+                imp_spring1.mp3
+				imp_spring2.mp3
+				imp_spring3.mp3
+				imp_spring4.mp3
+				imp_spring5.mp3
+				imp_spring6.mp3
+				
+			end
+
+
+			
+;;;;;;;;;;;;;;;;;;;;; Эльфы ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;			
+			
+			
+	music_type england
+
+
+	
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
+;;;;;;;;;;;;;;;;;;;;;  FRONTEND  ;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+		state MUSIC_FRONTEND
+			event 
+				folder data/sounds/music/high_elf
+				high_elf_main_theme1.mp3
+			end
+
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;			
+			
+			
+			
+					
+;;; BAttlE MAP			
+			
+			
+		state MUSIC_BATTLE_TENSION
+			event 
+				folder data/sounds/music/high_elf
+				hi_elf_rasstanovka1.mp3
+				hi_elf_rasstanovka2.mp3
+				hi_elf_rasstanovka3.mp3
+				hi_elf_rasstanovka4.mp3
+				hi_elf_rasstanovka5.mp3
+			end
+			
+		state MUSIC_BATTLE_MOBILIZE
+			event
+				folder data/sounds/music/high_elf
+				hi_elf_mobilise1.mp3
+				hi_elf_mobilise3.mp3
+				hi_elf_mobilise2.mp3
+				hi_elf_mobilise4.mp3
+				hi_elf_mobilise5.mp3
+			end
+			
+		state MUSIC_BATTLE_BATTLE
+			event
+				folder data/sounds/music/high_elf
+				hi_elf_battle1.mp3
+				hi_elf_battle2.mp3
+			    hi_elf_battle3.mp3
+			    hi_elf_battle4.mp3
+				hi_elf_battle5.mp3
+				hi_elf_battle6.mp3
+            end     
+
+
+;;; BATTLE MAP RESULT			
+			
+					
+		state MUSIC_RESULT_WIN_CLOSE
+			event 
+				folder data/sounds/music/high_elf
+				hi_elf_battle_win2.mp3
+				
+			end
+		state MUSIC_RESULT_WIN_AVERAGE
+			event 
+				folder data/sounds/music/high_elf
+				hi_elf_battle_win1.mp3
+				
+			end
+		state MUSIC_RESULT_WIN_CRUSHING
+			event 
+				folder data/sounds/music/high_elf
+				hi_elf_battle_win3.mp3
+				
+			end
+		state MUSIC_RESULT_LOSE_CLOSE
+			event 
+				folder data/sounds/music/high_elf
+				hi_elf_battle_lost3.mp3
+				
+			end
+		state MUSIC_RESULT_LOSE_AVERAGE
+			event 
+				folder data/sounds/music/high_elf
+				hi_elf_battle_lost1.mp3
+				hi_elf_battle_lost2.mp3
+				
+				
+			end
+		state MUSIC_RESULT_LOSE_CRUSHING
+			event 
+				folder data/sounds/music/high_elf
+				he_battle_defeat.mp3
+				
+			end
+		state MUSIC_RESULT_DRAW
+			event 
+				folder data/sounds/music/high_elf
+				hi_elf_nichja.mp3
+				
+			end
+
+
+						
+;;; CAMPMAP			
+				
+			
+		state MUSIC_STRATMAP_SUMMER
+			event delay 5 
+				folder data/sounds/music/high_elf			
+				hi_elf_stratmap_summer1.mp3 
+				hi_elf_stratmap_summer2.mp3 
+				hi_elf_stratmap_summer3.mp3
+				hi_elf_stratmap_summer4.mp3	
+				hi_elf_stratmap_summer5.mp3 
+				hi_elf_stratmap_summer6.mp3
+				hi_elf_stratmap_summer7.mp3
+				hi_elf_stratmap_summer8.mp3
+				hi_elf_stratmap_summer9.mp3
+				hi_elf_stratmap_summer10.mp3
+				hi_elf_stratmapwinter1.mp3 
+				hi_elf_stratmapwinter4.mp3 
+				hi_elf_stratmapwinter3.mp3 
+				hi_elf_stratmapwinter2.mp3
+				hi_elf_stratmapwinter5.mp3 
+			    hi_elf_stratmapwinter6.mp3    
+				hi_elf_stratmapwinter7.mp3 
+				hi_elf_stratmapwinter8.mp3
+				hi_elf_stratmapwinter9.mp3
+				hi_elf_stratmapwinter10.mp3
+			end	
+		
+		state MUSIC_STRATMAP_WINTER
+			event delay 5 
+				folder data/sounds/music/high_elf			
+			end		
+				
+		state MUSIC_CAMPAIGN_LOADING
+			event 
+				folder data/sounds/music/high_elf
+				hi_elf_load.mp3
+				hi_elf_load_2.mp3		
+			end	
+			
+		
+		state MUSIC_PREBATTLE_SCROLL
+			event  
+				folder data/sounds/music/high_elf
+				hi_elf_prebattle.mp3
+			end
+			
+			
+			
+			
+		state MUSIC_RESULT_STRAT_WIN_CLOSE
+			event 
+				folder data/sounds/music/high_elf
+				hi_elf_battle_win_strat3.mp3
+						
+			end
+		state MUSIC_RESULT_STRAT_WIN_AVERAGE
+			event 
+				folder data/sounds/music/high_elf
+				hi_elf_battle_win_strat2.mp3
+				hi_elf_battle_win_strat1.mp3		
+			end
+		state MUSIC_RESULT_STRAT_WIN_CRUSHING
+			event 
+				folder data/sounds/music/high_elf
+				hi_elf_wincrushing_strat.mp3						
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CLOSE
+			event 
+				folder data/sounds/music/high_elf
+				he_battle_lost_strat3.mp3				
+			end
+		state MUSIC_RESULT_STRAT_LOSE_AVERAGE
+			event 
+				folder data/sounds/music/high_elf
+				he_battl_lost_strat1.mp3
+				he_battl_lost_strat2.mp3
+						
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CRUSHING
+			event 
+				folder data/sounds/music/high_elf
+				he_battle_lost_strat4.mp3
+					
+			end
+		state MUSIC_RESULT_STRAT_DRAW
+			event 
+				folder data/sounds/music/high_elf
+				hi_elf_battle_nichja_strat1.mp3
+						
+			end	
+
+			
+;;; CAMPAIGN RESULT				
+			
+			
+		state MUSIC_CAMPAIGN_VICTORY
+			event looped 
+				folder data/sounds/music/high_elf
+			        hi_elf_victory.mp3				
+			end	
+			
+		state MUSIC_CAMPAIGN_DEFEAT
+			event looped 
+				folder data/sounds/music/high_elf
+		            hi_elf_campaign_defeat.mp3
+			end	
+			
+
+;;; CREDITS
+
+	state MUSIC_CREDITS1 delay 3
+			event 
+				folder data/sounds/music/empire
+				imp_maintheme1.mp3
+			end	
+			
+	state MUSIC_CREDITS2
+			event 
+				folder data/sounds/music/empire
+				imp_company_win.mp3				
+                                imp_prebattle.mp3
+                                imp_spring1.mp3
+				imp_spring2.mp3
+				imp_spring3.mp3
+				imp_spring4.mp3
+				imp_spring5.mp3
+				imp_spring6.mp3	
+			end
+
+
+
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;; никто пока ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;			
+	
+					
+	music_type mesoamerican
+			
+			
+;;; BATTLE MAP			
+			
+			
+		state MUSIC_BATTLE_TENSION
+			event 
+				folder data/sounds/music
+				(Aztec_Tension_1)_Octli.mp3
+				(Aztec_Tension_2)_Memories_of_Mictlan.mp3
+			end
+			
+		state MUSIC_BATTLE_MOBILIZE
+			event 
+				folder data/sounds/music
+				(Aztec_Mobilize_1)_Inca.mp3
+				(Aztec_Mobilize_2)_Lakota_Lambada.mp3
+				(Aztec_Mobilize_3)_Jaguar_Jig.mp3
+				
+			end
+			
+		state MUSIC_BATTLE_BATTLE
+			event 
+				folder data/sounds/music
+				(Aztec_Battle_1)_Battle_of_Tollan.mp3
+				(Aztec_Battle_2)_Clash_of_Nahual.mp3
+				
+			end
+
+			
+;;;; BATTLE MAP RESULT			
+			
+		
+		state MUSIC_RESULT_WIN_CLOSE
+			event 
+				folder data/sounds/music
+				(Aztec_Win_1)_Mextli_Mambo.mp3
+				
+			end
+		state MUSIC_RESULT_WIN_AVERAGE
+			event 
+				folder data/sounds/music
+				(Aztec_Win_1)_Mextli_Mambo.mp3
+				
+			end
+		state MUSIC_RESULT_WIN_CRUSHING
+			event 
+				folder data/sounds/music
+				(Aztec_Win_1)_Mextli_Mambo.mp3
+				
+			end
+		state MUSIC_RESULT_LOSE_CLOSE
+			event 
+				folder data/sounds/music
+				(Aztec_Lose_1)_Muahyan.mp3
+				
+			end
+		state MUSIC_RESULT_LOSE_AVERAGE
+			event 
+				folder data/sounds/music
+				(Aztec_Lose_1)_Muahyan.mp3
+			end
+		state MUSIC_RESULT_LOSE_CRUSHING
+			event 
+				folder data/sounds/music
+				(Aztec_Lose_1)_Muahyan.mp3
+			end
+		state MUSIC_RESULT_DRAW
+			event 
+				folder data/sounds/music
+				(Aztec_Lose_1)_Muahyan.mp3
+			end
+
+			
+			
+;;; CAMPMAP
+						
+			
+			
+		state MUSIC_STRATMAP_SUMMER
+			event delay 5 
+				folder data/sounds/music
+				(Arabic_Strat_Map_1)_Persian_Pyjamas_01.mp3
+				(Arabic_Strat_Map_1)_Persian_Pyjamas_02.mp3
+			end			
+
+
+		state MUSIC_CAMPAIGN_LOADING
+			event 
+				folder data/sounds/music
+				(Teutonic_Campaign_Loading)_Brothers_Together.mp3
+				;(Frontend_1)_Amen.mp3
+				;(Euro_Loading_1)_Time_and_Again.mp3
+				;(Euro_Loading_2)_The_Widow.mp3
+			end							
+						
+			
+		state MUSIC_PREBATTLE_SCROLL
+			event  
+				folder data/sounds/music
+				(Euro_Camp_Battle_1)_Destiny.mp3
+				
+			end
+			
+			
+			
+			
+		state MUSIC_RESULT_STRAT_WIN_CLOSE
+			event 
+				folder data/sounds/music
+				(Aztec_Win_1)_Mextli_Mambo.mp3
+							
+			end
+		state MUSIC_RESULT_STRAT_WIN_AVERAGE
+			event 
+				folder data/sounds/music
+				(Aztec_Win_1)_Mextli_Mambo.mp3
+							
+			end
+		state MUSIC_RESULT_STRAT_WIN_CRUSHING
+			event 
+				folder data/sounds/music
+				(Aztec_Win_1)_Mextli_Mambo.mp3
+							
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CLOSE
+			event 
+				folder data/sounds/music
+						
+			end
+		state MUSIC_RESULT_STRAT_LOSE_AVERAGE
+			event 
+				folder data/sounds/music
+						
+			end
+		state MUSIC_RESULT_STRAT_LOSE_CRUSHING
+			event 
+				folder data/sounds/music
+						
+			end
+		state MUSIC_RESULT_STRAT_DRAW
+			event 
+				folder data/sounds/music
+						
+			end					
+
+			
+;;; CAMPAIGN RESULT			
+			
+			
+			
+		state MUSIC_CAMPAIGN_VICTORY
+			event  looped
+				folder data/sounds/music
+							
+			end	
+		state MUSIC_CAMPAIGN_DEFEAT
+			event  looped
+				folder data/sounds/music
+						
+			end	
+			
+			

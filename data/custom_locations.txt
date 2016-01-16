@@ -1,0 +1,319 @@
+		; custom locations , add new locations at the bottom
+
+;;; Old placeholder locations
+
+
+custom_location		Angol's Land
+{
+	location		3	239
+	image			data/menu/battlefield_pics/Angol's Land.tga
+	sett_locked		no
+	climate			temperate_deciduous_forest
+	summer			no
+}
+
+custom_location		Blasted Wastes
+{
+	location		24	105
+	image			data/menu/battlefield_pics/Blasted Wastes.tga
+	sett_locked		no
+	climate			sandy_desert
+	summer			no
+}
+custom_location		Border Princes
+{
+	location		99	2
+	image			data/menu/battlefield_pics/Border Princes.tga
+	sett_locked		no
+	climate			temperate_coniferous_forest
+	summer			no
+}
+custom_location		Dark Lands
+{
+	location		173	51
+	image			data/menu/battlefield_pics/Dark Lands.tga
+	sett_locked		no
+	climate			sandy_desert
+	summer			no
+}
+custom_location		Dark Lands 2
+{
+	location		183     43		;136	122
+	image			data/menu/battlefield_pics/Dark Lands 2.tga
+	sett_locked		no
+	climate			sandy_desert
+	summer			no
+}
+custom_location		Dietershafen
+{
+	location		34	123
+	image			data/menu/battlefield_pics/Dietershafen.tga
+	sett_locked		no
+	climate			temperate_coniferous_forest
+	summer			no
+}
+custom_location		Dolgan's Land
+{
+	location		178	212
+	image			data/menu/battlefield_pics/Dolgan's Land.tga
+	sett_locked		no
+	climate			highland
+	summer			no
+}
+custom_location		Drakenhof
+{
+	location		111	50
+	image			data/menu/battlefield_pics/Drakenhof.tga
+	sett_locked		no
+	climate			temperate_coniferous_forest
+	summer			no
+}
+custom_location		Drakenhof 2
+{
+	location		108	48  ;258 68
+	image			data/menu/battlefield_pics/Drakenhof 2.tga
+	sett_locked		no
+	climate			temperate_coniferous_forest
+	summer			no
+}
+;custom_location		Mount Silverspear
+;{
+;	location		160	2
+;	image			data/menu/battlefield_pics/Mount Silverspear.tga
+;	sett_locked		no
+;	climate			highland
+;	summer			no
+;}
+custom_location		Eight Peaks
+{
+	location		125	5
+	image			data/menu/battlefield_pics/Eight Peaks.tga
+	sett_locked		no
+	climate			highland
+	summer			no
+}
+custom_location		Karak Eight Peaks
+{
+	location		134	3
+	image			data/menu/battlefield_pics/Karak Eight Peaks.tga
+	sett_locked		no
+	climate			highland
+	summer			no
+}
+;custom_location		Eight Peaks Extended
+;{
+;	location		137	8
+;	image			data/menu/battlefield_pics/Eight Peaks Extended.tga
+;	sett_locked		no
+;	climate			highland
+;	summer			no
+;}
+;custom_location		Eight Peaks Extended 2
+;{
+;	location		121	3
+;	image			data/menu/battlefield_pics/Eight Peaks Extended 2.tga
+;	sett_locked		no
+;	climate			highland
+;	summer			no
+;}
+custom_location		A-Karak
+{
+	location		118	13
+	image			data/menu/battlefield_pics/A-Karak.tga
+	sett_locked		no
+	climate			highland
+	summer			no
+}
+custom_location		Kadrin 
+{
+	location		152	68
+	image			data/menu/battlefield_pics/Kadrin.tga
+	sett_locked		no
+	climate			highland
+	summer			no
+}
+custom_location		Nachtdorf 
+{
+	location		126	64
+	image			data/menu/battlefield_pics/Nachtdorf.tga
+	sett_locked		no
+	climate			temperate_coniferous_forest
+	summer			no
+}
+;custom_location		Beregond's Hideout
+;{
+;	location		10	50
+;	image			data/menu/battlefield_pics/Beregond's Hideout.tga
+;	sett_locked		no
+;	climate			temperate_coniferous_forest
+;	summer			no
+;}
+custom_location		Nuln Countryside
+{
+	location		45	48
+	image			data/menu/battlefield_pics/Nuln Countryside.tga
+	sett_locked		no
+	climate			temperate_coniferous_forest
+	summer			no
+}
+custom_location		Nagenhof
+{
+	location		116	81
+	image			data/menu/battlefield_pics/Nagenhof.tga
+	sett_locked		no
+	climate			temperate_coniferous_forest
+	summer			no
+}
+custom_location		Flensburg
+{
+	location		48	49
+	image			data/menu/battlefield_pics/Flensburg.tga
+	sett_locked		no
+	climate			temperate_deciduous_forest
+	summer			no
+}
+custom_location		Gharhar
+{
+	location		100	218
+	image			data/menu/battlefield_pics/Gharhar.tga
+	sett_locked		no
+	climate			temperate_deciduous_forest
+	summer			no
+}
+custom_location		Grunburg
+{
+	location		39	57
+	image			data/menu/battlefield_pics/Grunburg.tga
+	sett_locked		no
+	climate			temperate_deciduous_forest
+	summer			no
+}
+custom_location		Kislev
+{
+	location		124	101
+	image			data/menu/battlefield_pics/Kislev.tga
+	sett_locked		no
+	climate			temperate_deciduous_forest
+	summer			no
+}
+custom_location		Kislev 2
+{
+	location		118	98
+	image			data/menu/battlefield_pics/Kislev 2.tga
+	sett_locked		no
+	climate			temperate_deciduous_forest
+	summer			no
+}
+custom_location		Marienburg Flatlands
+{
+	location		6	94
+	image			data/menu/battlefield_pics/Marienburg Flatlands.tga
+	sett_locked		no
+	climate			temperate_deciduous_forest
+	summer			no
+}
+custom_location		Middenheim
+{
+	location		42	104
+	image			data/menu/battlefield_pics/Middenheim.tga
+	sett_locked		no
+	climate			temperate_coniferous_forest
+	summer			no
+}
+custom_location		Middenheim 2
+{
+	location		46	102
+	image			data/menu/battlefield_pics/Middenheim 2.tga
+	sett_locked		no
+	climate			temperate_deciduous_forest
+	summer			no
+}
+custom_location		Middenstag
+{
+	location		38	77
+	image			data/menu/battlefield_pics/Middenstag.tga
+	sett_locked		no
+	climate			temperate_deciduous_forest
+	summer			no
+}
+custom_location		Mordheim
+{
+	location		100	62
+	image			data/menu/battlefield_pics/Mordheim.tga
+	sett_locked		no
+	climate			temperate_deciduous_forest
+	summer			no
+}
+custom_location		Nuln
+{
+	location		45	48
+	image			data/menu/battlefield_pics/Nuln.tga
+	sett_locked		no
+	climate			temperate_deciduous_forest
+	summer			no
+}
+custom_location		Potting
+{
+	location		74	47
+	image			data/menu/battlefield_pics/Potting.tga
+	sett_locked		no
+	climate			temperate_deciduous_forest
+	summer			no
+}
+custom_location		Sarl's Land
+{
+	location		58	155
+	image			data/menu/battlefield_pics/Sarl's Land.tga
+	sett_locked		no
+	climate			temperate_deciduous_forest
+	summer			no
+}
+custom_location		Talabheim
+{
+	location		66	81
+	image			data/menu/battlefield_pics/Talabheim.tga
+	sett_locked		no
+	climate			temperate_deciduous_forest
+	summer			no
+}
+custom_location		Chaos Wastes
+{
+	location		187	243
+	image			data/menu/battlefield_pics/Tong's Land.tga
+	sett_locked		no
+	climate			alpine
+	summer			no
+}
+custom_location		Mountains of Chaos
+{
+	location		9	191
+	image			data/menu/battlefield_pics/Varg's Land.tga
+	sett_locked		no
+	climate			temperate_deciduous_forest
+	summer			no
+}
+custom_location		Valley of Chaos
+{
+	location		100	245
+	image			data/menu/battlefield_pics/Varn.tga
+	sett_locked		no
+	climate			alpine
+	summer			no
+}
+custom_location		Wolfenburg
+{
+	location		79	97
+	image			data/menu/battlefield_pics/Wolfenburg.tga
+	sett_locked		no
+	climate			temperate_deciduous_forest
+	summer			no
+}
+custom_location		Nordland Coast
+{
+	location		23  126
+	image			data/menu/battlefield_pics/Altdorf  River Crossing.tga
+	sett_locked		no
+	climate			steppe
+	summer			no
+}
+

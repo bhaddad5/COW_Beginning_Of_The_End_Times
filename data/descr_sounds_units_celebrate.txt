@@ -1,0 +1,179 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Units routing bank
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+DEFAULT: 3d mindist 5 priority 170 fadein 1 fadeout 3
+DEFAULT: minpitch .9 maxpitch 1.0 volume 0 probability 1
+DEFAULT: distancepriority -1 randomdelay 1  effect_level .5 pref SFX
+
+BANK: unit_celebrate
+
+;;;;Orks;;;;
+
+
+type Orcs boar boyz, Savage Orcs boar boyz, Orcz boyz, Orcz spear boyz, Savage Orcs boyz, Big`un Orcz boyz, Black Orcs, Black orcs destroyer, Orcz Arrerz, Savage Orcs arrer, Orcz boyz rebel, Orcz Arrerz rebel
+ 		event lod 5  
+ 			folder data/sounds/Voice/human/Generic
+ 			triumphorcmedium
+ 					end
+ 	
+ 		event lod 10
+ 			folder data/sounds/Voice/human/Generic
+ 			triumphorcmedium
+ 		     
+ 			end
+ 		
+ 		event lod 30 
+ 			folder data/sounds/Voice/human/Generic
+ 			triumphorclarge
+
+ 		end
+
+
+;;;;Goblins;;;;;;
+
+type Goblin wolf rider, Goblinz, Goblinz spearz, Night Goblinz, Night Goblinz spearz, Night Goblins Netters, Goblinz Arrerz, Night Goblin Arrerz, Night Goblin Squig, Night Goblin Squig rider, Night Goblin Squig rider bodyguard, Night Goblin Squig bodyguard, Chukka, Rock Lobba, tortoise ram orks, siege tower goblins
+ 		event lod 5  
+ 			folder data/sounds/Voice/human/Generic
+ 			triumphgoblinmedium
+ 			end
+ 	
+ 		event lod 10
+ 			folder data/sounds/Voice/human/Generic
+ 			triumphgoblinmedium
+ 		     
+ 			end
+ 		
+ 		event lod 30 
+ 			folder data/sounds/Voice/human/Generic
+ 			triumphgoblinlarge
+
+ 		end
+
+type Steam Tank
+ 		event lod 5  volume 0
+ 			folder data/sounds/SFX/Individual/Melee
+ 			steamtank_whistle_01
+ 			end
+ 	
+ 		event lod 10 volume -10
+ 			folder data/sounds/SFX/Individual/Melee
+ 			steamtank_whistle_01
+ 		     
+ 			end
+ 		
+ 		event lod 30 volume -20
+ 			folder data/sounds/SFX/Individual/Melee
+ 			steamtank_whistle_01
+ 		end
+
+
+	
+unit infantry light, heavy, spearmen, skirmish, missile
+
+		event lod 5  
+			folder data/sounds/SFX/group/Infantry
+			infantry_group_celebrate_small_01
+		end
+
+		event lod 10
+			folder data/sounds/SFX/group/Infantry
+			infantry_group_celebrate_small_01
+
+		end
+
+		event lod 30
+			folder data/sounds/SFX/group/Infantry
+			infantry_group_celebrate_large_01
+		end
+		
+	
+	   
+  
+;;;;;;;;;;;;;;;;		
+   
+unit cavalry light, heavy, spearmen, skirmish, missile
+
+		event lod 5  
+			folder data/sounds/SFX/group/Infantry
+			infantry_group_celebrate_small_01
+		end
+
+		event lod 10
+			folder data/sounds/SFX/group/Infantry
+			infantry_group_celebrate_small_01
+
+		end
+
+		event lod 30
+			folder data/sounds/SFX/group/Infantry
+			infantry_group_celebrate_large_01
+		end
+     
+;;;;;;;;;;;;;;;;		
+   
+unit siege light, heavy, spearmen, skirmish, missile
+
+		event lod 5  
+			folder data/sounds/SFX/group/Infantry
+			infantry_group_celebrate_small_01
+		end
+
+		event lod 10
+			folder data/sounds/SFX/group/Infantry
+			infantry_group_celebrate_small_01
+
+		end
+
+		event lod 30
+			folder data/sounds/SFX/group/Infantry
+			infantry_group_celebrate_large_01
+		end    
+  
+;;;;;;;;;;;;;;;;		
+   
+unit handler light, heavy, spearmen, skirmish, missile
+
+		event lod 5  
+			folder data/sounds/SFX/group/Infantry
+			infantry_group_celebrate_small_01
+		end
+
+		event lod 10
+			folder data/sounds/SFX/group/Infantry
+			infantry_group_celebrate_small_01
+
+		end
+
+		event lod 30
+			folder data/sounds/SFX/group/Infantry
+			infantry_group_celebrate_large_01
+		end 		
+		
+		   
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
+;;;;;;;;;;;	FEMALE
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
+		
+		; female
+	type amazon bodyguard, amazon, Norse shield maidens
+		event lod 5  
+			folder data/sounds/Voice/human/generic
+			woman_group_celebrate_small					
+			end
+	
+			
+		event lod 10 volume 0
+			folder data/sounds/Voice/human/generic
+			woman_group_celebrate_med
+		end
+		
+		
+		event lod 30 volume 0
+			folder data/sounds/Voice/human/generic
+			woman_group_celebrate_large	
+			end
+	
+			

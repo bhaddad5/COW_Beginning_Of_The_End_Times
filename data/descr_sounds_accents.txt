@@ -1,0 +1,128 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+
+accent English
+    factions
+    
+accent Scottish
+    factions
+
+accent French
+    factions
+
+accent German
+    factions
+
+accent Mediterranean
+    factions
+
+accent Arabic
+    factions 
+
+accent East_European
+    factions russia, kalmar_union
+
+accent Mongolian
+    factions skaven
+
+accent Orks
+    factions turks
+
+accent Goblins
+    factions moors
+
+accent Ogres
+    factions
+
+accent Troll
+    factions
+
+accent Beastman
+    factions egypt
+
+accent Undivided
+    factions denmark, teutonic_order
+
+;accent ChaosGeneric
+     ;factions teutonic_order
+
+accent Khorne
+    factions norway
+
+accent Nurgle
+    factions novgorod
+
+accent Tzeentch
+    factions lithuania
+
+accent Nurglings
+    factions
+
+accent ChaosFemale
+    factions
+
+accent Barbarian
+    factions normans
+
+accent BarbarianFemale
+    factions
+
+accent Chaosdwarf
+    factions aztecs
+
+accent Bloodletter
+    factions
+
+accent ChaosMonster
+    factions
+
+accent Highelves
+    factions england
+
+accent HighelvesB
+    factions
+
+accent HighelvesC
+    factions
+
+accent HighelvesD
+    factions
+
+accent Darkelves
+    factions mongols
+
+accent DarkelvesB
+    factions
+
+accent DarkelvesC
+    factions
+
+accent DarkelvesFemales
+    factions
+
+accent DEmage
+    factions
+
+accent Sylvania
+    factions hungary, timurids
+
+accent Dwarf
+    factions poland
+
+accent Empire
+    factions milan, hre, venice, portugal
+
+accent EmpireB
+    factions byzantium, sicily, spain, papal_states
+
+accent EmpireC
+    factions france, scotland, saxons
+	
+accent kranger
+    factions
+
+accent iseara
+    factions
+
+accent vespero
+    factions

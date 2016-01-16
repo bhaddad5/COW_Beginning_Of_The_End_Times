@@ -1,0 +1,25 @@
+TODO (Critical):
+Create Lizardmen Faction
+Create Rebel Subfactions
+Fill in rebel armies on map
+Give Empire factions access to all starting cities
+Make rebel AI attack Empire cities
+Make permanent forts buildable and increase their price (5000 gold?)
+Add scripted events to encourage expansion
+Add Skaven strat map models
+Add High Elf city strat map models
+
+
+TODO (Stretch):
+Add Araby stratmap models
+Add Araby custom battle settlements
+Add Kislev custom battle settlements
+
+
+WIP:
+Remove almost all unit spawning scripts from campaign_script.txt - BERT
+Add Aquitaine and Blood Keep (cut Forge of the Old Ones and Elven Ruins) - BERT
+
+
+DONE:
+Create new map - BERT

@@ -1,0 +1,177 @@
+;;;;;;;;;;;;		;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;				
+;non region			based
+;;;;;;;;;;;;		;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+					
+rebel_type			gladiator_uprising
+category			gladiator_revolt
+chance				10
+description			gladiator_uprising
+unit				free company
+unit				free company archers
+
+;======================================================================================
+					
+rebel_type			brigands
+category			brigands
+chance				15
+description			brigands
+unit				free company
+unit				free company archers
+					
+rebel_type			pirates
+category			pirates
+chance				50
+description			pirates
+unit				pirate ship		
+
+;;;;;;;;;;;;		;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;				
+;region			based
+;;;;;;;;;;;;		;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+rebel_type			Wallachian_Rebels
+category			peasant_revolt 
+chance				3					
+description			Wallachian_Rebels
+unit				Vampire black knights
+unit				Vampire skeleton
+unit				Vampire skeleton spears
+unit				Vampire skeleton archer
+unit				Grave guard
+unit				Grave guard halberd
+
+rebel_type			Rus_Rebels
+category			peasant_revolt 
+chance				3					
+description			Rus_Rebels
+unit				Kislev Ungol
+unit				Kislev Spear
+unit				Kislev Cossar
+unit				Kislev Kvas
+unit				Kislev Strelec
+
+rebel_type			Norse_Rebels
+category			peasant_revolt 
+chance				3					
+description			Norse_Rebels
+unit				Marauders
+unit				Marauder axe
+unit				Marauder axe thrower
+unit				mounted marauders
+unit				Knights of chaos
+unit				Warrior of chaos
+unit				Warrior of chaos halberd
+unit				Norsk wheelers
+unit				Norsk huscarl
+unit				Norsk bonds
+unit				norsk_bow
+
+rebel_type			Empire_Rebels
+category			peasant_revolt 
+chance				3					
+description			Empire_Rebels
+unit				Empire Pikemen
+unit				Halberdmen
+unit				Handgunners
+unit				Empire crossbowmen
+unit				Empire archers
+unit				Empire Cannon
+unit				free company
+unit				free company archers
+unit				Swordsmen of Empire
+
+rebel_type			Ork_Rebels
+category			peasant_revolt 
+chance				3					
+description			Ork_Rebels
+unit				Goblinz spearz
+unit				Goblinz
+unit				Goblin wolf rider
+unit				Orcz boyz
+unit				Orcz spear boyz
+unit				Goblinz Arrerz
+unit				Orcz Arrerz
+unit				Orcs boar boyz
+
+rebel_type			Free_Cities
+category			peasant_revolt 
+chance				3					
+description			Free_Cities
+unit				sonsofmanann
+unit				Marine
+unit				Marienburg guard
+unit				Marienburg archers
+unit				Buccaneers
+unit				Empire Mortar
+
+rebel_type			Mordheim_Rebels
+category			peasant_revolt 
+chance				3					
+description			Mordheim_Rebels
+unit				Warrior of chaos
+unit				Marauders
+unit				Marauder axe
+unit				Black Orcs
+unit				Orcz boyz
+unit				Orcz spear boyz
+unit				Bestigor
+unit				Gor
+unit				Gor spear
+unit				free company
+
+rebel_type			Border_Princes
+category			peasant_revolt 
+chance				3					
+description			Border_Princes
+unit				carlsson cav
+unit				carlsson inf
+unit				bord spe
+
+rebel_type			Night_Gobl
+category			peasant_revolt 
+chance				3					
+description			Night_Gobl
+unit				Night Goblin Squig rider
+unit				Night Goblinz spearz
+unit				Night Goblins Netters
+unit				Night Goblin Arrerz
+unit				Night Goblinz
+unit				Stone Troll
+
+rebel_type			Skaven_Rebels
+category			peasant_revolt 
+chance				3					
+description			Skaven_Rebels
+unit				Skaven Stormvermin
+unit				skaven monk
+unit				Skaven Jezzails
+unit				Skaven clanrats pikemen
+unit				Skaven clanrats
+unit				Skavens slaves pikemen
+unit				Skaven_slaves
+unit				small_rat
+
+rebel_type			Chaos_Dwarfs_Rebels
+category			peasant_revolt 
+chance				3					
+description			Chaos_Dwarfs_Rebels
+unit				Chaos dwarfs
+unit				Chaos dwarfs warriors
+unit				Chaos dwarfs arb
+
+rebel_type			Daemon_Rebels
+category			peasant_revolt 
+chance				3					
+description			Daemon_Rebels
+unit				Pleasureseekers
+unit				daemonettes
+unit				nurglings
+unit				plaguebearers
+unit				Flamers
+unit				Screemer
+unit				Horrors
+unit				bloodletters
+unit				Juggernauts
+
+
+			
+					

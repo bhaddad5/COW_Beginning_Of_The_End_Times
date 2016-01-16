@@ -1,0 +1,2 @@
+g5 setup file - do not edit by hand
+[scripts] ReallyBadAI_Universal.txt 
