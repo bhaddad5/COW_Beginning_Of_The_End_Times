@@ -1,0 +1,21 @@
+#====================================================================================================
+#		The main files path terrain, pathfinding, vegetation, animinstance
+#====================================================================================================
+settlements/Middle_Eastern/ambient_settlements/medium_monestary/ME_Medium_Monestary_A.worldTerrain
+settlements/Middle_Eastern/ambient_settlements/medium_monestary/ME_Medium_Monestary_A.worldPathfinding
+settlements/Middle_Eastern/ambient_settlements/medium_monestary/ME_Medium_Monestary_A.worldVegetation
+settlements/Middle_Eastern/ambient_settlements/medium_monestary/ME_Medium_Monestary_A.animInstances
+#====================================================================================================
+#		Animations links : matches with <anim> properties written in each objects
+#====================================================================================================
+[ANIM 1]
+DamageTransition0	BlockSet/Middle_Eastern/Animations/Tower_Ambient_Animations/Ambient_Roughstone_Tower_Animations/ME_roughstone_tower_4m_H_animation_a.anim
+[ANIM 2]
+DamageTransition0	BlockSet/Middle_Eastern/Animations/Tower_Ambient_Animations/Ambient_TechTree_Animations/Mosque_dome_small_animation_a.anim
+[ANIM 3]
+DamageTransition0	BlockSet/Middle_Eastern/Animations/Tower_Ambient_Animations/Ambient_Whitestone_Tower_Animations/ME_whitestone_tower_8m_D_animation_a.anim
+#====================================================================================================
+#		Debug AnimInstance database : each anim applied to a list of objects
+# ANIM 1 : #{139}
+# ANIM 2 : #{467}
+# ANIM 3 : #{561}

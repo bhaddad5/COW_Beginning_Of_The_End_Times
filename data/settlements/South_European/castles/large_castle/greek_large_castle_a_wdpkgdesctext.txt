@@ -1,0 +1,22 @@
+ 20 greek_large_castle_a
+ 10 settlement
+ 74 settlements/South_European/castles/large_castle/greek_large_castle_a.world
+6         number of pairs of attributes to follow 
+  7 culture
+ 17 southern_european
+
+ 11 environment
+  7 generic
+
+  7 faction
+  6 poland
+
+ 18 fortificationlevel
+  4 none
+
+  4 type
+ 12 large_castle
+
+  7 variant
+  4 none
+

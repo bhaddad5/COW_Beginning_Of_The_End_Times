@@ -1,0 +1,22 @@
+ 11 TC_Castle_A
+ 10 settlement
+ 59 Settlements/North_European/Castles/Castle/TC_Castle_A.world
+6         number of pairs of attributes to follow 
+  7 culture
+ 17 northern_european
+
+ 11 environment
+  7 generic
+
+  7 faction
+ 14 teutonic_order
+
+ 18 fortificationlevel
+  4 none
+
+  4 type
+  6 castle
+
+  7 variant
+  4 none
+

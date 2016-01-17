@@ -1,0 +1,18 @@
+#====================================================================================================
+#		The main files path terrain, pathfinding, vegetation, animinstance
+#====================================================================================================
+settlements/Middle_Eastern/ambient_settlements/medium_hamlet/ME_Medium_Hamlet_A.worldTerrain
+settlements/Middle_Eastern/ambient_settlements/medium_hamlet/ME_Medium_Hamlet_A.worldPathfinding
+settlements/Middle_Eastern/ambient_settlements/medium_hamlet/ME_Medium_Hamlet_A.worldVegetation
+settlements/Middle_Eastern/ambient_settlements/medium_hamlet/ME_Medium_Hamlet_A.animInstances
+#====================================================================================================
+#		Animations links : matches with <anim> properties written in each objects
+#====================================================================================================
+[ANIM 1]
+DamageTransition0	BlockSet/Middle_Eastern/Animations/Tower_Ambient_Animations/Ambient_Bakedbrick_Tower_Animations/ME_bakedbrick_tower_8m_C_animation_a.anim
+[ANIM 2]
+DamageTransition0	BlockSet/Middle_Eastern/Animations/Tower_Ambient_Animations/Ambient_Roughstone_Tower_Animations/ME_roughstone_tower_4m_H_animation_a.anim
+#====================================================================================================
+#		Debug AnimInstance database : each anim applied to a list of objects
+# ANIM 1 : #{191}
+# ANIM 2 : #{260}

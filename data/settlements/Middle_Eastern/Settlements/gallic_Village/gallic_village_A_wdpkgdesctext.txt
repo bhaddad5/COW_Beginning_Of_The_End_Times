@@ -1,0 +1,22 @@
+ 16 gallic_village_A
+ 10 settlement
+ 76 settlements/Middle_Eastern/Settlements/gallic_Village/gallic_village_A.world
+6         number of pairs of attributes to follow 
+  7 culture
+ 14 middle_eastern
+
+ 11 environment
+  7 generic
+
+  7 faction
+  3 any
+
+ 18 fortificationlevel
+  4 none
+
+  4 type
+  7 village
+
+  7 variant
+  4 none
+

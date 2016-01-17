@@ -1,0 +1,12 @@
+#====================================================================================================
+#		The main files path terrain, pathfinding, vegetation, animinstance
+#====================================================================================================
+settlements/South_European/ambient_settlements/Farms/Small_farm/south_european_small_farm.worldTerrain
+settlements/South_European/ambient_settlements/Farms/Small_farm/south_european_small_farm.worldPathfinding
+settlements/South_European/ambient_settlements/Farms/Small_farm/south_european_small_farm.worldVegetation
+settlements/South_European/ambient_settlements/Farms/Small_farm/south_european_small_farm.animInstances
+#====================================================================================================
+#		Animations links : matches with <anim> properties written in each objects
+#====================================================================================================
+#====================================================================================================
+#		Debug AnimInstance database : each anim applied to a list of objects

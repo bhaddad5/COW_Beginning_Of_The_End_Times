@@ -1,0 +1,22 @@
+ 16 greek_stone_keep
+ 10 settlement
+ 59 settlements/greek/castles/stone_keep/greek_stone_keep.world
+6         number of pairs of attributes to follow 
+  7 culture
+  5 greek
+
+ 11 environment
+  7 generic
+
+  7 faction
+  6 poland
+
+ 18 fortificationlevel
+  4 none
+
+  4 type
+ 10 stone_keep
+
+  7 variant
+  4 none
+

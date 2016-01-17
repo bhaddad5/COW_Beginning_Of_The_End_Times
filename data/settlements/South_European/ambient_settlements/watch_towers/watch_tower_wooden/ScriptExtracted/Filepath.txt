@@ -1,0 +1,12 @@
+#====================================================================================================
+#		The main files path terrain, pathfinding, vegetation, animinstance
+#====================================================================================================
+settlements/South_European/ambient_settlements/Watch_Towers/Watch_Tower_wooden/south_european_watch_tower_wooden.worldTerrain
+settlements/South_European/ambient_settlements/Watch_Towers/Watch_Tower_wooden/south_european_watch_tower_wooden.worldPathfinding
+settlements/South_European/ambient_settlements/Watch_Towers/Watch_Tower_wooden/south_european_watch_tower_wooden.worldVegetation
+settlements/South_European/ambient_settlements/Watch_Towers/Watch_Tower_wooden/south_european_watch_tower_wooden.animInstances
+#====================================================================================================
+#		Animations links : matches with <anim> properties written in each objects
+#====================================================================================================
+#====================================================================================================
+#		Debug AnimInstance database : each anim applied to a list of objects

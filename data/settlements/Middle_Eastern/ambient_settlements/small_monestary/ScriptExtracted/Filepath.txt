@@ -1,0 +1,15 @@
+#====================================================================================================
+#		The main files path terrain, pathfinding, vegetation, animinstance
+#====================================================================================================
+settlements/Middle_Eastern/ambient_settlements/small_monestary/ME_Small_Monestary_A.worldTerrain
+settlements/Middle_Eastern/ambient_settlements/small_monestary/ME_Small_Monestary_A.worldPathfinding
+settlements/Middle_Eastern/ambient_settlements/small_monestary/ME_Small_Monestary_A.worldVegetation
+settlements/Middle_Eastern/ambient_settlements/small_monestary/ME_Small_Monestary_A.animInstances
+#====================================================================================================
+#		Animations links : matches with <anim> properties written in each objects
+#====================================================================================================
+[ANIM 1]
+DamageTransition0	BlockSet/Middle_Eastern/Animations/Tower_Ambient_Animations/Ambient_TechTree_Animations/Mosque_dome_small_animation_a.anim
+#====================================================================================================
+#		Debug AnimInstance database : each anim applied to a list of objects
+# ANIM 1 : #{95}

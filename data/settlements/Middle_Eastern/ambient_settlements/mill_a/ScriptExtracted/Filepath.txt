@@ -1,0 +1,12 @@
+#====================================================================================================
+#		The main files path terrain, pathfinding, vegetation, animinstance
+#====================================================================================================
+settlements/Middle_Eastern/ambient_settlements/mill_A/ME_Mill_A.worldTerrain
+settlements/Middle_Eastern/ambient_settlements/mill_A/ME_Mill_A.worldPathfinding
+settlements/Middle_Eastern/ambient_settlements/mill_A/ME_Mill_A.worldVegetation
+settlements/Middle_Eastern/ambient_settlements/mill_A/ME_Mill_A.animInstances
+#====================================================================================================
+#		Animations links : matches with <anim> properties written in each objects
+#====================================================================================================
+#====================================================================================================
+#		Debug AnimInstance database : each anim applied to a list of objects

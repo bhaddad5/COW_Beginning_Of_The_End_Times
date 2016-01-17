@@ -1,0 +1,53 @@
+#====================================================================================================
+#		For each Complex there are a unknow array for light effect
+#====================================================================================================
+[Complex 1]
+
+[Complex 2]
+ 1 2 5 6
+[Complex 3]
+ 1 2 5 6
+[Complex 4]
+ 3 5 6
+[Complex 5]
+ 3
+[Complex 6]
+ 3
+[Complex 7]
+ 3
+[Complex 8]
+
+[Complex 9]
+
+[Complex 10]
+
+[Complex 11]
+ 4 1 2 3 5 6
+[Complex 12]
+ 1 2
+[Complex 13]
+
+[Complex 14]
+ 4
+[Complex 15]
+
+[Complex 16]
+
+[Complex 17]
+
+[Complex 18]
+
+[Complex 19]
+ 4 1 2 5 6
+[Complex 20]
+ 4 3 5 6
+[Complex 21]
+ 4 3 5 6
+[Complex 22]
+ 4 2 3 5 6
+[Complex 23]
+ 4 1 2 3 5 6
+[Complex 24]
+
+[Complex 25]
+ 4

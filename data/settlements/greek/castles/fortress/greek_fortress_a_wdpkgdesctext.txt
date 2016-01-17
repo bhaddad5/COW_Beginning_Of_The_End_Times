@@ -1,0 +1,22 @@
+ 16 greek_fortress_a
+ 10 settlement
+ 55 settlements/greek/castles/fortress/greek_fortress.world
+6         number of pairs of attributes to follow 
+  7 culture
+  5 greek
+
+ 11 environment
+  7 generic
+
+  7 faction
+  6 poland
+
+ 18 fortificationlevel
+  4 none
+
+  4 type
+  8 fortress
+
+  7 variant
+  4 none
+
